@@ -9,13 +9,13 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/index")
 public class IndexController {
 	
-	@RequestMapping(value="/hello")
+	@RequestMapping(value="/hello.do")
 	@ResponseBody
 	public String index(){
 		System.out.println(">>>>>>>ssss>>>>>>");
 		return "hello world";
 	}
-	@RequestMapping(value="/tojsp")
+	@RequestMapping(value="/tojsp.do")
 	public ModelAndView tojsp(){
         ModelAndView mv = new ModelAndView("hello");
         System.out.println(">>>>>>>ssss>>>>>>");

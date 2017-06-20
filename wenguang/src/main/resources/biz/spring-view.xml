@@ -57,7 +57,4 @@
 	<!-- 静态文件的访问映射 -->
 
 	<mvc:default-servlet-handler />
-	<mvc:resources mapping="/static/plugins/**" location="/plugins/**" />
-	<mvc:resources mapping="/static/css/**" location="/css/**" />
-	<mvc:resources mapping="/static/js/**" location="/js/**" />
 </beans>
