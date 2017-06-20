@@ -1,5 +1,15 @@
 package com.harmony.wenguang.controller;
 
-public class IndexController {
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+@Controller("/index")
+public class IndexController {
+	
+	@ResponseBody
+	@RequestMapping(value="/")
+	public String index(){
+		return "hello to wenguan website";
+	}
 }
