@@ -6,9 +6,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/index")
 public class IndexController {
-	
+    @RequestMapping("*")
+	public String no404(){
+	    return "404";
+	}
 	@RequestMapping(value="/hello.do")
 	@ResponseBody
 	public String index(){
