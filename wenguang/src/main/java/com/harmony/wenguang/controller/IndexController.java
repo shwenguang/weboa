@@ -12,8 +12,13 @@ public class IndexController {
 	@RequestMapping(value="/hello")
 	@ResponseBody
 	public String index(){
-		ModelAndView mv = new ModelAndView("hello");
 		System.out.println(">>>>>>>ssss>>>>>>");
 		return "hello world";
+	}
+	@RequestMapping(value="/tojsp")
+	public ModelAndView tojsp(){
+        ModelAndView mv = new ModelAndView("hello");
+        System.out.println(">>>>>>>ssss>>>>>>");
+        return mv;
 	}
 }
