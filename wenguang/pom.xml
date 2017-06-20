@@ -50,9 +50,9 @@
 			<version>1.0.6</version>
 		</dependency>
 		<dependency>
-		  <groupId>org.apache.poi</groupId>
-		  <artifactId>ooxml-schemas</artifactId>
-		  <version>1.3</version>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>ooxml-schemas</artifactId>
+			<version>1.3</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.guava</groupId>
@@ -100,6 +100,11 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.10</version>
 			</plugin>
 		</plugins>
 	</build>
