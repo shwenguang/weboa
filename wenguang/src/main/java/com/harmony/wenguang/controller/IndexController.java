@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller("/index")
 public class IndexController {
 	
-	@ResponseBody
 	@RequestMapping(value="/")
 	public String index(){
-		return "hello to wenguan website";
+		return "index";
 	}
 }
