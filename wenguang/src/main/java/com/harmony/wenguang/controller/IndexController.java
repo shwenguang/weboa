@@ -18,6 +18,7 @@ public class IndexController {
 	TestDao testDao;
     @RequestMapping("*")
 	public String no404(){
+    	System.out.println(">>>>>>");
 	    return "404";
 	}
 	@RequestMapping(value="/hello.do")
