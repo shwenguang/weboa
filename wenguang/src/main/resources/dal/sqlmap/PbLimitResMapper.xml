@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="wenguang">
+	<update id="createtable">
+		create table if not exists wenguang_test(id int,name varchar(100),remark varchar(1024))
+	</update>
+	<insert id="insert">
+		insert into wenguang_test(id,name,remark)
+		values(#{id},#{name},#{remark})
+	</insert>
+	<select id="selectAll" resultType="com.harmony.wenguang.dao.dataobject.TestDO">
+		select * from wenguang_test
+	</select>
+</mapper>
