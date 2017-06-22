@@ -1,0 +1,1 @@
+create table wg_test( id int primary key AUTO_INCREMENT, name varchar(100), remark varchar(100) );

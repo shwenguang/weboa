@@ -1,6 +1,6 @@
 package com.harmony.wenguang.dao.dataobject;
 
-public class TestDO {
+public class WgTestDO {
 	private Long id;
 	private String name;
 	private String remark;
