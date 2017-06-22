@@ -5,7 +5,7 @@
 		insert into wg_test(id,name,remark)
 		values(#{id},#{name},#{remark})
 	</insert>
-	<select id="selectAll" resultType="com.harmony.wenguang.dao.dataobject.TestDO">
+	<select id="selectAll" resultType="com.harmony.wenguang.dao.dataobject.WgTestDO">
 		select * from wg_test
 	</select>
 </mapper>
