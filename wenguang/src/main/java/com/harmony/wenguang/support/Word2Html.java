@@ -74,6 +74,7 @@ public class Word2Html {
     }
     
     public static void doc2html(String docFile,String htmlFile) throws Exception{
+    	System.out.println("doc2html");
         HWPFDocument doc = new HWPFDocument(new FileInputStream(docFile));
         WordToHtmlConverter wordToHtmlConverter = new WordToHtmlConverter(DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument());
         wordToHtmlConverter.setPicturesManager(new PicturesManager(){
