@@ -63,7 +63,7 @@ public class TestController {
 	}
 	@RequestMapping(value="/test/tojsp.do")
 	public ModelAndView tojsp(){
-        ModelAndView mv = new ModelAndView("hello");
+        ModelAndView mv = new ModelAndView("jsptest");
         System.out.println(">>>>>>>ssss>>>>>>");
         return mv;
 	}
