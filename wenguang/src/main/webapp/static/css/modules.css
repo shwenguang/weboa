@@ -1,0 +1,172 @@
+@charset "gb2312";
+/**
+ *--------------------------------------------------
+ * 主风格 模块 样式表
+ * Scorpio
+ * 2015-10-24
+ *--------------------------------------------------
+**/
+
+/*-- 右边栏 --*/
+div#rightsidebar{
+	float:right;
+	width:358px;
+	text-align:left;
+}
+h2.rsPublicTitle{
+	width:auto;
+	margin-bottom:15px;
+	padding:1px 0px 2px 16px;
+	border-left:7px solid #ff5a00;
+	font-size:18px;
+	font-weight:bold;
+	line-height:22px;
+	white-space:nowrap;
+	color:#ff5a00;
+}
+/* 政务微博
+----------------------------------------*/
+div#zwwbBox{
+	width:356px;
+	margin-bottom:19px;
+	padding:26px 0px 10px 0px;
+	background-color:#fafafa;
+	border:1px solid #e3e3e3;
+}
+div#zwwbBox h2{margin:0px 0px 22px 14px;}
+div#zwwbBox div#weiboList{width:356px;}
+div#zwwbBox div#weiboList ul{
+	float:left;
+	width:342px;
+	padding-left:14px;
+}
+div#zwwbBox div#weiboList ul li{
+	float:left;
+	font-size:0px;
+	line-height:0px;
+}
+div#zwwbBox div#weiboBox{
+	clear:both;
+	width:352px;
+	padding-left:4px;
+}
+div#zwwbBox iframe#zwwbFrame{
+	width:100%;
+	height:490px;
+}
+/* 政务微信
+----------------------------------------*/
+div#zwwxBox{
+	width:332px;
+	padding:26px 10px 12px 14px;
+	background-color:#fafafa;
+	border:1px solid #e3e3e3;
+}
+div#zwwxBox div#zwwxQACode{
+	width:100%;
+	text-align:center;
+	font-size:0px;
+	line-height:0px;
+}
+/* 主内容区
+----------------------------------------*/
+div#maincontent{
+	float:left;
+	width:603px;
+	padding:0px 10px;
+	background-color:#FFF;
+	border:1px solid #e3e3e3;
+	text-align:left;
+}
+/* 信息公开模块
+----------------------------------------*/
+/*-- 信息公开检索 --*/
+iframe#xxgk_gkjs{
+	width:358px;
+	height:258px;
+	margin-bottom:15px;
+}
+/*-- 信息公开目录（有依申请公开） --*/
+iframe#xxgk_gkml{
+	width:358px;
+	height:306px;
+	margin-bottom:14px;
+}
+/*-- 信息公开目录（无依申请公开） --*/
+iframe#xxgk_gkml_hideysqgk{
+	width:358px;
+	height:254px;
+	margin-bottom:15px;
+}
+/*-- 信息公开政策解读 --*/
+iframe#xxgk_zcjd{
+	width:358px;
+	height:239px;
+}
+/*-- 信息公开状况查询 --*/
+iframe#xxgk_zkcx{
+	width:358px;
+	height:175px;
+	margin-top:15px;
+}
+/*-- 信息公开专题栏目 --*/
+iframe#xxgk_ztlm{
+	width:358px;
+	height:360px;
+}
+/* 分页( bailian )
+----------------------------------------*/
+ul#changepage{
+	float:left;
+	clear:both;
+	width:583px;
+	
+	}
+ul#changepage {
+	display:inline-block;
+	text-align:center;
+	}
+ul#changepage  a{
+	border:1px solid #dddddd;
+	display:inline-block;
+	line-height:28px;
+	padding:0px 10px;
+	}
+ul#changepage  a:hover{
+	background:#f5f5f5;
+	color:#e36600;
+	}
+ul#changepage a.lastpage,ul#changepage a.nextpage,ul#changepage a.morepage{
+	width:auto;
+	overflow:hidden;
+	}
+ul#changepage a.lastpage a,ul#changepage a.nextpage a,ul#changepage a.morepage a{
+	margin-top:0px;
+	}
+ul#changepage a.lastpage a:hover,ul#changepage a.nextpage a:hover,ul#changepage a.morepage a:hover{
+	margin-top:-50px;
+	padding-bottom:50px;
+	}
+ul#changepage a.lastpage a:hover{
+	background:url(../images/page_last_bg.jpg) no-repeat left bottom;
+	}
+ul#changepage a.nextpage a:hover{
+	background:url(../images/page_next_bg.jpg) no-repeat left bottom;
+	}
+ul#changepage a.morepage a:hover{
+	background:url(../images/page_more_bg.jpg) no-repeat left bottom;
+	}
+ul#changepage a.lastpage a,ul#changepage a.nextpage a,ul#changepage a.morepage a{
+	padding:0px;
+	border:none;
+	}
+ul#changepage a.lastpage img{
+	padding-left:50px;
+	}
+ul#changepage a.lastpage a img{
+	padding-left:0px;
+	}
+ul#changepage a.onthispage {
+	color:#dc4b00;
+	font-weight:bold;
+	}

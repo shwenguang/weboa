@@ -1,0 +1,35 @@
+@charset "gb2312";
+/**
+ *--------------------------------------------------
+ * 通用设置 样式表
+ * Scorpio
+ * 2015-10-20
+ *--------------------------------------------------
+**/
+*{margin:0px;padding:0px;}
+img{border:none;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6{
+	font-size:12px;
+	line-height:16px;
+	font-weight:bold;
+}
+body{
+	font-size:12px;
+	line-height:14px;
+	background:#FFF;
+	font-family:"Microsoft YaHei","微软雅黑";
+	color:#333;
+	text-align:center;
+}
+a:link{color:#333;text-decoration:none;}
+a:visited{color:#333;text-decoration:none;}
+a:hover{color:#333;text-decoration:underline;}
+.clear,div#skip{
+	clear:both;
+	height:0px;
+	font-size:0px;
+	line-height:0px;
+	overflow:hidden;
+}
+.clear{clear:both;}

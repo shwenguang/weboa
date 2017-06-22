@@ -1,0 +1,211 @@
+@charset "gb2312";
+/**
+ *--------------------------------------------------
+ * 主风格 模块 样式表
+ * Scorpio
+ * 2015-10-24
+ *--------------------------------------------------
+**/
+
+/*-- content --*/
+div#maincontent{
+	padding-top:30px;
+	}
+.pubtitle1{
+	font-size:18px;
+	color:#ff5a00;
+	border-left:7px solid #ff5a00;
+	padding-left:17px;
+	line-height:26px;
+	text-align:left;
+	}
+.publist1{
+	float:left;
+	clear:both;
+	padding:15px 0px;
+	}
+.publist1 li{
+	float:left;
+	width:150px;
+	line-height:28px;
+	}
+.publist1 li a{
+	background:url(../images/publist1_icon.jpg) no-repeat left center;
+	padding-left:20px;
+	float:left;
+	color:#666666;
+	}
+.publist1 li a:link{
+	text-decoration:underline;
+	}
+.publist1 li a:hover{
+	color:#ff5a00;
+	}
+.publist1 li a:visited{
+	text-decoration:underline;
+	}
+form#form_ysqgk{
+	clear:both;
+	}
+table#table_ysqgk{
+	width:603px;
+	background:#f0f4f7;
+	}
+table#table_ysqgk td{
+	border-top:1px solid #ffffff;
+	padding:7px;
+	color:#333333;
+	text-align:left;
+	}
+table#table_ysqgk td label{
+	line-height:22px;
+	float:left;
+	}
+table#table_ysqgk td.td01 label{
+	float:none;
+	}
+table#table_ysqgk td input{
+	float:left;
+	}
+table#table_ysqgk td.border_e8{
+	border-top:1px solid #e8eef4
+	}
+table#table_ysqgk td.no_border{
+	border-top:none;
+	}
+table#table_ysqgk td.align_right{
+	text-align:right;
+	}
+table#table_ysqgk td.align_right label,table#table_ysqgk td.align_right input{
+	float:none;
+	}
+table#table_ysqgk td.td01{
+	background:#deeef7;
+	width:208px;
+	text-align:center;
+	border-right:1px solid #e8eef4;
+	vertical-align:middle;
+	}
+form#form_ysqgk input.input_text{
+	width:189px;
+	padding:0px 5px;
+	height:22px;
+	line-height:22px;
+	background:#ffffff;
+	border:1px solid #cccccc;
+	color:#333333;
+	}
+span.span_important{
+	color:#f00;
+	padding:5px 5px 0px;
+	}
+input#input_zfjgmc{
+	width:340px;
+	padding:0px 5px;
+	height:22px;
+	line-height:22px;
+	background:#ffffff;
+	border:1px solid #cccccc;
+	}
+td.td_shortinput label{
+	padding-left:9px;
+	}
+td.td_shortinput input{
+	width:119px;
+	padding:0px 5px;
+	height:22px;
+	line-height:22px;
+	background:#ffffff;
+	border:1px solid #cccccc;
+	}
+textarea.maxwidth{
+	width:340px;
+	padding:0px 5px;
+	line-height:22px;
+	background:#ffffff;
+	border:1px solid #cccccc;
+	height:100px;
+	}
+label.are_label{
+	line-height:30px;
+	}
+table#table_ysqgk td.align_center{
+	background:#ffffff;
+	}
+ul.publist3{
+	float:left;
+	}
+ul.publist3 li{
+	float:left;
+	text-align:right;
+	padding-right:7px;
+	line-height:22px;
+	}
+table#table_ysqgk td ul.publist3 li label{
+	background:#f0f4f7;
+	float:none;
+	display:inline;
+	*padding-left:16px;
+	}
+table#table_ysqgk td ul.publist3 li input{
+	float:left;
+	margin-top:4px;
+	*margin-top:-22px;
+	width:14px;
+	display:inline;
+	}
+table#table_ysqgk td ul.swidhtlabel{
+	width:295px;
+	}
+table#table_ysqgk td ul.swidhtlabel li{
+	width:125px;
+	text-align:left;
+	}
+table#table_ysqgk td span.align_left{
+	float:left;
+	line-height:22px;
+	}
+table#table_ysqgk td.clearli ul.publist3 li{
+	clear:both;
+	}
+ul#form_submit{
+	text-align:center;
+	padding:25px 0px 25px 110px;
+	float:left;
+	clear:both;
+	}
+ul#form_submit li{
+	float:left;
+	margin:0px 24px;
+	border:1px solid #cccccc;
+	border-radius:3px;
+	background:#cbcccd url(../images/submit_bg.jpg) no-repeat 15px 5px;
+	display:inline;
+	padding-left:46px;
+	}
+table#table_ysqgk td ul#form_submit li input{
+	border:none;
+	background:#ffffff;
+	height:30px;
+	padding:0px 15px 0px 15px;
+	letter-spacing:10px;
+	font-size:14px;
+	font-weight:bold;
+	}
+table#table_ysqgk td ul#form_submit li input:hover{
+	background:#cbcccd;
+	color:#ffffff;
+	}
+table#table_ysqgk td.align_center{
+	text-align:center;
+	}
+/*form#form_ysqgk table.table_nopadding tr td{
+	padding:0px;
+	}
+form#form_ysqgk table.table_nopadding tr td label{
+	float:right;
+	background:#f00;
+	}
+form#form_ysqgk table.table_nopadding tr td input{
+	float:left;
+	}*/

@@ -1,0 +1,169 @@
+@charset "gb2312";
+/**
+ *--------------------------------------------------
+ * 主风格 样式表
+ * Scorpio
+ * 2015-10-20
+ *--------------------------------------------------
+**/
+div#container{
+	margin:0px auto;
+	max-width:1300px;
+	min-width:1000px;
+	_width:expression(eval(document.documentElement.clientWidth>1300?1300:document.documentElement.clientWidth<1000?1000:document.documentElement.clientWidth));
+}
+div.pageCenter{
+	width:1000px;
+	margin:0px auto;
+}
+/* 头部
+----------------------------------------*/
+div#header{width:100%;}
+div#header_top{
+	width:100%;
+	background:#000 url(../images/mf_headerTopBg.gif) repeat left top;
+}
+div#header_bottom{
+	width:100%;
+	padding:10px 0px 20px 0px;
+	background:#FFF url(../images/mf_headerBottomBg.gif) repeat-x left top;
+}
+div#header_bottom div.pageCenter{
+	width:990px;
+	padding-right:10px;
+}
+/*-- logo --*/
+h1#logo{
+	float:left;
+	font-size:0px;
+	line-height:0px;
+}
+/*-- 快速链接 --*/
+ul#quickLink{
+	float:right;
+	width:635px;
+	padding:20px 0px;
+	text-align:right;
+}
+ul#quickLink li{
+	display:inline;
+	padding-left:10px;
+	white-space:nowrap;
+}
+ul#quickLink li a:link,
+ul#quickLink li a:visited,
+ul#quickLink li a:hover{color:#FFF;}
+/*-- 导航 --*/
+ul#mainnav{float:right;}
+ul#mainnav li{
+	float:left;
+	padding-left:28px;
+	font-size:14px;
+	line-height:20px;
+	white-space:nowrap;
+}
+ul#mainnav li a{
+	display:block;
+	padding-bottom:17px;
+}
+ul#mainnav li a:link,ul#mainnav li a:visited{color:#FFF;}
+ul#mainnav li.navSelect a,ul#mainnav li a:hover{
+	color:#FFF;
+	text-decoration:none;
+	border-bottom:5px solid #ffd200;
+	font-weight:bold;
+}
+/*-- 副标题 --*/
+h2#subTitle{
+	float:left;
+	font-size:0px;
+	line-height:0px;
+}
+/*-- 主搜索框 --*/
+iframe#mainSearchFrame{
+	float:right;
+	width:720px;
+	height:54px;
+}
+/* 内容
+----------------------------------------*/
+div#main{
+	width:100%;
+	background-color:#eeeeee;
+}
+div#mainTop{
+	width:100%;
+	padding-bottom:10px;
+	background-color:#FFF;
+}
+div#mainTop div.pageCenter{
+	width:984px;
+	padding-right:16px;
+}
+/*-- 面包屑导航 --*/
+div#breadcrumbNav{
+	float:left;
+	width:600px;
+	padding-left:10px;
+}
+div#breadcrumbNav ul{
+	float:left;
+	width:100%;
+	padding:7px 0px;
+	overflow:hidden;
+}
+div#breadcrumbNav ul li{
+	float:left;
+	margin-left:-19px;
+	padding:0px 28px 0px 19px;
+	background:url(../images/mf_breadcrumbNavBg.gif) no-repeat left 2px;
+	white-space:nowrap;
+	color:#333;
+}
+div#breadcrumbNav ul li a:link,
+div#breadcrumbNav ul li a:visited,
+div#breadcrumbNav ul li a:hover{color:#333;}
+/*-- 本栏检索框 --*/
+iframe#subSearchFrame{
+	float:right;
+	width:310px;
+	height:28px;
+}
+/*-- 内容 --*/
+div#content{padding:20px 0px;}
+/* 底部
+----------------------------------------*/
+div#footer{
+	width:100%;
+	padding:20px 0px 40px 0px;
+	background:url(../images/footerBg.gif) repeat left top;
+	border-top:1px solid #c7c7c7;
+}
+/*-- 底部标志 --*/
+div#footerLogo{
+	float:left;
+	padding-right:18px;
+	font-size:0px;
+	line-height:0px;
+}
+/*-- 站点信息 --*/
+ul#siteInfo{
+	float:left;
+	padding-top:1px;
+	width:400px;
+}
+ul#siteInfo li{
+	width:100%;
+	padding:4px 0px;
+	text-align:left;
+	color:#999;
+}
+/*-- ICP备案 --*/
+div#icpBox{
+	float:right;
+	padding:17px 20px 1px 55px;
+	background:url(../images/icpBoxBg.gif) no-repeat left bottom;
+	text-align:left;
+	line-height:20px;
+	color:#999;
+}
