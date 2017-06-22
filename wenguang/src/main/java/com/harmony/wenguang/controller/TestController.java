@@ -17,17 +17,17 @@ import com.harmony.wenguang.dao.WgTestDao;
 import com.harmony.wenguang.dao.dataobject.WgTestDO;
 
 @Controller
-public class InitController {
+public class TestController {
 	@Resource
 	DataSource dataSource;
 	@Resource
 	WgTestDao testDao;
-    @RequestMapping("/init/*")
+    @RequestMapping("/test/*")
 	public String no404(){
     	System.out.println(">>>>>>");
 	    return "404";
 	}
-    @RequestMapping(value="/init/createTable.do")
+    @RequestMapping(value="/test/createTable.do")
 	@ResponseBody
 	public String createTable(){
     	try {
@@ -44,7 +44,7 @@ public class InitController {
     	stmt.executeUpdate();
     	conn.close();
     }
-	@RequestMapping(value="/init/hello.do")
+	@RequestMapping(value="/test/hello.do")
 	@ResponseBody
 	public String index(){
 		WgTestDO testDo = new WgTestDO();
@@ -61,7 +61,7 @@ public class InitController {
 		System.out.println(">>>>>>>ssss>>>>>>");
 		return "hello world";
 	}
-	@RequestMapping(value="/init/tojsp.do")
+	@RequestMapping(value="/test/tojsp.do")
 	public ModelAndView tojsp(){
         ModelAndView mv = new ModelAndView("hello");
         System.out.println(">>>>>>>ssss>>>>>>");
