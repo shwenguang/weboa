@@ -17,6 +17,7 @@ public class WgTestDO {
 		this.name = name;
 	}
 	public String getRemark() {
+		//test
 		return remark;
 	}
 	public void setRemark(String remark) {
