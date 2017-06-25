@@ -1,0 +1,6 @@
+<urlrewrite>
+	<rule>
+		<from>^/1/(\w+).do</from>
+		<to>/html/doc.do</to>
+ 	</rule> 
+</urlrewrite>
