@@ -17,7 +17,7 @@ public class HtmlController {
 	@RequestMapping("/doc.do")
 	@ResponseBody
 	public String html(){
-		System.out.println("htmlService=="+htmlService);
+//		System.out.println("htmlService=="+htmlService);
 		return htmlService.getHtml(null);
 	}
 }
