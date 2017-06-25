@@ -20,7 +20,7 @@
 <div id="skip"><a href="#content" title="跳转到主要内容区域" accesskey="2">跳转到主要内容区域</a></div>
 <div id="container">
     <div id="header">
-        <div id="header_top">
+        <!-- <div id="header_top">
             <div class="pageCenter">
                 <h1 id="logo"><img src="/static/images/mf_headerLogo.gif" alt="上海市文化广播影视管理局 上海市文物局" title="上海市文化广播影视管理局 上海市文物局" /></h1>
                 <ul id="quickLink">
@@ -40,14 +40,14 @@
                 </ul>
                 <div class="clear"></div>
             </div>
-        </div>
-        <div id="header_bottom">
+        </div> -->
+       <!--  <div id="header_bottom">
             <div class="pageCenter">
                 <h2 id="subTitle"><img src="/static/images/mf_subTitle.gif" alt="网上政务大厅" title="网上政务大厅" /></h2>
                 <iframe id="mainSearchFrame" src="/node2/n2029/n2158/n2187/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="搜索"></iframe>
                 <div class="clear"></div>
             </div>
-        </div>
+        </div> -->
     </div>
     <div id="main">
         <div id="mainTop">
@@ -316,15 +316,14 @@
                     </table>
                 </form>
             </div>
-             <div id="rightsidebar">
+             <!-- <div id="rightsidebar">
                 <iframe id="xxgk_gkml_hideysqgk" src="/node2/n2029/n2158/n2193/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="信息公开目录"></iframe>
                 <iframe id="xxgk_ztlm" src="/node2/n2029/n2158/n2192/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="专题栏目"></iframe>
                 <iframe id="xxgk_zkcx" src="/node2/n2029/n2158/n2194/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="状况查询"></iframe>
-			</div>
+			</div> -->
             <div class="clear"></div>
         </div>
     </div>
-   <iframe marginwidth="0" marginheight="0" src="/node2/n2029/n2158/n2177/index.html" frameborder="0" width="100%" scrolling="no" height="131"></iframe>
 
 </div>
     <script type="text/javascript">
