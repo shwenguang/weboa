@@ -4,9 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -28,7 +26,6 @@ import org.apache.poi.xwpf.converter.xhtml.XHTMLOptions;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.w3c.dom.Document;
 
-import com.google.common.io.Files;
 import com.harmony.wenguang.constant.FileType;
 import com.harmony.wenguang.service.FileDocument;
 
@@ -39,43 +36,40 @@ public class Word2Html {
 //        convertToHtml("D:/alidata1/origindoc.docx","D:/alidata1/origindocx.html");
 //    }
     
-    public static void convertToHtml(final String docFile,String htmlFile) throws Exception{
+    public static String convertToHtml(final String docFile) throws Exception{
+    	FileDocument fd = new FileDocument(){
+			@Override
+			public FileType getSuffix() {
+				return FileType.docx;
+			}
+			@Override
+			public InputStream getInputStream() {
+				try {
+					return new FileInputStream(docFile);
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}
+				return null;
+			}
+			@Override
+			public File getFile() {
+				return new File(docFile);
+			}
+			@Override
+			public String getName() {
+				return docFile;
+			}
+        };
         if(docFile.endsWith("docx")){
-            docx2Html(new FileDocument(){
-				@Override
-				public FileType getSuffix() {
-					return FileType.docx;
-				}
-
-				@Override
-				public InputStream getInputStream() {
-					try {
-						return new FileInputStream(docFile);
-					} catch (FileNotFoundException e) {
-						e.printStackTrace();
-					}
-					return null;
-				}
-
-				@Override
-				public File getFile() {
-					return new File(docFile);
-				}
-
-				@Override
-				public String getName() {
-					return docFile;
-				}
-            	
-            }, htmlFile);
+            return docx2Html(fd);
         }else{
-            doc2html(docFile,htmlFile);
+            return doc2html(fd);
         }
     }
     
-    public static void doc2html(String docFile,String htmlFile) throws Exception{
+    public static String doc2html(FileDocument docFile) throws Exception{
     	System.out.println("doc2html");
-        HWPFDocument doc = new HWPFDocument(new FileInputStream(docFile));
+        HWPFDocument doc = new HWPFDocument(docFile.getInputStream());
         WordToHtmlConverter wordToHtmlConverter = new WordToHtmlConverter(DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument());
         wordToHtmlConverter.setPicturesManager(new PicturesManager(){
             public String savePicture(byte[] content, 
@@ -108,20 +102,20 @@ public class Word2Html {
         trans.setOutputProperty(OutputKeys.METHOD, "html");
         trans.transform(domSource, streamResult);
         out.close();
-        
-        Files.write(out.toByteArray(), new File(htmlFile));
-        
+//        Files.write(out.toByteArray(), new File(htmlFile));
+        return new String(out.toByteArray());
     }
     
-    public static void docx2Html(FileDocument docFile,String htmlFile) throws Exception{
+    public static String docx2Html(FileDocument docFile) throws Exception{
         XWPFDocument doc = new XWPFDocument(docFile.getInputStream());
         XHTMLOptions options = XHTMLOptions.create().indent(4);
         File imgFolder = new File(picPath);
         options.setExtractor(new FileImageExtractor(imgFolder));
         options.URIResolver(new FileURIResolver(imgFolder));
         
-        OutputStream out = new FileOutputStream(new File(htmlFile));
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
         XHTMLConverter.getInstance().convert(doc, out, options);
-        System.out.println("docx to html done");
+//        System.out.println("docx to html done");
+        return new String(out.toByteArray());
     }
 }

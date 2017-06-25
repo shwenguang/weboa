@@ -8,7 +8,7 @@ create table wg_documents(id int primary key AUTO_INCREMENT,file_type varchar(20
 
 create table wg_blob_data(id int primary key AUTO_INCREMENT, name varchar(100), content blob);
 
-
+create table wg_html(id int primary key AUTO_INCREMENT, path varchar(100),html_content varchar(4000));
 
 
 
