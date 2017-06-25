@@ -15,11 +15,15 @@
     <i-button @click="show">Click me!</i-button>
     <Modal v-model="visible" title="Welcome">欢迎使用 iView</Modal>
     
-    <my-grid></my-grid>
+<!--     <my-grid></my-grid> -->
+    
+    {{message}}
+    <input v-model="message"></input>
 </div>
 <script>
 	Vue.component("my-grid",{
 		template:'<i-table :columns="columns1" :data="data1"></i-table>',
+		
 		data:function(){
 			return {
                 columns1: [
@@ -64,7 +68,8 @@
     new Vue({
         el: '#app',
         data: {
-            visible: false
+            visible: false,
+            message:'hello vue'
         },
         methods: {
             show: function () {

@@ -3,7 +3,6 @@ package com.harmony.wenguang.controller;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -17,16 +16,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSON;
 import com.harmony.wenguang.dao.WgBlobDataDao;
-import com.harmony.wenguang.dao.WgTestDao;
 import com.harmony.wenguang.dao.dataobject.WgBlobDataDO;
-import com.harmony.wenguang.dao.dataobject.WgTestDO;
 
 @Controller
 public class TestController {
 	@Resource
 	DataSource dataSource;
-	@Resource
-	WgTestDao testDao;
 	@Resource
 	WgBlobDataDao wgBlobDataDao;
 	
@@ -65,19 +60,9 @@ public class TestController {
 		String age = request.getParameter("age");
 		System.out.println("name="+name+",age="+age);
 		this.allowCrossDomain(response);
-		WgTestDO testDo = new WgTestDO();
-		testDo.setName("YYYY");
-		testDao.insert(testDo);
-		testDo.setName("22222");
-		testDao.insert(testDo);
-		List<WgTestDO> list = testDao.queryAll();
-//		if(list!=null){
-//			for(WgTestDO dd : list){
-//				System.out.println(dd.getId()+"----"+dd.getName());
-//			}
-//		}
 		System.out.println(">>>>>>>ssss>>>>>>");
-		return JSON.toJSONString(list);
+		Object list = new String("123");
+		return JSON.toJSONString(list );
 	}
 	@RequestMapping(value="/test/tojsp.do")
 	public ModelAndView tojsp(){
