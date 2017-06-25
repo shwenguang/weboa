@@ -6,7 +6,7 @@
 		values(#{path},#{htmlContent })
 	</insert>
 	
-	<select id="getHtmlByPath" resultType="">
+	<select id="getHtmlByPath" resultType="com.harmony.wenguang.dao.dataobject.WgHtmlDO">
 		select id,path,html_content from wg_html
 		where path=#{path}
 	</select>

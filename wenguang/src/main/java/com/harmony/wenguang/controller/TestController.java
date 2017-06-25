@@ -28,12 +28,6 @@ public class TestController {
 	@Resource
 	HttpServletRequest request;
 
-	@RequestMapping("/test/*")
-	public String no404() {
-		System.out.println(">>>>>>");
-		return "404";
-	}
-
 	@RequestMapping(value = "/test/createTable.do")
 	@ResponseBody
 	public String createTable() {
