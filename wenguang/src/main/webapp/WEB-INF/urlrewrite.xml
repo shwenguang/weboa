@@ -1,6 +1,15 @@
 <urlrewrite>
 	<rule>
 		<from>^/1/(\w+).do</from>
-		<to>/html/doc.do</to>
+		<to>/html/doc.do?path1=$1</to>
+ 	</rule>
+ 	<rule>
+		<from>^/1/(\w+)/(\w+).do</from>
+		<to>/html/doc.do?path1=$1&amp;path2=$2</to>
  	</rule> 
+ 	<rule>
+		<from>^/1/(\w+)/(\w+)/(\w+).do</from>
+		<to>/html/doc.do?path1=$1&amp;path2=$2&amp;path3=$3</to>
+ 	</rule> 
+ 	
 </urlrewrite>
