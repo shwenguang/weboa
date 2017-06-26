@@ -11,5 +11,8 @@
 		<from>^/1/(\w+)/(\w+)/(\w+).do</from>
 		<to>/html/doc.do?path1=$1&amp;path2=$2&amp;path3=$3</to>
  	</rule> 
- 	
+ 	<rule>
+		<from>^/2/(\d+).do</from>
+		<to>/html/show.do?id=$1</to>
+ 	</rule> 
 </urlrewrite>
