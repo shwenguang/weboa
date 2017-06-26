@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css" href="/static/css/style_zfxxgk4.css" />
 </head>
 
-<body>
+<body onload="systemTime()">
 <div id="skip"><a href="#content" title="跳转到主要内容区域" accesskey="2">跳转到主要内容区域</a></div>
 <div id="container">
     <div id="header">
@@ -56,11 +56,11 @@
                     <ul>
                         <li><a href="/node2/n2029/index.html" target="_blank" title="首页">首页</a></li>
                         <li><a href="/node2/n2029/n2031/index.html" target="_parent" title="政府信息公开">政府信息公开</a></li>
-                        <li>依申请公开</li>
+                        <li>${aaa }</li>
                     </ul>
                 </div>
-                <iframe id="subSearchFrame" src="/node2/n2029/n2158/n2188/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="本栏检索"></iframe>
-                <div class="clear"></div>
+                <!--  <iframe id="subSearchFrame" src="/node2/n2029/n2158/n2188/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="本栏检索"></iframe>
+                <div class="clear"></div> -->
             </div>
         </div>
         <div class="pageCenter" id="content">
@@ -88,40 +88,40 @@
                         <tr>
                             <td class="td01"><label for="input_grqm">申请人（个人）签名</label></td>
                             <td>
-                                  <em class="abtFlag"><input class="input_text" type="text" name="input_grqm"  id="input_grqm" value="请填写个人签名" title="请填写个人签名" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" /></em>
+                                <em class="abtFlag"><input class="input_text" type="text" name="input_grqm"  id="input_grqm" value="请填写个人签名" title="请填写个人签名" onfocus= "javascript:if(this.value=='请填写个人签名')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写个人签名'" /></em>
                                 <span class="span_important">*</span>
                             </td>
                         </tr>
                         <tr>
                             <td class="td01"><label for="input_zjmc">证件名称</label></td>
                             <td>
-                                <input class="input_text" type="text" id="input_zjmc" name="input_zjmc" value="请填写证件名称" title="请填写证件名称" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" />
+                                <input class="input_text" type="text" id="input_zjmc" name="input_zjmc" value="请填写证件名称" title="请填写证件名称" onfocus= "javascript:if(this.value=='请填写证件名称')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写证件名称'" />
                                 <span class="span_important">*</span>
                             </td>
                         </tr>
                         <tr>
                             <td class="td01"><label for="input_frqm">申请人（法人或其他组织）签名</label></td>
                             <td>
-                                <input class="input_text" type="text" id="input_frqm" name="input_frqm" value="请填写申请人（法人或其他组织）签名" title="请填写申请人（法人或其他组织）签名" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" />
+                                <input class="input_text" type="text" id="input_frqm" name="input_frqm" value="请填写申请人（法人或其他组织）签名" title="请填写申请人（法人或其他组织）签名" onfocus= "javascript:if(this.value=='请填写申请人（法人或其他组织）签名')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写申请人（法人或其他组织）签名'" />
                             </td>
                         </tr>
                         <tr>
                             <td class="td01"><label for="input_zy">单位/职业</label></td>
                             <td>
-                                <input class="input_text" type="text" id="input_zy" name="input_zy" value="请填写单位/职业" title="请填写单位/职业" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" />
+                                <input class="input_text" type="text" id="input_zy" name="input_zy" value="请填写单位/职业" title="请填写单位/职业" onfocus= "javascript:if(this.value=='请填写单位/职业')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写单位/职业'" />
                                 <span class="span_important">*</span>
                             </td>
                         </tr>
                         <tr>
                             <td class="td01"><label for="input_zjhm">证件号码</label></td>
                             <td>
-                                <input class="input_text" type="text" id="input_zjhm" value="请填写证件号码" title="请填写证件号码" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" />
+                                <input class="input_text" type="text" id="input_zjhm" value="请填写证件号码" title="请填写证件号码" onfocus= "javascript:if(this.value=='请填写证件号码')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写证件号码'" />
                                 <span class="span_important">*</span>
                             </td>
                         </tr>
                         <tr>
                             <td class="td01"><label for="input_fddbr">法定代表人</label></td>
-                            <td><input class="input_text" type="text" id="input_fddbr" value="请填写法定代表人" title="请填写法定代表人" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" /></td>
+                            <td><input class="input_text" type="text" id="input_fddbr" value="请填写法定代表人" title="请填写法定代表人" onfocus= "javascript:if(this.value=='请填写法定代表人')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写法定代表人'" /></td>
                         </tr>
                         <tr>
                             <td rowspan="6" class="td01">联系方式<span class="span_important">*</span></td>
@@ -129,34 +129,34 @@
                         <tr>
                             <td>
                                 <label for="input_txdz">通信地址：</label>
-                                <input class="input_text" type="text" id="input_txdz" value="请填写通信地址" title="请填写通信地址" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" />
+                                <input class="input_text" type="text" id="input_txdz" value="请填写通信地址" title="请填写通信地址" onfocus= "javascript:if(this.value=='请填写通信地址')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写通信地址'" />
                                 <span class="span_important">*</span>
                             </td>
                         </tr>
                         <tr>
                             <td class="border_e8">
                                 <label for="input_lxdh">联系电话：</label>
-                                <input class="input_text" type="text" id="input_lxdh" value="请填写联系电话" title="请填写联系电话" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" />
+                                <input class="input_text" type="text" id="input_lxdh" value="请填写联系电话" title="请填写联系电话" onfocus= "javascript:if(this.value=='请填写联系电话')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写联系电话'" />
                                 <span class="span_important">*</span>
                             </td>
                         </tr>
                         <tr>
                             <td class="border_e8">
                                 <label for="input_email">电子邮箱：</label>
-                                <input class="input_text" type="text" id="input_email" value="请填写电子邮箱" title="请填写电子邮箱人" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" />
+                                <input class="input_text" type="text" id="input_email" value="请填写电子邮箱" title="请填写电子邮箱" onfocus= "javascript:if(this.value=='请填写电子邮箱')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写电子邮箱'" />
                                 <span class="span_important">*</span>
                             </td>
                         </tr>
                         <tr>
                             <td class="border_e8">
                                 <label for="input_yzbm">邮政编码：</label>
-                                <input class="input_text" type="text" id="input_yzbm" value="请填写法定代表人" title="请填写法定代表人" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" />
+                                <input class="input_text" type="text" id="input_yzbm" value="请填写邮政编码" title="请填写邮政编码" onfocus= "javascript:if(this.value=='请填写邮政编码')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写邮政编码'" />
                                 <span class="span_important">*</span>
                             </td>
                         </tr>
                         <tr>
                             <td class="border_e8"><label for="input_lxr">联系人：</label>
-                                <input class="input_text" type="text" id="input_lxr" value="请填写法定代表人" title="请填写法定代表人" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" />
+                                <input class="input_text" type="text" id="input_lxr" value="请填写法定代表人" title="请填写法定代表人" onfocus= "javascript:if(this.value=='请填写法定代表人')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写法定代表人'" />
                                 <span class="span_important">*</span></td>
                         </tr>
                         <tr>
@@ -164,14 +164,14 @@
                                 <label for="input_zfjgmc">政府信息公开义务机关（机构）名称</label>
                                 <span class="span_important">*</span>
                             </td>
-                            <td><input type="text" id="input_zfjgmc" value="请填写政府信息公开义务机关（机构）名称" title="请填写政府信息公开义务机关（机构）名称" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" /></td>
+                            <td><input type="text" id="input_zfjgmc" value="请填写政府信息公开义务机关（机构）名称" title="请填写政府信息公开义务机关（机构）名称" onfocus= "javascript:if(this.value=='请填写政府信息公开义务机关（机构）名称')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写政府信息公开义务机关（机构）名称'" /></td>
                         </tr>
                         <tr>
                             <td colspan="5" class="no_border td_shortinput">
                                 <label for="input_zfmc">名称：</label>
-                                <input id="input_zfmc" type="text" value="请填写政府信息公开义务机关（机构）名称" title="请填写政府信息公开义务机关（机构）名称" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" />
+                                <input id="input_zfmc" type="text" value="请填写政府信息公开义务机关（机构）名称" title="请填写政府信息公开义务机关（机构）名称" onfocus= "javascript:if(this.value=='请填写政府信息公开义务机关（机构）名称')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写政府信息公开义务机关（机构）名称'" />
                                 <label for="input_zfwh">文号：</label>
-                                <input type="text" id="input_zfwh" value="请填写政府信息公开义务机关（机构）名称" title="请填写政府信息公开义务机关（机构）名称" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" />
+                                <input type="text" id="input_zfwh" value="请填写政府信息公开义务机关（机构）名称" title="请填写政府信息公开义务机关（机构）名称" onfocus= "javascript:if(this.value=='请填写政府信息公开义务机关（机构）名称')this.value=''" onblur="javascript:if(this.value=='')this.value='请填写政府信息公开义务机关（机构）名称'" />
                             </td>
                         </tr>
                         <tr>
@@ -295,11 +295,11 @@
                         <tr>
                             <td class="no_border align_right">
                                 <label for="input_shrgz">*申请人签名(盖章)</label>
-                                <input type="text" id="input_shrgz" value="申请人签名(盖章)" title="申请人签名(盖章)" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" />
+                                <input type="text" id="input_shrgz" value="申请人签名(盖章)" title="申请人签名(盖章)" onfocus= "javascript:if(this.value=='申请人签名(盖章)')this.value=''" onblur="javascript:if(this.value=='')this.value='申请人签名(盖章)'" />
                             </td>
                         </tr>
                         <tr>
-                            <td class="no_border align_right">申请时间：2015年10月19日</td>
+                            <td class="no_border align_right" id="time"></td>
                         </tr>
                         <tr>
                             <td colspan="2" class="align_center">
@@ -327,6 +327,37 @@
 
 </div>
     <script type="text/javascript">
+     //获取系统时间，将时间以指定格式显示到页面。  
+     function systemTime()  
+     {  
+         //获取系统时间。  
+         var dateTime=new Date(); 
+ 		 var rq=dateTime.toLocaleDateString();
+           
+         //分秒时间是一位数字，在数字前补0。  
+         //mm = extra(mm);  
+         //ss = extra(ss);  
+           
+         //将时间显示到ID为time的位置，时间格式形如：19:18:02  
+         document.getElementById("time").innerHTML="申请时间："+rq;  
+           
+         //每隔1000ms执行方法systemTime()。  
+         //setTimeout("systemTime()",1000);  
+     }  
+          
+     //补位函数。  
+     function extra(x)  
+     {  
+         //如果传入数字小于10，数字前补一位0。  
+         if(x < 10)  
+         {  
+             return "0" + x;  
+         }  
+         else  
+         {  
+             return x;  
+         }  
+     }  
      function pay() {
             var data = { id: $("#div1").html() };
             var json = '{';
