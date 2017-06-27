@@ -1,7 +1,9 @@
 package com.harmony.wenguang.controller;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -11,19 +13,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
-import org.apache.commons.codec.binary.Base64;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSON;
-import com.google.common.io.ByteProcessor;
 import com.google.common.io.Files;
+import com.harmony.wenguang.constant.FileType;
 import com.harmony.wenguang.dao.FormtableMainDao;
 import com.harmony.wenguang.dao.WgBlobDataDao;
-import com.harmony.wenguang.dao.dataobject.FormtableMainDO;
+import com.harmony.wenguang.dao.WgDocumentsDao;
 import com.harmony.wenguang.dao.dataobject.WgBlobDataDO;
+import com.harmony.wenguang.dao.dataobject.WgDocumentsDO;
+import com.harmony.wenguang.service.FileDocument;
+import com.harmony.wenguang.support.Word2Html;
 
 @Controller
 public class TestController {
@@ -35,6 +39,8 @@ public class TestController {
 	FormtableMainDao formtableMainDao;
 	@Resource
 	HttpServletRequest request;
+	@Resource
+	WgDocumentsDao wgDocumentsDao;
 
 	@RequestMapping(value = "/test/createTable.do")
 	@ResponseBody
@@ -45,32 +51,49 @@ public class TestController {
 					"create table wg_test( id int primary key AUTO_INCREMENT, name varchar(100), remark varchar(100) )");
 			executeSql("drop table if exists wg_documents");
 			executeSql(
-					"create table wg_documents(id int primary key AUTO_INCREMENT,file_type varchar(20),doc_name varchar(200),doc_path varchar(200),doc_content blob, status varchar(10))");
+					"create table wg_documents(id int primary key AUTO_INCREMENT,doc_name varchar(200),doc_type varchar(20),doc_content blob, status varchar(10))");
 			executeSql("drop table if exists wg_blob_data");
 			executeSql("create table wg_blob_data(id int primary key AUTO_INCREMENT,name varchar(100), content blob)");
 			executeSql("drop table if exists formtable_main_2");
-			executeSql("CREATE TABLE formtable_main_2 (id int primary key AUTO_INCREMENT,requestId int,	fwh varchar(200),	fwdw int,	jj int,	sfgk int,	qfr int,	zw int,	zs varchar(200),	zbdw int ,	ngr int ,	hbdw text ,	hbr text ,	fj text ,	dz int ,	yfrq char(10) ,	jd int ,	dyfs int ,	bz text ,	ld varchar(2000) ,	sfxyldsy int ,	fwzl int ,	ljxz int ,	czshczz varchar(2000) ,	bgszr varchar(2000) ,	hhbr varchar(100) ,	bgszrrlzy text ,	qz varchar(200) ,	qzx text ,	fwh1 int ,	fwh2 int ,	fwh3 varchar(200) ,	xgtalc int ,	xgtalcbdjm varchar(1000) ,	sfgkwb varchar(200) ,	sfxyhb int ,	yjml int ,	ejml int ,	sjml int ,	hbcs varchar(2000) ,	hbcsczz varchar(2000) ,	ldqz varchar(999) ,	zwbt varchar(999) ,	fjbt varchar(999) ,	fjInputStream varchar(20000) ,	 zwInputStream varchar(20000))");
+			executeSql("CREATE TABLE formtable_main_2 (id int primary key AUTO_INCREMENT,requestId int,	fwh varchar(200),	fwdw int,	jj int,	sfgk int,	qfr int,	zw int,	zs varchar(200),	zbdw int ,	ngr int ,	hbdw text ,	hbr text ,	fj text ,	dz int ,	yfrq char(10) ,	jd int ,	dyfs int ,	bz text ,	ld varchar(2000) ,	sfxyldsy int ,	fwzl int ,	ljxz int ,	czshczz varchar(2000) ,	bgszr varchar(2000) ,	hhbr varchar(100) ,	bgszrrlzy text ,	qz varchar(200) ,	qzx text ,	fwh1 int ,	fwh2 int ,	fwh3 varchar(200) ,	xgtalc int ,	xgtalcbdjm varchar(1000) ,	sfgkwb varchar(200) ,	sfxyhb int ,	yjml int ,	ejml int ,	sjml int ,	hbcs varchar(2000) ,	hbcsczz varchar(2000) ,	ldqz varchar(999) ,	zwbt varchar(999) ,	fjbt varchar(999) ,	fjInputStream varchar(60000) ,	 zwInputStream varchar(60000))");
 		
-		byte[] bs = Files.readBytes(new File("/Users/yinguoliang/Downloads/正则表达式.doc"), new ByteProcessor<byte[]>(){
-			byte[] bytes = null;
+		final byte[] bs = Files.toByteArray(new File("/Users/yinguoliang/Downloads/正则表达式.doc"));
+		WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
+		wgDocumentsDO.setDocContent(bs);
+		wgDocumentsDO.setDocName("正则表达式");
+		wgDocumentsDO.setDocType("doc");
+		wgDocumentsDO.setStatus("1");
+		wgDocumentsDao.insert(wgDocumentsDO);
+		
+		wgDocumentsDO = new WgDocumentsDO();
+		String html=Word2Html.doc2html(new FileDocument(){
+
 			@Override
-			public boolean processBytes(byte[] buf, int off, int len) throws IOException {
-				bytes = new byte[buf.length];
-				for(int i=0;i<buf.length;i++){
-					bytes[i]=buf[i];
-				}
-				return true;
+			public FileType getSuffix() {
+				return null;
 			}
 
 			@Override
-			public byte[] getResult() {
-				return bytes;
+			public InputStream getInputStream() {
+				return new ByteArrayInputStream(bs);
+			}
+
+			@Override
+			public File getFile() {
+				return null;
+			}
+
+			@Override
+			public String getName() {
+				return null;
 			}});
-		String str = new Base64().encodeAsString(bs);
-		System.out.println(str);
-		FormtableMainDO dd = new FormtableMainDO();
-		dd.setZwInputStream(str);
-		formtableMainDao.insert(dd);
+		System.out.println(html);
+		wgDocumentsDO.setDocContent(html.getBytes(Charset.forName("utf-8")));
+		wgDocumentsDO.setDocName("正则表达式页面");
+		wgDocumentsDO.setDocType("html");
+		wgDocumentsDO.setStatus("1");
+		wgDocumentsDao.insert(wgDocumentsDO);
+		
 		} catch (Exception e) {
 			return e.getMessage();
 		}

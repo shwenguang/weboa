@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.util.List;
+import java.util.UUID;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.OutputKeys;
@@ -17,7 +17,6 @@ import javax.xml.transform.stream.StreamResult;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.converter.PicturesManager;
 import org.apache.poi.hwpf.converter.WordToHtmlConverter;
-import org.apache.poi.hwpf.usermodel.Picture;
 import org.apache.poi.hwpf.usermodel.PictureType;
 import org.apache.poi.xwpf.converter.core.FileImageExtractor;
 import org.apache.poi.xwpf.converter.core.FileURIResolver;
@@ -27,6 +26,7 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.w3c.dom.Document;
 
 import com.harmony.wenguang.constant.FileType;
+import com.harmony.wenguang.dao.dataobject.WgDocumentsDO;
 import com.harmony.wenguang.service.FileDocument;
 
 public class Word2Html {
@@ -77,17 +77,23 @@ public class Word2Html {
                                       String suggestedName, 
                                       float widthInches,
                                       float heightInches) {
-                return "test/"+suggestedName;
+            	String docName = UUID.randomUUID().toString().replaceAll("-", "").toUpperCase()+".jpg";
+            	WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
+            	wgDocumentsDO.setDocContent(content);
+            	wgDocumentsDO.setDocName(docName);
+            	wgDocumentsDO.setDocType("pic");
+            	Dao.inst().getWgDocumentsDao().insert(wgDocumentsDO);
+                return "/wg/documents/"+docName;
             }});
         
         wordToHtmlConverter.processDocument(doc);
         
-        List<Picture> pics = doc.getPicturesTable().getAllPictures();
-        if(pics!=null){
-            for(Picture pic : pics){
-                System.out.println(pic.suggestFullFileName());
-            }
-        }
+//        List<Picture> pics = doc.getPicturesTable().getAllPictures();
+//        if(pics!=null){
+//            for(Picture pic : pics){
+//                System.out.println(pic.suggestFullFileName());
+//            }
+//        }
         
         Document htmlDoc = wordToHtmlConverter.getDocument();
         ByteArrayOutputStream out = new ByteArrayOutputStream();

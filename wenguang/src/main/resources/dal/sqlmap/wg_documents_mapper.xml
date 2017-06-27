@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="wg_documents">
+	<resultMap type="com.harmony.wenguang.dao.dataobject.WgDocumentsDO" id="getDocumentByDocNameResultMap">
+		<result column="id" property="id"/>
+		<result column="doc_name" property="docName"/>
+		<result column="doc_content" property="docContent" jdbcType="BLOB" typeHandler="org.apache.ibatis.type.BlobTypeHandler"/>
+		<result column="doc_type" property="docType"/>
+		<result column="status" property="status"/>
+	</resultMap>
+	<insert id="insert">
+		insert into wg_documents(doc_name,doc_type,doc_content,status)
+		values(#{docName},#{docType},#{docContent},#{status})
+	</insert>
+	
+	<select id="selectByExample" resultMap="getDocumentByDocNameResultMap">
+		select id,doc_name,doc_type,doc_content,status
+		from wg_documents
+		where doc_name = #{docName}
+	</select>
+</mapper>
