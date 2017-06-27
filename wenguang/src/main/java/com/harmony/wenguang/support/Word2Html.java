@@ -4,6 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.UUID;
 
@@ -18,8 +19,8 @@ import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.converter.PicturesManager;
 import org.apache.poi.hwpf.converter.WordToHtmlConverter;
 import org.apache.poi.hwpf.usermodel.PictureType;
-import org.apache.poi.xwpf.converter.core.FileImageExtractor;
-import org.apache.poi.xwpf.converter.core.FileURIResolver;
+import org.apache.poi.xwpf.converter.core.IImageExtractor;
+import org.apache.poi.xwpf.converter.core.IURIResolver;
 import org.apache.poi.xwpf.converter.xhtml.XHTMLConverter;
 import org.apache.poi.xwpf.converter.xhtml.XHTMLOptions;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
@@ -30,10 +31,9 @@ import com.harmony.wenguang.dao.dataobject.WgDocumentsDO;
 import com.harmony.wenguang.service.FileDocument;
 
 public class Word2Html {
-	private static String picPath = "D:/alidata1/pics/";
 //    public static void main(String args[]) throws Exception{
-//        convertToHtml("D:/alidata1/origindoc.doc","D:/alidata1/origindoc.html");
-//        convertToHtml("D:/alidata1/origindoc.docx","D:/alidata1/origindocx.html");
+//    	String html = convertToHtml("/Users/yinguoliang/Downloads/魏敏的大论文_王东修改_1228 - 副本.docx");
+//    	System.out.println(html);
 //    }
     
     public static String convertToHtml(final String docFile) throws Exception{
@@ -113,11 +113,25 @@ public class Word2Html {
     }
     
     public static String docx2Html(FileDocument docFile) throws Exception{
+    	final String uuid = UUID.randomUUID().toString().replaceAll("-", "").toUpperCase();
         XWPFDocument doc = new XWPFDocument(docFile.getInputStream());
         XHTMLOptions options = XHTMLOptions.create().indent(4);
-        File imgFolder = new File(picPath);
-        options.setExtractor(new FileImageExtractor(imgFolder));
-        options.URIResolver(new FileURIResolver(imgFolder));
+        options.setExtractor(new IImageExtractor(){
+			public void extract(String imagePath, byte[] imageData) throws IOException {
+				String filepath = uuid+"_"+imagePath.replace("/", "_");
+				WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
+            	wgDocumentsDO.setDocContent(imageData);
+            	wgDocumentsDO.setDocName(filepath);
+            	wgDocumentsDO.setDocType("pic");
+            	Dao.inst().getWgDocumentsDao().insert(wgDocumentsDO);
+			}});
+        options.URIResolver(new IURIResolver(){
+			@Override
+			public String resolve(String uri) {
+				String filepath = uuid+"_"+uri.replace("/", "_");
+				return "/wg/documents/"+filepath;
+			}
+        });
         
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         XHTMLConverter.getInstance().convert(doc, out, options);

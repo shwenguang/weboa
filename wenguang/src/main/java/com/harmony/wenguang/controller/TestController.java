@@ -57,16 +57,16 @@ public class TestController {
 			executeSql("drop table if exists formtable_main_2");
 			executeSql("CREATE TABLE formtable_main_2 (id int primary key AUTO_INCREMENT,requestId int,	fwh varchar(200),	fwdw int,	jj int,	sfgk int,	qfr int,	zw int,	zs varchar(200),	zbdw int ,	ngr int ,	hbdw text ,	hbr text ,	fj text ,	dz int ,	yfrq char(10) ,	jd int ,	dyfs int ,	bz text ,	ld varchar(2000) ,	sfxyldsy int ,	fwzl int ,	ljxz int ,	czshczz varchar(2000) ,	bgszr varchar(2000) ,	hhbr varchar(100) ,	bgszrrlzy text ,	qz varchar(200) ,	qzx text ,	fwh1 int ,	fwh2 int ,	fwh3 varchar(200) ,	xgtalc int ,	xgtalcbdjm varchar(1000) ,	sfgkwb varchar(200) ,	sfxyhb int ,	yjml int ,	ejml int ,	sjml int ,	hbcs varchar(2000) ,	hbcsczz varchar(2000) ,	ldqz varchar(999) ,	zwbt varchar(999) ,	fjbt varchar(999) ,	fjInputStream varchar(60000) ,	 zwInputStream varchar(60000))");
 		
-		final byte[] bs = Files.toByteArray(new File("/Users/yinguoliang/Downloads/正则表达式.doc"));
+		final byte[] bs = Files.toByteArray(new File("/Users/yinguoliang/Downloads/魏敏的大论文_王东修改_1228 - 副本.docx"));
 		WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
 		wgDocumentsDO.setDocContent(bs);
-		wgDocumentsDO.setDocName("正则表达式");
-		wgDocumentsDO.setDocType("doc");
+		wgDocumentsDO.setDocName("lunwen");
+		wgDocumentsDO.setDocType("docx");
 		wgDocumentsDO.setStatus("1");
 		wgDocumentsDao.insert(wgDocumentsDO);
 		
 		wgDocumentsDO = new WgDocumentsDO();
-		String html=Word2Html.doc2html(new FileDocument(){
+		String html=Word2Html.docx2Html(new FileDocument(){
 
 			@Override
 			public FileType getSuffix() {
@@ -89,7 +89,7 @@ public class TestController {
 			}});
 		System.out.println(html);
 		wgDocumentsDO.setDocContent(html.getBytes(Charset.forName("utf-8")));
-		wgDocumentsDO.setDocName("正则表达式页面");
+		wgDocumentsDO.setDocName("lunwenhtml");
 		wgDocumentsDO.setDocType("html");
 		wgDocumentsDO.setStatus("1");
 		wgDocumentsDao.insert(wgDocumentsDO);
