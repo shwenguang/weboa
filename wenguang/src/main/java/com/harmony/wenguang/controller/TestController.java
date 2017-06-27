@@ -46,18 +46,18 @@ public class TestController {
 	@ResponseBody
 	public String createTable() {
 		try {
-			executeSql("drop table IF EXISTS wg_test ");
-			executeSql(
-					"create table wg_test( id int primary key AUTO_INCREMENT, name varchar(100), remark varchar(100) )");
-			executeSql("drop table if exists wg_documents");
-			executeSql(
-					"create table wg_documents(id int primary key AUTO_INCREMENT,doc_name varchar(200),doc_type varchar(20),doc_content blob, status varchar(10))");
-			executeSql("drop table if exists wg_blob_data");
-			executeSql("create table wg_blob_data(id int primary key AUTO_INCREMENT,name varchar(100), content blob)");
-			executeSql("drop table if exists formtable_main_2");
-			executeSql("CREATE TABLE formtable_main_2 (id int primary key AUTO_INCREMENT,requestId int,	fwh varchar(200),	fwdw int,	jj int,	sfgk int,	qfr int,	zw int,	zs varchar(200),	zbdw int ,	ngr int ,	hbdw text ,	hbr text ,	fj text ,	dz int ,	yfrq char(10) ,	jd int ,	dyfs int ,	bz text ,	ld varchar(2000) ,	sfxyldsy int ,	fwzl int ,	ljxz int ,	czshczz varchar(2000) ,	bgszr varchar(2000) ,	hhbr varchar(100) ,	bgszrrlzy text ,	qz varchar(200) ,	qzx text ,	fwh1 int ,	fwh2 int ,	fwh3 varchar(200) ,	xgtalc int ,	xgtalcbdjm varchar(1000) ,	sfgkwb varchar(200) ,	sfxyhb int ,	yjml int ,	ejml int ,	sjml int ,	hbcs varchar(2000) ,	hbcsczz varchar(2000) ,	ldqz varchar(999) ,	zwbt varchar(999) ,	fjbt varchar(999) ,	fjInputStream varchar(60000) ,	 zwInputStream varchar(60000))");
+//			executeSql("drop table IF EXISTS wg_test ");
+//			executeSql(
+//					"create table wg_test( id int primary key AUTO_INCREMENT, name varchar(100), remark varchar(100) )");
+//			executeSql("drop table if exists wg_documents");
+//			executeSql(
+//					"create table wg_documents(id int primary key AUTO_INCREMENT,doc_name varchar(200),doc_type varchar(20),doc_content blob, status varchar(10))");
+//			executeSql("drop table if exists wg_blob_data");
+//			executeSql("create table wg_blob_data(id int primary key AUTO_INCREMENT,name varchar(100), content blob)");
+//			executeSql("drop table if exists formtable_main_2");
+//			executeSql("CREATE TABLE formtable_main_2 (id int primary key AUTO_INCREMENT,requestId int,	fwh varchar(200),	fwdw int,	jj int,	sfgk int,	qfr int,	zw int,	zs varchar(200),	zbdw int ,	ngr int ,	hbdw text ,	hbr text ,	fj text ,	dz int ,	yfrq char(10) ,	jd int ,	dyfs int ,	bz text ,	ld varchar(2000) ,	sfxyldsy int ,	fwzl int ,	ljxz int ,	czshczz varchar(2000) ,	bgszr varchar(2000) ,	hhbr varchar(100) ,	bgszrrlzy text ,	qz varchar(200) ,	qzx text ,	fwh1 int ,	fwh2 int ,	fwh3 varchar(200) ,	xgtalc int ,	xgtalcbdjm varchar(1000) ,	sfgkwb varchar(200) ,	sfxyhb int ,	yjml int ,	ejml int ,	sjml int ,	hbcs varchar(2000) ,	hbcsczz varchar(2000) ,	ldqz varchar(999) ,	zwbt varchar(999) ,	fjbt varchar(999) ,	fjInputStream varchar(60000) ,	 zwInputStream varchar(60000))");
 		
-		final byte[] bs = Files.toByteArray(new File("/Users/yinguoliang/Downloads/魏敏的大论文_王东修改_1228 - 副本.docx"));
+		final byte[] bs = Files.toByteArray(new File("/Users/yinguoliang/Downloads/新建 Microsoft Word 文档 (3).docx"));
 		WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
 		wgDocumentsDO.setDocContent(bs);
 		wgDocumentsDO.setDocName("lunwen");
@@ -100,12 +100,12 @@ public class TestController {
 		return "success";
 	}
 
-	private void executeSql(String sql) throws SQLException {
-		Connection conn = dataSource.getConnection();
-		PreparedStatement stmt = conn.prepareStatement(sql);
-		stmt.executeUpdate();
-		conn.close();
-	}
+//	private void executeSql(String sql) throws SQLException {
+//		Connection conn = dataSource.getConnection();
+//		PreparedStatement stmt = conn.prepareStatement(sql);
+//		stmt.executeUpdate();
+//		conn.close();
+//	}
 
 	@RequestMapping(value = "/test/hello.do")
 	@ResponseBody
