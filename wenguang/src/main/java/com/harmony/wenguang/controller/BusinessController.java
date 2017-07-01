@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.harmony.wenguang.dao.FormtableMainDao;
 import com.harmony.wenguang.dao.dataobject.FormtableMainDO;
@@ -28,7 +29,8 @@ public class BusinessController {
     }
     
     @RequestMapping("/upload.do")
-    public String upload(@RequestParam("file") CommonsMultipartFile file){
+    public ModelAndView upload(@RequestParam("file") CommonsMultipartFile file){
+        ModelAndView mv = new ModelAndView();
         FormtableMainDO md = new FormtableMainDO();
         try(InputStream is = file.getInputStream();
           ByteArrayOutputStream os = new ByteArrayOutputStream();
@@ -40,10 +42,14 @@ public class BusinessController {
             md.setRequestId(new Long(System.currentTimeMillis()).intValue());
             md.setZwInputStream(new Base64().encodeAsString(os.toByteArray()));
             md.setFjInputStream(new Base64().encodeAsString(os.toByteArray()));
+            formtableMainDao.insert(md);
+            mv.addObject("msg", "上传成功");
         } catch (IOException e) {
-            return null;
+            mv.setViewName("fail");
+            mv.addObject("msg", e.getMessage());
+            return mv;
         }
-        formtableMainDao.insert(md);
-        return null;
+        mv.setViewName("success");
+        return mv;
     }
 }
