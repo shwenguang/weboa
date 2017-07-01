@@ -4,7 +4,7 @@
 	<resultMap type="com.harmony.wenguang.dao.dataobject.WgDocumentsDO" id="getDocumentByDocNameResultMap">
 		<result column="id" property="id"/>
 		<result column="doc_name" property="docName"/>
-		<result column="create_date" property="createDate"/>
+		<result column="create_date" property="createDate" javaType="DATE"/>
 		<result column="doc_content" property="docContent"/>
 		<result column="doc_type" property="docType"/>
 		<result column="record_type" property="recordType"/>
@@ -12,7 +12,7 @@
 	</resultMap>
 	<insert id="insert">
 		insert into wg_documents(doc_name,doc_type,doc_content,status,create_date,record_type)
-		values(#{docName},#{docType},#{docContent},#{status},#{createDate},#{recordType})
+		values(#{docName},#{docType},#{docContent},#{status},#{createDate,jdbcType=DATE},#{recordType})
 	</insert>
 	
 	<select id="selectByExample" resultMap="getDocumentByDocNameResultMap">

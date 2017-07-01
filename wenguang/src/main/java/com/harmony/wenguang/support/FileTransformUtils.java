@@ -3,6 +3,7 @@ package com.harmony.wenguang.support;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.InputStream;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.codec.binary.Base64;
@@ -54,6 +55,17 @@ public class FileTransformUtils {
 	        }catch(Exception ex){
 	            html = Word2Html.docx2Html(doc);
 	        }
+	        if(html == null ){
+	            return false;
+	        }
+	        String fjName = requestId + "fj";
+	        if(dd.getFjInputStream()!=null || dd.getFjInputStream().trim().length()>0){
+	            String fjhtml = String.format("<br><br><a href='%s'>%s</a><br><br><br><br>", 
+	                    "/wg/documents/"+fjName,
+	                    "&#x4E0B;&#x8F7D;&#x9644;&#x4EF6;"//"下载附件"的UTF8编码
+	                    );
+	            html = html + fjhtml;
+	        }
 	        WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
 	        wgDocumentsDO.setDocName(requestId+"");
 	        wgDocumentsDO.setDocContent(html);
@@ -63,11 +75,12 @@ public class FileTransformUtils {
 	        Dao.inst().getWgDocumentsDao().insert(wgDocumentsDO);
 	        if(dd.getFjInputStream()!=null){
 	            wgDocumentsDO = new WgDocumentsDO();
-	            wgDocumentsDO.setDocName(requestId+"fj");
+	            wgDocumentsDO.setDocName(fjName);
 	            wgDocumentsDO.setDocContent(dd.getFjInputStream());
 	            wgDocumentsDO.setDocType("doc");
 	            wgDocumentsDO.setRecordType("base64");
 	            wgDocumentsDO.setStatus("1");
+	            wgDocumentsDO.setCreateDate(new Date());
 	            Dao.inst().getWgDocumentsDao().insert(wgDocumentsDO);
 	        }
 	    }
