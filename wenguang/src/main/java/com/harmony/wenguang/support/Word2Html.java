@@ -81,9 +81,11 @@ public class Word2Html {
                                       float heightInches) {
             	String docName = UUID.randomUUID().toString().replaceAll("-", "").toUpperCase()+".jpg";
             	WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
-            	wgDocumentsDO.setDocContent(new String(content));
+            	wgDocumentsDO.setDocContent(new Base64().encodeAsString(content));
             	wgDocumentsDO.setDocName(docName);
             	wgDocumentsDO.setDocType("pic");
+            	wgDocumentsDO.setCreateDate(new Date());
+            	wgDocumentsDO.setRecordType("base64");
             	Dao.inst().getWgDocumentsDao().insert(wgDocumentsDO);
                 return "/wg/documents/"+docName;
             }});
