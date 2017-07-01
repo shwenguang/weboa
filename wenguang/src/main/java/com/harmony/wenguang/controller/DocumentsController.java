@@ -12,6 +12,7 @@ import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.harmony.wenguang.dao.FormtableMainDao;
 import com.harmony.wenguang.dao.WgDocumentsDao;
 import com.harmony.wenguang.dao.dataobject.WgDocumentsDO;
 import com.harmony.wenguang.support.LocalCache;
@@ -23,7 +24,8 @@ public class DocumentsController {
 	HttpServletRequest request;
 	@Resource
 	WgDocumentsDao wgDocumentsDao;
-
+	@Resource
+	FormtableMainDao formtableMainDao;
 	@RequestMapping("/get.do")
 	public String doc(HttpServletResponse response) {
 	    String docName = request.getParameter("docName");

@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class FormtableMainDO implements Serializable{
     private static final long serialVersionUID = 1L;
     Long id;
-	Long requestId;
+    Integer requestId;
 	String fwh;
 	Integer fwdw;
 	Integer jj;
@@ -57,10 +57,10 @@ public class FormtableMainDO implements Serializable{
     public void setId(Long id) {
         this.id = id;
     }
-    public Long getRequestId() {
+    public Integer getRequestId() {
         return requestId;
     }
-    public void setRequestId(Long requestId) {
+    public void setRequestId(Integer requestId) {
         this.requestId = requestId;
     }
     public String getFwh() {

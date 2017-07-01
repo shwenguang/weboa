@@ -3,23 +3,25 @@
 <mapper namespace="formtable_main">
 	<insert id="insert">
 		insert into formtable_main_2(
-		requestId,fwh,fwdw,jj,sfjk,qfr,zw,zs,cs,
+		requestId,fwh,fwdw,jj,sfgk,qfr,zw,zs,cs,
 		zbdw,ngr,hbdw,hbr,fj,dz,yfrq,jd,dyfs,bz,ld,
 		sfxyldsy,fwzl,ljxz,czshczz,bgszr,hhbr,
 		bgszrrlzy,qz,qzx,fwh1,fwh2,fwh3,
 		xgtalc,xgtalcbdjm,sfgkwb,sfxyhb,
 		yjml,ejml,sjml,hbcs,hbcsczz,ldqz,
-		zwbt,fjbt,fjInputStream,zwInputStream
+		zwbt,fjbt,
+		fjInputStream,zwInputStream
 		)
 		values(
-		#{requestId},#{fwh},#{fwdw},#{jj},#{sfjk},#{qfr},#{zw},#{zs},#{cs},
-		#{zbdw},#{ngr},#{hbdw},#{hbr},#{fj},#{dz},#{yfrq},#{jd},#{dyfs},#{bz},#{ld},
-		#{sfxyldsy},#{fwzl},#{ljxz},#{czshczz},#{bgszr},#{hhbr},
-		#{bgszrrlzy},#{qz},#{qzx},#{fwh1},#{fwh2},#{fwh3},
+		#{requestId},#{fwh},#{fwdw},#{jj},#{sfgk},#{qfr},#{zw},#{zs},#{cs},
+		#{zbdw},#{ngr},#{hbdw,jdbcType=VARCHAR},#{hbr,jdbcType=VARCHAR},#{fj,jdbcType=VARCHAR},#{dz},#{yfrq},#{jd},#{dyfs},#{bz,jdbcType=VARCHAR},#{ld},
+		#{sfxyldsy},#{fwzl},#{ljxz},#{czshczz,jdbcType=VARCHAR},#{bgszr},#{hhbr},
+		#{bgszrrlzy,jdbcType=VARCHAR},#{qz},#{qzx,jdbcType=VARCHAR},#{fwh1},#{fwh2},#{fwh3},
 		#{xgtalc},#{xgtalcbdjm},#{sfgkwb},#{sfxyhb},
-		#{yjml},#{ejml},#{sjml},#{hbcs},#{hbcsczz},#{ldqz},
+		#{yjml},#{ejml},#{sjml},#{hbcs,jdbcType=VARCHAR},#{hbcsczz,jdbcType=VARCHAR},#{ldqz,jdbcType=VARCHAR},
 		#{zwbt},#{fjbt},
-		#{fjInputStream},#{zwInputStream })
+		#{fjInputStream,jdbcType=VARCHAR},#{zwInputStream ,jdbcType=VARCHAR}
+		)
 	</insert>
 	
 	<select id="selectByExample" resultType="com.harmony.wenguang.dao.dataobject.FormtableMainDO">
