@@ -2,12 +2,41 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="formtable_main">
 	<insert id="insert">
-		insert into formtable_main_2(fjInputStream,zwInputStream)
-		values(#{fjInputStream},#{zwInputStream })
+		insert into formtable_main_2(
+		requestId,fwh,fwdw,jj,sfjk,qfr,zw,zs,cs,
+		zbdw,ngr,hbdw,hbr,fj,dz,yfrq,jd,dyfs,bz,ld,
+		sfxyldsy,fwzl,ljxz,czshczz,bgszr,hhbr,
+		bgszrrlzy,qz,qzx,fwh1,fwh2,fwh3,
+		xgtalc,xgtalcbdjm,sfgkwb,sfxyhb,
+		yjml,ejml,sjml,hbcs,hbcsczz,ldqz,
+		zwbt,fjbt,fjInputStream,zwInputStream
+		)
+		values(
+		#{requestId},#{fwh},#{fwdw},#{jj},#{sfjk},#{qfr},#{zw},#{zs},#{cs},
+		#{zbdw},#{ngr},#{hbdw},#{hbr},#{fj},#{dz},#{yfrq},#{jd},#{dyfs},#{bz},#{ld},
+		#{sfxyldsy},#{fwzl},#{ljxz},#{czshczz},#{bgszr},#{hhbr},
+		#{bgszrrlzy},#{qz},#{qzx},#{fwh1},#{fwh2},#{fwh3},
+		#{xgtalc},#{xgtalcbdjm},#{sfgkwb},#{sfxyhb},
+		#{yjml},#{ejml},#{sjml},#{hbcs},#{hbcsczz},#{ldqz},
+		#{zwbt},#{fjbt},
+		#{fjInputStream},#{zwInputStream })
 	</insert>
 	
-	<select id="getById" resultType="com.harmony.wenguang.dao.dataobject.FormtableMainDO">
-		select id,fjInputStream,zwInputStream
+	<select id="selectByExample" resultType="com.harmony.wenguang.dao.dataobject.FormtableMainDO">
+		select id,requestId,fjInputStream,zwInputStream
+		 from formtable_main_2
+		<where>
+			<if test="id != null">
+				and id = #{id}
+			</if>
+			<if test="requestId != null">
+				and requestId = #{requestId}
+			</if>
+		</where>
+	</select>
+	
+	<select id="getStreamById" resultType="com.harmony.wenguang.dao.dataobject.FormtableMainDO">
+		select id,requestId,fjInputStream,zwInputStream
 		 from formtable_main_2
 		where id=#{id}
 	</select>

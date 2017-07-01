@@ -8,4 +8,6 @@ public interface WgDocumentsDao {
 	public int insert(WgDocumentsDO wgDocumentsDO);
 	
 	public List<WgDocumentsDO> selectByExample(WgDocumentsDO example);
+	
+	public List<WgDocumentsDO> getStreamById(Integer id);
 }

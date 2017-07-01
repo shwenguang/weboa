@@ -21,4 +21,9 @@ public class WgDocumentsDaoImpl extends SqlSessionDaoSupport implements WgDocume
 		return this.getSqlSession().selectList("wg_documents.selectByExample",example);
 	}
 
+    @Override
+    public List<WgDocumentsDO> getStreamById(Integer id) {
+        return this.getSqlSession().selectList("wg_documents.getStreamById",id);
+    }
+
 }
