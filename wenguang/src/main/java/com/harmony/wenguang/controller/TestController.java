@@ -3,7 +3,6 @@ package com.harmony.wenguang.controller;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.InputStream;
-import java.nio.charset.Charset;
 import java.util.Date;
 
 import javax.annotation.Resource;
@@ -21,9 +20,7 @@ import com.alibaba.fastjson.JSON;
 import com.google.common.io.Files;
 import com.harmony.wenguang.constant.FileType;
 import com.harmony.wenguang.dao.FormtableMainDao;
-import com.harmony.wenguang.dao.WgBlobDataDao;
 import com.harmony.wenguang.dao.WgDocumentsDao;
-import com.harmony.wenguang.dao.dataobject.WgBlobDataDO;
 import com.harmony.wenguang.dao.dataobject.WgDocumentsDO;
 import com.harmony.wenguang.service.FileDocument;
 import com.harmony.wenguang.support.Word2Html;
@@ -32,8 +29,6 @@ import com.harmony.wenguang.support.Word2Html;
 public class TestController {
 	@Resource
 	DataSource dataSource;
-	@Resource
-	WgBlobDataDao wgBlobDataDao;
 	@Resource
 	FormtableMainDao formtableMainDao;
 	@Resource
@@ -127,22 +122,6 @@ public class TestController {
 		ModelAndView mv = new ModelAndView("jsptest");
 		System.out.println(">>>>>>>ssss>>>>>>");
 		return mv;
-	}
-
-	@RequestMapping("/test/blob.do")
-	@ResponseBody
-	public String doblob() {
-		WgBlobDataDO data = new WgBlobDataDO();
-		data.setName("123");
-		data.setContent("Hello Blob".getBytes());
-		wgBlobDataDao.insert(data);
-
-		WgBlobDataDO dd = wgBlobDataDao.getData(1);
-		if (dd != null && dd.getContent() != null) {
-			System.out.println("read from db:" + new String(dd.getContent()));
-		}
-
-		return "success";
 	}
 
 	private void allowCrossDomain(HttpServletResponse response) {
