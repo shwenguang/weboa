@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Date;
 import java.util.UUID;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -15,6 +16,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.converter.PicturesManager;
 import org.apache.poi.hwpf.converter.WordToHtmlConverter;
@@ -79,7 +81,7 @@ public class Word2Html {
                                       float heightInches) {
             	String docName = UUID.randomUUID().toString().replaceAll("-", "").toUpperCase()+".jpg";
             	WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
-            	wgDocumentsDO.setDocContent(content);
+            	wgDocumentsDO.setDocContent(new String(content));
             	wgDocumentsDO.setDocName(docName);
             	wgDocumentsDO.setDocType("pic");
             	Dao.inst().getWgDocumentsDao().insert(wgDocumentsDO);
@@ -120,9 +122,11 @@ public class Word2Html {
 			public void extract(String imagePath, byte[] imageData) throws IOException {
 				String filepath = uuid+"_"+imagePath.replace("/", "_");
 				WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
-            	wgDocumentsDO.setDocContent(imageData);
+            	wgDocumentsDO.setDocContent(new Base64().encodeAsString(imageData));
             	wgDocumentsDO.setDocName(filepath);
             	wgDocumentsDO.setDocType("pic");
+            	wgDocumentsDO.setRecordType("base64");
+            	wgDocumentsDO.setCreateDate(new Date());
             	Dao.inst().getWgDocumentsDao().insert(wgDocumentsDO);
 			}});
         options.URIResolver(new IURIResolver(){

@@ -4,15 +4,14 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.InputStream;
 import java.nio.charset.Charset;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.util.Date;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+import org.apache.commons.codec.binary.Base64;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -57,12 +56,14 @@ public class TestController {
 //			executeSql("drop table if exists formtable_main_2");
 //			executeSql("CREATE TABLE formtable_main_2 (id int primary key AUTO_INCREMENT,requestId int,	fwh varchar(200),	fwdw int,	jj int,	sfgk int,	qfr int,	zw int,	zs varchar(200),	zbdw int ,	ngr int ,	hbdw text ,	hbr text ,	fj text ,	dz int ,	yfrq char(10) ,	jd int ,	dyfs int ,	bz text ,	ld varchar(2000) ,	sfxyldsy int ,	fwzl int ,	ljxz int ,	czshczz varchar(2000) ,	bgszr varchar(2000) ,	hhbr varchar(100) ,	bgszrrlzy text ,	qz varchar(200) ,	qzx text ,	fwh1 int ,	fwh2 int ,	fwh3 varchar(200) ,	xgtalc int ,	xgtalcbdjm varchar(1000) ,	sfgkwb varchar(200) ,	sfxyhb int ,	yjml int ,	ejml int ,	sjml int ,	hbcs varchar(2000) ,	hbcsczz varchar(2000) ,	ldqz varchar(999) ,	zwbt varchar(999) ,	fjbt varchar(999) ,	fjInputStream varchar(60000) ,	 zwInputStream varchar(60000))");
 		
-		final byte[] bs = Files.toByteArray(new File("/Users/yinguoliang/Downloads/新建 Microsoft Word 文档 (3).docx"));
+		final byte[] bs = Files.toByteArray(new File("C:/Users/yinguoliang/Desktop/文档webservices接口.docx"));
 		WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
-		wgDocumentsDO.setDocContent(bs);
+		wgDocumentsDO.setDocContent(new Base64().encodeAsString(bs));
 		wgDocumentsDO.setDocName("lunwen");
 		wgDocumentsDO.setDocType("docx");
 		wgDocumentsDO.setStatus("1");
+		wgDocumentsDO.setCreateDate(new Date());
+		wgDocumentsDO.setRecordType("base64");
 		wgDocumentsDao.insert(wgDocumentsDO);
 		
 		wgDocumentsDO = new WgDocumentsDO();
@@ -88,10 +89,12 @@ public class TestController {
 				return null;
 			}});
 		System.out.println(html);
-		wgDocumentsDO.setDocContent(html.getBytes(Charset.forName("utf-8")));
+		wgDocumentsDO.setDocContent(html);
 		wgDocumentsDO.setDocName("lunwenhtml");
 		wgDocumentsDO.setDocType("html");
 		wgDocumentsDO.setStatus("1");
+		wgDocumentsDO.setCreateDate(new Date());
+		wgDocumentsDO.setRecordType("text");
 		wgDocumentsDao.insert(wgDocumentsDO);
 		
 		} catch (Exception e) {

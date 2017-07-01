@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.IOUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,25 +36,25 @@ public class DocumentsController {
 				return "404";
 			}
 			WgDocumentsDO dd = list.get(0);
-			if(dd.getDocContent()==null || dd.getDocContent().length==0){
+			if(dd.getDocContent()==null || dd.getDocContent().length()==0){
 				return "404";
 			}
 			os = response.getOutputStream();
 			if ("html".equals(dd.getDocType())) {
 				response.setContentType("text/html");
 				response.setCharacterEncoding("utf-8");
-				os.write(dd.getDocContent());
+				os.write(dd.getDocContent().getBytes());
 			} else if ("pic".equals(dd.getDocType())) {
 				response.setContentType("image/pjpeg");
-				os.write(dd.getDocContent());
+				os.write(Base64.decodeBase64(dd.getDocContent()));
 			} else if("txt".equals(dd.getDocType())){
 				response.setContentType("text/plain");
 				response.setCharacterEncoding("utf-8");
-				os.write(dd.getDocContent());
+				os.write(Base64.decodeBase64(dd.getDocContent()));
 			}else {
 				response.setContentType("application/octet-stream");
 				response.addHeader("Content-Disposition","attachment;fileName=" + dd.getDocName() + "." + dd.getDocType());
-				os.write(dd.getDocContent());
+				os.write(Base64.decodeBase64(dd.getDocContent()));
 			}
 			return null;
 		} catch (Exception ex) {

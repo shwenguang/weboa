@@ -40,7 +40,7 @@ public class FileTransformUtils {
 		}
 		IOUtils.closeQuietly(is);
 		WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
-    	wgDocumentsDO.setDocContent(html.getBytes("UTF-8"));
+    	wgDocumentsDO.setDocContent(html);
     	wgDocumentsDO.setDocName(fileName);
     	wgDocumentsDO.setDocType("html");
     	Dao.inst().getWgDocumentsDao().insert(wgDocumentsDO);

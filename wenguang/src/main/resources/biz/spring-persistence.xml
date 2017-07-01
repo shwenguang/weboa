@@ -22,9 +22,9 @@
         <property name="username" value="sa"></property>
         <property name="password" value=""></property> 
         -->
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://localhost:3306/wg_database"></property>
-        <property name="username" value="root"></property>
+        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>
+        <property name="url" value="jdbc:sqlserver://localhost:54364;databaseName=tempdb"></property>
+        <property name="username" value="sa"></property>
         <property name="password" value="123456"></property>
     </bean>
 
