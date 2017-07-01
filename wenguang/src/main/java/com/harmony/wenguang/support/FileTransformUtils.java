@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.codec.binary.Base64;
+import org.jsoup.Jsoup;
 
 import com.harmony.wenguang.constant.FileType;
 import com.harmony.wenguang.dao.dataobject.FormtableMainDO;
@@ -58,17 +59,21 @@ public class FileTransformUtils {
 	        if(html == null ){
 	            return false;
 	        }
+
+	        org.jsoup.nodes.Document htmlDocument = Jsoup.parse(html);
 	        String fjName = requestId + "fj";
 	        if(dd.getFjInputStream()!=null || dd.getFjInputStream().trim().length()>0){
-	            String fjhtml = String.format("<br><br><a href='%s'>%s</a><br><br><br><br>", 
-	                    "/wg/documents/"+fjName,
-	                    "&#x4E0B;&#x8F7D;&#x9644;&#x4EF6;"//"下载附件"的UTF8编码
+	            String fjhtml = String.format("<p style='text-align:center; margin:0 auto;width:200px;'><a href='%s'>下载附件</a><p>", 
+	                    "/wg/documents/"+fjName
 	                    );
-	            html = html + fjhtml;
+	            htmlDocument.select("body").append(fjhtml);
 	        }
+	        htmlDocument.select("head").append("<title>上海文化广播影视管理局</title>");
+	        htmlDocument.select("head").append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />");
+//	        System.out.println(htmlDocument.html());
 	        WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
 	        wgDocumentsDO.setDocName(requestId+"");
-	        wgDocumentsDO.setDocContent(html);
+	        wgDocumentsDO.setDocContent(htmlDocument.html());
 	        wgDocumentsDO.setDocType("html");
 	        wgDocumentsDO.setRecordType("text");
 	        wgDocumentsDO.setStatus("1");
