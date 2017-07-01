@@ -87,7 +87,7 @@ public class Word2Html {
             	wgDocumentsDO.setCreateDate(new Date());
             	wgDocumentsDO.setRecordType("base64");
             	Dao.inst().getWgDocumentsDao().insert(wgDocumentsDO);
-                return "/wg/documents/"+docName;
+                return "/wg/pictures/"+docName;
             }});
         
         wordToHtmlConverter.processDocument(doc);
@@ -135,7 +135,7 @@ public class Word2Html {
 			@Override
 			public String resolve(String uri) {
 				String filepath = uuid+"_"+uri.replace("/", "_");
-				return "/wg/documents/"+filepath;
+				return "/wg/pictures/"+filepath;
 			}
         });
         

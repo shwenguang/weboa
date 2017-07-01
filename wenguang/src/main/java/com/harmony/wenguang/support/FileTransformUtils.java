@@ -16,12 +16,14 @@ import com.harmony.wenguang.service.FileDocument;
 
 
 public class FileTransformUtils {
-	public static boolean transform(Integer requestId) throws Exception{
-	    if(requestId == null || requestId <= 0){
+	public static boolean transform(Long docid,Integer requestId) throws Exception{
+	    if((requestId == null || requestId <= 0)
+	    && (docid == null || docid <= 0)){
 	        return false;
 	    }
 	    FormtableMainDO example = new FormtableMainDO();
 	    example.setRequestId(requestId);
+	    example.setId(docid);
 	    List<FormtableMainDO> list = Dao.inst().getFormtableMainDao().selectByExample(example);
 	    if(list == null || list.size()==0 ){
 	        return false;
@@ -61,7 +63,7 @@ public class FileTransformUtils {
 	        }
 
 	        org.jsoup.nodes.Document htmlDocument = Jsoup.parse(html);
-	        String fjName = requestId + "fj";
+	        String fjName = (requestId!=null?requestId:docid) + "fujian";
 	        if(dd.getFjInputStream()!=null || dd.getFjInputStream().trim().length()>0){
 	            String fjhtml = String.format("<p style='text-align:center; margin:0 auto;width:200px;'><a href='%s'>下载附件</a><p>", 
 	                    "/wg/documents/"+fjName
@@ -72,7 +74,7 @@ public class FileTransformUtils {
 	        htmlDocument.select("head").append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />");
 //	        System.out.println(htmlDocument.html());
 	        WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
-	        wgDocumentsDO.setDocName(requestId+"");
+	        wgDocumentsDO.setDocName((requestId!=null?requestId:docid)+"");
 	        wgDocumentsDO.setDocContent(htmlDocument.html());
 	        wgDocumentsDO.setDocType("html");
 	        wgDocumentsDO.setRecordType("text");

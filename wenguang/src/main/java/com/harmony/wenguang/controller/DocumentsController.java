@@ -32,17 +32,24 @@ public class DocumentsController {
     @RequestMapping("/get.do")
     public String doc(HttpServletResponse response) {
         String docName = request.getParameter("docName");
-        String cacheKey = "get_doc_111111111_" + docName;
+        String docid = request.getParameter("docid");
+        String cacheKey = "get_doc_111111111_" ;
+        if(docName != null ){
+            cacheKey += docName;
+        }else{
+            cacheKey += docid;
+        }
         OutputStream os = null;
         try {
             WgDocumentsDO dd = LocalCache.get(cacheKey);
             if (dd == null) {
                 WgDocumentsDO example = new WgDocumentsDO();
-                example.setDocName(docName);
+                example.setDocName(docName!=null?docName:docid);
                 List<WgDocumentsDO> list = wgDocumentsDao.selectByExample(example);
                 if (list == null || list.size() == 0) {
                     Integer requestId = CommonUtils.parseInt(docName, null);
-                    FileTransformUtils.transform(requestId);
+                    Long longDocid = CommonUtils.parseLong(docid, null);
+                    FileTransformUtils.transform(longDocid,requestId);
                     list = wgDocumentsDao.selectByExample(example);
                     if(list == null || list.size() == 0){
                         return "404";

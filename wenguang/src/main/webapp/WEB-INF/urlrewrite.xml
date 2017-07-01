@@ -12,7 +12,15 @@
 		<to>/html/show.do?id=$1</to>
  	</rule>
  	<rule>
-		<from>^/wg/documents/(.*)</from>
+		<from>^/wg/pictures/(.*)</from>
 		<to>/documents/get.do?docName=$1</to>
+ 	</rule>
+ 	<rule>
+		<from>^/wg/reqid/(.*)</from>
+		<to>/documents/get.do?docName=$1</to>
+ 	</rule>
+ 	<rule>
+		<from>^/wg/docid/(.*)</from>
+		<to>/documents/get.do?docid=$1</to>
  	</rule>
 </urlrewrite>
