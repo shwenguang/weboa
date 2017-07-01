@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.harmony.wenguang.dao.WgDocumentsDao;
 import com.harmony.wenguang.dao.dataobject.WgDocumentsDO;
+import com.harmony.wenguang.support.LocalCache;
 
 @Controller
 @RequestMapping("/documents/")
@@ -25,17 +26,24 @@ public class DocumentsController {
 
 	@RequestMapping("/get.do")
 	public String doc(HttpServletResponse response) {
+	    String docName = request.getParameter("docName");
+	    String cacheKey = "get_doc_111111111_"+docName;
 		OutputStream os = null;
 		try {
-			String docName = request.getParameter("docName");
-//			String reqType = request.getParameter("reqType");
-			WgDocumentsDO example = new WgDocumentsDO();
-			example.setDocName(docName);
-			List<WgDocumentsDO> list = wgDocumentsDao.selectByExample(example);
-			if (list == null || list.size() == 0) {
-				return "404";
-			}
-			WgDocumentsDO dd = list.get(0);
+		    WgDocumentsDO dd = LocalCache.get(cacheKey);
+		    if(dd == null){
+		        WgDocumentsDO example = new WgDocumentsDO();
+	            example.setDocName(docName);
+	            List<WgDocumentsDO> list = wgDocumentsDao.selectByExample(example);
+	            if (list == null || list.size() == 0) {
+	                return "404";
+	            }
+	            dd = list.get(0);
+	            if(dd != null){
+	                LocalCache.cache(cacheKey, dd);
+	                System.out.println("--------- get document from db------------");
+	            }
+		    }
 			if(dd.getDocContent()==null || dd.getDocContent().length()==0){
 				return "404";
 			}
