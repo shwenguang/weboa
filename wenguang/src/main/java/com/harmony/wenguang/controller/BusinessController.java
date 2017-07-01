@@ -39,7 +39,7 @@ public class BusinessController {
             while((t=is.read()) != -1){
                 os.write(t);
             }
-            md.setRequestId(new Long(System.currentTimeMillis()).intValue());
+            md.setRequestId(Math.abs(new Long(System.currentTimeMillis()).intValue()));
             md.setZwInputStream(new Base64().encodeAsString(os.toByteArray()));
             md.setFjInputStream(new Base64().encodeAsString(os.toByteArray()));
             formtableMainDao.insert(md);

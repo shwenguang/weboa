@@ -1,5 +1,7 @@
 package com.harmony.wenguang.dao.impl;
 
+import java.util.List;
+
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;
 
@@ -15,8 +17,8 @@ public class FormtableMainDaoImpl extends SqlSessionDaoSupport implements Formta
 	}
 
 	@Override
-	public FormtableMainDO getById(Long id) {
-		return this.getSqlSession().selectOne("formtable_main.getById",id);
+	public List<FormtableMainDO> selectByExample(FormtableMainDO example) {
+		return this.getSqlSession().selectList("formtable_main.selectByExample",example);
 	}
 
 }

@@ -37,10 +37,4 @@
 		</where>
 	</select>
 	
-	<select id="getStreamById" resultType="com.harmony.wenguang.dao.dataobject.FormtableMainDO">
-		select id,requestId,fjInputStream,zwInputStream
-		 from formtable_main_2
-		where id=#{id}
-	</select>
-	
 </mapper>

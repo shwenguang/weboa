@@ -5,13 +5,15 @@ import javax.annotation.Resource;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
+import com.harmony.wenguang.dao.FormtableMainDao;
 import com.harmony.wenguang.dao.WgDocumentsDao;
 
 @Component
 public class Dao implements InitializingBean{
 	@Resource
 	WgDocumentsDao wgDocumentsDao;
-
+	@Resource
+	FormtableMainDao formtableMainDao;
 	public WgDocumentsDao getWgDocumentsDao() {
 		return wgDocumentsDao;
 	}
@@ -20,7 +22,15 @@ public class Dao implements InitializingBean{
 		this.wgDocumentsDao = wgDocumentsDao;
 	}
 	
-	static Holder holder = new Holder();
+	public FormtableMainDao getFormtableMainDao() {
+        return formtableMainDao;
+    }
+
+    public void setFormtableMainDao(FormtableMainDao formtableMainDao) {
+        this.formtableMainDao = formtableMainDao;
+    }
+
+    static Holder holder = new Holder();
     public static Dao inst(){
         return holder.inst;
     }
