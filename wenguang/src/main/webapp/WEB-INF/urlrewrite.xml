@@ -16,6 +16,10 @@
 		<to>/documents/get.do?docName=$1</to>
  	</rule>
  	<rule>
+		<from>^/wg/documents/(.*)</from>
+		<to>/documents/get.do?docName=$1</to>
+ 	</rule>
+ 	<rule>
 		<from>^/wg/reqid/(.*)</from>
 		<to>/documents/get.do?docName=$1</to>
  	</rule>
