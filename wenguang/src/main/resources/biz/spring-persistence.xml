@@ -23,7 +23,7 @@
         <property name="password" value=""></property> 
         -->
         <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>
-        <property name="url" value="jdbc:sqlserver://localhost:54364;databaseName=tempdb"></property>
+        <property name="url" value="jdbc:sqlserver://localhost:54364;databaseName=master"></property>
         <property name="username" value="sa"></property>
         <property name="password" value="123456"></property>
     </bean>
