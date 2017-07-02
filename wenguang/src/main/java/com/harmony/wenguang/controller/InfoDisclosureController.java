@@ -15,6 +15,8 @@ public class InfoDisclosureController {
 	@RequestMapping("/addNewApply.do")
 	public ModelAndView addNewAplly(ModelAndView mv){
 		mv.setViewName("addNewApply");
+		mv.addObject("aaa", "hello mode");
 		return mv;
 	}
+	//TODO 添加输入数据的处理逻辑
 }

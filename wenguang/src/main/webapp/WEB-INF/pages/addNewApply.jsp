@@ -333,38 +333,21 @@
          //获取系统时间。  
          var dateTime=new Date(); 
  		 var rq=dateTime.toLocaleDateString();
-           
-         //分秒时间是一位数字，在数字前补0。  
-         //mm = extra(mm);  
-         //ss = extra(ss);  
-           
+          
          //将时间显示到ID为time的位置，时间格式形如：19:18:02  
          document.getElementById("time").innerHTML="申请时间："+rq;  
-           
-         //每隔1000ms执行方法systemTime()。  
-         //setTimeout("systemTime()",1000);  
+ 
      }  
-          
-     //补位函数。  
-     function extra(x)  
-     {  
-         //如果传入数字小于10，数字前补一位0。  
-         if(x < 10)  
-         {  
-             return "0" + x;  
-         }  
-         else  
-         {  
-             return x;  
-         }  
-     }  
+ 
      function pay() {
             var data = { id: $("#div1").html() };
             var json = '{';
             var applicant = ''; document_name = ''; applicant_organization = ''; profession = ''; document_num = ''; legal_person = ''; commun_address = ''; telphone = ''; email = ''; zipcode = ''; zfxxgk_name = ''; zf_name = ''; zf_no = ''; description = ''; zfxx_style = ''; carrier_form = ''; use_style = ''; specific_use = ''; fee_reduction = ''; sqr_signature = ''; contacts = '';
             applicant = $("#input_grqm").val();
             document_name = $("#input_zjmc").val();
-            applicant_organization = $("#input_frqm").val(); profession = $("#input_zy").val(); document_num = $("#input_zjhm").val(); legal_person = $("#input_fddbr").val(); commun_address = $("#input_txdz").val(); telphone = $("#input_lxdh").val(); email = $("#input_email").val(); zipcode = $("#input_yzbm").val(); contacts = $("#input_lxr").val(); zfxxgk_name = $("#input_zfjgmc").val(); zf_name = $("#input_zfmc").val(); zf_no = $("#input_zfwh").val(); description = $("#are_jtms").val();
+            applicant_organization = $("#input_frqm").val();
+            profession = $("#input_zy").val(); 
+            document_num = $("#input_zjhm").val(); legal_person = $("#input_fddbr").val(); commun_address = $("#input_txdz").val(); telphone = $("#input_lxdh").val(); email = $("#input_email").val(); zipcode = $("#input_yzbm").val(); contacts = $("#input_lxr").val(); zfxxgk_name = $("#input_zfjgmc").val(); zf_name = $("#input_zfmc").val(); zf_no = $("#input_zfwh").val(); description = $("#are_jtms").val();
             if ($('input[name="hqfs_yj"]:checked')) {
                 if ($('input[name="hqfs_yj"]:checked')[0]) {
                   zfxx_style = $('input[name="hqfs_yj"]:checked')[0].title;
