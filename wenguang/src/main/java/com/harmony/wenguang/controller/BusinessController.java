@@ -3,6 +3,8 @@ package com.harmony.wenguang.controller;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.annotation.Resource;
 
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.alibaba.fastjson.JSONObject;
 import com.harmony.wenguang.dao.FormtableMainDao;
 import com.harmony.wenguang.dao.dataobject.FormtableMainDO;
 
@@ -30,9 +33,58 @@ public class BusinessController {
     public String top(){
         return "top";
     }
+    @RequestMapping("/doclist.do")
+    public ModelAndView doclist(){
+        ModelAndView mv = new ModelAndView("doclist");
+        List<JSONObject> list = new ArrayList<JSONObject>();
+        for(int i=0;i<=10;i++){
+            JSONObject page = new JSONObject();
+            page.put("name", "文件"+i);
+            page.put("url", "/wg/documents/xxxxxxx");
+            list.add(page);
+        }
+        mv.addObject("doclist", list);
+        return mv;
+    }
     @RequestMapping("/left.do")
-    public String left(){
-        return "left";
+    public ModelAndView left(){
+        ModelAndView mv =new ModelAndView("left");
+        List<JSONObject> list = new ArrayList<JSONObject>();
+        JSONObject level1 = new JSONObject();
+        level1.put("menuId", 1);
+        level1.put("menuName", "目录1");
+        level1.put("menuCode", "M001");
+        JSONObject level2 = new JSONObject();
+        level2.put("menuId", 1);
+        level2.put("menuName", "目录2");
+        level2.put("menuCode", "M002");
+        List<JSONObject> sublist2_1 = new ArrayList<JSONObject>();
+        level2.put("subMenu", sublist2_1);
+        JSONObject level21 = new JSONObject();
+        level21.put("menuId", 1);
+        level21.put("menuName", "子目录2");
+        level21.put("menuCode", "SM002");
+        JSONObject level22 = new JSONObject();
+        level22.put("menuId", 1);
+        level22.put("menuName", "子目录2");
+        level22.put("menuCode", "SM002");
+        sublist2_1.add(level21);
+        sublist2_1.add(level22);
+        JSONObject level3 = new JSONObject();
+        level3.put("menuId", 1);
+        level3.put("menuName", "目录3");
+        level3.put("menuCode", "M003");
+        JSONObject level4 = new JSONObject();
+        level4.put("menuId", 1);
+        level4.put("menuName", "目录4");
+        level4.put("menuCode", "M004");
+        
+        list.add(level1);
+        list.add(level2);
+        list.add(level3);
+        list.add(level4);
+        mv.addObject("menuList", list);
+        return mv;
     }
     @RequestMapping("/uploadPage.do")
     public String uploadPage(){
