@@ -22,7 +22,18 @@ public class BusinessController {
     @Resource
     FormtableMainDao formtableMainDao;
     
-    
+    @RequestMapping("/docindex.do")
+    public String docindex(){
+        return "docindex";
+    }
+    @RequestMapping("/top.do")
+    public String top(){
+        return "top";
+    }
+    @RequestMapping("/left.do")
+    public String left(){
+        return "left";
+    }
     @RequestMapping("/uploadPage.do")
     public String uploadPage(){
         return "uploadPage";
