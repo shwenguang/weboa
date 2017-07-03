@@ -4,12 +4,66 @@
 
 <html>
 <head>
+<style type="text/css">
+@charset "utf-8";
 
+body, div, ul, ol, li {
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+	font: 14px/22px "\5B8B\4F53", Arial, Helvetica, sans-serif
+}
+
+ol, ul, li {
+	list-style: none
+}
+
+body {
+	color: #CECECE;
+	background: #FFF
+}
+
+.clear {
+	clear: both;
+	height: 1px;
+	width: 100%;
+	overflow: hidden;
+	margin-top: -1px
+}
+
+a {
+	color: #343434;
+	text-decoration: none
+}
+
+a:hover {
+	color: #BA2636;
+	text-decoration: underline
+}
+
+ul.news {
+	margin: 0 auto;
+	width: 300px
+}
+
+ul.news li {
+	height: 28px;
+	line-height: 28px;
+	text-indent: 10px;
+	width: 100%;
+	overflow: hidden;
+}
+</style>
 </head>
 <body>
-<c:forEach var="item" items="${doclist }" varStatus="vs">  
-   ${vs.index + 1 }. <a href="/wg/docid/1">${item.name }</a><br>
-</c:forEach>  
+	<ul class="news">
+		<c:forEach var="item" items="${doclist }" varStatus="vs">
+			<li>
+				<b><em>${vs.index + 1 }</em></b> 
+				<a href="/wg/docid/1">${item.name }</a>
+			</li>
+		</c:forEach>
+	</ul>
 </body>
 </html>
 
