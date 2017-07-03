@@ -14,17 +14,4 @@ public class WgInputDaoImpl extends SqlSessionDaoSupport implements WgInputDao {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
-	@Override
-	public List<WgInputDO> selectByExample(WgInputDO wgInputDO) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int update(WgInputDO wgInputDO) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

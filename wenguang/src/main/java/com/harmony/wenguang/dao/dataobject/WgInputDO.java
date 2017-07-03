@@ -32,11 +32,11 @@ public class WgInputDO {
 	//所需政府信息(其它特征描述)
 	private String Government_information;
 	//获取政府信息的方式  邮递、传真、递送、当面领取、现场查阅、电子邮件
-	private int mode;
+	private String mode;
 	//获取政府信息的载体形式 纸质文本、光盘、磁盘
-	private int carrier;
+	private String carrier;
 	//所需政府信息用途类型 自身生产需要、自身科研的需要、自身生活的需要、查验自身信息
-	private int use_type;
+	private String use_type;
 	//所需政府信息用途
 	private String Information_use;
 	//减免费用理由 农村五保户供养对象、属于城乡居民最低生活保障对象、属于领取国家抚恤补助的优抚对象、确有其他经济困难
@@ -133,22 +133,22 @@ public class WgInputDO {
 	public void setGovernment_information(String government_information) {
 		Government_information = government_information;
 	}
-	public int getMode() {
+	public String getMode() {
 		return mode;
 	}
-	public void setMode(int mode) {
+	public void setMode(String mode) {
 		this.mode = mode;
 	}
-	public int getCarrier() {
+	public String getCarrier() {
 		return carrier;
 	}
-	public void setCarrier(int carrier) {
+	public void setCarrier(String carrier) {
 		this.carrier = carrier;
 	}
-	public int getUse_type() {
+	public String getUse_type() {
 		return use_type;
 	}
-	public void setUse_type(int use_type) {
+	public void setUse_type(String use_type) {
 		this.use_type = use_type;
 	}
 	public String getInformation_use() {

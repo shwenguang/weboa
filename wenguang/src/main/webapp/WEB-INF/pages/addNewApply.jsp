@@ -20,34 +20,6 @@
 <div id="skip"><a href="#content" title="跳转到主要内容区域" accesskey="2">跳转到主要内容区域</a></div>
 <div id="container">
     <div id="header">
-        <!-- <div id="header_top">
-            <div class="pageCenter">
-                <h1 id="logo"><img src="/static/images/mf_headerLogo.gif" alt="上海市文化广播影视管理局 上海市文物局" title="上海市文化广播影视管理局 上海市文物局" /></h1>
-                <ul id="quickLink">
-                    <li><a href="http://wgj.sh.gov.cn/" title="简体">简体</a></li>
-                    <li><a href="http://big5.eastday.com:82/gate/big5/wgj.eastday.com/" title="繁体">繁体</a></li>
-                    <li><a href="http://hz.eastday.com/wgjc/report.aspx" title="纠错">纠错</a></li>
-                    <li><a href="javascript:ABT.show()" title="无障碍浏览工具">无障碍浏览工具</a></li>
-                </ul>
-                <ul id="mainnav">
-                    <li><a href="/node2/n2029/index.html" target="_parent" title="首页">首页</a></li>
-                    <li><a href="/node2/n2029/n2030/index.html" target="_parent" title="要闻动态">要闻动态</a></li>
-                    <li class="navSelect"><a href="/node2/n2029/n2031/index.html" target="_parent" title="政府信息公开">政府信息公开</a></li>
-                    <li><a href="http://wsbs.wgj.sh.gov.cn/shwgj_zwdt/core/web/welcome/index!all.action" target="_parent" title="网上政务大厅">网上政务大厅</a></li>
-                    <li><a href="/node2/n2029/n2032/index.html" target="_parent" title="政民互动">政民互动</a></li>
-                    <li><a href="/node2/n2029/n2033/index.html" target="_parent" title="公众服务">公众服务</a></li>
-                    <li><a href="/node2/n2029/n2034/index.html" target="_parent" title="走进文广">走进文广</a></li>
-                </ul>
-                <div class="clear"></div>
-            </div>
-        </div> -->
-       <!--  <div id="header_bottom">
-            <div class="pageCenter">
-                <h2 id="subTitle"><img src="/static/images/mf_subTitle.gif" alt="网上政务大厅" title="网上政务大厅" /></h2>
-                <iframe id="mainSearchFrame" src="/node2/n2029/n2158/n2187/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="搜索"></iframe>
-                <div class="clear"></div>
-            </div>
-        </div> -->
     </div>
     <div id="main">
         <div id="mainTop">
@@ -56,18 +28,15 @@
                     <ul>
                         <li><a href="/node2/n2029/index.html" target="_blank" title="首页">首页</a></li>
                         <li><a href="/node2/n2029/n2031/index.html" target="_parent" title="政府信息公开">政府信息公开</a></li>
-                        <li>${aaa }</li>
                     </ul>
                 </div>
-                <!--  <iframe id="subSearchFrame" src="/node2/n2029/n2158/n2188/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="本栏检索"></iframe>
-                <div class="clear"></div> -->
             </div>
         </div>
         <div class="pageCenter" id="content">
             <div id="maincontent">
                 <h3 class="pubtitle1">依申请公开</h3>
 				<ul class="publist1">
-                	<li><a href="/node2/n2029/n2031/n2178/index.html" target="_parent" title="网上申请"><em class="abtFlag">网上申请</em></a></li>
+                	<!--  <li><a href="/node2/n2029/n2031/n2178/index.html" target="_parent" title="网上申请"><em class="abtFlag">网上申请</em></a></li>
 
                     <li><a href="/node2/n2029/n2031/n2178/n2179/index.html" target="_parent" title="受理申请机构"><em class="abtFlag">受理申请机构</em></a></li>
 
@@ -80,8 +49,7 @@
                     <li><a href="/node2/n2029/n2031/n2178/n2182/index.html" target="_parent" title="信息公开申请流程图"><em class="abtFlag">信息公开申请流程图</em></a></li>
 
                     <li><a href="/node2/n2029/n2031/n2178/n2183/index.html" target="_parent" title="申请表下载"><em class="abtFlag">申请表下载</em></a></li>
-
-					
+                    -->
                 </ul>
                 <form id="form_ysqgk" action="http://wgj.sh.gov.cn/node2/n2029/n2031/n2178/index.html?#">
                     <table id="table_ysqgk" border="0" cellspacing="0" cellpadding="0" summary="申请公开表">
@@ -316,17 +284,12 @@
                     </table>
                 </form>
             </div>
-             <!-- <div id="rightsidebar">
-                <iframe id="xxgk_gkml_hideysqgk" src="/node2/n2029/n2158/n2193/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="信息公开目录"></iframe>
-                <iframe id="xxgk_ztlm" src="/node2/n2029/n2158/n2192/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="专题栏目"></iframe>
-                <iframe id="xxgk_zkcx" src="/node2/n2029/n2158/n2194/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="状况查询"></iframe>
-			</div> -->
             <div class="clear"></div>
         </div>
     </div>
 
 </div>
-    <script type="text/javascript">
+<script type="text/javascript">
      //获取系统时间，将时间以指定格式显示到页面。  
      function systemTime()  
      {  
@@ -342,12 +305,41 @@
      function pay() {
             var data = { id: $("#div1").html() };
             var json = '{';
-            var applicant = ''; document_name = ''; applicant_organization = ''; profession = ''; document_num = ''; legal_person = ''; commun_address = ''; telphone = ''; email = ''; zipcode = ''; zfxxgk_name = ''; zf_name = ''; zf_no = ''; description = ''; zfxx_style = ''; carrier_form = ''; use_style = ''; specific_use = ''; fee_reduction = ''; sqr_signature = ''; contacts = '';
+            var applicant = ''; 
+            document_name = ''; 
+            applicant_organization = ''; 
+            profession = ''; 
+            document_num = ''; 
+            legal_person = ''; 
+            commun_address = ''; 
+            telphone = ''; email = ''; 
+            zipcode = ''; 
+            zfxxgk_name = ''; 
+            zf_name = ''; 
+            zf_no = ''; 
+            description = ''; 
+            zfxx_style = ''; 
+            carrier_form = ''; 
+            use_style = ''; 
+            specific_use = ''; 
+            fee_reduction = ''; 
+            sqr_signature = ''; 
+            contacts = '';
             applicant = $("#input_grqm").val();
             document_name = $("#input_zjmc").val();
             applicant_organization = $("#input_frqm").val();
             profession = $("#input_zy").val(); 
-            document_num = $("#input_zjhm").val(); legal_person = $("#input_fddbr").val(); commun_address = $("#input_txdz").val(); telphone = $("#input_lxdh").val(); email = $("#input_email").val(); zipcode = $("#input_yzbm").val(); contacts = $("#input_lxr").val(); zfxxgk_name = $("#input_zfjgmc").val(); zf_name = $("#input_zfmc").val(); zf_no = $("#input_zfwh").val(); description = $("#are_jtms").val();
+            document_num = $("#input_zjhm").val(); 
+            legal_person = $("#input_fddbr").val(); 
+            commun_address = $("#input_txdz").val(); 
+            telphone = $("#input_lxdh").val(); 
+            email = $("#input_email").val(); 
+            zipcode = $("#input_yzbm").val(); 
+            contacts = $("#input_lxr").val(); 
+            zfxxgk_name = $("#input_zfjgmc").val(); 
+            zf_name = $("#input_zfmc").val(); 
+            zf_no = $("#input_zfwh").val(); 
+            description = $("#are_jtms").val();
             if ($('input[name="hqfs_yj"]:checked')) {
                 if ($('input[name="hqfs_yj"]:checked')[0]) {
                   zfxx_style = $('input[name="hqfs_yj"]:checked')[0].title;
@@ -369,6 +361,7 @@
                 if (jtyt_wbh[i].checked) fee_reduction += jtyt_wbh[i].title + ',';  //如果选中，将value添加到变量s中
             }
             sqr_signature = $("#input_shrgz").val();
+            
             if (applicant != undefined && applicant != '' && applicant.indexOf('请填写') < 0) {
                 json = json + '"Applicant":"' + applicant + '"';
             }
@@ -433,7 +426,7 @@
                 json = json + ',"Sqr_Signature":"' + sqr_signature + '"';
             }
             json = json + "}";
-            $.post("http://newappl.eastday.com/apply/api/Sum/ApplyForm", { jsonstr: json }, function (result) {
+            $.post("http://localhost/info/disclosure/insert", { jsonstr: json }, function (result) {
                if(result){
                  if (result.Code === '1') {
                     alert(result.Message);
