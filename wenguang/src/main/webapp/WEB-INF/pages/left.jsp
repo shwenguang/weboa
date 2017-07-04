@@ -35,6 +35,10 @@
 				$(this).siblings('ul').slideUp(100);
 			}
 			return null;
+		});
+		
+		$("a[code]").click(function(){
+			alert($(this).attr("code"))
 		})
 	});
 	
@@ -56,18 +60,18 @@
 				<ul style="display: none">
 					<li><a href="#" class="inactive active">子目录1</a>
 						<ul>
-							<li><a href="#">AAAA</a></li>
-							<li><a href="#">BBBB</a></li>
-							<li><a href="#">CCCC</a></li>
+							<li><a href="#" code="aaaa">AAAA</a></li>
+							<li><a href="#" code="bbbb">BBBB</a></li>
+							<li><a href="#" code="cccc">CCCC</a></li>
 						</ul>
 					</li> 
 					<li><a href="#" class="inactive active">子目录2</a>   
 						<ul>
-							<li><a href="#">AAAAA</a></li>
-							<li><a href="#">BBBBB</a></li>
-							<li><a href="#">CCCCC</a></li>
-							<li><a href="#">DDDDD</a></li>
-							<li><a href="#">EEEEE</a></li>
+							<li><a href="#" code="aaa">AAAAA</a></li>
+							<li><a href="#" code="bbb">BBBBB</a></li>
+							<li><a href="#" code="ccc">CCCCC</a></li>
+							<li><a href="#" code="ddd">DDDDD</a></li>
+							<li><a href="#" code="eee">EEEEE</a></li>
 						</ul>
 					</li>
 					<li class="last"><a href="#">子目录3</a></li>
