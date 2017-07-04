@@ -42,8 +42,8 @@ a:hover {
 }
 
 ul.news {
-	margin: 0 auto;
-	width: 300px
+	margin-left: 60px;
+	width: 600px
 }
 
 ul.news li {
@@ -53,14 +53,29 @@ ul.news li {
 	width: 100%;
 	overflow: hidden;
 }
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    margin-left: 30px;
+    margin-top: 30px;
+    width:200px;
+    text-align:center;
+}
 </style>
 </head>
 <body>
+	<h3>文件列表</h3>
 	<ul class="news">
 		<c:forEach var="item" items="${doclist }" varStatus="vs">
 			<li>
-				<b><em>${vs.index + 1 }</em></b> 
-				<a href="/wg/docid/1">${item.name }</a>
+				<span style="width: 30px; position: relative;"><b><em>${vs.index + 1 }</em></b> </span>
+				<span style="width: 2000px;position: relative;"><a href="/wg/docid/1">${item.name }</a></span>
+				<span style="width: 200px;position: relative;">2017-01-02发</span>
 			</li>
 		</c:forEach>
 	</ul>

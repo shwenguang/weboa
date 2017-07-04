@@ -37,9 +37,9 @@ public class BusinessController {
     public ModelAndView doclist(){
         ModelAndView mv = new ModelAndView("doclist");
         List<JSONObject> list = new ArrayList<JSONObject>();
-        for(int i=0;i<=10;i++){
+        for(int i=0;i<=20;i++){
             JSONObject page = new JSONObject();
-            page.put("name", "文件"+i);
+            page.put("name", "上海文广局关于改善和加强网络信息维护通知【2018】");
             page.put("url", "/wg/documents/xxxxxxx");
             list.add(page);
         }
