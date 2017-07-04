@@ -24,6 +24,12 @@
 		)
 	</insert>
 	
+	<select id="selectSimpleByExample" resultType="com.harmony.wenguang.dao.dataobject.FormtableMainDO">
+		select id,requestId,fwh,fwdw,jj,sfgk,qfr,zw,zs,cs,zbdw,ngr,hbdw,hbr,fj,dz,bz,sfgkwb,zwbt,fjbt
+		 from formtable_main_2
+		
+	</select>
+	
 	<select id="selectByExample" resultType="com.harmony.wenguang.dao.dataobject.FormtableMainDO">
 		select id,requestId,fjInputStream,zwInputStream
 		 from formtable_main_2

@@ -20,5 +20,9 @@ public class FormtableMainDaoImpl extends SqlSessionDaoSupport implements Formta
 	public List<FormtableMainDO> selectByExample(FormtableMainDO example) {
 		return this.getSqlSession().selectList("formtable_main.selectByExample",example);
 	}
+	
+	public List<FormtableMainDO> selectSimpleByExample(FormtableMainDO example){
+	    return this.getSqlSession().selectList("formtable_main.selectSimpleByExample",example);
+	}
 
 }

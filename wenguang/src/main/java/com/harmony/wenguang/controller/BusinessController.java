@@ -9,6 +9,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -37,10 +38,14 @@ public class BusinessController {
     public ModelAndView doclist(){
         ModelAndView mv = new ModelAndView("doclist");
         List<JSONObject> list = new ArrayList<JSONObject>();
-        for(int i=0;i<=20;i++){
+        List<FormtableMainDO> dataList = formtableMainDao.selectSimpleByExample(null);
+        if(dataList != null)
+        for(FormtableMainDO data : dataList){
             JSONObject page = new JSONObject();
-            page.put("name", "上海文广局关于改善和加强网络信息维护通知【2018】");
-            page.put("url", "/wg/documents/xxxxxxx");
+            String name = data.getZwbt();
+            page.put("name", StringUtils.isBlank(name)?"文件":name);
+            page.put("url", "/wg/reqid/"+data.getRequestId());
+            page.put("zs", data.getZs());
             list.add(page);
         }
         mv.addObject("doclist", list);

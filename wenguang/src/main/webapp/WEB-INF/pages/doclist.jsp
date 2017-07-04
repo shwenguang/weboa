@@ -74,8 +74,8 @@ h3 {
 		<c:forEach var="item" items="${doclist }" varStatus="vs">
 			<li>
 				<span style="width: 30px; position: relative;"><b><em>${vs.index + 1 }</em></b> </span>
-				<span style="width: 2000px;position: relative;"><a href="/wg/docid/1">${item.name }</a></span>
-				<span style="width: 200px;position: relative;">2017-01-02发</span>
+				<span style="width: 2000px;position: relative;"><a href="${item.url }">${item.name }</a></span>
+				<span style="width: 200px;position: relative;">${item.zs }</span>
 			</li>
 		</c:forEach>
 	</ul>
