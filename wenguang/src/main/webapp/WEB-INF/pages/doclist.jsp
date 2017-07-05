@@ -72,7 +72,7 @@ h3 {
 		<ul class="news">
 			<li v-for="doc in docs">
 				<span style="width: 30px; position: relative;"><b><em>111</em></b></span>
-				<span style="width: 2000px; position: relative;"><a href="#">{{doc.name}}</a></span>
+				<span style="width: 2000px; position: relative;"><a href="{{doc.url}}">{{doc.name}}</a></span>
 				<span style="width:200px; position: relative;"> 2017-01-01 </span>
 			</li>
 		</ul>
