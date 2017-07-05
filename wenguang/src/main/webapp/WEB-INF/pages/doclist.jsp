@@ -55,30 +55,50 @@ ul.news li {
 }
 
 h3 {
-    display: block;
-    font-size: 1.17em;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    margin-left: 30px;
-    margin-top: 30px;
-    width:200px;
-    text-align:center;
+	display: block;
+	font-size: 1.17em;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	margin-left: 30px;
+	margin-top: 30px;
+	width: 200px;
+	text-align: center;
 }
 </style>
 </head>
 <body>
 	<h3>文件列表</h3>
-	<ul class="news">
-		<c:forEach var="item" items="${doclist }" varStatus="vs">
-			<li>
-				<span style="width: 30px; position: relative;"><b><em>${vs.index + 1 }</em></b> </span>
-				<span style="width: 2000px;position: relative;"><a href="${item.url }">${item.name }</a></span>
-				<span style="width: 200px;position: relative;">${item.zs }</span>
+	<div id="app">
+		<ul class="news">
+			<li v-for="doc in docs">
+				<span style="width: 30px; position: relative;"><b><em>111</em></b></span>
+				<span style="width: 2000px; position: relative;"><a href="#">{{doc.name}}</a></span>
+				<span style="width:200px; position: relative;"> 2017-01-01 </span>
 			</li>
-		</c:forEach>
-	</ul>
+		</ul>
+	</div>
+	<script src="//vuejs.org/js/vue.min.js"></script>
+	<script src="//libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript">
+		var data = {
+			docs:[]
+		}
+		function hello(p) {
+			axios.get("/busi/querydocs.do", {
+				params : {
+					code : p.code
+				}
+			}).then(function(res) {
+				data.docs = res.data;
+			})
+		}
+		var vm = new Vue({
+			el : "#app",
+			data : data
+		})
+	</script>
 </body>
 </html>
-

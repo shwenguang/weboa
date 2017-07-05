@@ -16,6 +16,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -43,12 +44,17 @@ public class BusinessController {
     }
     @RequestMapping("/doclist.do")
     public ModelAndView doclist(){
+        ModelAndView mv = new ModelAndView("doclist");
+        return mv;
+    }
+    @RequestMapping(value="/querydocs.do", produces="application/json; charset=UTF-8")
+    @ResponseBody
+    public Object querydocs(){
         Enumeration<String> em = request.getParameterNames();
         while(em.hasMoreElements()){
             String key = em.nextElement();
             System.out.println(key+":::::"+request.getParameter(key));
         }
-        ModelAndView mv = new ModelAndView("doclist");
         List<JSONObject> list = new ArrayList<JSONObject>();
         List<FormtableMainDO> dataList = formtableMainDao.selectSimpleByExample(null);
         if(dataList != null)
@@ -60,8 +66,7 @@ public class BusinessController {
             page.put("zs", data.getZs());
             list.add(page);
         }
-        mv.addObject("doclist", list);
-        return mv;
+        return list;
     }
     @RequestMapping("/left.do")
     public ModelAndView left(){

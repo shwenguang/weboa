@@ -39,8 +39,9 @@
 		});
 		
 		$("a[code]").click(function(){
-			//alert($(this).attr("code"))
-			alert(document.parent)
+			self.parent.frames["rightFrame"].hello({
+				code:$(this).attr("code")
+			})
 		})
 	});
 	
@@ -55,7 +56,7 @@
 				<a href="#" class="inactive active">${menu.name }</a>
 				<ul>
 					<c:forEach items="${menu.subs }" var="subMenu">
-						<li><a href="#">${subMenu.name }</a></li>
+						<li><a href="#" code="${subMenu.name }">${subMenu.name }</a></li>
 					</c:forEach>
 				</ul>
 			</li>
