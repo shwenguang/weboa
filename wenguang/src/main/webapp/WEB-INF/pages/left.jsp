@@ -1,5 +1,6 @@
 <%@ page pageEncoding="UTF-8"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -16,7 +17,7 @@
 	.list ul li .inactive{ background:url(images/off.png) no-repeat 184px center;}
 	.list ul li .inactives{background:url(images/on.png) no-repeat 184px center;} 
 	.list ul li ul{display: none;}
-	.list ul li ul li { border-left:0; border-right:0; background-color:#e07033; border-color:#467ca2;}
+	.list ul li ul li { border-left:0; border-right:0; background-color:#6196bb; border-color:#467ca2;}
 	.list ul li ul li ul{display: none;}
 	.list ul li ul li a{ padding-left:20px;}
 	.list ul li ul li ul li { background-color:#d6e6f1; border-color:#6196bb; }
@@ -38,7 +39,8 @@
 		});
 		
 		$("a[code]").click(function(){
-			alert($(this).attr("code"))
+			//alert($(this).attr("code"))
+			alert(document.parent)
 		})
 	});
 	
@@ -48,35 +50,48 @@
 <body>
 	<div class="list">
 		<ul class="yiji">
-			<li><a href="#" class="inactive active">目录一</a>
+			<c:forEach items="${menuList }" var="menu">
+			<li>
+				<a href="#" class="inactive active">${menu.name }</a>
 				<ul>
-					<li><a href="#">子目录1</a></li>
-					<li><a href="#">子目录2</a></li>
-					<li><a href="#">子目录3</a></li>
+					<c:forEach items="${menu.subs }" var="subMenu">
+						<li><a href="#">${subMenu.name }</a></li>
+					</c:forEach>
 				</ul>
 			</li>
-
-			<li><a href="#" class="inactive">目录二</a>
-				<ul style="display: none">
-					<li><a href="#" class="inactive active">子目录1</a>
-						<ul>
-							<li><a href="#" code="aaaa">AAAA</a></li>
-							<li><a href="#" code="bbbb">BBBB</a></li>
-							<li><a href="#" code="cccc">CCCC</a></li>
-						</ul>
-					</li> 
-					<li><a href="#" class="inactive active">子目录2</a>   
-						<ul>
-							<li><a href="#" code="aaa">AAAAA</a></li>
-							<li><a href="#" code="bbb">BBBBB</a></li>
-							<li><a href="#" code="ccc">CCCCC</a></li>
-							<li><a href="#" code="ddd">DDDDD</a></li>
-							<li><a href="#" code="eee">EEEEE</a></li>
-						</ul>
-					</li>
-					<li class="last"><a href="#">子目录3</a></li>
-				</ul>
-			</li>
+			</c:forEach>
+<!-- 			<li><a href="#" class="inactive active">组织机构简介</a> -->
+<!-- 				<ul> -->
+<!-- 					<li><a href="#">上海市人民政府</a></li> -->
+<!-- 					<li><a href="#">上海市人民政府办公厅</a></li> -->
+<!-- 					<li><a href="#">上海市人民政府组成部门</a></li> -->
+<!-- 					<li><a href="#">上海市人民政府直属机构</a></li> -->
+<!-- 					<li><a href="#">其他</a></li> -->
+<!-- 				</ul> -->
+<!-- 			</li> -->
+			
+			
+<!-- 			<li><a href="#" class="inactive">目录二</a> -->
+<!-- 				<ul style="display: none"> -->
+<!-- 					<li><a href="#" class="inactive active">子目录1</a> -->
+<!-- 						<ul> -->
+<!-- 							<li><a href="#" code="aaaa">AAAA</a></li> -->
+<!-- 							<li><a href="#" code="bbbb">BBBB</a></li> -->
+<!-- 							<li><a href="#" code="cccc">CCCC</a></li> -->
+<!-- 						</ul> -->
+<!-- 					</li>  -->
+<!-- 					<li><a href="#" class="inactive active">子目录2</a>    -->
+<!-- 						<ul> -->
+<!-- 							<li><a href="#" code="aaa">AAAAA</a></li> -->
+<!-- 							<li><a href="#" code="bbb">BBBBB</a></li> -->
+<!-- 							<li><a href="#" code="ccc">CCCCC</a></li> -->
+<!-- 							<li><a href="#" code="ddd">DDDDD</a></li> -->
+<!-- 							<li><a href="#" code="eee">EEEEE</a></li> -->
+<!-- 						</ul> -->
+<!-- 					</li> -->
+<!-- 					<li class="last"><a href="#">子目录3</a></li> -->
+<!-- 				</ul> -->
+<!-- 			</li> -->
 		</ul>
 	</div>
 </body>
