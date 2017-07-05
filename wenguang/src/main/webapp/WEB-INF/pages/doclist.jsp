@@ -63,14 +63,12 @@ h3 {
 	-webkit-margin-end: 0px;
 	margin-left: 30px;
 	margin-top: 30px;
-	width: 200px;
-	text-align: center;
 }
 </style>
 </head>
 <body>
-	<h3>文件列表</h3>
 	<div id="app">
+		<h3>> {{paramCode}}</h3>
 		<ul class="news">
 			<li v-for="doc in docs">
 				<span style="width: 30px; position: relative;"><b><em>111</em></b></span>
@@ -84,9 +82,11 @@ h3 {
 	<script src="//unpkg.com/axios/dist/axios.min.js"></script>
 	<script type="text/javascript">
 		var data = {
+			paramCode:'文件列表',
 			docs:[]
 		}
 		function hello(p) {
+			data.paramCode = p.code;
 			axios.get("/busi/querydocs.do", {
 				params : {
 					code : p.code
