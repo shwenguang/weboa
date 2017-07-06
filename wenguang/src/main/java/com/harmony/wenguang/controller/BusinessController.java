@@ -71,7 +71,7 @@ public class BusinessController {
             page.put("name", StringUtils.isBlank(name)?"文件":name);
             page.put("url", "/wg/reqid/"+data.getRequestId());
             page.put("zs", data.getZs());
-            page.put("rowId", data.getRowId());
+            page.put("rowid", data.getRowId());
             list.add(page);
         }
         return list;
