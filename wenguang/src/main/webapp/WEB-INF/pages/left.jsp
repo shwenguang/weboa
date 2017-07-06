@@ -39,7 +39,7 @@
 		});
 		
 		$("a[code]").click(function(){
-			self.parent.frames["rightFrame"].hello({
+			self.parent.frames["rightFrame"].doBusiness({
 				code:$(this).attr("code"),
 				m1:$(this).attr("m1"),
 				m2:$(this).attr("m2")

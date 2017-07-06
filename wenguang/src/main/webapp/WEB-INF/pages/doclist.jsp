@@ -96,7 +96,7 @@ h3 {
 				{name:"测试测试HHHHHHHHH",url:"/wg/reqid/8", rowid:8}
 			]
 		}
-		function hello(p) {
+		function doBusiness(p) {
 			data.paramCode = p.code;
 			data.m1 = p.m1;
 			data.m2 = p.m2;
