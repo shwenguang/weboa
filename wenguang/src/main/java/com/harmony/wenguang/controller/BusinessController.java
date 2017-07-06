@@ -10,7 +10,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,12 +18,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.harmony.wenguang.dao.FormtableMain39Dao;
+import com.harmony.wenguang.dao.FormtableMain40Dao;
 import com.harmony.wenguang.dao.FormtableMainDao;
+import com.harmony.wenguang.dao.dataobject.FormtableMain39DO;
+import com.harmony.wenguang.dao.dataobject.FormtableMain40DO;
 import com.harmony.wenguang.dao.dataobject.FormtableMainDO;
 import com.harmony.wenguang.support.CommonUtils;
+import com.harmony.wenguang.support.LocalCache;
 
 @Controller
 @RequestMapping("/busi")
@@ -33,7 +36,11 @@ public class BusinessController {
     HttpServletRequest request;
     @Resource
     FormtableMainDao formtableMainDao;
-    
+    @Resource
+    FormtableMain39Dao formtableMain39Dao;
+    @Resource
+    FormtableMain40Dao formtableMain40Dao;
+
     @RequestMapping("/docindex.do")
     public String docindex(){
         return "docindex";
@@ -72,15 +79,30 @@ public class BusinessController {
     @RequestMapping("/left.do")
     public ModelAndView left(){
         ModelAndView mv =new ModelAndView("left");
-        String menu = null;
-        try {
-            InputStream is = BusinessController.class.getResourceAsStream("/mixin/menu.json");
-            menu = IOUtils.toString(is);
-        } catch (IOException e) {
-            e.printStackTrace();
+        String key = "menu_left_2017_alldata";
+        JSONArray menuList = LocalCache.get(key);
+        if(menuList == null){
+            menuList = new JSONArray();
+            List<FormtableMain39DO> list1 = formtableMain39Dao.selectAllData();
+            for(FormtableMain39DO d1 : list1){
+                JSONObject j = new JSONObject();
+                j.put("name", d1.getYjmlmc());
+                FormtableMain40DO example = new FormtableMain40DO();
+                example.setYjmlmc(d1.getMlbh());
+                List<FormtableMain40DO> list2 = formtableMain40Dao.selectByExample(example);
+                JSONArray subs = new JSONArray();
+                for(FormtableMain40DO d2 : list2){
+                    JSONObject jj = new JSONObject();
+                    jj.put("name", d2.getEjmlmc());
+                    subs.add(jj);
+                }
+                j.put("subs", subs);
+                menuList.add(j);
+            }
+            LocalCache.cache(key, menuList);
         }
-        JSONArray memuList = JSON.parseArray(menu);
-        mv.addObject("menuList", memuList);
+        
+        mv.addObject("menuList", menuList);
         return mv;
     }
     @RequestMapping("/uploadPage.do")

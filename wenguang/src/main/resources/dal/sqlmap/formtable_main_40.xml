@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="formtable_main_40">
+	<select id="selectAllData" resultType="com.harmony.wenguang.dao.dataobject.FormtableMain40DO">
+		select * from formtable_main_40
+	</select>
+	
+	<select id="selectByExample" resultType="com.harmony.wenguang.dao.dataobject.FormtableMain40DO">
+		select * from formtable_main_40
+		<where>
+			<if test="id != null">
+				and id = #{id}
+			</if>
+			<if test="requestId != null">
+				and requestId = #{requestId}
+			</if>
+			<if test="yjmlmc != null and yjmlmc != ''">
+				and yjmlmc = #{yjmlmc}
+			</if>
+			<if test="mlbh != null and mlbh != ''">
+				and mlbh = #{mlbh}
+			</if>
+			<if test="ejmlmc != null and ejmlmc != ''">
+				and ejmlmc = #{ejmlmc}
+			</if>
+			<if test="formmodeid != null">
+				and formmodeid = #{formmodeid}
+			</if>
+		</where>
+	</select>
+	
+</mapper>
