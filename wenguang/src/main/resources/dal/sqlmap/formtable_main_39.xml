@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="formtable_main_39">
 	<select id="selectAllData" resultType="com.harmony.wenguang.dao.dataobject.FormtableMain39DO">
-		select t.*, row_number() over(order by id desc) rowid from formtable_main_39 t
+		select t.*, row_number() over(order by id) rowid from formtable_main_39 t
 	</select>
 	
 	<select id="selectByExample" resultType="com.harmony.wenguang.dao.dataobject.FormtableMain39DO">
-		select t.*, row_number() over(order by id desc) rowid from formtable_main_39 t
+		select t.*, row_number() over(order by id) rowid from formtable_main_39 t
 		<where>
 			<if test="id != null">
 				and id = #{id}
