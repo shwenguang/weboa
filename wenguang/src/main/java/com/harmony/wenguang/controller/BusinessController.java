@@ -87,6 +87,8 @@ public class BusinessController {
             for(FormtableMain39DO d1 : list1){
                 JSONObject j = new JSONObject();
                 j.put("name", d1.getYjmlmc());
+                j.put("rowid", d1.getRowId());
+                j.put("mlbh", d1.getMlbh());
                 FormtableMain40DO example = new FormtableMain40DO();
                 example.setYjmlmc(d1.getMlbh());
                 List<FormtableMain40DO> list2 = formtableMain40Dao.selectByExample(example);
@@ -94,6 +96,9 @@ public class BusinessController {
                 for(FormtableMain40DO d2 : list2){
                     JSONObject jj = new JSONObject();
                     jj.put("name", d2.getEjmlmc());
+                    jj.put("rowid", d2.getRowId());
+                    jj.put("ejmlmc", d2.getEjmlmc());
+                    jj.put("mlbh", d2.getMlbh());
                     subs.add(jj);
                 }
                 j.put("subs", subs);

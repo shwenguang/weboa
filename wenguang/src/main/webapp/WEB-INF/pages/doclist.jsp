@@ -68,7 +68,7 @@ h3 {
 </head>
 <body>
 	<div id="app">
-		<h3>> {{paramCode}}</h3>
+		<h3>> {{m1}} > {{m2}} </h3>
 		<ul class="news">
 			<li v-for="doc in docs">
 				<span style="width: 30px; position: relative;"><b><em>111</em></b></span>
@@ -83,6 +83,8 @@ h3 {
 	<script type="text/javascript">
 		var data = {
 			paramCode:'文件列表',
+			m1:'',
+			m2:'',
 			docs:[
 				{name:"测试测试AAAAAAAAA",url:"/wg/reqid/1"},
 				{name:"测试测试BBBBBBBBB",url:"/wg/reqid/2"},
@@ -96,6 +98,8 @@ h3 {
 		}
 		function hello(p) {
 			data.paramCode = p.code;
+			data.m1 = p.m1;
+			data.m2 = p.m2;
 			axios.get("/busi/querydocs.do", {
 				params : {
 					code : p.code
