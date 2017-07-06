@@ -1,5 +1,6 @@
 package com.harmony.wenguang.dao.dataobject;
-public class WgConfigDO {
+public class WgConfigDO extends PageDTO {
+    private static final long serialVersionUID = 1L;
     private int id;
     private String configKey;
     private String configValue;

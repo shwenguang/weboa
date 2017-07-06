@@ -2,7 +2,7 @@ package com.harmony.wenguang.dao.dataobject;
 
 import java.io.Serializable;
 
-public class FormtableMainDO implements Serializable{
+public class FormtableMainDO extends PageDTO implements Serializable{
     private static final long serialVersionUID = 1L;
     Long id;
     Integer requestId;

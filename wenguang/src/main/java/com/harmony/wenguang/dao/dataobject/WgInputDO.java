@@ -1,7 +1,8 @@
 package com.harmony.wenguang.dao.dataobject;
 
-public class WgInputDO {
-	//申请人(个人)签名
+public class WgInputDO extends PageDTO{
+    private static final long serialVersionUID = 1L;
+    //申请人(个人)签名
 	private String applicant_Sign;
 	//证件名称
 	private String ID_name;

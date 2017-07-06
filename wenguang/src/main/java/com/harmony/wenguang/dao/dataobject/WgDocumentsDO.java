@@ -3,7 +3,7 @@ package com.harmony.wenguang.dao.dataobject;
 import java.io.Serializable;
 import java.util.Date;
 
-public class WgDocumentsDO implements Serializable{
+public class WgDocumentsDO extends PageDTO implements Serializable{
     private static final long serialVersionUID = 1L;
     private int id;
 	private String docName;

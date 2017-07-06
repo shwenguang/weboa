@@ -4,7 +4,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -25,6 +24,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.harmony.wenguang.dao.FormtableMainDao;
 import com.harmony.wenguang.dao.dataobject.FormtableMainDO;
+import com.harmony.wenguang.support.CommonUtils;
 
 @Controller
 @RequestMapping("/busi")
@@ -50,13 +50,13 @@ public class BusinessController {
     @RequestMapping(value="/querydocs.do", produces="application/json; charset=UTF-8")
     @ResponseBody
     public Object querydocs(){
-        Enumeration<String> em = request.getParameterNames();
-        while(em.hasMoreElements()){
-            String key = em.nextElement();
-            System.out.println(key+":::::"+request.getParameter(key));
-        }
+        int pageNo = CommonUtils.parseInt(request.getParameter("pageNo"), 1);
+        int pageRows = CommonUtils.parseInt(request.getParameter("pageRows"), 20);
         List<JSONObject> list = new ArrayList<JSONObject>();
-        List<FormtableMainDO> dataList = formtableMainDao.selectSimpleByExample(null);
+        FormtableMainDO example = new FormtableMainDO();
+        example.setPageNo(pageNo);
+        example.setPageRows(pageRows);
+        List<FormtableMainDO> dataList = formtableMainDao.selectSimpleByExample(example);
         if(dataList != null)
         for(FormtableMainDO data : dataList){
             JSONObject page = new JSONObject();
@@ -64,6 +64,7 @@ public class BusinessController {
             page.put("name", StringUtils.isBlank(name)?"文件":name);
             page.put("url", "/wg/reqid/"+data.getRequestId());
             page.put("zs", data.getZs());
+            page.put("rowId", data.getRowId());
             list.add(page);
         }
         return list;

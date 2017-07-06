@@ -3,8 +3,8 @@ package com.harmony.wenguang.support;
 import java.util.regex.Pattern;
 
 public class CommonUtils {
-    private static String digitalPattern = "^\\d+$";
-    private static String decimalPattern = "^\\d+(\\.?\\d*)$";
+    private static String digitalPattern = "^[+-]?\\d+$";
+    private static String decimalPattern = "^[+-]?\\d+(\\.?\\d*)$";
 
     public static boolean isDigital(String input) {
         if (input == null || input.length() == 0) {
