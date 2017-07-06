@@ -72,7 +72,7 @@ h3 {
 		<ul class="news">
 			<li v-for="doc in docs">
 				<span style="width: 30px; position: relative;"><b><em>111</em></b></span>
-				<span style="width: 2000px; position: relative;"><a href="{{doc.url}}" target="view_window">{{doc.name}}</a></span>
+				<span style="width: 2000px; position: relative;"><a v-bind:href="doc.url" target="view_window">{{doc.name}}</a></span>
 				<span style="width:200px; position: relative;"> 2017-01-01 </span>
 			</li>
 		</ul>
@@ -83,7 +83,16 @@ h3 {
 	<script type="text/javascript">
 		var data = {
 			paramCode:'文件列表',
-			docs:[]
+			docs:[
+				{name:"测试测试AAAAAAAAA",url:"/wg/reqid/1"},
+				{name:"测试测试BBBBBBBBB",url:"/wg/reqid/2"},
+				{name:"测试测试CCCCCCCCC",url:"/wg/reqid/3"},
+				{name:"测试测试DDDDDDDDD",url:"/wg/reqid/4"},
+				{name:"测试测试EEEEEEEEE",url:"/wg/reqid/5"},
+				{name:"测试测试FFFFFFFFF",url:"/wg/reqid/6"},
+				{name:"测试测试GGGGGGGGG",url:"/wg/reqid/7"},
+				{name:"测试测试HHHHHHHHH",url:"/wg/reqid/8"}
+			]
 		}
 		function hello(p) {
 			data.paramCode = p.code;
