@@ -73,7 +73,7 @@ h3 {
 			<li v-for="doc in docs">
 				<span style="width: 30px; position: relative;"><b><em>{{doc.rowid}}</em></b></span>
 				<span style="width: 2000px; position: relative;"><a v-bind:href="doc.url" target="view_window">{{doc.name}}</a></span>
-				<span style="width:200px; position: relative;"> 2017-01-01 </span>
+				<span style="width:200px; position: relative;"> {{doc.zs}} </span>
 			</li>
 		</ul>
 	</div>
