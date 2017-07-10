@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="wg_input">
+  	<resultMap type="com.harmony.wenguang.dao.dataobject.WgInputDO" id="getDocumentByDocNameResultMap">
+		<result column="applicant_Sign" property="applicant_Sign"/>
+		<result column="ID_name" property="ID_name"/>
+		<result column="corporate_sign" property="corporate_sign" />
+		<result column="Occupation" property="Occupation"/>
+		<result column="ID_number" property="ID_number"/>
+		<result column="Legal_representative" property="Legal_representative"/>
+		<result column="address" property="address"/>
+		<result column="phone_number" property="phone_number"/>
+		<result column="email" property="email"/>
+		<result column="Postal_Code" property="Postal_Code"/>
+		<result column="Legal_representative_s" property="Legal_representative_s"/>
+		<result column="Organization_name" property="Organization_name"/>
+		<result column="Organization_name_s" property="Organization_name_s"/>
+		<result column="Organization_number" property="Organization_number"/>
+		<result column="Government_information" property="Government_information"/>
+		<result column="mode" property="mode"/>
+		<result column="carrier" property="carrier"/>
+		<result column="use_type" property="use_type"/>
+		<result column="Information_use" property="Information_use"/>
+		<result column="Remission_type" property="Remission_type"/>
+		<result column="Signature_applicant" property="Signature_applicant"/>
+	</resultMap>
+
 	<insert id="insert">
-		insert into wg_input(input_key,input_value, is_valid)
-		values(#{inuptKey},#{inuptValue},#{isValid})
+		insert into wg_input(applicant_Sign,ID_name,corporate_sign,Occupation,ID_number,Legal_representative,address,phone_number,email,Postal_Code,Legal_representative_s,Organization_name,Organization_name_s,Organization_number,Government_information,mode,carrier,use_type,Information_use,Remission_type, Signature_applicant)
+		values(#{applicant_Sign},#{ID_name},#{corporate_sign},#{Occupation},#{ID_number},#{Legal_representative},#{address},#{phone_number},#{email,Postal_Code},#{Legal_representative_s},#{Organization_name},#{Organization_name_s},#{Organization_number},#{Government_information},#{mode},#{carrier},#{use_type},#{Information_use},#{Remission_type}, #{Signature_applicant})
 	</insert>
-	<select id="selectByExample" resultType="com.harmony.wenguang.dao.dataobject.WgInputDO">
-		select * from wg_input
-		<if test="configKey!=null and configKey!=''">
-			and input_key = #{inputKey}
-		</if>
-		<if test="isValid!=null and isValid!=''">
-			and is_valid = #{isValid}
-		</if>
-	</select>
-	
-	<update id="update">
-		update wg_input set 
-			inupt_value=#{inuptValue}
-			<if test="isValid!=null and isValid!=''">
-				,is_valid = #{isValid}
-			</if>
-		where input_key=#{inuptKey}
-	</update>
 </mapper>

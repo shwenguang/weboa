@@ -1,5 +1,7 @@
 package com.harmony.wenguang.dao.impl;
 
+import java.util.List;
+
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;
 
@@ -10,7 +12,6 @@ public class WgInputDaoImpl extends SqlSessionDaoSupport implements WgInputDao {
 
 	@Override
 	public int insert(WgInputDO wgInputDO) {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.getSqlSession().insert("wg_input.insert",wgInputDO);
 	}
 }
