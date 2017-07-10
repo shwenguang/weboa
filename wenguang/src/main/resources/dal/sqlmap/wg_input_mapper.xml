@@ -25,8 +25,8 @@
 		<result column="Signature_applicant" property="Signature_applicant"/>
 	</resultMap>
 
-	<insert id="insert">
-		insert into wg_input(applicant_Sign,ID_name,corporate_sign,Occupation,ID_number,Legal_representative,address,phone_number,email,Postal_Code,Legal_representative_s,Organization_name,Organization_name_s,Organization_number,Government_information,mode,carrier,use_type,Information_use,Remission_type, Signature_applicant)
-		values(#{applicant_Sign},#{ID_name},#{corporate_sign},#{Occupation},#{ID_number},#{Legal_representative},#{address},#{phone_number},#{email,Postal_Code},#{Legal_representative_s},#{Organization_name},#{Organization_name_s},#{Organization_number},#{Government_information},#{mode},#{carrier},#{use_type},#{Information_use},#{Remission_type}, #{Signature_applicant})
-	</insert>
+<!-- 	<insert id="insert"> -->
+<!-- 		insert into wg_input(applicant_Sign,ID_name,corporate_sign,Occupation,ID_number,Legal_representative,address,phone_number,email,Postal_Code,Legal_representative_s,Organization_name,Organization_name_s,Organization_number,Government_information,mode,carrier,use_type,Information_use,Remission_type, Signature_applicant) -->
+<!-- 		values(#{applicant_Sign},#{ID_name},#{corporate_sign},#{Occupation},#{ID_number},#{Legal_representative},#{address},#{phone_number},#{email,Postal_Code},#{Legal_representative_s},#{Organization_name},#{Organization_name_s},#{Organization_number},#{Government_information},#{mode},#{carrier},#{use_type},#{Information_use},#{Remission_type}, #{Signature_applicant}) -->
+<!-- 	</insert> -->
 </mapper>
