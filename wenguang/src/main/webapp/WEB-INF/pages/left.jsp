@@ -12,17 +12,20 @@
 	a:link,a:visited{text-decoration: none;color: #fff;}
 	.list{width: 210px;border-bottom:solid 1px #316a91;margin:40px auto 0 auto;}
 	.list ul li{background-color:#ff5a00; border:solid 1px #316a91; border-bottom:0;}
-	.list ul li a{padding-left: 10px;color: #fff; font-size:12px; display: block; font-weight:bold; height:36px;line-height: 36px;position: relative;
+	.list ul li span{
+		padding-left: 10px;color: #fff; font-size:12px; display: block; 
+		font-weight:bold; height:36px;line-height: 36px;position: relative;
+		cursor:pointer;
 	}
 	.list ul li .inactive{ background:url(images/off.png) no-repeat 184px center;}
 	.list ul li .inactives{background:url(images/on.png) no-repeat 184px center;} 
 	.list ul li ul{display: none;}
 	.list ul li ul li { border-left:0; border-right:0; background-color:#6196bb; border-color:#467ca2;}
 	.list ul li ul li ul{display: none;}
-	.list ul li ul li a{ padding-left:20px;}
+	.list ul li ul li span{ padding-left:20px;cursor:pointer}
 	.list ul li ul li ul li { background-color:#d6e6f1; border-color:#6196bb; }
 	.last{ background-color:#d6e6f1; border-color:#6196bb; }
-	.list ul li ul li ul li a{ color:#316a91; padding-left:30px;}
+	.list ul li ul li ul li span{ color:#316a91; padding-left:30px;cursor:pointer}
 	</style>
 	<script type="text/javascript"  src="/static/js/jquery-1.8.2.js"></script>
 	<script type="text/javascript">
@@ -38,7 +41,7 @@
 			return null;
 		});
 		
-		$("a[code]").click(function(){
+		$("span[code]").click(function(){
 			self.parent.frames["rightFrame"].doBusiness({
 				code:$(this).attr("code"),
 				m1:$(this).attr("m1"),
@@ -57,10 +60,10 @@
 		<ul class="yiji">
 			<c:forEach items="${menuList }" var="menu">
 			<li>
-				<a href="#" class="inactive active">${menu.name }</a>
+				<span href="#" class="inactive active">${menu.name }</span>
 				<ul>
 					<c:forEach items="${menu.subs }" var="subMenu">
-						<li><a href="#" code="sub" m1="${menu.name }" m2="${subMenu.name }" yjmlid="${subMenu.yjmlid }" ejmlid="${subMenu.ejmlid }">${subMenu.name }</a></li>
+						<li><span href="#" code="sub" m1="${menu.name }" m2="${subMenu.name }" yjmlid="${subMenu.yjmlid }" ejmlid="${subMenu.ejmlid }">${subMenu.name }</span></li>
 					</c:forEach>
 				</ul>
 			</li>
