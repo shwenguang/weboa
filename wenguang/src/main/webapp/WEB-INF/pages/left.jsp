@@ -42,7 +42,9 @@
 			self.parent.frames["rightFrame"].doBusiness({
 				code:$(this).attr("code"),
 				m1:$(this).attr("m1"),
-				m2:$(this).attr("m2")
+				m2:$(this).attr("m2"),
+				yjmlbh:$(this).attr("yjmlbh"),
+				ejmlbh:$(this).attr("ejmlbh")
 			})
 		})
 	});
@@ -58,7 +60,7 @@
 				<a href="#" class="inactive active">${menu.name }</a>
 				<ul>
 					<c:forEach items="${menu.subs }" var="subMenu">
-						<li><a href="#" code="sub" m1="${menu.name }" m2="${subMenu.name }">${subMenu.name }</a></li>
+						<li><a href="#" code="sub" m1="${menu.name }" m2="${subMenu.name }" yjmlbh="${subMenu.yjmlbh }" ejmlbh="${subMenu.ejmlbh }">${subMenu.name }</a></li>
 					</c:forEach>
 				</ul>
 			</li>

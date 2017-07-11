@@ -83,17 +83,10 @@ h3 {
 	<script type="text/javascript">
 		var data = {
 			paramCode:'文件列表',
-			m1:'所有',
-			m2:'所有',
+			m1:'',
+			m2:'',
 			docs:[
-				{name:"测试测试AAAAAAAAA",url:"/wg/reqid/1", rowid:1},
-				{name:"测试测试BBBBBBBBB",url:"/wg/reqid/2", rowid:2},
-				{name:"测试测试CCCCCCCCC",url:"/wg/reqid/3", rowid:3},
-				{name:"测试测试DDDDDDDDD",url:"/wg/reqid/4", rowid:4},
-				{name:"测试测试EEEEEEEEE",url:"/wg/reqid/5", rowid:5},
-				{name:"测试测试FFFFFFFFF",url:"/wg/reqid/6", rowid:6},
-				{name:"测试测试GGGGGGGGG",url:"/wg/reqid/7", rowid:7},
-				{name:"测试测试HHHHHHHHH",url:"/wg/reqid/8", rowid:8}
+				
 			]
 		}
 		function doBusiness(p) {
@@ -102,7 +95,11 @@ h3 {
 			data.m2 = p.m2;
 			axios.get("/busi/querydocs.do", {
 				params : {
-					code : p.code
+					code : p.code,
+					yjmlbh:p.yjmlbh,
+					ejmlbh:p.ejmlbh,
+					yjmlmc:p.m1,
+					ejmlbc:p.m2
 				}
 			}).then(function(res) {
 				data.docs = res.data;

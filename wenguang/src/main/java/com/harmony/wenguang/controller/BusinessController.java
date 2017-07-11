@@ -59,6 +59,14 @@ public class BusinessController {
     public Object querydocs(){
         int pageNo = CommonUtils.parseInt(request.getParameter("pageNo"), 1);
         int pageRows = CommonUtils.parseInt(request.getParameter("pageRows"), 20);
+        String yjmlbh = request.getParameter("yjmlbh");
+        String ejmlbh = request.getParameter("ejmlbh");
+        String yjmlmc = request.getParameter("yjmlmc");
+        String ejmlmc = request.getParameter("ejmlmc");
+        
+        System.out.println(String.format("查询文档,参数:\n一级目录名称=%s,一级目录编号=%s,\n二级目录名称=%s,二级目录编号=%s,\n当前页数=%d,每页大小=%d",
+                yjmlmc,yjmlbh,ejmlmc,ejmlbh,pageNo,pageRows));
+        
         List<JSONObject> list = new ArrayList<JSONObject>();
         FormtableMainDO example = new FormtableMainDO();
         example.setPageNo(pageNo);
@@ -97,7 +105,8 @@ public class BusinessController {
                     JSONObject jj = new JSONObject();
                     jj.put("name", d2.getEjmlmc());
                     jj.put("rowid", d2.getRowId());
-                    jj.put("ejmlmc", d2.getEjmlmc());
+                    jj.put("ejmlbh", d2.getMlbh());//二级目录编号
+                    jj.put("yjmlbh", d1.getMlbh());//一级目录编号
                     jj.put("mlbh", d2.getMlbh());
                     subs.add(jj);
                 }
