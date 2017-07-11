@@ -155,27 +155,27 @@
                                 <ul class="publist3">
                                     <li>
                                         <label for="hqfs_yj">邮寄</label>
-                                        <input type="radio" id="hqfs_yj" name="zfxx_style" title="邮寄" />
+                                        <input type="radio" id="hqfs_yj" name="hqfs_yj" title="邮寄" />
                                     </li>
                                     <li>
                                         <label for="hqfs_cz">传真</label>
-                                        <input type="radio" id="hqfs_cz"name="zfxx_style" title="传真" />
+                                        <input type="radio" id="hqfs_cz"name="hqfs_yj" title="传真" />
                                     </li>
                                     <li>
                                         <label for="hqfs_ds">递送</label>
-                                        <input type="radio" id="hqfs_ds" name="zfxx_style" title="递送" />
+                                        <input type="radio" id="hqfs_ds" name="hqfs_yj" title="递送" />
                                     </li>
                                     <li>
                                         <label for="hqfs_dmlq">当面领取</label>
-                                        <input type="radio" id="hqfs_dmlq" name="zfxx_style" title="当面领取" />
+                                        <input type="radio" id="hqfs_dmlq" name="hqfs_yj" title="当面领取" />
                                     </li>
                                     <li>
                                         <label for="hqfs_xccy">现场查阅</label>
-                                        <input type="radio" id="hqfs_xccy" name="zfxx_style" title="现场查阅" />
+                                        <input type="radio" id="hqfs_xccy" name="hqfs_yj" title="现场查阅" />
                                     </li>
                                     <li>
                                         <label for="hqfs_email">电子邮件</label>
-                                        <input type="radio" id="hqfs_email" name="zfxx_style" title="电子邮件" />
+                                        <input type="radio" id="hqfs_email" name="hqfs_yj" title="电子邮件" />
                                     </li>
                                 </ul>
                             </td>
@@ -186,15 +186,15 @@
                                 <ul class="publist3">
                                     <li>
                                         <label for="ztxs_zzwb">纸质文本</label>
-                                        <input type="radio" id="ztxs_zzwb" name="carrier_form" title="纸质文本" />
+                                        <input type="radio" id="ztxs_zzwb" name="ztxs_zzwb" title="纸质文本" />
                                     </li>
                                     <li>
                                         <label for="ztxs_gp">光盘</label>
-                                        <input type="radio" id="ztxs_gp" name="carrier_form" title="光盘" />
+                                        <input type="radio" id="ztxs_gp" name="ztxs_zzwb" title="光盘" />
                                     </li>
                                     <li>
                                         <label for="ztxs_cp">磁盘</label>
-                                        <input type="radio" id="ztxs_cp" name="carrier_form" title="磁盘" />
+                                        <input type="radio" id="ztxs_cp" name="ztxs_zzwb" title="磁盘" />
                                     </li>
                                 </ul>
                             </td>
@@ -236,19 +236,19 @@
                                     <li>需申请免除收费，主要理由</li>
                                     <li>
                                         <label for="jtyt_wbh">属于农村五保户供养对象</label>
-                                        <input type="checkbox" id="jtyt_wbh" name="fee_reduction" title="属于农村五保户供养对象" />
+                                        <input type="checkbox" id="jtyt_wbh" name="jtyt_wbh" title="属于农村五保户供养对象" />
                                     </li>
                                     <li>
                                         <label for="jtyt_zdbz">属于城乡居民最低生活保障对象</label>
-                                        <input type="checkbox" id="jtyt_zdbz" name="fee_reduction" title="属于城乡居民最低生活保障对象" />
+                                        <input type="checkbox" id="jtyt_zdbz" name="jtyt_wbh" title="属于城乡居民最低生活保障对象" />
                                     </li>
                                     <li>
                                         <label for="jtyt_fxbz">属于领取国家抚恤补助的优抚对象</label>
-                                        <input type="checkbox" id="jtyt_fxbz" name="fee_reduction" title="属于领取国家抚恤补助的优抚对象" />
+                                        <input type="checkbox" id="jtyt_fxbz" name="jtyt_wbh" title="属于领取国家抚恤补助的优抚对象" />
                                     </li>
                                     <li>
                                         <label for="jtyt_qtkn">确有其他经济困难</label>
-                                        <input type="checkbox" id="jtyt_qtkn" name="fee_reduction" title="确有其他经济困难" />
+                                        <input type="checkbox" id="jtyt_qtkn" name="jtyt_wbh" title="确有其他经济困难" />
                                     </li>
                                 </ul>
                             </td>
@@ -303,54 +303,7 @@
      }  
  
      function pay() {
-		 var param = {};
-	     $("#form_ysqgk").find("input,select,textarea").map(function(){
-	    	 var type = $(this).attr("type");
-	    	 var name = $(this).attr("name");
-	    	 var id = $(this).attr("id")
-	    	 if(type=='reset' || type=='button'){
-	    		 //ignore button
-	    	 }else if(type=='radio'){
-	    		 if($(this).is(":checked")){
-	    			 param[name] = $(this).attr("title")
-	    		 }
-	    	 } else if(type=='checkbox'){
-	    		 if($(this).is(":checked")==false){
-	    			 //not checked
-	    		 }else if(param[name]){
-	    			 param[name] = param[name]+","+$(this).attr("title");
-	    		 }else{
-	    			 param[name] = $(this).attr("title");
-	    		 }
-	    	 }else{
-	    		 param[id] = $(this).val()
-	    	 }
-	     })
-	     
-	     for(k in param){
-	    	 if(param[k].indexOf("请填写")>=0){
-	    		 delete param[k]
-	    	 }
-	     }
-	     
-	     $.ajax({
-	    	 url:"/info/disclosure/insert.do",
-	    	 data:param,
-	    	 type:'post'
-	     }).done(function(){
-	    	 console.log("success")
-	     }).fail(function(){
-	    	 console.log("error")
-	     })
-	     console.log(param);
-	     
-	     return;
-	     
-	     ///======原始代码========
-     
             var data = { id: $("#div1").html() };
-            console.log(data)
-            return ;
             var json = '{';
             var applicant = ''; 
             document_name = ''; 
@@ -473,14 +426,12 @@
                 json = json + ',"Sqr_Signature":"' + sqr_signature + '"';
             }
             json = json + "}";
-            $.post("http://localhost/info/disclosure/insert", { jsonstr: json }, function (result) {
-               if(result){
-                 if (result.Code === '1') {
-                    alert(result.Message);
-                 }else{
-                    alert("提交失败,"+result.Message);
-                 }
-               }
+            $.post("/info/disclosure/insert.do", { jsonstr: json }, function (resp) {
+                if(resp.result=="success"){
+                	alert("提交成功");
+                }else{
+                	alert("提交失败");
+                }
             });
         }
     </script>
