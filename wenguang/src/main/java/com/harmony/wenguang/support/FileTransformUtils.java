@@ -10,7 +10,7 @@ import org.apache.commons.codec.binary.Base64;
 import org.jsoup.Jsoup;
 
 import com.harmony.wenguang.constant.FileType;
-import com.harmony.wenguang.dao.dataobject.FormtableMainDO;
+import com.harmony.wenguang.dao.dataobject.FormtableMain2DO;
 import com.harmony.wenguang.dao.dataobject.WgDocumentsDO;
 import com.harmony.wenguang.service.FileDocument;
 
@@ -21,14 +21,14 @@ public class FileTransformUtils {
 	    && (docid == null || docid <= 0)){
 	        return false;
 	    }
-	    FormtableMainDO example = new FormtableMainDO();
+	    FormtableMain2DO example = new FormtableMain2DO();
 	    example.setRequestId(requestId);
 	    example.setId(docid);
-	    List<FormtableMainDO> list = Dao.inst().getFormtableMainDao().selectByExample(example);
+	    List<FormtableMain2DO> list = Dao.inst().getFormtableMainDao().selectByExample(example);
 	    if(list == null || list.size()==0 ){
 	        return false;
 	    }
-	    for(FormtableMainDO dd : list){
+	    for(FormtableMain2DO dd : list){
 	        String zw = dd.getZwInputStream();
 	        if(zw == null){
 	            continue;

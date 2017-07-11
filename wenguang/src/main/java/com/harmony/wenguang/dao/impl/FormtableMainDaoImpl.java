@@ -6,22 +6,22 @@ import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;
 
 import com.harmony.wenguang.dao.FormtableMainDao;
-import com.harmony.wenguang.dao.dataobject.FormtableMainDO;
+import com.harmony.wenguang.dao.dataobject.FormtableMain2DO;
 
 @Repository
 public class FormtableMainDaoImpl extends SqlSessionDaoSupport implements FormtableMainDao{
 
 	@Override
-	public int insert(FormtableMainDO dd) {
+	public int insert(FormtableMain2DO dd) {
 		return this.getSqlSession().insert("formtable_main.insert",dd);
 	}
 
 	@Override
-	public List<FormtableMainDO> selectByExample(FormtableMainDO example) {
+	public List<FormtableMain2DO> selectByExample(FormtableMain2DO example) {
 		return this.getSqlSession().selectList("formtable_main.selectByExample",example);
 	}
 	
-	public List<FormtableMainDO> selectSimpleByExample(FormtableMainDO example){
+	public List<FormtableMain2DO> selectSimpleByExample(FormtableMain2DO example){
 	    return this.getSqlSession().selectList("formtable_main.selectSimpleByExample",example);
 	}
 

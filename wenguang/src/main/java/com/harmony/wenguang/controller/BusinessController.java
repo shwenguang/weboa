@@ -25,7 +25,7 @@ import com.harmony.wenguang.dao.FormtableMain40Dao;
 import com.harmony.wenguang.dao.FormtableMainDao;
 import com.harmony.wenguang.dao.dataobject.FormtableMain39DO;
 import com.harmony.wenguang.dao.dataobject.FormtableMain40DO;
-import com.harmony.wenguang.dao.dataobject.FormtableMainDO;
+import com.harmony.wenguang.dao.dataobject.FormtableMain2DO;
 import com.harmony.wenguang.support.CommonUtils;
 import com.harmony.wenguang.support.LocalCache;
 
@@ -59,22 +59,24 @@ public class BusinessController {
     public Object querydocs(){
         int pageNo = CommonUtils.parseInt(request.getParameter("pageNo"), 1);
         int pageRows = CommonUtils.parseInt(request.getParameter("pageRows"), 20);
-        String yjmlbh = request.getParameter("yjmlbh");
-        String ejmlbh = request.getParameter("ejmlbh");
+        String yjmlid = request.getParameter("yjmlid");
+        String ejmlid = request.getParameter("ejmlid");
         String yjmlmc = request.getParameter("yjmlmc");
         String ejmlmc = request.getParameter("ejmlmc");
         
         System.out.println(String.format("======================查询文档,参数========================="
                 + "\n一级目录名称=%s,一级目录编号=%s,\n二级目录名称=%s,二级目录编号=%s,\n当前页数=%d,每页大小=%d",
-                yjmlmc,yjmlbh,ejmlmc,ejmlbh,pageNo,pageRows));
+                yjmlmc,yjmlid,ejmlmc,ejmlid,pageNo,pageRows));
         
         List<JSONObject> list = new ArrayList<JSONObject>();
-        FormtableMainDO example = new FormtableMainDO();
+        FormtableMain2DO example = new FormtableMain2DO();
         example.setPageNo(pageNo);
         example.setPageRows(pageRows);
-        List<FormtableMainDO> dataList = formtableMainDao.selectSimpleByExample(example);
+        example.setXxgkyjml(yjmlid);
+        example.setXxgkejml(ejmlid);
+        List<FormtableMain2DO> dataList = formtableMainDao.selectSimpleByExample(example);
         if(dataList != null)
-        for(FormtableMainDO data : dataList){
+        for(FormtableMain2DO data : dataList){
             JSONObject page = new JSONObject();
             String name = data.getZwbt();
             page.put("name", StringUtils.isBlank(name)?"文件":name);
@@ -106,8 +108,8 @@ public class BusinessController {
                     JSONObject jj = new JSONObject();
                     jj.put("name", d2.getEjmlmc());
                     jj.put("rowid", d2.getRowId());
-                    jj.put("ejmlbh", d2.getMlbh());//二级目录编号
-                    jj.put("yjmlbh", d1.getMlbh());//一级目录编号
+                    jj.put("ejmlid", d2.getId());//二级目录ID
+                    jj.put("yjmlid", d1.getId());//一级目录ID
                     jj.put("mlbh", d2.getMlbh());
                     subs.add(jj);
                 }
@@ -128,7 +130,7 @@ public class BusinessController {
     @RequestMapping("/upload.do")
     public ModelAndView upload(@RequestParam("file") CommonsMultipartFile file){
         ModelAndView mv = new ModelAndView();
-        FormtableMainDO md = new FormtableMainDO();
+        FormtableMain2DO md = new FormtableMain2DO();
         try(InputStream is = file.getInputStream();
           ByteArrayOutputStream os = new ByteArrayOutputStream();
           ) {

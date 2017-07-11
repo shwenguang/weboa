@@ -43,8 +43,8 @@
 				code:$(this).attr("code"),
 				m1:$(this).attr("m1"),
 				m2:$(this).attr("m2"),
-				yjmlbh:$(this).attr("yjmlbh"),
-				ejmlbh:$(this).attr("ejmlbh")
+				yjmlid:$(this).attr("yjmlid"),
+				ejmlid:$(this).attr("ejmlid")
 			})
 		})
 	});
@@ -60,7 +60,7 @@
 				<a href="#" class="inactive active">${menu.name }</a>
 				<ul>
 					<c:forEach items="${menu.subs }" var="subMenu">
-						<li><a href="#" code="sub" m1="${menu.name }" m2="${subMenu.name }" yjmlbh="${subMenu.yjmlbh }" ejmlbh="${subMenu.ejmlbh }">${subMenu.name }</a></li>
+						<li><a href="#" code="sub" m1="${menu.name }" m2="${subMenu.name }" yjmlid="${subMenu.yjmlid }" ejmlid="${subMenu.ejmlid }">${subMenu.name }</a></li>
 					</c:forEach>
 				</ul>
 			</li>

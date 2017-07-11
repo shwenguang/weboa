@@ -24,16 +24,25 @@
 		)
 	</insert>
 	
-	<select id="selectSimpleByExample" resultType="com.harmony.wenguang.dao.dataobject.FormtableMainDO">
+	<select id="selectSimpleByExample" resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
 	  SELECT w2.rowId, w1.id,w1.requestId,w1.fwh,w1.fwdw,w1.jj,w1.sfgk,w1.qfr,w1.zw,w1.zs,w1.cs,w1.zbdw,w1.ngr,w1.hbdw,w1.hbr,w1.fj,w1.dz,w1.bz,w1.sfgkwb,w1.zwbt,w1.fjbt 
 	  FROM formtable_main_2 w1,
 	  ( SELECT TOP ${endNum } row_number() OVER (ORDER BY ID DESC) rowId,
 	  id,requestId,fwh,fwdw,jj,sfgk,qfr,zw,zs,cs,zbdw,ngr,hbdw,hbr,fj,dz,bz,sfgkwb,zwbt,fjbt
-	   FROM formtable_main_2) w2 
+	   FROM formtable_main_2
+	   <where>
+	   	<if test="xxgkyjml!=null and xxgkyjml != ''">
+	   		and xxgkyjml = #{xxgkyjml}
+	   	</if>
+	   	<if test="xxgkejml!=null and xxgkejml!=''">
+	   		and xxgkejml = #{xxgkejml}
+	   	</if>
+	   </where>
+	   ) w2 
 	  WHERE w1.ID = w2.ID AND w2.rowId >= #{startNum}
 	</select>
 	
-	<select id="selectByExample" resultType="com.harmony.wenguang.dao.dataobject.FormtableMainDO">
+	<select id="selectByExample" resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
 		select id,requestId,fjInputStream,zwInputStream
 		 from formtable_main_2
 		<where>

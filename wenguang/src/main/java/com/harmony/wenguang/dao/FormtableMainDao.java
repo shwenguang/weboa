@@ -2,12 +2,12 @@ package com.harmony.wenguang.dao;
 
 import java.util.List;
 
-import com.harmony.wenguang.dao.dataobject.FormtableMainDO;
+import com.harmony.wenguang.dao.dataobject.FormtableMain2DO;
 
 public interface FormtableMainDao {
-	public int insert(FormtableMainDO dd);
+	public int insert(FormtableMain2DO dd);
 	
-	public List<FormtableMainDO> selectByExample(FormtableMainDO example);
+	public List<FormtableMain2DO> selectByExample(FormtableMain2DO example);
 	
-	public List<FormtableMainDO> selectSimpleByExample(FormtableMainDO example);
+	public List<FormtableMain2DO> selectSimpleByExample(FormtableMain2DO example);
 }

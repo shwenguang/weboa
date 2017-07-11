@@ -2,7 +2,7 @@ package com.harmony.wenguang.dao.dataobject;
 
 import java.io.Serializable;
 
-public class FormtableMainDO extends PageDTO implements Serializable{
+public class FormtableMain2DO extends PageDTO implements Serializable{
     private static final long serialVersionUID = 1L;
     Long id;
     Integer requestId;
@@ -49,6 +49,8 @@ public class FormtableMainDO extends PageDTO implements Serializable{
 	String ldqz;
 	String zwbt;
 	String fjbt;
+	String xxgkyjml;
+	String xxgkejml;
 	String fjInputStream;
 	String zwInputStream;
     public Long getId() {
@@ -333,5 +335,16 @@ public class FormtableMainDO extends PageDTO implements Serializable{
     public void setZwInputStream(String zwInputStream) {
         this.zwInputStream = zwInputStream;
     }
-	
+    public String getXxgkyjml() {
+        return xxgkyjml;
+    }
+    public void setXxgkyjml(String xxgkyjml) {
+        this.xxgkyjml = xxgkyjml;
+    }
+    public String getXxgkejml() {
+        return xxgkejml;
+    }
+    public void setXxgkejml(String xxgkejml) {
+        this.xxgkejml = xxgkejml;
+    }
 }

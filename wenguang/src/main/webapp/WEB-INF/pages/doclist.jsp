@@ -83,8 +83,8 @@ h3 {
 	<script type="text/javascript">
 		var data = {
 			paramCode:'文件列表',
-			m1:'所有',
-			m2:'所有',
+			m1:'',
+			m2:'',
 			docs:[
 				
 			]
@@ -96,8 +96,8 @@ h3 {
 			axios.get("/busi/querydocs.do", {
 				params : {
 					code : p.code,
-					yjmlbh:p.yjmlbh,
-					ejmlbh:p.ejmlbh,
+					yjmlid:p.yjmlid,
+					ejmlid:p.ejmlid,
 					yjmlmc:p.m1,
 					ejmlmc:p.m2
 				}
@@ -110,8 +110,8 @@ h3 {
 			data : data,
 			created:function(){
 				doBusiness({});
-				this.m1 = "所有"
-				this.m2 = "所有"
+				this.m1 = "全部"
+				this.m2 = "全部文档"
 			}
 		})
 	</script>
