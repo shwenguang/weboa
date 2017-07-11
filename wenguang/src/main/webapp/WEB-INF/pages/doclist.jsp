@@ -109,7 +109,7 @@ h3 {
 			el : "#app",
 			data : data,
 			created:function(){
-				doBusiness({});
+				doBusiness({});//初始化时查询全部文档
 				this.m1 = "全部"
 				this.m2 = "全部文档"
 			}
