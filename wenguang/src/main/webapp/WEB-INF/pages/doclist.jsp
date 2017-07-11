@@ -83,8 +83,8 @@ h3 {
 	<script type="text/javascript">
 		var data = {
 			paramCode:'文件列表',
-			m1:'',
-			m2:'',
+			m1:'所有',
+			m2:'所有',
 			docs:[
 				
 			]
@@ -99,7 +99,7 @@ h3 {
 					yjmlbh:p.yjmlbh,
 					ejmlbh:p.ejmlbh,
 					yjmlmc:p.m1,
-					ejmlbc:p.m2
+					ejmlmc:p.m2
 				}
 			}).then(function(res) {
 				data.docs = res.data;
@@ -107,7 +107,12 @@ h3 {
 		}
 		var vm = new Vue({
 			el : "#app",
-			data : data
+			data : data,
+			created:function(){
+				doBusiness({});
+				this.m1 = "所有"
+				this.m2 = "所有"
+			}
 		})
 	</script>
 </body>

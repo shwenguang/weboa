@@ -64,7 +64,8 @@ public class BusinessController {
         String yjmlmc = request.getParameter("yjmlmc");
         String ejmlmc = request.getParameter("ejmlmc");
         
-        System.out.println(String.format("查询文档,参数:\n一级目录名称=%s,一级目录编号=%s,\n二级目录名称=%s,二级目录编号=%s,\n当前页数=%d,每页大小=%d",
+        System.out.println(String.format("======================查询文档,参数========================="
+                + "\n一级目录名称=%s,一级目录编号=%s,\n二级目录名称=%s,二级目录编号=%s,\n当前页数=%d,每页大小=%d",
                 yjmlmc,yjmlbh,ejmlmc,ejmlbh,pageNo,pageRows));
         
         List<JSONObject> list = new ArrayList<JSONObject>();
