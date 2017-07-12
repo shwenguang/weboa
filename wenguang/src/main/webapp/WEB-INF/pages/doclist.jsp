@@ -1,82 +1,49 @@
 <%@ page pageEncoding="UTF-8"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-
-<html>
-<head>
+<title>CSS文章列表</title>
 <style type="text/css">
-@charset "utf-8";
-
-body, div, ul, ol, li {
-	margin: 0;
-	padding: 0;
-	font-style: normal;
-	font: 14px/22px "\5B8B\4F53", Arial, Helvetica, sans-serif
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+a,a:visited{color:#5e5e5e; text-decoration:none;}
+a:hover{color:#b52725;text-decoration:underline;}
+.clear{display:block;overflow:hidden;clear:both;height:0;line-height:0;font-size:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif;}
+.mainapp{width:90%;height:100%;margin:20px auto;border:solid 0px;}
+.apphead{color:#CECECE; margin:10px auto auto 10px ;}
+.ranklist{border:solid 0px #ddd;padding:10px 10px 0 1px;margin:10px;height:80%}
+.ranklist li{height:20px;line-height:16px;overflow:hidden;position:relative;padding:0 70px 0 30px;margin:0 0 10px 0;}
+.ranklist li em{width:20px;height:20px;overflow:hidden;display:block;position:absolute;left:0;top:0;text-align:center;font-style:normal;color:#333;}
+.ranklist li em{background-position:0 -16px;}
+.ranklist li .zs{position:absolute;right:10;top:0;color:#999;}
+.pagination{
+	border-bottom:solid 1px #ddd;
+	text-align:center;
 }
-
-ol, ul, li {
-	list-style: none
-}
-
-body {
-	color: #CECECE;
-	background: #FFF
-}
-
-.clear {
-	clear: both;
-	height: 1px;
-	width: 100%;
-	overflow: hidden;
-	margin-top: -1px
-}
-
-a {
-	color: #343434;
-	text-decoration: none
-}
-
-a:hover {
-	color: #BA2636;
-	text-decoration: underline
-}
-
-ul.news {
-	margin-left: 60px;
-	width: 600px
-}
-
-ul.news li {
-	height: 28px;
-	line-height: 28px;
-	text-indent: 10px;
-	width: 100%;
-	overflow: hidden;
-}
-
-h3 {
-	display: block;
-	font-size: 1.17em;
-	-webkit-margin-before: 1em;
-	-webkit-margin-after: 1em;
-	-webkit-margin-start: 0px;
-	-webkit-margin-end: 0px;
-	margin-left: 30px;
-	margin-top: 30px;
+.pagination span {
+	margin:3px;	
+	cursor:pointer;
 }
 </style>
-</head>
-<body>
-	<div id="app">
-		<h3>> {{m1}} > {{m2}} </h3>
-		<ul class="news">
-			<li v-for="doc in docs">
-				<span style="width: 30px; position: relative;"><b><em>{{doc.rowid}}</em></b></span>
-				<span style="width: 2000px; position: relative;"><a v-bind:href="doc.url" target="view_window">{{doc.name}}</a></span>
-				<span style="width:200px; position: relative;"> {{doc.zs}} </span>
-			</li>
-		</ul>
+<div class="mainapp" id="app">
+	<div class="apphead">
+	<h3>> {{m1}} > {{m2}}</h3>
 	</div>
+    <div class="ranklist">
+        <ol>
+            <li v-for="doc in docs">
+            	<em>{{doc.rowid}}</em>
+            	<p><a v-bind:href="doc.url" target="view_window">{{doc.name}}</a></p>
+            	<span class="zs">{{doc.zs}}</span></li>
+        </ol>
+        <div class="clear"></div>
+    </div>
+	<div class="pagination">
+		<span @click="prev">上一页</span>
+		<span v-for="p in pageNos">{{p}}</span>
+		<span @click="next">下一页</span>
+	</div>
+</div>
+
 	<script src="//vuejs.org/js/vue.min.js"></script>
 	<script src="//libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//unpkg.com/axios/dist/axios.min.js"></script>
@@ -85,8 +52,15 @@ h3 {
 			paramCode:'文件列表',
 			m1:'',
 			m2:'',
+			pageNo:1,
+			totalPage:5,
 			docs:[
-				
+				{rowid:'01',name:'aaaaaaaa',zs:'dfldfalfalf',url:"//www.baidu.com"},
+				{rowid:'02',name:'aaaaaaaa',zs:'dfldfalfalf'},
+				{rowid:'03',name:'aaaaaaaa',zs:'dfldfalfalf'},
+				{rowid:'04',name:'dslfasfjads;fasjdlfadsf测试一些',zs:'发奖发奖所发生的浪费时间地方发了举案说法；设计费；'},
+				{rowid:'05',name:'aaaaaaaa',zs:'dfldfalfalf'},
+				{rowid:'06',name:'aaaaaaaa',zs:'dfldfalfalf'}
 			]
 		}
 		function doBusiness(p) {
@@ -109,11 +83,30 @@ h3 {
 			el : "#app",
 			data : data,
 			created:function(){
-				doBusiness({});//初始化时查询全部文档
+				//doBusiness({});//初始化时查询全部文档
 				this.m1 = "全部"
 				this.m2 = "全部文档"
+			},
+			computed:{
+				pageNos:function(){
+					var r = [];
+					for(var i=1;i<=this.totalPage;i++){
+						if(i<10) r.push('0'+i)
+						else r.push(i)
+					}
+					return r;
+				}
+			},
+			methods:{
+				prev:function(){
+					console.log(this.pageNo-1)
+				},
+				next:function(){
+					console.log(this.pageNo+1)
+				},
+				jump:function(p){
+					console.log(this.pageNo+","+p)
+				}
 			}
 		})
 	</script>
-</body>
-</html>
