@@ -104,9 +104,6 @@
   </ul>
   </nav>
   <div >
-<script>
-// $("li[id='nav02']").attr("class","active");
-</script>
 		<div class="container">
 			<div class="row-fluid">
 				<div class="span8 no-margin-left">
@@ -119,27 +116,6 @@
 		<c:forEach items="${menu2List }" var="menu2">
 			<li><a class="btn-line"  href="/busi/docindex.do?yjml=${menu2.yjmlmc }&ejml=${menu2.id }"  title="${menu2.ejmlmc }">${menu2.ejmlmc }</a></li>
 		</c:forEach>
-<!-- 		<li><a  class="btn-line" href="/nw2/nw2314/nw2319/nw11494/nw12328/index.html" title="市政府及其工作机构的领导名单">市政府及其工作机构的领导名单</a></li> -->
-<!-- 		<li><a class="btn-line"  href="/nw2/nw2314/nw2319/nw2405/index.html"  title="市政府工作机构及其主要职责">市政府工作机构及其主要职责</a></li> -->
-<!-- 		<li><a  class="btn-line" href="/nw2/nw2314/nw2319/nw11494/nw18958/index.html" title="市长、副市长工作分工"><span style="color:#F00">市长、副市长工作分工</span></a></li> -->
-<!-- 		<li><a  class="btn-line" href="/nw2/nw2314/nw2319/nw11494/nw18959/index.html" title="市政府秘书长、副秘书长工作分工">市政府秘书长、副秘书长工作分工</a></li> -->
-<!-- 		<li><a  class="btn-line" href="/nw2/nw2314/nw2319/nw11494/nw12654/index.html" title="市政府规章">市政府规章</a></li> -->
-<!-- 		<li><a  class="btn-line" href="/nw2/nw2314/nw2319/nw11494/nw12331/index.html" title="市政府工作规则及其它规范性文件">市政府工作规则及其它规范性文件</a></li> -->
-<!-- 		<li><a  class="btn-line" href="/nw2/nw2314/nw2319/nw11494/nw12661/index.html" title="市政府重点工作">市政府重点工作</a></li> -->
-<!-- 		<li><a  class="btn-line" href="/nw2/nw2314/nw2319/nw11494/nw12330/index.html" title="市政府提交市人大及其常委会审议的各类报告">市政府提交市人大及其常委会审议的各类报告</a></li> -->
-<!-- 		<li><a class="btn-line"  href="/nw2/nw2314/nw2319/nw11494/nw12333/index.html"  title="市政府重要会议的主要内容"> 市政府重要会议的主要内容</a></li> -->
-<!-- 		<li><a  class="btn-line" href="/nw2/nw2314/nw2319/nw11494/nw12335/index.html" title="关于本市经济和社会发展的主要数据">关于本市经济和社会发展的主要数据</a></li> -->
-<!-- 		<li><a class="btn-line"  href="/nw2/nw2314/nw2319/nw11498/index.html"  title="市政府实事项目"> 市政府实事项目</a></li> -->
-<!-- 		<li><a class="btn-line"  href="/nw2/nw2314/nw2319/nw11494/nw12664/index.html"  title="市政府人事任免"> 市政府人事任免</a></li> -->
-<!-- 	    <li class="col50"><a class="btn-line  no-margin"   target="_blank" href="/nw2/nw2314/nw2319/nw10800/index.html"  title="市政府文件"> 市政府文件</a></li> -->
-<!-- 		<li class="col50"><a class="btn-line  no-margin"   target="_blank" href="/nw2/nw2314/nw2319/nw22396/nw22401/index.html"  title="规划计划"> 规划计划</a></li> -->
-<!-- 		<li class="col50"><a class="btn-line  no-margin"   target="_blank" href="/nw2/nw2314/nw2319/nw18462/index.html"  title="统计数据"> 统计数据</a></li> -->
-<!-- 		<li class="col50"><a class="btn-line  no-margin"   target="_blank" href="/nw2/nw2314/nw2319/nw10908/nw12622/index.html"  title="信访接待"> 信访接待</a></li> -->
-<!-- 		<li class="col50"><a class="btn-line  no-margin"   target="_blank" href="/nw2/nw2314/nw2319/nw38628/index.html"  title="公共权力"> 公共权力</a></li> -->
-<!-- 		<li class="col50"><a class="btn-line  no-margin"   target="_blank" href="/nw2/nw2314/nw2319/nw38625/index.html"  title="公共资金"> 公共资金</a></li>	 -->
-<!-- 		<li class="col50"><a class="btn-line  no-margin"   target="_blank" href="/nw2/nw2314/nw2319/nw22409/index.html"  title="重点领域"> 重点领域</a></li>	 -->
-<!-- 		<li class="col50"><a class="btn-line  no-margin"   target="_blank" href="/nw2/nw2314/nw11175/index.html"  title="市人大代表建议和提案办理"> 市人大代表建议和政协提案办理</a></li>	 -->
-<!-- 		<li class="col50"><a class="btn-line  no-margin"    target="_blank" href="/nw2/nw2314/nw2319/nw41893/index.html"  title="政策解读"> 政策解读</a></li>																			 -->
 	</ul>
 	</div>		               
 	
@@ -169,6 +145,7 @@
 
 	
 				</div>
+				<div class="span4"></div>
 				<div class="span4">
 					<ul class="nav nav-list arrowNav margin-bottom20">
 							<script>
@@ -219,33 +196,5 @@ height:44px;
  
   </div>
 </div>
-
-<!--[if lte IE 6]>
-<script type="text/javascript" src="http://www.shanghai.gov.cn//newshanghai/js/ETUI-ie.js"></script>
-<script type="text/javascript" src="http://www.shanghai.gov.cn//newshanghai/js/DD_belatedPNG-min.js"></script>
-<![endif]--> 
-<a id="hash" data-toggle="modal" tabindex="-1"  href="#myModal"></a>
-<div id="myModal"  class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header no-border">
-    <button type="button" id="closets" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-  </div>
-  <div class="modal-body text-center margin-top30 margin-bottom20">
-    <p class="f18">您访问的链接即将离开“中国上海”门户网站 是否继续？</p>
-	<p id="outurl" style="display:none"></p>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">放弃</button>
-    <button class="btn btn-danger" onclick="window.open(outurl.innerText);document.getElementById('closets').click();">继续访问</button>
-  </div>
-</div>
-
-<script type="text/javascript">
-
-    function showmore(id,objtype,pagesize){
-    $('#pageList').prop('outerHTML', '<iframe src="http://service.shanghai.gov.cn/pagemore/iframePagerIndex_'+id+'_'+objtype+'_'+pagesize+'.html?page=11"  id="frame_content" name="frame_content" width="100%" height="346px" scrolling="no" frameborder="0" title=""></iframe>');
-    }
-
-</script>
-
 </body>
 </html>
