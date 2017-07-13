@@ -194,10 +194,10 @@ $("li[id='nav02']").attr("class","active");
 		<div class="span8 no-margin-left">
 			<div class="page-header-1">
 				<c:if test="${empty ejmlData.ejmlmc }">
-					<h4><a title="文件列表">文件列表</a></h4>
+					<h4><a title="文件列表">信息公开文件</a></h4>
 				</c:if>
 				<c:if test="${not empty ejmlData.ejmlmc }">
-					<h4><a title="${ejmlData.ejmlmc }">${ejmlData.ejmlmc }</a></h4>
+					<h4><a title="${ejmlData.ejmlmc }">${ejmlData.ejmlmc }信息公开文件</a></h4>
 				</c:if>
 			</div>
 			<ul class="uli14 pageList">

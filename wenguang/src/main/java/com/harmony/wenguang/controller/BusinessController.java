@@ -47,10 +47,12 @@ public class BusinessController {
         String ejml = request.getParameter("ejml");
         ModelAndView mv = new ModelAndView("docindex2");
         List<FormtableMain39DO> list1 = formtableMain39Dao.selectAllData();
-        if(StringUtils.isNotBlank(yjml)){
-            FormtableMain40DO example = new FormtableMain40DO();
-            example.setYjmlmc(yjml);
-            List<FormtableMain40DO> list2 = formtableMain40Dao.selectByExample(example);
+        if(StringUtils.isBlank(yjml)){
+            yjml = "1";
+        }
+            FormtableMain40DO example1 = new FormtableMain40DO();
+            example1.setYjmlmc(yjml);
+            List<FormtableMain40DO> list2 = formtableMain40Dao.selectByExample(example1);
             mv.addObject("menu2List", list2);
             
             FormtableMain39DO yjmlExamle = new FormtableMain39DO();
@@ -59,7 +61,6 @@ public class BusinessController {
             if(yjlist!=null && yjlist.size()==1){
                 mv.addObject("yjmlData", yjlist.get(0));
             }
-        }
         
         if(StringUtils.isNotBlank(yjml) && StringUtils.isNotBlank(ejml)){
             int pageNo = CommonUtils.parseInt(request.getParameter("pageNo"), 1);
