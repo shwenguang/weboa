@@ -241,16 +241,16 @@ $("li[id='nav02']").attr("class","active");
 <!-- 						<li id="qx" onclick="changeColor('qx')"><a href="/nw2/nw2314/nw2319/nw38674/index.html" title="市政府部门与区政府信息公开" ><span>市政府部门与区政府信息公开</span></a></li> -->
 <!-- 						<li class="margin-top10"><a href="http://xxgk.sh.gov.cn/infoopen/open/portal_index.jsp" class="red text-center no-margin-bottom" title="依申请公开"><span>依申请公开</span></a></li> -->
 					</ul>
-					<div class="page-header-1">
-							<h4><a  title="工作机构">工作机构</a></h4>
-						</div>
-						<ul class="uli14 pageList no-margin">
-						<li>部门名称：上海市人民政府办公厅<p class="no-margin-bottom" style="text-indent:5em;">政务公开办公室</li>
-						<li>联系地址：人民大道200号</li>
-						<li>邮政编码：200003</li>
-						<li>咨询电话：021-63582606</li>
-						<li>电子邮箱：xxgkyjx@shanghai.gov.cn</li>
-							</ul>
+<!-- 					<div class="page-header-1"> -->
+<!-- 							<h4><a  title="工作机构">工作机构</a></h4> -->
+<!-- 					</div> -->
+<!-- 					<ul class="uli14 pageList no-margin"> -->
+<!-- 						<li>部门名称：上海市人民政府办公厅<p class="no-margin-bottom" style="text-indent:5em;">政务公开办公室</li> -->
+<!-- 						<li>联系地址：人民大道200号</li> -->
+<!-- 						<li>邮政编码：200003</li> -->
+<!-- 						<li>咨询电话：021-63582606</li> -->
+<!-- 						<li>电子邮箱：xxgkyjx@shanghai.gov.cn</li> -->
+<!-- 					</ul> -->
 				</div>
 			
 				</div>
@@ -268,57 +268,17 @@ height:44px;
 <div id="footer" class="row-fluid margin-top10" >
   <div class="container">
     <div class="footlogo"> 
-    <script>
-if(location.hostname == "big5.shanghai.gov.cn"){
-
-    document.write("<img src=\"http://www.shanghai.gov.cn//newshanghai/img/big5/color-logo-hd.png\" alt=\"\">");
-        }else
-{
-       document.write("<img src=\"http://www.shanghai.gov.cn//newshanghai/img/color-logo-hd.png\" alt=\"\">");
-        }
-</script>
-
-    
-    
+    <img src="http://www.shanghai.gov.cn//newshanghai/img/color-logo-hd.png" alt="">
       <h4>上海市人民政府<br/>
         <small>地址：人民大道200号　邮政编码：200003　电话：23111111</small></h4>
     </div>
     <div class="pull-right sign"> 
-  
- <script>
-if(location.hostname == "big5.shanghai.gov.cn"){
-
-    document.write("<a href=\"ht"+"tp://bszs.conac.cn/sitename?method=show&id=08E61FB166710F06E053012819AC1E62\" alt=\"*\" target=\"_blank\" title=\"党政机关\"  ><img src=\"http://www.shanghai.gov.cn//newshanghai/img/copyright/red.png\" ></a>");
-    }else
-{
-        document.write("<a href=\"http://bszs.conac.cn/sitename?method=show&id=08E61FB166710F06E053012819AC1E62\" alt=\"*\" target=\"_blank\" title=\"党政机关\"  ><img src=\"http://www.shanghai.gov.cn//newshanghai/img/copyright/red.png\" ></a>");
-        }
-</script>
-
- 
-<script id="_jiucuo_" sitecode='3100000044' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script>
-    
-  
-   
-       <script>
-if(location.hostname == "big5.shanghai.gov.cn"){
-
-    document.write("<a href=\"ht"+"tp://net.china.com.cn/index.htm\" alt=\"*\" target=\"_blank\" title=\"上海市互联网举报平台\"  class=\"\"><img src=\"http://www.shanghai.gov.cn//newshanghai/img/big5/footIcon06.png\" alt=\"*\" ></a>");
-    }else
-{
-        document.write("<a href=\"http://net.china.com.cn/index.htm\" alt=\"*\" target=\"_blank\" title=\"上海市互联网举报平台\"  class=\"\"><img src=\"http://www.shanghai.gov.cn//newshanghai/img/copyright/footIcon06.png\" alt=\"*\" ></a>");
-        }
-</script>
-    
-       <script>
-if(location.hostname == "big5.shanghai.gov.cn"){
-
-    document.write("<a href=\"ht"+"tp://www.miibeian.gov.cn\" alt=\"*\" target=\"_blank\" title=\"沪ICP备12004267\"  class=\"\"><img src=\"http://www.shanghai.gov.cn//newshanghai/img/big5/foot.jpg\" alt=\"*\" ></a>");
-    }else
-{
-        document.write("<a href=\"http://www.miibeian.gov.cn\" alt=\"*\" target=\"_blank\" title=\"沪ICP备12004267\"  class=\"\"><img src=\"http://www.shanghai.gov.cn//newshanghai/img/copyright/foot.jpg\" alt=\"*\" ></a>");
-        }
-</script>
+	  	<a href="http://bszs.conac.cn/sitename?method=show&id=08E61FB166710F06E053012819AC1E62" alt="*" target="_blank" title="党政机关"  >
+	  		<img src="http://www.shanghai.gov.cn//newshanghai/img/copyright/red.png" ></a>
+		<a href="http://net.china.com.cn/index.htm" alt="*" target="_blank" title="上海市互联网举报平台"  class="">
+			<img src="http://www.shanghai.gov.cn//newshanghai/img/copyright/footIcon06.png" alt="*" ></a>
+    	<a href="http://www.miibeian.gov.cn" alt="*" target="_blank" title="沪ICP备12004267"  class="">
+    		<img src="http://www.shanghai.gov.cn//newshanghai/img/copyright/foot.jpg" alt="*" ></a>
  
   </div>
 </div>
