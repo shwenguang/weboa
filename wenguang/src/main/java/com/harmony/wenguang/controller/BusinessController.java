@@ -23,9 +23,9 @@ import com.alibaba.fastjson.JSONObject;
 import com.harmony.wenguang.dao.FormtableMain39Dao;
 import com.harmony.wenguang.dao.FormtableMain40Dao;
 import com.harmony.wenguang.dao.FormtableMainDao;
+import com.harmony.wenguang.dao.dataobject.FormtableMain2DO;
 import com.harmony.wenguang.dao.dataobject.FormtableMain39DO;
 import com.harmony.wenguang.dao.dataobject.FormtableMain40DO;
-import com.harmony.wenguang.dao.dataobject.FormtableMain2DO;
 import com.harmony.wenguang.support.CommonUtils;
 import com.harmony.wenguang.support.LocalCache;
 
@@ -42,8 +42,46 @@ public class BusinessController {
     FormtableMain40Dao formtableMain40Dao;
 
     @RequestMapping("/docindex.do")
-    public String docindex(){
-        return "docindex";
+    public ModelAndView docindex(){
+        String yjml = request.getParameter("yjml");
+        String ejml = request.getParameter("ejml");
+        ModelAndView mv = new ModelAndView("docindex2");
+        List<FormtableMain39DO> list1 = formtableMain39Dao.selectAllData();
+        if(StringUtils.isNotBlank(yjml)){
+            FormtableMain40DO example = new FormtableMain40DO();
+            example.setYjmlmc(yjml);
+            List<FormtableMain40DO> list2 = formtableMain40Dao.selectByExample(example);
+            mv.addObject("menu2List", list2);
+            
+            FormtableMain39DO yjmlExamle = new FormtableMain39DO();
+            yjmlExamle.setId(CommonUtils.parseLong(yjml, -1L));
+            List<FormtableMain39DO> yjlist = formtableMain39Dao.selectByExample(yjmlExamle);
+            if(yjlist!=null && yjlist.size()==1){
+                mv.addObject("yjmlData", yjlist.get(0));
+            }
+        }
+        
+        if(StringUtils.isNotBlank(yjml) && StringUtils.isNotBlank(ejml)){
+            int pageNo = CommonUtils.parseInt(request.getParameter("pageNo"), 1);
+            int pageRows = CommonUtils.parseInt(request.getParameter("pageRows"), 20);
+            FormtableMain2DO example = new FormtableMain2DO();
+            example.setPageNo(pageNo);
+            example.setPageRows(pageRows);
+            example.setXxgkyjml(yjml);
+            example.setXxgkejml(ejml);
+            List<FormtableMain2DO> dataList = formtableMainDao.selectSimpleByExample(example);
+            mv.addObject("docList", dataList);
+            
+            FormtableMain40DO ejmlExample = new FormtableMain40DO();
+            ejmlExample.setId(CommonUtils.parseLong(ejml, -1L));
+            List<FormtableMain40DO> ejlist = formtableMain40Dao.selectByExample(ejmlExample);
+            if(ejlist!=null && ejlist.size()==1){
+                mv.addObject("ejmlData",ejlist.get(0));
+            }
+        }
+        
+        mv.addObject("menu1List", list1);
+        return mv;
     }
     @RequestMapping("/top.do")
     public String top(){
