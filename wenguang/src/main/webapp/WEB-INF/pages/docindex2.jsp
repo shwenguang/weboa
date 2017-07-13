@@ -80,29 +80,18 @@
         <a data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="#container" data-placement="right" class="btn-link btn-navbar">导航</a>
         <div class="nav-collapse collapse navbar-responsive-collapse MainNavBar-responsive-collapse">
           <ul  id="mainNav" class="nav">
-          <li><a href="/" class="margin-left10">首页</a></li>
-          <li id="nav01"><a href="/nw2/nw2314/nw2315/index.html">要闻动态</a></li>
-          <li id="nav02"><a href="/nw2/nw2314/nw2319/index.html">政府信息公开</a></li>
+          <li><a href="http://www.shanghai.gov.cn/" class="margin-left10">首页</a></li>
+          <li id="nav01"><a href="http://www.shanghai.gov.cn//nw2/nw2314/nw2315/index.html">要闻动态</a></li>
+          <li id="nav02"><a href="http://www.shanghai.gov.cn//nw2/nw2314/nw2319/index.html">政府信息公开</a></li>
           <li id="nav03"><a href="http://zwdt.sh.gov.cn/zwdt/">网上政务大厅</a></li>
-          <li id="nav04"><a href="/nw2/nw2314/nw38605/index.html">政民互动</a></li>
-          <li id="nav05"><a href="/nw2/nw2314/nw2315/nw17239/index.html">公众服务</a></li>
-          <li id="nav06"><a href="/nw2/nw2314/nw2318/index.html" class="no-margin-right">走进上海</a></li>
+          <li id="nav04"><a href="http://www.shanghai.gov.cn//nw2/nw2314/nw38605/index.html">政民互动</a></li>
+          <li id="nav05"><a href="http://www.shanghai.gov.cn//nw2/nw2314/nw2315/nw17239/index.html">公众服务</a></li>
+          <li id="nav06"><a href="http://www.shanghai.gov.cn//nw2/nw2314/nw2318/index.html" class="no-margin-right">走进上海</a></li>
         </ul>
         </div>
       </div>
     </div>
   </div>
-  <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-right offcanvas" role="navigation">
-  <ul class="nav navmenu-nav">
-    <li><a href="/">首页</a></li>
-    <li id="nav01"><a href="/nw2/nw2314/nw2315/index.html">要闻动态</a></li>
-    <li id="nav02"><a href="/nw2/nw2314/nw2319/index.html">政府信息公开</a></li>
-    <li id="nav03"><a href="http://zwdt.sh.gov.cn/zwdt/">网上政务大厅</a></li>
-    <li id="nav04"><a href="/nw2/nw2314/nw38605/index.html">政民互动</a></li>
-    <li id="nav05"><a href="/nw2/nw2314/nw2315/nw17239/index.html">公众服务</a></li>
-    <li id="nav06"><a href="/nw2/nw2314/nw2318/index.html">走进上海</a></li>
-  </ul>
-  </nav>
   <div >
 		<div class="container">
 			<div class="row-fluid">
