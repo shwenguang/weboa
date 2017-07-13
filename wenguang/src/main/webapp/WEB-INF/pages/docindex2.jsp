@@ -61,7 +61,7 @@
 不能读取工具条
 </noscript>
 <!-- /工具条 -->
-<script type="text/javascript" src="/newshanghai/js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="http://www.shanghai.gov.cn//newshanghai/js/jquery-1.7.2.min.js"></script> 
 
  
   <div id="header" class="navbar MainNav no-margin-bottom"> 
@@ -70,30 +70,12 @@
     <div class="navbar-inner">
       <div class="container">
         <div class="brand">
-                    <script>
-if(location.hostname == "big5.shanghai.gov.cn"){
-
-    document.write("<a href=\"http://big5.shanghai.gov.cn/gate/big5/www.shanghai.gov.cn\" title=\"中国上海\" alt=\"*\"><img src=\"http://www.shanghai.gov.cn//newshanghai/img/big5/logo-hd.png\" class=\"hdlogo logo\"></a><a href=\"ht"+"tp://big5.shanghai.gov.cn/gate/big5/www.shanghai.gov.cn\" title=\"中国上海\" alt=\"*\"><img src=\"http://www.shanghai.gov.cn//newshanghai/img/big5/logo-sm.png\" class=\"smlogo logo pngFix\"></a>");
-    }else
-{
-        document.write("<a href=\"http://www.shanghai.gov.cn\" alt=\"*\" title=\"中国上海\" ><img src=\"http://www.shanghai.gov.cn//newshanghai/img/logo-hd.png\" class=\"hdlogo logo\"></a><a href=\"http://www.shanghai.gov.cn\" alt=\"*\"><img src=\"http://www.shanghai.gov.cn//newshanghai/img/logo-sm.png\"  title=\"中国上海\"  class=\"smlogo logo pngFix\"></a>");
-        }
-</script>
-
-          
-          
-          <a class="brandLink margin-left10" href="javascript:;" onclick="toggleToolBar()" title="无障碍浏览工具">无障碍</a>
-          <script>
-if(location.hostname == "big5.shanghai.gov.cn"){
-
-    document.write("<a  class=\"brandLink\" href=\"ht"+"tp://www.shanghai.gov.cn\" title=\"简体\">简体</a>");
-    }else
-{
-        document.write("<a  class=\"brandLink\" href=\"http://big5.shanghai.gov.cn/gate/big5/www.shanghai.gov.cn\" title=\"繁體\">繁體</a>");}
-</script>
-
-          
-          <a class="brandLink no-margin-right" href="http://www.shanghai.gov.cn/shanghai/node27118/index.html">English</a>
+		<a href="http://www.shanghai.gov.cn" alt="*" title="中国上海" >
+			<img src="http://www.shanghai.gov.cn//newshanghai/img/logo-hd.png" class="hdlogo logo"></a>
+		<a href="http://www.shanghai.gov.cn" alt="*">
+			<img src="http://www.shanghai.gov.cn//newshanghai/img/logo-sm.png"  title="中国上海"  class="smlogo logo pngFix"></a>
+<!--         <a class="brandLink margin-left10" href="javascript:;" onclick="toggleToolBar()" title="无障碍浏览工具">无障碍</a> -->
+<!--         <a class="brandLink no-margin-right" href="http://www.shanghai.gov.cn/shanghai/node27118/index.html">English</a> -->
         </div>
         <a data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="#container" data-placement="right" class="btn-link btn-navbar">导航</a>
         <div class="nav-collapse collapse navbar-responsive-collapse MainNavBar-responsive-collapse">
@@ -121,37 +103,9 @@ if(location.hostname == "big5.shanghai.gov.cn"){
     <li id="nav06"><a href="/nw2/nw2314/nw2318/index.html">走进上海</a></li>
   </ul>
   </nav>
-   <div  class="row-fluid ChiefHall">
-      <div class="container">
-      
-
-                <div class="control-group">
-            
-              
-<script type="text/javascript" src="/newshanghai/js/autocomplete/jquery-ui-1.8.13.custom.min.js"></script>
-<link href="/newshanghai/js/autocomplete/jquery-ui-1.8.13.custom.css" rel="stylesheet" type="text/css">
-<form class="form-horizontal margin-bottom5" accept-charset="utf-8" method="post" action="http://zwdt.sh.gov.cn/zwdtSW/search/pre.do"
-         			id="entireform" name="entireform"  target="_blank"  onsubmit="document.charset='utf-8'">
-
-<label class="control-label" style="display:none">网上政务大厅</label>
-            <div class="controls1" >
-            
-<div class="zwdt-search">
-</div>
-	        </div>
-</form>
-              <script>
-$(".control-label").attr("style","");
-
-</script>
-                     </div>
-                      
-        
-      </div>
-    </div>
   <div >
 <script>
-$("li[id='nav02']").attr("class","active");
+// $("li[id='nav02']").attr("class","active");
 </script>
 		<div class="container">
 			<div class="row-fluid">
@@ -208,12 +162,6 @@ $("li[id='nav02']").attr("class","active");
 						</a>
 					</li>
 				</c:forEach>
-<!-- 				<li><a  class="btn-line" href="/nw2/nw2314/nw2319/nw22421/u26aw52126.html" target="_blank" title="市政府办公厅关于印发2017年上海市政务公开工作要点的通知"> -->
-<!-- 						市政府办公厅关于印发2017年上海市政务公开工作要点的通知</a> -->
-<!-- 				</li> -->
-<!-- 				<li><a  class="btn-line" href="/nw2/nw2314/nw2319/nw22421/u26aw47538.html" target="_blank" title="市政府办公厅关于印发2016年上海市政务公开工作要点的通知"> -->
-<!-- 						市政府办公厅关于印发2016年上海市政务公开工作要点的通知</a> -->
-<!-- 				</li> -->
 			</ul>
 		</div>
 	</div>
@@ -229,17 +177,6 @@ $("li[id='nav02']").attr("class","active");
 							<c:forEach items="${menu1List }" var="menu">
 							<li onclick=""><a href="/busi/docindex.do?yjml=${menu.id }" title="${menu.yjmlmc }" ><span>${menu.yjmlmc }</span></a></li>
 							</c:forEach>
-<!-- 						<li id="fg" onclick="changeColor('fg')"><a href="/nw2/nw2314/nw2319/nw11494/nw18958/index.html" title="市政府领导分工" ><span>市政府领导分工</span></a></li> -->
-<!-- 						<li id="xw" onclick="changeColor('xw')"><a href="/nw2/nw2314/nw9819/index.html" title="市政府新闻发布" target="_blank"><span>市政府新闻发布</span></a></li> -->
-<!-- 						<li id="gg" onclick="changeColor('gg')"><a href="/nw2/nw2314/nw2319/nw2404/index.html" title="市政府公报" ><span>市政府公报</span></a></li> -->
-<!-- 						<li id="wj" onclick="changeColor('wj')"><a href="/nw2/nw2314/nw2319/nw41149/index.html" title="行政规范性文件" ><span>行政规范性文件</span></a></li> -->
-<!-- 						<li id="zd" onclick="changeColor('zd')"><a href="/nw2/nw2314/nw2319/nw22421/index.html" title="政府信息公开依据"  ><span>政府信息公开依据</span></a></li> -->
-<!-- 						<li id="zn" onclick="changeColor('zn')"><a href="/nw2/nw2314/nw2319/nw11495/index.html" title="政府信息公开指南"  ><span>政府信息公开指南</span></a></li> -->
-<!-- 						<li id="ml" onclick="changeColor('ml')"><a href="/nw2/nw2314/nw2319/nw11494/index.html" title="政府信息公开目录"  ><span>政府信息公开目录</span></a></li> -->
-<!-- 						<li id="nb" onclick="changeColor('nb')"><a href="/nw2/nw2314/nw2319/nw14868/index.html" title="政府信息公开年报" ><span>政府信息公开年报</span></a></li> -->
-<!-- 						<li id="yjx" onclick="changeColor('yjx')"><a href="/nw2/nw2314/nw2319/nw39186/nw39188/index.html" title="市政府信息公开监督保障" ><span>市政府信息公开监督保障</span></a></li> -->
-<!-- 						<li id="qx" onclick="changeColor('qx')"><a href="/nw2/nw2314/nw2319/nw38674/index.html" title="市政府部门与区政府信息公开" ><span>市政府部门与区政府信息公开</span></a></li> -->
-<!-- 						<li class="margin-top10"><a href="http://xxgk.sh.gov.cn/infoopen/open/portal_index.jsp" class="red text-center no-margin-bottom" title="依申请公开"><span>依申请公开</span></a></li> -->
 					</ul>
 <!-- 					<div class="page-header-1"> -->
 <!-- 							<h4><a  title="工作机构">工作机构</a></h4> -->
@@ -283,13 +220,9 @@ height:44px;
   </div>
 </div>
 
-<!--Main JS--> 
-
-<!-- <script type="text/javascript" src="/newshanghai/js/jquery-1.7.2.min.js"></script> --> 
-<script type="text/javascript" src="/newshanghai/js/ETUI.min.js"></script> 
 <!--[if lte IE 6]>
-<script type="text/javascript" src="/newshanghai/js/ETUI-ie.js"></script>
-<script type="text/javascript" src="/newshanghai/js/DD_belatedPNG-min.js"></script>
+<script type="text/javascript" src="http://www.shanghai.gov.cn//newshanghai/js/ETUI-ie.js"></script>
+<script type="text/javascript" src="http://www.shanghai.gov.cn//newshanghai/js/DD_belatedPNG-min.js"></script>
 <![endif]--> 
 <a id="hash" data-toggle="modal" tabindex="-1"  href="#myModal"></a>
 <div id="myModal"  class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
