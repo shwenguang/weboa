@@ -52,7 +52,7 @@
 
 <div id="container">
   <div id="header" class="navbar MainNav no-margin-bottom"> 
-    <div class="navbar-inner">
+   <!--  <div class="navbar-inner">
       <div class="container">
         <div class="brand">
 		<a href="http://www.shanghai.gov.cn" alt="*" title="中国上海" ><img src="http://www.shanghai.gov.cn//newshanghai/img/logo-hd.png" class="logo"></a>
@@ -69,7 +69,7 @@
         </ul>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="container">
      <div class="row-fluid">
