@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh_CN" lang="zh_CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>上海市文化广播影视管理局 上海市文物局</title>
 <script type="text/javascript" id="ABT" src="http://wgj.sh.gov.cn/images/wg2015/script/ABT/ABT.js"></script>
 <script type="text/javascript" src="http://wgj.sh.gov.cn/images/wg2015/script/openTag.js"></script>
