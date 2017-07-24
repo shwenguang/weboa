@@ -1,0 +1,1197 @@
+@CHARSET "UTF-8";
+/**
+ *--------------------------------------------------
+ * 首页 样式表
+ * Scorpio
+ * 2015-10-20
+ *--------------------------------------------------
+**/
+div#container{
+	margin:0px auto;
+	max-width:1300px;
+	min-width:1000px;
+	_width:expression(eval(document.documentElement.clientWidth>1300?1300:document.documentElement.clientWidth<1000?1000:document.documentElement.clientWidth));
+}
+.pageCenter{
+	width:1000px;
+	margin:0px auto;
+}
+/* 头部
+----------------------------------------*/
+div#header{
+	width:100%;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_headerBg.gif) repeat left top;
+	border-bottom:1px solid #d7d7d7;
+}
+ul#quickLink li a:link,
+ul#quickLink li a:visited,
+ul#quickLink li a:hover{color:#909090;}
+/*-- 头部开关 --*/
+div#header div.pageCenter{position:relative;}
+div#headerSwitch{
+	position:absolute;
+	right:-29px;
+	bottom:0px;
+	width:29px;
+	height:19px;
+	background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/index_headerSwitchBg.gif);
+	background-repeat:no-repeat;
+	font-size:0px;
+	line-height:0px;
+	white-space:nowrap;
+	text-indent:100px;
+	overflow:hidden;
+}
+div#headerSwitch a{
+	display:block;
+	width:29px;
+	height:19px;
+}
+/*-- 头部打开状态 --*/
+div.headerOpen{padding-top:6px;}
+div.headerOpen div.pageCenter{padding-bottom:6px;}
+div.headerOpen div#headerSwitch{background-position:-29px top;}
+div.headerOpen div#csjsBox{
+	float:left;
+	width:255px;
+	font-size:0px;
+	line-height:0px;
+}
+div.headerOpen h1#logo{
+	float:left;
+	width:487px;
+	height:90px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_maxLogo.gif) no-repeat left top;
+	font-size:0px;
+	line-height:0px;
+	overflow:hidden;
+}
+div.headerOpen h1#logo span{display:none;}
+div.headerOpen ul#quickLink{
+	float:left;
+	width:208px;
+	padding:20px 0px 0px 50px;
+}
+div.headerOpen ul#quickLink li{
+	float:left;
+	width:60px;
+	margin:0px 3px 2px 0px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_quickLinkBg.gif) repeat-x left top;
+	border-right:1px solid #cacaca;
+	border-bottom:1px solid #cacaca;
+}
+div.headerOpen ul#quickLink li a{
+	display:block;
+	width:100%;
+	padding:5px 0px;
+}
+div.headerOpen ul#quickLink li#abtSwitch{width:124px;}
+/*-- 头部关闭状态 --*/
+div.headerClose div#headerSwitch{background-position:left top;}
+div.headerClose div#csjsBox{display:none;}
+div.headerClose h1#logo{
+	float:left;
+	width:552px;
+	padding:7px 0px 7px 48px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_minLogo.gif) no-repeat left top;
+	font-size:18px;
+	line-height:22px;
+	color:#776e66;
+	text-align:left;
+	white-space:nowrap;
+}
+div.headerClose h1#logo span{padding-right:30px;}
+div.headerClose ul#quickLink{
+	float:right;
+	width:350px;
+	padding:16px 10px 6px 0px;
+	text-align:right;
+}
+div.headerClose ul#quickLink li{
+	display:inline;
+	padding-left:12px;
+}
+/* 主要
+----------------------------------------*/
+div#main{width:100%;}
+div#mainTop{
+	width:100%;
+	background-color:#f4f4f4;
+}
+/*-- 主标题 --*/
+h2#mainTitle{
+	padding:8px 0px;
+	font-size:0px;
+	line-height:0px;
+	text-align:center;
+}
+/*-- 主导航 --*/
+div#mainNav{
+	width:720px;
+	margin:0px auto;
+}
+div#mainNav ul{
+	float:left;
+	width:720px;
+	margin-bottom:5px;
+	background:#e6e6e6 url(http://wgj.sh.gov.cn/images/wg2015/images/index_mainNavBg.gif) no-repeat left bottom;
+}
+div#mainNav ul li{float:left;}
+div#mainNav ul li#mn_xzsp{width:239px;}
+div#mainNav ul li#mn_bsfw{width:243px;}
+div#mainNav ul li#mn_blfw{width:238px;}
+div#mainNav ul li a{
+	display:block;
+	width:100%;
+	padding:35px 0px 12px 0px;
+	border-top:4px solid #e6e6e6;
+	font-size:18px;
+	line-height:22px;
+	background-repeat:no-repeat;
+	background-position:center 10px;
+	color:#ff5a00;
+}
+
+div#mainNav ul li a:hover{
+	text-decoration:none;
+	border-color:#ff5a00;
+	
+}
+div#mainNav ul li#mn_xzsp a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/index_mn_xzspBg2.gif);}
+div#mainNav ul li#mn_bsfw a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/index_mn_bsfwBg2.gif);}
+div#mainNav ul li#mn_blfw a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/index_mn_blfwBg2.gif);}
+
+
+/*-- 主搜索 --*/
+form#mainSearch{
+	width:720px;
+	margin:0px auto;
+}
+div#mainSearchInput{
+	float:left;
+	width:706px;
+	padding:6px;
+	border:1px dashed #cecece;
+}
+div#mainSearchInput input.mainSearchKey{
+	float:left;
+	width:640px;
+	height:40px;
+	padding-left:14px;
+	background-color:#FFF;
+	border:1px solid #d9d9d9;
+	border-right:none;
+	font-size:14px;
+	line-height:40px;
+	color:#999;
+}
+div#mainSearchInput input.mainSearchButton{
+	float:left;
+	width:50px;
+	height:40px;
+	border:1px solid #d9d9d9;
+	border-left:none;
+}
+/*-- 热门关键字 --*/
+dl#hotSearchKey{
+	float:left;
+	width:720px;
+	padding:10px 0px 13px 0px;
+	text-align:center;
+	font-size:14px;
+	line-height:16px;
+	color:#999;
+}
+dl#hotSearchKey dt,dl#hotSearchKey dd{display:inline;}
+dl#hotSearchKey dd{padding:0px 5px;}
+dl#hotSearchKey dd a:link,
+dl#hotSearchKey dd a:visited,
+dl#hotSearchKey dd a:hover{color:#999;}
+/*-- 子导航 --*/
+div#subNav{
+	width:580px;
+	margin:0px auto;
+	padding-bottom:23px;
+}
+div#subNav ul{
+	float:left;
+	width:100%;
+}
+div#subNav ul li{
+	float:left;
+	width:127px;
+	padding:0px 9px;
+}
+div#subNav ul li a{
+	display:block;
+	width:100%;
+	padding:11px 0px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_subNavBg.gif) no-repeat left top;
+	font-size:18px;
+	line-height:20px;
+}
+div#subNav ul li a:hover{text-decoration:none;}
+/*-- 网络媒体 --*/
+div#netMedia{
+	width:1000px;
+	padding-top:28px;
+	background:#FFF url(http://wgj.sh.gov.cn/images/wg2015/images/index_netMediaBg.jpg) no-repeat left top;
+}
+div#netMedia div.netMediaSub{
+	float:left;
+	width:223px;
+	height:59px;
+	padding-bottom:31px;
+	font-size:0px;
+	line-height:0px;
+}
+div#netMedia div.netMediaSub a{
+	display:block;
+	width:100%;
+}
+div#netMedia div#weixinBox{
+	position:relative;
+	padding-left:54px;
+}
+div#weixinBox div#weixinPop{
+	display:none;
+	position:absolute;
+	top:-125px;
+	right:-20px;
+	width:104px;
+	height:104px;
+	padding:10px 10px 17px 10px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_weixinPopBg.gif) no-repeat left top;
+	font-size:0px;
+	line-height:0px;
+	overflow:hidden;
+	z-index:200;
+}
+div.sharePopOpen{
+	position:relative;
+	padding-bottom:141px;
+}
+div.sharePopOpen div#shareBox div#sharePop{display:block;}
+div#sharePop{
+	display:none;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	width:800px;
+	height:81px;
+	padding:60px 100px 0px 100px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_sharePopBg.gif) no-repeat left top;
+}
+div#sharePop dl{
+	float:left;
+	width:960px;
+}
+div#sharePop dl dt,div#sharePop dl dd{
+	float:left;
+	width:100px;
+	text-align:center;
+}
+div#sharePop dl dt{
+	padding-top:1px;
+	font-size:18px;
+	line-height:30px;
+}
+div#sharePop dl dd{
+	font-size:0px;
+	line-height:0px;
+}
+/*-- 友情链接 --*/
+div#friendLink{
+	width:980px;
+	padding:12px 0px 24px 20px;
+}
+div#friendLink select{
+	float:left;
+	width:225px;
+	height:28px;
+	margin-right:20px;
+	border:1px solid #CCC;
+	border-radius:4px;
+}
+/*-- 内容 --*/
+div#content{
+	width:100%;
+	padding:20px 0px 16px 0px;
+	/* background:url(../images/index_contentBg.gif) repeat-x left top; */
+}
+div#content div#mainContent{
+	padding-bottom:15px;
+	/* background:url(../images/index_mainContentBg.jpg) no-repeat left bottom; */
+	border: 1px solid rgb(255,90,0);
+}
+
+/*-- 搜索 --*/
+div#searchBox{
+	width:736px;
+	padding:19px 132px 15px 132px;
+	padding-top:19px;
+	/* background:#FFF url(../images/index_searchBoxBg.jpg) no-repeat left top; */
+	text-align:left;
+}
+div#searchBox form#znSearch{float:left;}
+div#searchBox form#qwSearch{float:right;}
+div#searchBox form{width:353px;}
+div#searchBox form *{float:left;}
+div#searchBox form label{
+	display:block;
+	width:68px;
+	padding:7px 0px;
+	font-size:14px;
+	line-height:16px;
+}
+div#searchBox form input.keyword{
+	width:242px;
+	height:28px;
+	padding-left:8px;
+	border:1px solid #CCC;
+	border-right:none;
+	border-radius:4px 0px 0px 4px;
+	line-height:28px;
+	color:#999;
+}
+div#searchBox form input.searchButton{
+	width:30px;
+	height:28px;
+	border:1px solid #CCC;
+	border-left:none;
+	border-radius:0px 4px 4px 0px;
+}
+/*-- 标签块 --*/
+div#tabMain{
+	width:980px;
+	padding:0px 10px;
+	background:#FFF url(http://wgj.sh.gov.cn/images/wg2015/images/index_tabMainBg.gif) repeat-y left top;
+}
+div#tabWrapper{
+	width:980px;
+	padding-top:12px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_tabWrapperBg.gif) no-repeat left top;
+}
+div#tabContent{
+	position:relative;
+	width:730px;
+	height:270px;
+	padding:0px 12px 12px 238px;
+	padding-bottom:12px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_tabContentBg.gif) no-repeat left bottom;
+}
+div.tabContent{
+	display:none;
+	width:100%;
+	text-align:left;
+}
+div#tabContent h2{
+	position:absolute;
+	left:12px;
+	width:215px;
+	padding-bottom:15px;
+	text-align:left;
+	background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/index_tabTitleBg.gif);
+	background-repeat:no-repeat;
+	background-position:left -2px;
+}
+div#tabContent h2 a{
+	display:block;
+	width:173px;
+	padding:11px 0px;
+	font-size:16px;
+	font-weight:normal;
+	line-height:20px;
+	text-align:center;
+	color:#fff;
+}
+div#tabContent h2 a:hover{text-decoration:none;}
+div#tabContent h2#tabTitle_ywdt{
+	padding-top:2px;
+	top:-2px;
+	background-position:left top;
+}
+h2#tabTitle_xxgk{top:57px;}
+h2#tabTitle_zmhd{top:114px;}
+h2#tabTitle_gzfw{top:171px;}
+div#tabContent h2#tabTitle_zjwg{
+	top:228px;
+	padding-bottom:0px;
+}
+div#tabWrapper div.tabShow_ywdt h2#tabTitle_ywdt{background-position:-215px top;}
+div.tabShow_xxgk h2#tabTitle_xxgk,
+div.tabShow_zmhd h2#tabTitle_zmhd,
+div.tabShow_gzfw h2#tabTitle_gzfw,
+div.tabShow_zjwg h2#tabTitle_zjwg{background-position:-215px -2px;}
+div.tabShow_ywdt h2#tabTitle_ywdt a:link,
+div.tabShow_ywdt h2#tabTitle_ywdt a:visited,
+div.tabShow_ywdt h2#tabTitle_ywdt a:hover,
+div.tabShow_xxgk h2#tabTitle_xxgk a:link,
+div.tabShow_xxgk h2#tabTitle_xxgk a:visited,
+div.tabShow_xxgk h2#tabTitle_xxgk a:hover,
+div.tabShow_zmhd h2#tabTitle_zmhd a:link,
+div.tabShow_zmhd h2#tabTitle_zmhd a:visited,
+div.tabShow_zmhd h2#tabTitle_zmhd a:hover,
+div.tabShow_gzfw h2#tabTitle_gzfw a:link,
+div.tabShow_gzfw h2#tabTitle_gzfw a:visited,
+div.tabShow_gzfw h2#tabTitle_gzfw a:hover,
+div.tabShow_zjwg h2#tabTitle_zjwg a:link,
+div.tabShow_zjwg h2#tabTitle_zjwg a:visited,
+div.tabShow_zjwg h2#tabTitle_zjwg a:hover{color:#333;text-decoration:none;}
+div.tabShow_ywdt div#tabContent_ywdt,
+div.tabShow_xxgk div#tabContent_xxgk,
+div.tabShow_zmhd div#tabContent_zmhd,
+div.tabShow_gzfw div#tabContent_gzfw,
+div.tabShow_zjwg div#tabContent_zjwg{display:block;}
+
+/* 要闻动态
+----------------------------------------*/
+/*-- 热点关注 --*/
+dl#rdgzBox{
+	float:left;
+	width:730px;
+	padding-bottom:14px;
+	font-size:14px;
+	line-height:16px;
+}
+dl#rdgzBox dt{
+	float:left;
+	width:80px;
+}
+dl#rdgzBox dd{
+	float:left;
+	width:650px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	word-break:keep-all;
+	overflow:hidden;
+}
+/*-- 图片轮播 --*/
+div#picCarousel{
+	position:relative;
+	float:left;
+	width:364px;
+	height:236px;
+	padding-top:4px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_newsPicBg.gif) no-repeat left top;
+	z-index:1;
+}
+div#picCarouselList{
+	position:relative;
+	width:364px;
+	height:236px;
+	z-index:2;
+}
+div#picCarouselList dl{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:364px;
+	height:236px;
+	z-index:10;
+}
+div#picCarouselList dl dt{
+	width:364px;
+	height:236px;
+	font-size:0px;
+	line-height:0px;
+	overflow:hidden;
+}
+div#picCarouselList dl dt img{width:100%;}
+div#picCarouselList dl dd{
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	width:364px;
+	padding:0px 0px 0px 0px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_newsPicTextBg.png) no-repeat left top;
+	z-index:11;
+}
+div#picCarouselList dl dd a{
+	display:block;
+	width:250px;
+	padding:9px 0px 9px 15px;
+	font-size:14px;
+	line-height:16px;
+	color:#FFF;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	word-break:keep-all;
+	overflow:hidden;
+}
+div#picCarouselTagList{
+	position:absolute;
+	right:5px;
+	bottom:12px;
+	z-index:30;
+}
+div#picCarouselTagList div{
+	float:left;
+	display:block !important;
+	display:inline;
+	width:10px;
+	height:10px;
+	margin-right:8px;
+	background-color:#CCC;
+	font-size:0px;
+	line-height:0px;
+	overflow:hidden;
+}
+div#picCarouselTagList div.picCarouselTagOn{background-color:#ffd100;}
+/*-- 新闻列表 --*/
+div#newsBox{
+	position:relative;
+	float:right;
+	width:350px;
+	padding-top:31px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_tabContentTitleBg.gif) repeat-x left 27px;
+}
+div#newsBox h3{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:102px;
+}
+div#newsBox h3#whywTitle{left:0px;}
+div#newsBox h3#qxdtTitle{left:102px;}
+div#newsBox h3 a{
+	display:block;
+	width:100%;
+	padding-bottom:5px;
+	border-bottom:4px solid #cbccce;
+	font-size:16px;
+	font-weight:normal;
+	line-height:22px;
+	text-align:center;
+	color:#999;
+}
+div#newsBox h3 a:hover{text-decoration:none;}
+div#whywList,div#qxdtList{
+	display:none;
+	width:100%;
+}
+div#newsBox ul{
+	float:left;
+	width:350px;
+	padding-top:5px;
+}
+div#newsBox ul li{
+	float:left;
+	width:328px;
+	padding:10px 0px 8px 22px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_listPoint.gif) no-repeat 2px 15px;
+	font-size:14px;
+	line-height:16px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	word-break:keep-all;
+	overflow:hidden;
+}
+div.whywShow h3#whywTitle a,
+div.qxdtShow h3#qxdtTitle a{
+	font-size:18px;
+	font-weight:bold;
+	color:#ff5a00;
+	border-color:#ff5a00;
+}
+div.whywShow div#whywList,
+div.qxdtShow div#qxdtList{display:block;}
+/* 政府信息公开
+----------------------------------------*/
+/*--- 近期信息公开 --*/
+div#jqgkBox{
+	float:left;
+	width:437px;
+}
+div#jqgkBox h3{
+	float:left;
+	width:100%;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_tabContentTitleBg.gif) repeat-x left bottom;
+}
+div#jqgkBox h3 span{
+	display:block;
+	width:134px;
+	padding-bottom:5px;
+	border-bottom:4px solid #ff5a00;
+	text-align:center;
+	font-size:18px;
+	font-weight:normal;
+	line-height:20px;
+	color:#ff5a00;
+}
+div#jqgkBox ul{
+	float:left;
+	width:437px;
+	padding-top:1px;
+}
+div#jqgkBox ul li{
+	float:left;
+	width:417px;
+	padding:9px 0px 5px 20px;
+	font-size:14px;
+	line-height:16px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_listPoint.gif) no-repeat 2px 14px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	word-break:keep-all;
+	overflow:hidden;
+}
+/*--- 信息公开目录 --*/
+div#gkmlBox{
+	float:right;
+	width:270px;
+}
+div#gkmlBox ul{
+	float:left;
+	width:270px;
+}
+div#gkmlBox ul li{
+	float:left;
+	width:270px;
+	padding-bottom:8px;
+}
+div#gkmlBox ul li a{
+	display:block;
+	width:193px;
+	padding:8px 0px 8px 75px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/gkmlListBg.gif) no-repeat left top;
+	border:1px solid #cbccce;
+	border-radius:3px;
+	font-size:16px;
+	line-height:20px;
+}
+div#gkmlBox ul li a:hover{
+	background-color:#cbccce;
+	color:#FFF;
+	font-weight:bold;
+	text-decoration:none;
+}
+div#gkmlBox div#ysqgkBox{
+	clear:both;
+	width:270px;
+	background:#ff5a00 url(http://wgj.sh.gov.cn/images/wg2015/images/ysqgkBoxBg.gif) no-repeat 13px 10px;
+}
+div#gkmlBox div#ysqgkBox a{
+	display:block;
+	width:194px;
+	padding:10px 0px 10px 76px;
+	font-size:16px;
+	line-height:20px;
+}
+div#gkmlBox div#ysqgkBox a:link,
+div#gkmlBox div#ysqgkBox a:visited{color:#FFF;}
+div#gkmlBox div#ysqgkBox a:hover{color:#FFF;text-decoration:none;}
+/* 政民互动
+----------------------------------------*/
+div#zmhdLeft{
+	float:left;
+	width:362px;
+}
+/*-- 政民互动通用标题 --*/
+div#wszjBox h3,
+div#zxftBox h3,
+div#jzxxBox dl dt{
+	float:left;
+	width:100%;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_tabContentTitleBg.gif) repeat-x left bottom;
+}
+div#wszjBox h3 a,
+div#zxftBox h3 a,
+div#jzxxBox dl dt a{
+	display:block;
+	padding-bottom:4px;
+	border-bottom:4px solid #ff5a00;
+	text-align:center;
+	font-size:18px;
+	font-weight:normal;
+	line-height:20px;
+	color:#ff5a00;
+}
+div#wszjBox h3 a:hover,
+div#zxftBox h3 a:hover,
+div#jzxxBox dl dt a:hover{text-decoration:none;}
+/*-- 局长信箱 --*/
+div#jzxxBox{
+	float:left;
+	width:362px;
+	margin-bottom:16px;
+}
+div#jzxxBox h3{
+	float:left;
+	width:110px;
+	font-size:0px;
+	line-height:0px;
+}
+div#jzxxBox dl{
+	float:right;
+	width:240px;
+}
+div#jzxxBox dl dt a{width:194px;}
+div#jzxxBox dl dd{
+	float:left;
+	width:240px;
+	padding-top:9px;
+}
+div#jzxxBox dl dd a{
+	display:block;
+	width:162px;
+	padding:6px 0px 6px 76px;
+	background-repeat:no-repeat;
+	background-position:left top;
+	border:1px solid #cbcccd;
+	border-radius:3px;
+	font-size:16px;
+	line-height:18px;
+}
+div#jzxxBox dl dd a:hover{
+	color:#FFF;
+	text-decoration:none;
+	background-color:#cbcccd;
+}
+div#jzxxBox dl dd#zxhfLink a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/index_zxhfLinkBg.gif);}
+div#jzxxBox dl dd#wyxxLink a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/index_wyxxLinkBg.gif);}
+/*-- 网上征集 --*/
+div#wszjBox{
+	float:left;
+	width:362px;
+}
+div#wszjBox h3 a{width:110px;}
+div#wszjBox ul{
+	float:left;
+	width:362px;
+	padding-top:4px;
+}
+div#wszjBox ul li{
+	float:left;
+	width:340px;
+	padding:8px 0px 4px 22px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_listPoint.gif) no-repeat 2px 13px;
+	font-size:14px;
+	line-height:16px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	word-break:keep-all;
+	overflow:hidden;
+}
+/*-- 在线访谈 --*/
+div#zxftBox{
+	float:right;
+	width:350px;
+	height:120px;
+}
+div#zxftBox h3{
+	float:none;
+	margin-bottom:8px;
+}
+div#zxftBox h3 a{width:110px;}
+div#zxftContent{
+	position:relative;
+	width:350px;
+	padding-top:29px;
+}
+div#zxftContent h4{
+	position:absolute;
+	top:0px;
+	width:95px;
+	border-top:1px solid #eeeeee;
+	border-right:1px solid #eeeeee;
+}
+div#zxftContent h4#ftygTitle{
+	left:0px;
+	border-left:1px solid #eeeeee;
+}
+div#zxftContent h4#ftslTitle{left:97px;}
+div#zxftContent h4 a{
+	display:block;
+	width:100%;
+	padding:5px 0px;
+	font-size:16px;
+	font-weight:normal;
+	line-height:18px;
+	text-align:center;
+	border-bottom:1px solid #eeeeee;
+	background-color:#f6f6f6;
+	color:#999;
+}
+div#zxftContent h4 a:hover{text-decoration:none;}
+div.ftygShow h4#ftygTitle a,
+div.ftslShow h4#ftslTitle a{
+	color:#ff5a00;
+	background-color:#FFF;
+	border-color:#FFF;
+}
+div.ftygShow div#ftygList,
+div.ftslShow div#ftslList{display:block;}
+div#ftygList,div#ftslList{
+	display:none;
+	width:350px;
+	border-top:1px solid #eeeeee;
+}
+div#zxftContent ul{
+	float:left;
+	width:350px;
+}
+div#zxftContent ul li{
+	float:left;
+	width:328px;
+	padding:14px 0px 4px 22px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_listPoint.gif) no-repeat 2px 19px;
+	font-size:14px;
+	line-height:16px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	word-break:keep-all;
+	overflow:hidden;
+}
+/* 公众服务
+----------------------------------------*/
+div#gzfwLeft{
+	float:left;
+	width:361px;
+}
+div#tabContent_gzfw h3{
+	float:left;
+	width:100%;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_tabContentTitleBg.gif) repeat-x left bottom;
+}
+div#tabContent_gzfw h3 span{
+	display:block;
+	padding-bottom:5px;
+	border-bottom:4px solid #ff5a00;
+	text-align:center;
+	font-size:18px;
+	font-weight:normal;
+	line-height:20px;
+	color:#ff5a00;
+}
+/*-- 文化票务查询 --*/
+div#pwcxBox{
+	float:left;
+	width:361px;
+	padding-bottom:10px;
+}
+div#pwcxBox h3 span{width:138px;}
+form#pwcxForm{
+	float:left;
+	width:361px;
+	padding-top:10px;
+	overflow:hidden;
+}
+div.pwcxFormRow{
+	float:left;
+	width:361px;
+	padding-bottom:12px;
+}
+div.pwcxFormRow *{ float:left;}
+div.pwcxFormRow label{
+	display:block;
+	padding:4px 8px 4px 0px;
+	white-space:nowrap;
+	font-size:14px;
+	line-height:16px;
+}
+div.pwcxFormRow a.pwcxTimeSelect{
+	display:block;
+	width:16px;
+	padding:5px 12px 6px 0px;
+	font-size:0px;
+	line-height:0px;
+}
+div.pwcxFormRow input.pwcxFormText,
+div.pwcxFormRow input.pwcxFormKeyword{
+	float:left;
+	width:83px;
+	height:22px;
+	margin-right:5px;
+	padding-left:5px;
+	border:1px solid #CCC;
+	border-radius:4px;
+	line-height:24px;
+	color:#666;
+}
+div.pwcxFormRow input.pwcxFormKeyword{
+	width:152px;
+	margin-right:6px;
+}
+div.pwcxFormRow input.pwcxFormSubmit{
+	width:42px;
+	height:24px;
+}
+div#pwcxFormSelectRow{width:380px;}
+div#pwcxFormSelectRow label{
+	width:36px;
+	padding:2px 0px 3px 0px;
+}
+div#pwcxFormSelectRow select{
+	width:137px;
+	height:21px;
+	margin-right:15px;
+}
+/*-- 文化地标查询 --*/
+div#dbcxBox{
+	float:left;
+	width:361px;
+}
+div#dbcxBox h3{margin-bottom:10px;}
+div#dbcxBox h3 span{width:138px;}
+div#dbcxContent{
+	position:relative;
+	float:left;
+	width:287px;
+	height:77px;
+	padding:0px 37px;
+}
+div#dbcxScrollLeft,div#dbcxScrollRight{
+	position:absolute;
+	top:0px;
+	width:24px;
+	height:77px;
+	font-size:0px;
+	line-height:0px;
+	cursor:pointer;
+	overflow:hidden;
+}
+div#dbcxScrollLeft{
+	left:0px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_dbcxScrollLeftBg.gif) no-repeat left top;
+}
+div#dbcxScrollRight{
+	right:0px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_dbcxScrollRightBg.gif) no-repeat left top;
+}
+div#dbcxList{
+	width:287px;
+	height:77px;
+	overflow:hidden;
+}
+div#dbcxList ul{
+	float:left;
+	width:297px;
+	height:77px;
+	overflow:hidden;
+}
+div#dbcxList ul li{
+	float:left;
+	width:89px;
+	height:77px;
+	padding-right:10px;
+	font-size:0px;
+	line-height:0px;
+	overflow:hidden;
+}
+/*-- 资料下载 --*/
+div#zlxzBox{
+	float:right;
+	width:350px;
+}
+div#zlxzBox h3 span{width:100px;}
+div#zlxzBox ul{
+	float:left;
+	width:350px;
+	padding-top:3px;
+}
+div#zlxzBox ul li{
+	float:left;
+	width:328px;
+	padding:9px 0px 9px 22px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_listPoint.gif) no-repeat 0px 14px;
+	font-size:14px;
+	line-height:16px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	word-break:keep-all;
+	overflow:hidden;
+}
+/* 走进文广
+----------------------------------------*/
+div#zjwgLeft{
+	float:left;
+	width:363px;
+}
+div#zjwgRight{
+	float:right;
+	width:353px;
+}
+div#tabContent_zjwg h3{
+	float:left;
+	width:100%;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_tabContentTitleBg.gif) repeat-x left bottom;
+}
+div#tabContent_zjwg h3 span{
+	display:block;
+	padding-bottom:5px;
+	border-bottom:4px solid #ff5a00;
+	text-align:center;
+	font-size:18px;
+	font-weight:normal;
+	line-height:20px;
+	color:#ff5a00;
+}
+/*-- 数据统计 --*/
+div#sjtjBox{
+	float:left;
+	width:100%;
+	margin-bottom:15px;
+	font-size:0px;
+	line-height:0px;
+}
+/*-- 招标公告 --*/
+dl#zbggBox{
+	float:left;
+	width:363px;
+	margin-bottom:22px;
+}
+dl#zbggBox dt{
+	float:left;
+	width:76px;
+	height:76px;
+	font-size:0px;
+	line-height:0px;
+	overflow:hidden;
+}
+dl#zbggBox dd{
+	float:right;
+	width:255px;
+	padding:5px 0px 4px 20px;
+	font-size:14px;
+	line-height:16px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_listPoint.gif) no-repeat 0px 10px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	word-break:keep-all;
+	overflow:hidden;
+}
+/*-- 文化明信片 --*/
+div#whmxpBox{
+	float:left;
+	width:363px;
+}
+div#whmxpBox h3{margin-bottom:12px;}
+div#whmxpBox h3 span{width:116px;}
+div#whmxpContent{
+	position:relative;
+	float:left;
+	width:363px;
+	height:85px;
+	overflow:hidden;
+}
+div#whmxpScrollLeft,div#whmxpScrollRight{
+	position:absolute;
+	top:17px;
+	width:26px;
+	height:26px;
+	font-size:0px;
+	line-height:0px;
+	cursor:pointer;
+	overflow:hidden;
+}
+div#whmxpScrollLeft{
+	left:0px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_whmxpScrollLeftBg.png) no-repeat left top;
+}
+div#whmxpScrollRight{
+	right:0px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_whmxpScrollRightBg.png) no-repeat left top;
+}
+div#whmxpList{
+	width:368px;
+	height:85px;
+	overflow:hidden;
+}
+div#whmxpList dl{
+	float:left;
+	width:87px;
+	padding-right:5px;
+}
+div#whmxpList dl dt{
+	width:100%;
+	height:60px;
+	font-size:0px;
+	line-height:0px;
+	overflow:hidden;
+}
+div#whmxpList dl dd{
+	width:100%;
+	padding:6px 0px 3px 0px;
+	font-size:14px;
+	line-height:16px;
+	text-align:center;
+}
+/*-- 企业优惠扶持政策 --*/
+div#fczcBox{
+	float:left;
+	width:353px;
+	padding-bottom:9px;
+}
+div#fczcBox h3 span{width:176px;}
+div#fczcBox ul{
+	float:left;
+	width:353px;
+}
+div#fczcBox ul li{
+	float:left;
+	width:330px;
+	padding:12px 0px 9px 23px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/index_listPoint.gif) no-repeat 2px 17px;
+	font-size:14px;
+	line-height:16px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	word-break:keep-all;
+	overflow:hidden;
+}
+/*-- 走进文广导航 --*/
+div#zjwgNav{
+	float:left;
+	width:353px;
+	overflow:hidden;
+}
+div#zjwgNav ul{
+	float:left;
+	width:369px;
+}
+div#zjwgNav ul li{
+	float:left;
+	width:107px;
+	height:84px;
+	padding-right:16px;
+	font-size:0px;
+	line-height:0px;
+	overflow:hidden;
+}
+/* 底部
+----------------------------------------*/
+div#footer{
+	width:100%;
+	padding:20px 0px 40px 0px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/footerBg.gif) repeat left top;
+	border-top:1px solid #c7c7c7;
+}
+/*-- 底部标志 --*/
+div#footerLogo{
+	float:left;
+	padding-right:18px;
+	font-size:0px;
+	line-height:0px;
+}
+/*-- 站点信息 --*/
+ul#siteInfo{
+	float:left;
+	padding-top:1px;
+	width:400px;
+}
+ul#siteInfo li{
+	width:100%;
+	padding:4px 0px;
+	text-align:left;
+	color:#999;
+}
+/*-- ICP备案 --*/
+div#icpBox{
+	float:right;
+	padding:17px 20px 1px 55px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/icpBoxBg.gif) no-repeat left bottom;
+	text-align:left;
+	line-height:20px;
+	color:#999;
+}

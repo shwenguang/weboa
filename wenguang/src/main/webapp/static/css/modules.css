@@ -148,13 +148,13 @@ ul#changepage a.lastpage a:hover,ul#changepage a.nextpage a:hover,ul#changepage 
 	padding-bottom:50px;
 	}
 ul#changepage a.lastpage a:hover{
-	background:url(../images/page_last_bg.jpg) no-repeat left bottom;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/page_last_bg.jpg) no-repeat left bottom;
 	}
 ul#changepage a.nextpage a:hover{
-	background:url(../images/page_next_bg.jpg) no-repeat left bottom;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/page_next_bg.jpg) no-repeat left bottom;
 	}
 ul#changepage a.morepage a:hover{
-	background:url(../images/page_more_bg.jpg) no-repeat left bottom;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/page_more_bg.jpg) no-repeat left bottom;
 	}
 ul#changepage a.lastpage a,ul#changepage a.nextpage a,ul#changepage a.morepage a{
 	padding:0px;

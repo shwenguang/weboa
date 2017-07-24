@@ -30,7 +30,7 @@ div#maincontent{
 	line-height:28px;
 	}
 .publist1 li a{
-	background:url(../images/publist1_icon.jpg) no-repeat left center;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/publist1_icon.jpg) no-repeat left center;
 	padding-left:20px;
 	float:left;
 	color:#666666;
@@ -179,7 +179,7 @@ ul#form_submit li{
 	margin:0px 24px;
 	border:1px solid #cccccc;
 	border-radius:3px;
-	background:#cbcccd url(../images/submit_bg.jpg) no-repeat 15px 5px;
+	background:#cbcccd url(http://wgj.sh.gov.cn/images/wg2015/images/submit_bg.jpg) no-repeat 15px 5px;
 	display:inline;
 	padding-left:46px;
 	}

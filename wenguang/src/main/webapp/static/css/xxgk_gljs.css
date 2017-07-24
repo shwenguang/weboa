@@ -1,0 +1,103 @@
+@CHARSET "UTF-8";
+/**
+ *--------------------------------------------------
+ * 信息公开检索 样式表
+ * Scorpio
+ * 2015-10-28
+ *--------------------------------------------------
+**/
+
+body{
+	background-color:#eeeeee;
+	text-align:left;
+}
+
+form#gkjsForm{
+	position:relative;
+	width:346px;
+	padding:12px 0px 12px 10px;
+	border:1px solid #e3e3e3;
+	background-color:#FFF;
+}
+form#gkjsForm h2{
+	float:left;
+	width:325px;
+	margin-bottom:18px;
+	padding-left:14px;
+	border-left:7px solid #ff5a00;
+	font-size:18px;
+	font-weight:bold;
+	line-height:22px;
+	color:#ff5a00;
+}
+form#gkjsForm input#submitButton{
+	position:absolute;
+	right:10px;
+	bottom:27px;
+	width:56px;
+	height:43px;
+	border:none;
+	background-color:#ff5a00;
+	font-size:15px;
+	color:#FFF;
+	cursor:pointer;
+}
+div.formRow{
+	float:left;
+	width:346px;
+	padding-bottom:15px;
+}
+div.formRow *{float:left;}
+div.formRow a.timeSelect{
+	display:block;
+	width:16px;
+	padding:5px 12px 6px 0px;
+	font-size:0px;
+	line-height:0px;
+}
+div.formRow select{
+	width:186px;
+	height:21px;
+	border:1px solid #CCC;
+	border-radius:3px;
+}
+div.formRow label{
+	display:block;
+	padding:4px 8px 4px 0px;
+	font-size:14px;
+	line-height:16px;
+}
+div.formRow label.labelClass1{
+	width:50px;
+	padding-right:0px;
+}
+div.formRow label.labelClass2{
+	width:64px;
+	padding-right:0px;
+}
+div.formRow label.labelClass3{
+	width:64px;
+	padding:2px 0px 3px 0px;
+}
+div.formRow input{
+	height:22px;
+	padding-left:5px;
+	border:1px solid #CCC;
+	border-radius:3px;
+	line-height:24px;
+	color:#999;
+}
+div.formRow input.inputClass1{
+	width:83px;
+	margin-right:6px;
+}
+div.formRow input.inputClass2{
+	width:99px;
+	margin-right:9px;
+}
+div.formRow input.inputClass3{width:100px;}
+div.formRow input.inputClass4{
+	width:85px;
+	margin-right:9px;
+}
+div.formRow input.inputClass5{width:179px;}

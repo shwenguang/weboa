@@ -21,12 +21,12 @@ div.pageCenter{
 div#header{width:100%;}
 div#header_top{
 	width:100%;
-	background:#000 url(../images/mf_headerTopBg.gif) repeat left top;
+	background:#000 url(http://wgj.sh.gov.cn/images/wg2015/images/mf_headerTopBg.gif) repeat left top;
 }
 div#header_bottom{
 	width:100%;
 	padding:10px 0px 20px 0px;
-	background:#FFF url(../images/mf_headerBottomBg.gif) repeat-x left top;
+	background:#FFF url(http://wgj.sh.gov.cn/images/wg2015/images/mf_headerBottomBg.gif) repeat-x left top;
 }
 div#header_bottom div.pageCenter{
 	width:990px;
@@ -116,7 +116,7 @@ div#breadcrumbNav ul li{
 	float:left;
 	margin-left:-19px;
 	padding:0px 28px 0px 19px;
-	background:url(../images/mf_breadcrumbNavBg.gif) no-repeat left 2px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/mf_breadcrumbNavBg.gif) no-repeat left 2px;
 	white-space:nowrap;
 	color:#333;
 }
@@ -136,7 +136,7 @@ div#content{padding:20px 0px;}
 div#footer{
 	width:100%;
 	padding:20px 0px 40px 0px;
-	background:url(../images/footerBg.gif) repeat left top;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/footerBg.gif) repeat left top;
 	border-top:1px solid #c7c7c7;
 }
 /*-- µ×²¿±êÖ¾ --*/
@@ -162,7 +162,7 @@ ul#siteInfo li{
 div#icpBox{
 	float:right;
 	padding:17px 20px 1px 55px;
-	background:url(../images/icpBoxBg.gif) no-repeat left bottom;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/icpBoxBg.gif) no-repeat left bottom;
 	text-align:left;
 	line-height:20px;
 	color:#999;

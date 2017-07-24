@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+/**
+ *--------------------------------------------------
+ * 信息公开目录 样式表
+ * Scorpio
+ * 2015-10-28
+ *--------------------------------------------------
+**/
+
+body{
+	background-color:#eeeeee;
+	text-align:left;
+}
+
+div#xxgkmlBox{
+	width:336px;
+	padding-top:15px;
+	padding-left:10px;
+	padding-right:10px;
+	border:1px solid #e3e3e3;
+	background-color:#FFF;
+}
+div#xxgkmlBox ul{
+	float:left;
+	width:336px;
+	padding-bottom:7px;
+}
+div#xxgkmlBox ul li{
+	float:left;
+	width:336px;
+	padding-bottom:8px;
+}
+div#xxgkmlBox ul li a{
+	display:block;
+	width:259px;
+	padding:8px 0px 8px 75px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/gkmlListBg.gif) no-repeat left top;
+	border:1px solid #cbccce;
+	border-radius:3px;
+	font-size:16px;
+	line-height:20px;
+}
+div#xxgkmlBox ul li a:hover{
+	background-color:#cbccce;
+	color:#FFF;
+	font-weight:bold;
+	text-decoration:none;
+}
+div#xxgkmlBox div#ysqgkBox{
+	clear:both;
+	width:336px;
+	margin-bottom:12px;
+	background:#ff5a00 url(http://wgj.sh.gov.cn/images/wg2015/images/ysqgkBoxBg.gif) no-repeat 13px 10px;
+}
+div#xxgkmlBox div#ysqgkBox a{
+	display:block;
+	width:260px;
+	padding:10px 0px 10px 76px;
+	font-size:16px;
+	line-height:20px;
+}
+div#xxgkmlBox div#ysqgkBox a:link,
+div#xxgkmlBox div#ysqgkBox a:visited{color:#FFF;}
+div#xxgkmlBox div#ysqgkBox a:hover{color:#FFF;text-decoration:none;}

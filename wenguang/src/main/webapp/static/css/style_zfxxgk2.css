@@ -1,0 +1,137 @@
+@CHARSET "UTF-8";
+/**
+ *--------------------------------------------------
+ * 主风格 模块 样式表
+ * Scorpio
+ * 2015-10-24
+ *--------------------------------------------------
+**/
+
+/*-- content --*/
+div#maincontent {
+	padding:0px;
+	width:623px;
+}
+div.pubbox1{
+	position:relative;
+	}
+div#box_zbxx,div#box_zcxx,div#box_cwxx{
+	position:relative;
+	left:0px;
+	top:0px;
+	_height:248px;
+	min-height:248px;
+	clear:both;
+	float:left;
+	width:623px;
+	}
+h3.pubh3_3{
+	border:1px solid #e8e8e8;
+	float:left;
+	line-height:44px;
+	position:absolute;
+	top:0px;
+	text-align:center;
+	width:150px;
+	background:#fff;
+	z-index:50;
+	background:#f6f6f6;
+	}
+h3.pubh3_3 a:link,h3.pubh3_3 a:hover,h3.pubh3_3 a:visited{
+	display:block;
+	font-size:16px;
+	color:#999999;
+	}
+div.pubcontent3{
+	float:left;
+	clear:both;
+	position:absolute;
+	top:45px;
+	border-top:1px solid #e8e8e8;
+	z-index:1;
+	left:-9999px;
+	padding-top:8px;
+	}
+h3#title_zhaobgg,h3#title_zcfg,h3#title_cwgk{
+	left:10px;
+	}
+h3#title_zhongbgg,h3#title_zcjd,h3#title_ggzj{
+	left:161px;
+	}
+div.main_zhaobgg h3#title_zhaobgg,div.main_zhongbgg h3#title_zhongbgg,div.main_zcfg h3#title_zcfg,div.main_zcjd h3#title_zcjd,div.main_cwgk h3#title_cwgk,div.main_ggzj h3#title_ggzj{
+	border-bottom:none;
+	padding-bottom:1px;
+	background:#ffffff;
+	}
+div.main_zhaobgg h3#title_zhaobgg a,div.main_zhongbgg h3#title_zhongbgg a,div.main_zcfg h3#title_zcfg a,div.main_zcjd h3#title_zcjd a,div.main_cwgk h3#title_cwgk a,div.main_ggzj h3#title_ggzj a{
+	font-size:18px;
+	color:#ff5a00;
+	}
+div.main_zhaobgg h3#title_zhaobgg a:hover,
+div.main_zhongbgg h3#title_zhongbgg a:hover,
+div.main_zcfg h3#title_zcfg a:hover,
+div.main_zcjd h3#title_zcjd a:hover,
+div.main_cwgk h3#title_cwgk a:hover,
+div.main_ggzj h3#title_ggzj a:hover{text-decoration:none;}
+ul.publist1{
+	width:603px;
+	float:left;
+}
+ul.publist1 li{
+	width:568px;
+	font-size:14px;
+	line-height:34px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/publist2_icon.jpg) no-repeat 15px center;
+	padding-left:35px;
+	float:left;
+	}
+div.pubcontent3 ul.publist1 li{
+	border-top:1px solid #e8e8e8;
+	*border-top-style:expression(this.previousSibling==null?"none":"solid");
+	}
+div.pubcontent3 ul.publist1 li:first-child{
+	border:none;
+	}
+ul.publist1 li a{
+	float:left;
+	}
+ul.publist1 li span.pubtime{
+	float:right;
+	font-style:italic;
+	color:#999999;
+	padding-right:8px;
+	}
+div.main_zhaobgg div#content_zhaobgg,div.main_zhongbgg div#content_zhongbgg,div.main_zcfg div#content_zcfg,div.main_zcjd div#content_zcjd,div.main_cwgk div#content_cwgk,div.main_ggzj div#content_ggzj{
+	left:10px;
+	}
+/*
+近期信息公开
+*/
+div#box_jjxxgk{
+	float:left;
+	padding-top:17px;
+	padding-bottom:30px;
+	}
+div#box_jjxxgk h3.pubh3_3{
+	position:relative;
+	color:#ff5a00;
+	font-size:18px;
+	border-bottom:none;
+	left:10px;
+	background:#ffffff;
+	}
+div#box_jjxxgk ul.publist1{
+	padding-left:10px;
+	width:613px;
+	padding-bottom:3px;
+	border-bottom:1px solid #e8e8e8;
+	}
+div#box_jjxxgk ul.publist1 li{
+	border:1px solid #e8e8e8;
+	margin-bottom:1px;
+	background-color:#fcfcfc;
+	width:566px;
+	}
+div#box_jjxxgk ul.publist1 li span.pubtime{
+	background:#fcfcfc url(http://wgj.sh.gov.cn/images/wg2015/images/xxgk_morebg.JPG) no-repeat right top;
+	}

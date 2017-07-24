@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+/**
+ *--------------------------------------------------
+ * 信息公开专题 样式表
+ * Scorpio
+ * 2015-10-29
+ *--------------------------------------------------
+**/
+
+body{
+	background-color:#eeeeee;
+	text-align:left;
+}
+
+div#ztlmBox{
+	width:358px;
+	height:360px;
+	overflow:hidden;
+}
+div#ztlmBox ul{
+	float:left;
+	width:372px;
+}
+div#ztlmBox ul li{
+	float:left;
+	width:110px;
+	margin:0px 14px 15px 0px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/xxgk_ztlmBoxBg.gif) repeat left top;
+	border-radius:4px;
+	text-align:center;
+	overflow:hidden;
+}
+div#ztlmBox ul li a{
+	display:block;
+	width:100%;
+	padding:66px 0px 26px 0px;
+	background-repeat:no-repeat;
+	background-position:left 27px;
+	font-size:16px;
+	line-height:18px;
+}
+div#ztlmBox ul li a:link,
+div#ztlmBox ul li a:visited{color:#ff5a00;}
+div#ztlmBox ul li a:hover{
+	color:#FFF;
+	text-decoration:none;
+	background-position:-110px 27px;
+	background-color:#ff5a00;
+}
+div#ztlmBox ul li#jgzz a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/xxgk_tag_jgzzBg.gif);}
+div#ztlmBox ul li#ghjh a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/xxgk_tag_ghjhBg.gif);}
+div#ztlmBox ul li#ssxm a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/xxgk_tag_ssxmBg.gif);}
+div#ztlmBox ul li#tjsj a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/xxgk_tag_tjsjBg.gif);}
+div#ztlmBox ul li#xfjd a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/xxgk_tag_xfjdBg.gif);}
+div#ztlmBox ul li#ggzj a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/xxgk_tag_ggzjBg.gif);}
+div#ztlmBox ul li#whhd a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/xxgk_tag_whhdBg.gif);}
+div#ztlmBox ul li#zxzj a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/xxgk_tag_zxzjBg.gif);}
+div#ztlmBox ul li#zxyl a{background-image:url(http://wgj.sh.gov.cn/images/wg2015/images/xxgk_tag_zxylBg.gif);}
