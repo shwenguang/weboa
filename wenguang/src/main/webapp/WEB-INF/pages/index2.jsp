@@ -1,3 +1,4 @@
+<!-- 该页面用于展示main.jsp页面的右侧导航栏 -->
 <%@ page pageEncoding="UTF-8"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -19,7 +20,7 @@
         <li style="height:25px;padding-bottom:11px;"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2088/index.html" target="_parent" title="规范性文件">规范性文件</a></li>
         <li style="height:25px;padding-bottom:11px;"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2178/n2180/u1ai123517.html" target="_parent" title="申请信息公开指南">申请信息公开指南</a></li>
     </ul>
-    <div id="ysqgkBox"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2178/index.html" target="_parent" title="依申请公开">依申请公开</a></div>
+    <div id="ysqgkBox"><a href="/info/disclosure/addNewApply.do" target="_parent" title="依申请公开">依申请公开</a></div>
 </div>
 </body>
 </html>

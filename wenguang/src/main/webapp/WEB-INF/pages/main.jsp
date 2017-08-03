@@ -45,11 +45,15 @@
                 <div id="box_jjxxgk">
                     <a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2062/index.html" target="_parent" title="近期信息公开"><h3 class="pubh3_3">近期信息公开</h3></a>
                     <ul class="publist1">
-				    <c:forEach items="${docList}" var="doc">
-					   <li><a  class="btn-line" href="/wg/docid/${doc.id }" target="_blank" title="${doc.zwbt }">${doc.zwbt }</a>
-					   <span class="pubtime">${doc.yfrq }</span>
-					   </li>
-				    </c:forEach>
+				    	<li><a  href="/wg/docid/${docList[0].id }" target="_blank" title="${docList[0].zwbt }">${docList[0].zwbt }</a>
+					   		<span class="pubtime">${docList[0].yfrq }</span>
+					   	</li>
+					   	<li><a  href="/wg/docid/${docList[1].id }" target="_blank" title="${docList[1].zwbt }">${docList[1].zwbt }</a>
+					   		<span class="pubtime">${docList[1].yfrq }</span>
+					   	</li>
+					   	<li><a  href="/wg/docid/${docList[2].id }" target="_blank" title="${docList[2].zwbt }">${docList[2].zwbt }</a>
+					   		<span class="pubtime">${docList[2].yfrq }</span>
+					   	</li>
 			     	</ul>
                 </div>
                 <div id="box_zbxx" class="main_zhaobgg">
@@ -57,7 +61,7 @@
                     <div class="pubcontent3" id="content_zhaobgg">
                     <ul class="publist1">
                     <c:forEach items="${docList2}" var="doc">
-					   <li><a  class="btn-line" href="/wg/docid/${doc.id }" target="_blank" title="${doc.zwbt }">${doc.zwbt }</a>
+					   <li><a class="btn-line" href="/wg/docid/${doc.id }" target="_blank" title="${doc.zwbt }">${doc.zwbt }</a>
 					   <span class="pubtime">${doc.yfrq }</span>
 					   </li>
 				    </c:forEach>

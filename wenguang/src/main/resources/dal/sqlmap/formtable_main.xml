@@ -57,12 +57,13 @@
 	
 	<select id="selectByExampleOrderedByTime" resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
 		select TOP (5) id,requestId,yfrq,zwbt
-		 from formtable_main_2 ORDER BY yfrq DESC
-		<!--  <where>
-			<if test="yjml != null">
-				and yjml = #{yjml}
+		 from formtable_main_2 
+		<where>
+			<if test="xxgkyjml != null">
+				and xxgkyjml = #{xxgkyjml}
 			</if>
-		</where>-->
+		</where>
+		ORDER BY yfrq DESC
 	</select>
 	
 </mapper>

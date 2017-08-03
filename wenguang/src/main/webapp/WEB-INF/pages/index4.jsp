@@ -1,28 +1,97 @@
+<!-- 该页面用于呈现main.jsp页面的右侧搜索栏的搜索结果 -->
 <%@ page pageEncoding="UTF-8"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh_CN" lang="zh_CN">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>上海市文化广播影视管理局 上海市文物局</title>
-<link rel="stylesheet" type="text/css" href="/static/css/public.css" />
-<link rel="stylesheet" type="text/css" href="/static/css/xxgk_ztlm.css" />
-</head>
-
-<body>
-<div id="ztlmBox">
-    <ul>
-        <li id="jgzz"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2079/n2080/index.html" target="_parent" title="机构职责">机构职责</a></li>
-        <li id="ghjh"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2090/index.html" target="_parent" title="规划计划">规划计划</a></li>
-        <li id="ssxm"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2148/index.html" target="_parent" title="实事项目">实事项目</a></li>
-        <li id="tjsj"><a href="http://wgj.sh.gov.cn/node2/n2029/n2034/n2123/index.html" target="_parent" title="统计数据">统计数据</a></li>
-        <li id="xfjd"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2228/u1ai124562.html" target="_parent" title="行政处罚">行政处罚</a></li>
-        <li id="ggzj"><a href="http://zxzj.wgj.sh.gov.cn/" target="_parent" title="专项资金">专项资金</a></li>
-        <li id="whhd"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2134/index.html" target="_parent" title="优惠政策">优惠政策</a></li>
-        <li id="zxzj"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2088/index.html" target="_parent" title="文件草案">文件草案</a></li>
-        <li id="zxyl"><a href="http://weibo.com/culturalshanghai/profile?s=6cm7D0" target="_parent" title="微博微信">微博微信</a></li>
-    </ul>
-    <div class="clear"></div>
-</div>
+<html>
+	<head>
+		<title>文广</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+		<link href="http://searchgov1.eastday.com/searchwgj_new/css/css.css" rel="stylesheet" type="text/css">
+		<link href="http://searchgov1.eastday.com/searchwgj_new/css/tree.css" rel="StyleSheet" type="text/css">
+		<link href="http://searchgov1.eastday.com/searchwgj_new/css/search.css" rel="StyleSheet" type="text/css">
+	</head>
+	<body background="http://searchgov1.eastday.com/searchwgj_new/images/pagebk.gif" topmargin="0" leftmargin="0">
+		<center>
+			<table width="100%" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<td valign="top" bgcolor="#ffffff">
+							<table width="768" cellspacing="0" cellpadding="0">
+								<tbody>
+									<tr>
+										<td height="2" bgcolor="#eaeaea" colspan="3">
+										</td>
+									</tr>
+								<tr class="12pixblack">
+									<td>
+										<img src="http://searchgov1.eastday.com/searchwgj_new/images/js7.gif">
+									</td>
+									<td>
+										<div id="info">共4419项，当前第1页/共221页</div>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+							<table width="100%" bgcolor="#efefef" cellspacing="0" cellpadding="0">
+								<tbody>
+									<tr>
+										<td width="106" height="33" align="right" class="12pixblack">
+											<font color="#497e00">
+												<b>索取号</b>
+											</font>&nbsp;&nbsp;&nbsp;
+											<font color="#adaead">|</font>
+										</td>
+										<td width="152" align="right" class="12pixblack">
+											<font color="#497e00"><b>信息名称</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<font color="#adaead">|</font>
+										</td>
+										<td width="188" align="right" class="12pixblack">
+											<font color="#497e00"><b>内容描述</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<font color="#adaead">|</font>
+										</td>
+										<td width="95" align="right" class="12pixblack">
+											<font color="#497e00"><b>产生日期 </b></font>&nbsp;
+											<font color="#adaead">|</font>
+										</td>
+										<td width="129" align="right" class="12pixblack">
+											<font color="#497e00"><b>文件编号</b></font>&nbsp;&nbsp;&nbsp;
+											<font color="#adaead">|</font>
+										</td>
+										<td width="108" align="center" class="12pixblack">
+											<font color="#497e00"><b>发布机构</b></font>
+										</td>
+									</tr>
+									<tr>
+										<td height="1" bgcolor="#ffffff" colspan="6"></td>
+									</tr>
+									<tr>
+										<td height="1" bgcolor="#d6d3d6" colspan="6"></td>
+									</tr>
+									<tr>
+										<td height="3" bgcolor="#efebef" colspan="6"></td>
+									</tr>
+								</tbody>
+							</table>
+							<table width="100%" id="items" cellspacing="0" cellpadding="0">
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="pages"></div>
+			<div id="empty">未找到相关记录，请检查输入的文字是否有误或更换关键字</div>
+			<table width="1000" border="0" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<td height="7" align="center" valign="middle" bgcolor="#ffffff"></td>
+					</tr>
+					<tr>
+						<td height="97" align="center" valign="middle" bgcolor="#e3dcb6">
+						<img width="218" height="84" src="http://searchgov1.eastday.com/searchwgj_new/images/icp.gif">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</center>
 </body>
 </html>
