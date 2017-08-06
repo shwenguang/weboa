@@ -68,7 +68,7 @@ public class DocumentsController {
             if ("html".equals(dd.getDocType())) {
                 response.setContentType("text/html");
                 response.setCharacterEncoding("utf-8");
-                os.write(dd.getDocContent().getBytes());
+                os.write(dd.getDocContent().getBytes("utf-8"));
             } else if ("pic".equals(dd.getDocType())) {
                 response.setContentType("image/pjpeg");
                 os.write(Base64.decodeBase64(dd.getDocContent()));
