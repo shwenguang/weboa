@@ -1,6 +1,7 @@
 <!-- 该页面用于呈现main.jsp页面的右侧搜索栏的搜索结果 -->
 <%@ page pageEncoding="UTF-8"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
@@ -27,13 +28,13 @@
 										<img src="http://searchgov1.eastday.com/searchwgj_new/images/js7.gif">
 									</td>
 									<td>
-										<div id="info">共4419项，当前第1页/共221页</div>
+										<div id="info">共${totalRows }项，当前第${curPage }页/共${totalPage }页</div>
 									</td>
 								</tr>
 								</tbody>
 							</table>
 							<table width="100%" bgcolor="#efefef" cellspacing="0" cellpadding="0">
-								<tbody>
+								<thead>
 									<tr>
 										<td width="106" height="33" align="right" class="12pixblack">
 											<font color="#497e00">
@@ -61,36 +62,61 @@
 											<font color="#497e00"><b>发布机构</b></font>
 										</td>
 									</tr>
+								</thead>
+								<tbody>
+									<c:forEach items="${docList}" var="doc">
 									<tr>
-										<td height="1" bgcolor="#ffffff" colspan="6"></td>
+										<td width="106" height="33" align="right" >
+											${doc.callNumber }
+										</td>
+										<td width="152" align="right">
+											<a href="/wg/docid/${doc.id }" target="content">${doc.zwbt }</a>
+										</td>
+										<td width="188" align="right">
+											${doc.contentDescription}
+										</td>
+										<td width="95" align="right">
+											${doc.yfrq }
+										</td>
+										<td width="129" align="right">
+											
+										</td>
+										<td width="108" align="center">
+											${doc.fwdw }
+										</td>
 									</tr>
-									<tr>
-										<td height="1" bgcolor="#d6d3d6" colspan="6"></td>
-									</tr>
-									<tr>
-										<td height="3" bgcolor="#efebef" colspan="6"></td>
-									</tr>
+									</c:forEach>
 								</tbody>
-							</table>
-							<table width="100%" id="items" cellspacing="0" cellpadding="0">
-							   <c:forEach items="${docList}" var="doc">
-					   			 <li>
-					   			 <span class="pubtime">${doc.callNumber }</span>
-					   			 <a class="btn-line" href="/wg/docid/${doc.id }" target="_blank" title="${doc.zwbt }">${doc.zwbt }</a>
-					   			 <span class="pubtime">${doc.contentDescription}</span>
-					   			 <span class="pubtime">${doc.yfrq }</span>
-					   			 <span class="pubtime">${doc.fileNumber }</span>
-					   			 <span class="pubtime">${doc.fwdw }</span>
-					   			 </li>
-				    			</c:forEach>
 							</table>
 						</td>
 					</tr>
 				</tbody>
+				<tfoot>
+				</tfoot>
 			</table>
-			<div id="pages"></div>
-			<div id="empty">未找到相关记录，请检查输入的文字是否有误或更换关键字</div>
-			<table width="1000" border="0" cellspacing="0" cellpadding="0">
+			<div id="pages">
+				<c:if test="${not empty docList }">
+					<a id="first" href="${queryStr }&pageNo=1">第一页 </a>
+					<a id="prev" href="${queryStr }&pageNo=${curPage==1?1:(curPage-1)}">上一页 </a>
+					<span id="nums">
+					<c:forEach begin="${beginPage }" end="${endPage }" var="v">
+						<c:if test="${v == curPage }">
+						[<a class="Current"> ${v } </a>]
+						</c:if>
+						<c:if test="${not (v == curPage) }">
+						[<a href="${queryStr }&pageNo=${v}"> ${v } </a>]
+						</c:if>
+					</c:forEach>
+	                </span>
+	                <a id="next" href="${queryStr }&pageNo=${curPage==totalPage?totalPage:(curPage+1)}">下一页 </a>
+	                <a id="last" href="${queryStr }&pageNo=${totalPage}">最后一页</a>
+                </c:if>
+                <c:if test="${empty docList}">
+					<div id="empty">未找到相关记录，请检查输入的文字是否有误或更换关键字</div>
+				</c:if>
+             </div>
+	</center>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 				<tbody>
 					<tr>
 						<td height="7" align="center" valign="middle" bgcolor="#ffffff"></td>
@@ -101,7 +127,6 @@
 					</td>
 				</tr>
 			</tbody>
-		</table>
-	</center>
+	</table>
 </body>
 </html>
