@@ -33,26 +33,26 @@
 			<if test="xxgkejml!=null and xxgkejml!=''">
 				and xxgkejml = #{xxgkejml}
 			</if>
-			<if test="yfrq != null and fwh!=null">
+			<if test="yfrq != null and fwh!=null and yfrq != '' and fwh !=''">
 				and (yfrq &gt;= #{yfrq} and yfrq &lt;= #{fwh} or yfrq is
 				null or yfrq = '')
 			</if>
-			<if test="callNumber != null">
+			<if test="callNumber != null and callNumber !=''">
 				and callNumber like #{callNumber}
 			</if>
-			<if test="fwdw != null">
+			<if test="fwdw != null and fwdw != ''">
 				and fwdw = #{fwdw}
 			</if>
-			<if test="zwbt != null">
+			<if test="zwbt != null and zwbt != ''">
 				and zwbt = #{zwbt}
 			</if>
-			<if test="fileNumber != null">
+			<if test="fileNumber != null and fileNumber != ''">
 				and fileNumber like #{fileNumber}
 			</if>
-			<if test="yjml != null">
+			<if test="yjml != null and yjml != ''">
 				and yjml = #{yjml}
 			</if>
-			<if test="keyWord != null">
+			<if test="keyWord != null and keyWord !=''">
 				and keyWord like #{keyWord}
 			</if>
 		</where>
