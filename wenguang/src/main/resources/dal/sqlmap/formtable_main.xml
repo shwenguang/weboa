@@ -20,62 +20,25 @@
 		#{xgtalc},#{xgtalcbdjm},#{sfgkwb},#{sfxyhb},
 		#{yjml},#{ejml},#{sjml},#{hbcs,jdbcType=VARCHAR},#{hbcsczz,jdbcType=VARCHAR},#{ldqz,jdbcType=VARCHAR},
 		#{zwbt},#{fjbt},
-		#{fjInputStream,jdbcType=VARCHAR},#{zwInputStream ,jdbcType=VARCHAR}
+		#{fjInputStream,jdbcType=VARCHAR},#{zwInputStream
+		,jdbcType=VARCHAR}
 		)
 	</insert>
-	
-	<select id="selectSimpleByExample" resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
-	  SELECT w2.rowId, w1.id,w1.requestId,w1.fwh,w1.fwdw,w1.jj,w1.sfgk,w1.qfr,w1.zw,w1.zs,w1.cs,w1.zbdw,w1.ngr,w1.hbdw,w1.hbr,w1.fj,w1.dz,w1.bz,w1.sfgkwb,w1.zwbt,w1.fjbt 
-	  FROM formtable_main_2 w1,
-	  ( SELECT TOP ${endNum } row_number() OVER (ORDER BY ID DESC) rowId,
-	  id,requestId,fwh,fwdw,jj,sfgk,qfr,zw,zs,cs,zbdw,ngr,hbdw,hbr,fj,dz,bz,sfgkwb,zwbt,fjbt
-	   FROM formtable_main_2
-	   <where>
-	   	<if test="xxgkyjml!=null and xxgkyjml != ''">
-	   		and xxgkyjml = #{xxgkyjml}
-	   	</if>
-	   	<if test="xxgkejml!=null and xxgkejml!=''">
-	   		and xxgkejml = #{xxgkejml}
-	   	</if>
-	   </where>
-	   ) w2 
-	  WHERE w1.ID = w2.ID AND w2.rowId >= #{startNum}
-	</select>
-	
-	<select id="selectByExample" resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
-		select id,requestId,fjInputStream,zwInputStream
-		 from formtable_main_2
-		<where>
-			<if test="id != null">
-				and id = #{id}
-			</if>
-			<if test="requestId != null">
-				and requestId = #{requestId}
-			</if>
-		</where>
-	</select>
-	
-	<select id="selectByExampleOrderedByTime" resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
-		select TOP (5) id,requestId,yfrq,zwbt
-		 from formtable_main_2 
-		<where>
-			<if test="xxgkyjml != null">
+	<select id="countByExample" resultType="int">
+	select count(*) from formtable_main_2
+	<where>
+			<if test="xxgkyjml!=null and xxgkyjml != ''">
 				and xxgkyjml = #{xxgkyjml}
 			</if>
-		</where>
-		ORDER BY yfrq DESC
-	</select>
-	
-		<select id="selectByParaOrderedByTime" resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
-		select callNumber,zwbt,contentDescription,yfrq,fileNumber,fwdw
-		 from formtable_main_2 
-		<where>
-			<!-- 此处 yfrq表示开始日期，fwh表示结束日期-->
+			<if test="xxgkejml!=null and xxgkejml!=''">
+				and xxgkejml = #{xxgkejml}
+			</if>
 			<if test="yfrq != null and fwh!=null">
-				and yfrq between #{yfrq} and #{fwh}
+				and (yfrq &gt;= #{yfrq} and yfrq &lt;= #{fwh} or yfrq is
+				null or yfrq = '')
 			</if>
 			<if test="callNumber != null">
-				and callNumber = #{callNumber}
+				and callNumber like #{callNumber}
 			</if>
 			<if test="fwdw != null">
 				and fwdw = #{fwdw}
@@ -84,16 +47,105 @@
 				and zwbt = #{zwbt}
 			</if>
 			<if test="fileNumber != null">
-				and fileNumber = #{fileNumber}
+				and fileNumber like #{fileNumber}
 			</if>
 			<if test="yjml != null">
 				and yjml = #{yjml}
 			</if>
 			<if test="keyWord != null">
-				and keyWord = #{keyWord}
+				and keyWord like #{keyWord}
+			</if>
+		</where>
+	</select>
+	<select id="selectSimpleByExample"
+		resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
+		SELECT w2.rowId,
+		w1.id,w1.requestId,w1.fwh,w1.fwdw,w1.jj,w1.sfgk,w1.qfr,w1.zw,w1.zs,w1.cs,w1.zbdw,w1.ngr,w1.hbdw,w1.hbr,w1.fj,w1.dz,w1.bz,w1.sfgkwb,w1.zwbt,w1.fjbt
+		FROM formtable_main_2 w1,
+		( SELECT TOP ${endNum } row_number() OVER (ORDER BY ID DESC) rowId,
+		id,requestId,fwh,fwdw,jj,sfgk,qfr,zw,zs,cs,zbdw,ngr,hbdw,hbr,fj,dz,bz,sfgkwb,zwbt,fjbt
+		FROM formtable_main_2
+		<where>
+			<if test="xxgkyjml!=null and xxgkyjml != ''">
+				and xxgkyjml = #{xxgkyjml}
+			</if>
+			<if test="xxgkejml!=null and xxgkejml!=''">
+				and xxgkejml = #{xxgkejml}
+			</if>
+			<if test="yfrq != null and fwh!=null">
+				and (yfrq &gt;= #{yfrq} and yfrq &lt;= #{fwh} or yfrq is
+				null or yfrq = '')
+			</if>
+			<if test="callNumber != null">
+				and callNumber like #{callNumber}
+			</if>
+			<if test="fwdw != null">
+				and fwdw = #{fwdw}
+			</if>
+			<if test="zwbt != null">
+				and zwbt = #{zwbt}
+			</if>
+			<if test="fileNumber != null">
+				and fileNumber like #{fileNumber}
+			</if>
+			<if test="yjml != null">
+				and yjml = #{yjml}
+			</if>
+			<if test="keyWord != null">
+				and keyWord like #{keyWord}
+			</if>
+		</where>
+		) w2
+		WHERE w1.ID = w2.ID AND w2.rowId >= #{startNum}
+	</select>
+	<select id="selectByExample"
+		resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
+		select id,requestId,fjInputStream,zwInputStream
+		from formtable_main_2
+		<where>
+			<if test="id != null">
+				and id = #{id}
+			</if>
+			<if test="requestId != null">
+				and requestId = #{requestId}
+			</if>
+			<if test="yfrq != null and fwh!=null">
+				and (yfrq &gt;= #{yfrq} and yfrq &lt;= #{fwh} or yfrq is
+				null or yfrq = '')
+			</if>
+			<if test="callNumber != null">
+				and callNumber like #{callNumber}
+			</if>
+			<if test="fwdw != null">
+				and fwdw = #{fwdw}
+			</if>
+			<if test="zwbt != null">
+				and zwbt = #{zwbt}
+			</if>
+			<if test="fileNumber != null">
+				and fileNumber like #{fileNumber}
+			</if>
+			<if test="yjml != null">
+				and yjml = #{yjml}
+			</if>
+			<if test="keyWord != null">
+				and keyWord like #{keyWord}
 			</if>
 		</where>
 		ORDER BY yfrq DESC
 	</select>
-	
+
+	<select id="selectByExampleOrderedByTime"
+		resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
+		select TOP (5) id,requestId,yfrq,zwbt
+		from formtable_main_2
+		<where>
+			<if test="xxgkyjml != null">
+				and xxgkyjml = #{xxgkyjml}
+			</if>
+		</where>
+
+	</select>
+
+
 </mapper>
