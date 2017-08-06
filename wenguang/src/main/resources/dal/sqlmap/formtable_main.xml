@@ -66,4 +66,34 @@
 		ORDER BY yfrq DESC
 	</select>
 	
+		<select id="selectByParaOrderedByTime" resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
+		select callNumber,zwbt,contentDescription,yfrq,fileNumber,fwdw
+		 from formtable_main_2 
+		<where>
+			<!-- 此处 yfrq表示开始日期，fwh表示结束日期-->
+			<if test="yfrq != null and fwh!=null">
+				and yfrq between #{yfrq} and #{fwh}
+			</if>
+			<if test="callNumber != null">
+				and callNumber = #{callNumber}
+			</if>
+			<if test="fwdw != null">
+				and fwdw = #{fwdw}
+			</if>
+			<if test="zwbt != null">
+				and zwbt = #{zwbt}
+			</if>
+			<if test="fileNumber != null">
+				and fileNumber = #{fileNumber}
+			</if>
+			<if test="yjml != null">
+				and yjml = #{yjml}
+			</if>
+			<if test="keyWord != null">
+				and keyWord = #{keyWord}
+			</if>
+		</where>
+		ORDER BY yfrq DESC
+	</select>
+	
 </mapper>

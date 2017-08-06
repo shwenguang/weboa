@@ -63,15 +63,15 @@
     </div>
     <div class="formRow">
         <label class="labelClass1">索取号</label>
-        <input id="call_Number" name="m1" title="索取号" class="inputClass2" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" type="text">
+        <input name="call_Number" title="索取号" class="inputClass2" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" type="text">
         <label class="labelClass2">发布机构</label>
-        <input id="publish_Organization" name="m4" title="发布机构" class="inputClass3" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" type="text">
+        <input name="publish_Organization" title="发布机构" class="inputClass3" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" type="text">
     </div>
     <div class="formRow">
         <label class="labelClass2">信息名称</label>
-        <input title="信息名称" class="inputClass4" id="infoname" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" type="text">
+        <input title="信息名称" class="inputClass4" name="infoname" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" type="text">
         <label class="labelClass2">文件编号</label>
-        <input id="indexOf_File" name="m3" title="文件编号" class="inputClass3" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" type="text">
+        <input name="indexOf_File" title="文件编号" class="inputClass3" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" type="text">
     </div>
     <div class="formRow">
         <label class="labelClass3">公开类别</label>
@@ -154,45 +154,10 @@
     </script>
     <div class="formRow">
         <label class="labelClass2">关键词</label>
-        <input title="关键词" class="inputClass5" id="keyword" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" type="text">
+        <input title="关键词" class="inputClass5" name="keyword" onfocus="formValue.cd(this)" onblur="formValue.rd(this)" type="text">
     </div>
     <div class="clear"></div>
     <input title="查询" id="submitButton" type="submit" value="查询">
- <!--<script language="javascript">
-	    function search() {
-	    	var data = { id: $("#div1").html() };
-            var json = '{';
-            var startTime = ''; //开始时间
-            endTime = ''; //结束时间
-            callNumber = ''; //索引号
-            publishOrganization = ''; //发布机构
-            infoName = ''; //信息名称
-            indexOfFile = ''; //文件编号
-            openCategories = ''; //公开类别
-            keyWord = '';//关键字
-            
-            startTime = $("#bsdtime2").val();
-            endTime = $("#bedtime2").val();
-            callNumber = $("#call_Number").val();
-            publishOrganization = $("#publish_Organization").val(); 
-            infoName = $("#infoName").val(); 
-            indexOfFile = $("#indexOf_File").val(); 
-            openCategories = $("#select1").val(); 
-            keyWord = $("#keyword").val(); 
-                        
-            json = json + '"startTime":"' + startTime + '"';
-            json = json + ',"endTime":"' + endTime + '"';
-            json = json + ',"callNumber":"' + callNumber + '"';
-            json = json + ',"publishOrganization":"' + publishOrganization + '"';
-            json = json + ',"infoName":"' + infoName + '"';
-            json = json + ',"indexOfFile":"' + indexOfFile + '"';
-            json = json + ',"openCategories":"' + openCategories + '"';
-            json = json + ',"keyWord":"' + keyWord + '"';
-            
-            json = json + "}";
-            $.post("/entrance/index4.do", { jsonstr: json });
-		}
-    </script>-->
 </form>
 </body>
 </html>

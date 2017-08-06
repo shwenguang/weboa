@@ -53,6 +53,11 @@ public class FormtableMain2DO extends PageDTO implements Serializable{
 	String xxgkejml;
 	String fjInputStream;
 	String zwInputStream;
+	//midified at 2017.8.5 用于查询
+	String callNumber;//索取号
+	String fileNumber;//文件编号
+	String keyWord;//关键字
+	String contentDescription;//内容描述
     public Long getId() {
         return id;
     }
@@ -347,4 +352,29 @@ public class FormtableMain2DO extends PageDTO implements Serializable{
     public void setXxgkejml(String xxgkejml) {
         this.xxgkejml = xxgkejml;
     }
+	public String getCallNumber() {
+		return callNumber;
+	}
+	public void setCallNumber(String callNumber) {
+		this.callNumber = callNumber;
+	}
+	public String getFileNumber() {
+		return fileNumber;
+	}
+	public void setFileNumber(String fileNumber) {
+		this.fileNumber = fileNumber;
+	}
+	public String getKeyWord() {
+		return keyWord;
+	}
+	public void setKeyWord(String keyWord) {
+		this.keyWord = keyWord;
+	}
+	public String getContentDescription() {
+		return contentDescription;
+	}
+	public void setContentDescription(String contentDescription) {
+		this.contentDescription = contentDescription;
+	}
+	
 }

@@ -92,29 +92,45 @@ public class EntranceController {
 		return mv;
 	}
 	
-	@RequestMapping("/index2.do")
+	@RequestMapping("/index2.do")//显示main.JSP的右侧导航栏
 	public ModelAndView addIndex2Aplly(ModelAndView mv){
 		mv.setViewName("index2"); 
 		return mv;
 	}
-	@RequestMapping("/index3.do")
+	@RequestMapping("/index3.do")//显示main.JSP的右侧搜索栏
 	public ModelAndView addIndex3Aplly(ModelAndView mv){
 		mv.setViewName("index3"); 
 		return mv;
 	}
 	
-	@RequestMapping("/index4.do")
-	public ModelAndView addIndex4Aplly(ModelAndView mv){
-
-        String startTime = request.getParameter("bsdtime2");
-        String endTime = request.getParameter("bedtime2");
+	@RequestMapping("/index4.do")//显示查询结果页面
+	public ModelAndView addIndex4Aplly(){
+		//此处通过name传递值
+        String startTime = request.getParameter("st");
+        String endTime = request.getParameter("et");
         String callNumber = request.getParameter("call_Number");
         String publishOrganization = request.getParameter("publish_Organization"); 
         String infoName = request.getParameter("infoName");
         String indexOfFile = request.getParameter("indexOf_File");
         String openCategories = request.getParameter("select1");
         String keyWord = request.getParameter("keyword");
-		mv.setViewName("index4");
+        
+        FormtableMain2DO example = new FormtableMain2DO();
+        example.setYfrq(startTime);
+        example.setFwh(endTime);
+        example.setCallNumber(callNumber);
+        //TODO 此处发文机构与公开类别(一级目录)都是Integer变量，需要映射
+    //    example.setFwdw(publishOrganization);
+        example.setZwbt(infoName);
+        example.setFileNumber(indexOfFile);
+    //    example.setYjml(openCategories);
+        example.setKeyWord(keyWord);
+        
+        List<FormtableMain2DO> dataList = formtableMainDao.selectByParaOrderedByTime(example);
+        
+        ModelAndView mv = new ModelAndView("index4");
+        mv.addObject("docList", dataList);
+		
         return mv;
 	}
 	/*

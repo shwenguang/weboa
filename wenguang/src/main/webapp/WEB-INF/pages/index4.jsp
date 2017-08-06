@@ -73,6 +73,16 @@
 								</tbody>
 							</table>
 							<table width="100%" id="items" cellspacing="0" cellpadding="0">
+							   <c:forEach items="${docList}" var="doc">
+					   			 <li>
+					   			 <span class="pubtime">${doc.callNumber }</span>
+					   			 <a class="btn-line" href="/wg/docid/${doc.id }" target="_blank" title="${doc.zwbt }">${doc.zwbt }</a>
+					   			 <span class="pubtime">${doc.contentDescription}</span>
+					   			 <span class="pubtime">${doc.yfrq }</span>
+					   			 <span class="pubtime">${doc.fileNumber }</span>
+					   			 <span class="pubtime">${doc.fwdw }</span>
+					   			 </li>
+				    			</c:forEach>
 							</table>
 						</td>
 					</tr>

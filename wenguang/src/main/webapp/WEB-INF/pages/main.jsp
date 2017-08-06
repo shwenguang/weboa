@@ -34,7 +34,7 @@
             <div class="pageCenter">
                 <div id="breadcrumbNav">
                     <ul>
-                        <li><a href="http://wgj.sh.gov.cn/node2/n2029/index.html" target="_parent" title="首页">首页</a></li>
+                        <li><a href="/entrance/main.do" target="_parent" title="首页">首页</a></li>
                     </ul>
                 </div>
                 <div class="clear"></div>

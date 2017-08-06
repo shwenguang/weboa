@@ -26,8 +26,8 @@
             <div class="pageCenter">
                 <div id="breadcrumbNav">
                     <ul>
-                        <li><a href="/node2/n2029/index.html" target="_blank" title="首页">首页</a></li>
-                        <li><a href="/node2/n2029/n2031/index.html" target="_parent" title="政府信息公开">政府信息公开</a></li>
+                        <li><a href="/entrance/main.do" target="_blank" title="首页">首页</a></li>
+                        <li><em class="abtFlag">依申请公开</em></li>
                     </ul>
                 </div>
             </div>

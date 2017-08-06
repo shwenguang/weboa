@@ -13,23 +13,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="author,email address">
 <link rel="shortcut icon" href="http://www.shanghai.gov.cn//newshanghai/img/ico/favicon.png">
+<link rel="stylesheet" type="text/css" href="/static/css/hello.css" />
 </head>
 <body onload="initJSHelperEvent();" class="">
+    <div id="breadcrumbNav">
+        <ul>
+            <li><a href="/entrance/main.do" target="_blank" title="首页">首页</a></li>
+            <li><em class="abtFlag">信息公开</em></li>
+        </ul>
+    </div>
  <div id="accessNull"></div>
 <!-- min CSS -->
 <link rel="stylesheet" type="text/css" href="http://www.shanghai.gov.cn//newshanghai/css/ETUI.min.css">
-<!--[if lte IE 6]>
-<link rel="stylesheet" type="text/css" href="http://www.shanghai.gov.cn//newshanghai/css/ETUI-ie6.css">
-<![endif]-->
-<!--[if lte IE 7]>
-<link rel="stylesheet" type="text/css" href="http://www.shanghai.gov.cn//newshanghai/css/ie.css">
-<link rel="stylesheet" href="http://www.shanghai.gov.cn//newshanghai/css/fontello-ie7.css">
-<![endif]-->
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-<script src="http://www.shanghai.gov.cn//newshanghai/js/html5shiv.min.js"></script>
-<![endif]-->
-<!-- Custom CSS -->
 <style> 
 
 #skip {overflow: hidden;width: 0px;height: 0px;}
@@ -50,26 +45,11 @@
 
 <script type="text/javascript" src="http://www.shanghai.gov.cn//newshanghai/js/jquery-1.7.2.min.js"></script> 
 
+
+
+
 <div id="container">
   <div id="header" class="navbar MainNav no-margin-bottom"> 
-   <!--  <div class="navbar-inner">
-      <div class="container">
-        <div class="brand">
-		<a href="http://www.shanghai.gov.cn" alt="*" title="中国上海" ><img src="http://www.shanghai.gov.cn//newshanghai/img/logo-hd.png" class="logo"></a>
-        </div>
-        <div class="nav-collapse collapse navbar-responsive-collapse MainNavBar-responsive-collapse">
-          <ul  id="mainNav" class="nav">
-          <li><a href="http://www.shanghai.gov.cn/" class="margin-left10">首页</a></li>
-          <li id="nav01"><a href="http://www.shanghai.gov.cn//nw2/nw2314/nw2315/index.html">要闻动态</a></li>
-          <li id="nav02"><a href="http://www.shanghai.gov.cn//nw2/nw2314/nw2319/index.html">政府信息公开</a></li>
-          <li id="nav03"><a href="http://zwdt.sh.gov.cn/zwdt/">网上政务大厅</a></li>
-          <li id="nav04"><a href="http://www.shanghai.gov.cn//nw2/nw2314/nw38605/index.html">政民互动</a></li>
-          <li id="nav05"><a href="http://www.shanghai.gov.cn//nw2/nw2314/nw2315/nw17239/index.html">公众服务</a></li>
-          <li id="nav06"><a href="http://www.shanghai.gov.cn//nw2/nw2314/nw2318/index.html" class="no-margin-right">走进上海</a></li>
-        </ul>
-        </div>
-      </div>
-    </div> -->
   </div>
   <div class="container">
      <div class="row-fluid">
