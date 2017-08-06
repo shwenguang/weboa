@@ -1,40 +1,18 @@
 package com.harmony.wenguang.controller;
 
-import java.net.URLEncoder;
 import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-
-
-
-
-
-
-
-import org.apache.commons.lang3.StringUtils;
-import org.codehaus.jettison.json.JSONException;
 //import org.codehaus.jettison.json.JSONException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 //import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-
-
-
-
-
-
-
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.harmony.wenguang.dao.FormtableMainDao;
 import com.harmony.wenguang.dao.dataobject.FormtableMain2DO;
-import com.harmony.wenguang.dao.dataobject.FormtableMain39DO;
-import com.harmony.wenguang.dao.dataobject.FormtableMain40DO;
 //import com.alibaba.fastjson.JSON;
 //import com.alibaba.fastjson.JSONObject;
 //import com.harmony.wenguang.dao.dataobject.WgDisclosureInfoDO;
@@ -107,7 +85,7 @@ public class EntranceController {
 	@RequestMapping("/index4.do")//显示查询结果页面
 	public ModelAndView addIndex4Aplly() {
 		// 此处通过name传递值
-		String pageNo = request.getParameter("pageNo");
+		int pageNo = CommonUtils.parseInt(request.getParameter("pageNo"),1);
 		String startTime = request.getParameter("st");
 		String endTime = request.getParameter("et");
 		String callNumber = request.getParameter("call_Number");
@@ -126,16 +104,16 @@ public class EntranceController {
 		query.append("&keyword=").append(CommonUtils.encodeurl(keyWord));
 		query.append("&publish_Organization=").append(CommonUtils.encodeurl(publishOrganization));
 		FormtableMain2DO example = new FormtableMain2DO();
-		example.setYfrq(startTime);
-		example.setFwh(endTime);
-		example.setCallNumber(callNumber);
+		example.setYfrq(CommonUtils.trimToNull(startTime));
+		example.setFwh(CommonUtils.trimToNull(endTime));
+		example.setCallNumber(CommonUtils.trimToNull(callNumber));
 		// TODO 此处发文机构与公开类别(一级目录)都是Integer变量，需要映射
 		// example.setFwdw(publishOrganization);
-		example.setZwbt(infoName);
-		example.setFileNumber(indexOfFile);
-		example.setPageNo(CommonUtils.parseInt(pageNo, 1));
+		example.setZwbt(CommonUtils.trimToNull(infoName));
+		example.setFileNumber(CommonUtils.trimToNull(indexOfFile));
+//		example.setPageNo(CommonUtils.parseInt(pageNo, 1));
 		// example.setYjml(openCategories);
-		example.setKeyWord(keyWord);
+		example.setKeyWord(CommonUtils.trimToNull(keyWord));
 		Integer totalRows = formtableMainDao.countByExample(example);
 		List<FormtableMain2DO> dataList = formtableMainDao.selectSimpleByExample(example);
 		int totalPage = totalRows / 5;
@@ -144,8 +122,8 @@ public class EntranceController {
 		mv.addObject("curPage", pageNo);
 		mv.addObject("totalRows", totalRows);
 		mv.addObject("totalPage", totalPage);
-		mv.addObject("beginPage", totalPage > 0 ? totalPage : 0);
-		mv.addObject("endPage", totalPage);
+		mv.addObject("beginPage", determineBeginPage(pageNo,totalPage));
+		mv.addObject("endPage", determineEndPage(pageNo,totalPage));
 		mv.addObject("queryStr", query.toString());
 		return mv;
 	}
@@ -156,4 +134,21 @@ public class EntranceController {
 		return mv;
 	}
 	*/
+	static int determineBeginPage(int curPage,int totalPage){
+		if(curPage<=0 ){
+			return 1;
+		}
+		if(curPage > totalPage){
+			return totalPage;
+		}
+		int r = curPage - 5;
+		int s = totalPage - 10;
+		if(r > s) r = s;
+		return r <= 0? 1:r;
+	}
+	static int determineEndPage(int curPage,int totalPage){
+		int b = determineBeginPage(curPage,totalPage);
+		int r = b + 10;
+		return r > totalPage ? totalPage : r;
+	}
 }

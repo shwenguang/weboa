@@ -13,7 +13,12 @@ public class CommonUtils {
     	}
     	return false;
     }
-    
+    public static String trimToNull(String str){
+    	if(str == null || str.trim().length()==0){
+    		return null;
+    	}
+    	return str.trim();
+    }
     public static String encodeurl(String str){
     	if(str==null || str.trim().length()==0){
     		return "";
