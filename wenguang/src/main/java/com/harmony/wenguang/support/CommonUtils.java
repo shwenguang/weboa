@@ -1,11 +1,26 @@
 package com.harmony.wenguang.support;
 
+import java.net.URLEncoder;
 import java.util.regex.Pattern;
 
 public class CommonUtils {
     private static String digitalPattern = "^[+-]?\\d+$";
     private static String decimalPattern = "^[+-]?\\d+(\\.?\\d*)$";
-
+    
+    public static boolean blank(String str){
+    	if(str == null || str.trim().length()==0){
+    		return true;
+    	}
+    	return false;
+    }
+    
+    public static String encodeurl(String str){
+    	if(str==null || str.trim().length()==0){
+    		return "";
+    	}
+    	return URLEncoder.encode(str);
+    }
+    
     public static boolean isDigital(String input) {
         if (input == null || input.length() == 0) {
             return false;

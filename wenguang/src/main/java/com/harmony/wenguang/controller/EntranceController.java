@@ -1,5 +1,6 @@
 package com.harmony.wenguang.controller;
 
+import java.net.URLEncoder;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -104,34 +105,49 @@ public class EntranceController {
 	}
 	
 	@RequestMapping("/index4.do")//显示查询结果页面
-	public ModelAndView addIndex4Aplly(){
-		//此处通过name传递值
-        String startTime = request.getParameter("st");
-        String endTime = request.getParameter("et");
-        String callNumber = request.getParameter("call_Number");
-        String publishOrganization = request.getParameter("publish_Organization"); 
-        String infoName = request.getParameter("infoName");
-        String indexOfFile = request.getParameter("indexOf_File");
-        String openCategories = request.getParameter("select1");
-        String keyWord = request.getParameter("keyword");
-        
-        FormtableMain2DO example = new FormtableMain2DO();
-        example.setYfrq(startTime);
-        example.setFwh(endTime);
-        example.setCallNumber(callNumber);
-        //TODO 此处发文机构与公开类别(一级目录)都是Integer变量，需要映射
-    //    example.setFwdw(publishOrganization);
-        example.setZwbt(infoName);
-        example.setFileNumber(indexOfFile);
-    //    example.setYjml(openCategories);
-        example.setKeyWord(keyWord);
-        
-        List<FormtableMain2DO> dataList = formtableMainDao.selectByParaOrderedByTime(example);
-        
-        ModelAndView mv = new ModelAndView("index4");
-        mv.addObject("docList", dataList);
-		
-        return mv;
+	public ModelAndView addIndex4Aplly() {
+		// 此处通过name传递值
+		String pageNo = request.getParameter("pageNo");
+		String startTime = request.getParameter("st");
+		String endTime = request.getParameter("et");
+		String callNumber = request.getParameter("call_Number");
+		String publishOrganization = request.getParameter("publish_Organization");
+		String infoName = request.getParameter("infoName");
+		String indexOfFile = request.getParameter("indexOf_File");
+		String openCategories = request.getParameter("select1");
+		String keyWord = request.getParameter("keyword");
+		StringBuilder query = new StringBuilder();
+		query.append("?st=").append(CommonUtils.encodeurl(startTime));
+		query.append("&et=").append(CommonUtils.encodeurl(endTime));
+		query.append("&call_Number=").append(CommonUtils.encodeurl(callNumber));
+		query.append("&infoName=").append(CommonUtils.encodeurl(infoName));
+		query.append("&indexOf_File=").append(CommonUtils.encodeurl(indexOfFile));
+		query.append("&select1=").append(CommonUtils.encodeurl(openCategories));
+		query.append("&keyword=").append(CommonUtils.encodeurl(keyWord));
+		query.append("&publish_Organization=").append(CommonUtils.encodeurl(publishOrganization));
+		FormtableMain2DO example = new FormtableMain2DO();
+		example.setYfrq(startTime);
+		example.setFwh(endTime);
+		example.setCallNumber(callNumber);
+		// TODO 此处发文机构与公开类别(一级目录)都是Integer变量，需要映射
+		// example.setFwdw(publishOrganization);
+		example.setZwbt(infoName);
+		example.setFileNumber(indexOfFile);
+		example.setPageNo(CommonUtils.parseInt(pageNo, 1));
+		// example.setYjml(openCategories);
+		example.setKeyWord(keyWord);
+		Integer totalRows = formtableMainDao.countByExample(example);
+		List<FormtableMain2DO> dataList = formtableMainDao.selectSimpleByExample(example);
+		int totalPage = totalRows / 5;
+		ModelAndView mv = new ModelAndView("index4");
+		mv.addObject("docList", dataList);
+		mv.addObject("curPage", pageNo);
+		mv.addObject("totalRows", totalRows);
+		mv.addObject("totalPage", totalPage);
+		mv.addObject("beginPage", totalPage > 0 ? totalPage : 0);
+		mv.addObject("endPage", totalPage);
+		mv.addObject("queryStr", query.toString());
+		return mv;
 	}
 	/*
 	@RequestMapping("/index5.do")

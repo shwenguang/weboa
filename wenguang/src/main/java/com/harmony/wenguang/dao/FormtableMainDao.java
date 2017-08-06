@@ -22,4 +22,6 @@ public interface FormtableMainDao {
 	 * @return
 	 */
 	public List<FormtableMain2DO> selectByParaOrderedByTime(FormtableMain2DO example);
+	
+	public Integer countByExample(FormtableMain2DO example);
 }

@@ -34,4 +34,9 @@ public class FormtableMainDaoImpl extends SqlSessionDaoSupport implements Formta
 		return this.getSqlSession().selectList("formtable_main.selectByParaOrderedByTime",example);
 	}
 
+	@Override
+	public Integer countByExample(FormtableMain2DO example) {
+		return this.getSqlSession().selectOne("formtable_main.countByExample",example);
+	}
+
 }
