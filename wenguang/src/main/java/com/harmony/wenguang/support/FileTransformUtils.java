@@ -63,10 +63,10 @@ public class FileTransformUtils {
 	        }
 
 	        org.jsoup.nodes.Document htmlDocument = Jsoup.parse(html);
-	        String fjName = CommonUtils.blank(dd.getFjbt())?(docid+ "fujian"):dd.getFjbt();
+	        String fjName = (requestId!=null?requestId:docid) + "fujian";
 	        if(dd.getFjInputStream()!=null || dd.getFjInputStream().trim().length()>0){
 	            String fjhtml = String.format("<p style='text-align:center; margin:0 auto;width:200px;'><a href='%s'>%s</a><p>", 
-	                    "/wg/documents/"+fjName,fjName
+	                    "/wg/documents/"+requestId,dd.getFjbt()
 	                    );
 	            htmlDocument.select("body").append(fjhtml);
 	        }
