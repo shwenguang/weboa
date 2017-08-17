@@ -66,10 +66,10 @@ public class FileTransformUtils {
 	        String fjName = (requestId!=null?requestId:docid) + "fujian";
 	        if(dd.getFjInputStream()!=null || dd.getFjInputStream().trim().length()>0){
 	            String fjhtml = String.format(
-	                    "<p style='margin:0 auto;width:200px;'>"
+	                    "<p style='width:200px;'>"
 	                    +"<span>下载附件</span></br>"
 	                    + "附件1: <a href='%s'>%s</a><p>", 
-	                    "/wg/documents/"+requestId,dd.getFjbt()
+	                    "/wg/documents/"+docid+"fujian",dd.getFjbt()
 	                    );
 	            htmlDocument.select("body").append(fjhtml);
 	        }
