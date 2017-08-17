@@ -13,7 +13,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="author,email address">
 <link rel="shortcut icon" href="http://www.shanghai.gov.cn//newshanghai/img/ico/favicon.png">
-<link rel="stylesheet" type="text/css" href="/static/css/hello.css" />
+<!-- <link rel="stylesheet" type="text/css" href="/static/css/hello.css" /> -->
+<style type="text/css">
+*{margin:0px;padding:0px;}
+.body {
+	background: gray;
+}
+div.pageCenter{
+	width:1000px;
+	margin:0px auto;
+}
+a:link{color:#333;text-decoration:none;}
+a:visited{color:#333;text-decoration:none;}
+a:hover{color:#333;text-decoration:underline;}
+
+div#breadcrumbNav{
+	float:left;
+	width:600px;
+	padding-left:10px;
+}
+div#breadcrumbNav ul{
+	float:left;
+	width:100%;
+	padding:7px 0px;
+	overflow:hidden;
+}
+div#breadcrumbNav ul li{
+	float:left;
+	margin-left:-19px;
+	padding:0px 28px 0px 19px;
+	background:url(http://wgj.sh.gov.cn/images/wg2015/images/mf_breadcrumbNavBg.gif) no-repeat left 2px;
+	white-space:nowrap;
+	color:#333;
+}
+
+
+</style>
 </head>
 <body onload="initJSHelperEvent();" class="">
     <div id="breadcrumbNav">
