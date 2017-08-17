@@ -107,13 +107,19 @@ public class DocumentsController {
                 return null;
             }
 
-            FormtableMain2DO mainDO = new FormtableMain2DO();
-            mainDO.setId(docid);
-            List<FormtableMain2DO> list = formtableMainDao.selectByExample(mainDO);
-            if (list == null || list.size() == 0) {
-                return null;
+            String key = "local_fujian_download_"+docid;
+            FormtableMain2DO detail = LocalCache.get(key);
+            if(detail == null){
+                FormtableMain2DO mainDO = new FormtableMain2DO();
+                mainDO.setId(docid);
+                List<FormtableMain2DO> list = formtableMainDao.selectByExample(mainDO);
+                if (list == null || list.size() == 0) {
+                    return null;
+                }
+                detail = list.get(0);
+                LocalCache.cache(key, detail);
             }
-            FormtableMain2DO detail = list.get(0);
+            
             String docType = CommonUtils.getFileSuffix(detail.getFjbt());
             os = response.getOutputStream();
             if ("html".equals(docType)) {
