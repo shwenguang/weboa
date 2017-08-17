@@ -14,7 +14,7 @@
 <meta name="author" content="author,email address">
 <link rel="shortcut icon" href="http://www.shanghai.gov.cn//newshanghai/img/ico/favicon.png">
 <!-- <link rel="stylesheet" type="text/css" href="/static/css/hello.css" /> -->
-<style type="text/css">
+<!--<style type="text/css">
 *{margin:0px;padding:0px;}
 .body {
 	background: gray;
@@ -48,15 +48,10 @@ div#breadcrumbNav ul li{
 }
 
 
-</style>
+</style>-->
 </head>
 <body onload="initJSHelperEvent();" class="">
-    <div id="breadcrumbNav">
-        <ul>
-            <li><a href="/entrance/main.do" target="_blank" title="首页">首页</a></li>
-            <li><em class="abtFlag">信息公开</em></li>
-        </ul>
-    </div>
+    
  <div id="accessNull"></div>
 <!-- min CSS -->
 <link rel="stylesheet" type="text/css" href="http://www.shanghai.gov.cn//newshanghai/css/ETUI.min.css">
@@ -87,6 +82,10 @@ div#breadcrumbNav ul li{
   <div id="header" class="navbar MainNav no-margin-bottom"> 
   </div>
   <div class="container">
+     <a href="/entrance/main.do" target="_blank" title="首页" float:left>首页</a>
+     <img alt="" src="http://wgj.sh.gov.cn/images/wg2015/images/mf_breadcrumbNavBg.gif" float:left>
+     <em class="abtFlag" float:left>信息公开</em>
+     <!--  <a target="_blank" title="信息公开" float:left>信息公开</a>-->
      <div class="row-fluid">
         <div class="span8 no-margin-left">
         	<!-- 一级目录名称 -->
