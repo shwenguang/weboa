@@ -65,7 +65,10 @@ public class FileTransformUtils {
 	        org.jsoup.nodes.Document htmlDocument = Jsoup.parse(html);
 	        String fjName = (requestId!=null?requestId:docid) + "fujian";
 	        if(dd.getFjInputStream()!=null || dd.getFjInputStream().trim().length()>0){
-	            String fjhtml = String.format("<p style='text-align:center; margin:0 auto;width:200px;'><a href='%s'>%s</a><p>", 
+	            String fjhtml = String.format(
+	                    "<p style='margin:0 auto;width:200px;'>"
+	                    +"<span>下载附件</span></br>"
+	                    + "附件1: <a href='%s'>%s</a><p>", 
 	                    "/wg/documents/"+requestId,dd.getFjbt()
 	                    );
 	            htmlDocument.select("body").append(fjhtml);
