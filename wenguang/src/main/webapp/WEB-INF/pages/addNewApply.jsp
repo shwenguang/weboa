@@ -429,6 +429,7 @@
             $.post("/info/disclosure/insert.do", { jsonstr: json }, function (resp) {
                 if(resp.result=="success"){
                 	alert("提交成功");
+                	window.location.href="/entrance/main.do"
                 }else{
                 	alert("提交失败");
                 }
