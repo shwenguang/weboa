@@ -94,6 +94,9 @@
 			<if test="keyWord != null">
 				and keyWord like #{keyWord}
 			</if>
+			<if test="id != null">
+				and id = #{id}
+			</if>
 		</where>
 		) w2
 		WHERE w1.ID = w2.ID AND w2.rowId >= #{startNum}
