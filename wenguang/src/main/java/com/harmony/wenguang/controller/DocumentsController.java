@@ -77,9 +77,10 @@ public class DocumentsController {
                 response.setCharacterEncoding("utf-8");
                 os.write(Base64.decodeBase64(dd.getDocContent()));
             } else {
+                String docType = dd.getDocType();
                 response.setContentType("application/octet-stream");
                 response.addHeader("Content-Disposition",
-                        "attachment;fileName=" + dd.getDocName() + "." + dd.getDocType());
+                        "attachment;fileName=" + dd.getDocName() +(CommonUtils.blank(docType)?"":( "." + dd.getDocType())));
                 os.write(Base64.decodeBase64(dd.getDocContent()));
             }
             return null;

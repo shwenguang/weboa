@@ -19,6 +19,7 @@ public class CommonUtils {
     	}
     	return str.trim();
     }
+    @SuppressWarnings("deprecation")
     public static String encodeurl(String str){
     	if(str==null || str.trim().length()==0){
     		return "";
@@ -51,5 +52,21 @@ public class CommonUtils {
             return defaultValue;
         }
         return Integer.parseInt(str);
+    }
+    
+    public static String getFileSuffix(String fileName){
+        if(blank(fileName)){
+            return null;
+        }
+        StringBuilder sb = new StringBuilder();
+        for(int i=fileName.length()-1;i>=0;i--){
+            char c = fileName.charAt(i);
+            if(c != '.'){
+                sb.append(c);
+            }else{
+                break;
+            }
+        }
+        return sb.reverse().toString();
     }
 }

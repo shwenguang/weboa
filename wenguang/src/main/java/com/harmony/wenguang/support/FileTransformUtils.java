@@ -29,6 +29,9 @@ public class FileTransformUtils {
 	        return false;
 	    }
 	    for(FormtableMain2DO dd : list){
+	        FormtableMain2DO detailExample = new FormtableMain2DO();
+	        detailExample.setId(dd.getId());
+	        FormtableMain2DO detail = Dao.inst().getFormtableMainDao().selectSimpleByExample(detailExample).get(0);
 	        String zw = dd.getZwInputStream();
 	        if(zw == null){
 	            continue;
@@ -69,7 +72,7 @@ public class FileTransformUtils {
 	                    "<p style='width:200px;'>"
 	                    +"<span>下载附件</span></br>"
 	                    + "附件1: <a href='%s'>%s</a><p>", 
-	                    "/wg/documents/"+docid+"fujian",dd.getFjbt()
+	                    "/wg/documents/"+docid+"fujian",detail.getFjbt()
 	                    );
 	            htmlDocument.select("body").append(fjhtml);
 	        }
@@ -87,7 +90,7 @@ public class FileTransformUtils {
 	            wgDocumentsDO = new WgDocumentsDO();
 	            wgDocumentsDO.setDocName(fjName);
 	            wgDocumentsDO.setDocContent(dd.getFjInputStream());
-	            wgDocumentsDO.setDocType("doc");
+	            wgDocumentsDO.setDocType(CommonUtils.getFileSuffix(detail.getFjbt()));
 	            wgDocumentsDO.setRecordType("base64");
 	            wgDocumentsDO.setStatus("1");
 	            wgDocumentsDO.setCreateDate(new Date());
