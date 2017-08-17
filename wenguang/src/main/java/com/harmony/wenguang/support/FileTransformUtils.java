@@ -66,13 +66,14 @@ public class FileTransformUtils {
 	        }
 
 	        org.jsoup.nodes.Document htmlDocument = Jsoup.parse(html);
-	        String fjName = (requestId!=null?requestId:docid) + "fujian";
+	        
+	        String fjName = CommonUtils.blank(detail.getFjbt())?("附件"+docid):detail.getFjbt();
 	        if(dd.getFjInputStream()!=null || dd.getFjInputStream().trim().length()>0){
 	            String fjhtml = String.format(
-	                    "<p style='width:200px;'>"
+	                    "<p style=''>"
 	                    +"<span>下载附件</span></br>"
 	                    + "附件1: <a href='%s'>%s</a><p>", 
-	                    "/wg/documents/"+docid+"fujian",detail.getFjbt()
+	                    "/documents/fujian.do?docid="+docid,fjName
 	                    );
 	            htmlDocument.select("body").append(fjhtml);
 	        }
@@ -86,16 +87,7 @@ public class FileTransformUtils {
 	        wgDocumentsDO.setRecordType("text");
 	        wgDocumentsDO.setStatus("1");
 	        Dao.inst().getWgDocumentsDao().insert(wgDocumentsDO);
-	        if(dd.getFjInputStream()!=null){
-	            wgDocumentsDO = new WgDocumentsDO();
-	            wgDocumentsDO.setDocName(fjName);
-	            wgDocumentsDO.setDocContent(dd.getFjInputStream());
-	            wgDocumentsDO.setDocType(CommonUtils.getFileSuffix(detail.getFjbt()));
-	            wgDocumentsDO.setRecordType("base64");
-	            wgDocumentsDO.setStatus("1");
-	            wgDocumentsDO.setCreateDate(new Date());
-	            Dao.inst().getWgDocumentsDao().insert(wgDocumentsDO);
-	        }
+	        
 	    }
 	    return true;
 	}

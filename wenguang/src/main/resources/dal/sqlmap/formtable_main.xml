@@ -103,7 +103,7 @@
 	</select>
 	<select id="selectByExample"
 		resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
-		select id,requestId,fjInputStream,zwInputStream
+		select id,zwbt,fjbt,requestId,fjInputStream,zwInputStream
 		from formtable_main_2
 		<where>
 			<if test="id != null">
