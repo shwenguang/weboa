@@ -43,7 +43,7 @@
         <div class="pageCenter" id="content">
             <div id="maincontent">
                 <div id="box_jjxxgk">
-                    <a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2062/index.html" target="_parent" title="近期信息公开"><h3 class="pubh3_3">近期信息公开</h3></a>
+                    <a href="/busi/docindex.do" target="_parent" title="近期信息公开"><h3 class="pubh3_3">近期信息公开</h3></a>
                     <ul class="publist1">
 				    	<li><a  href="/wg/docid/${docList[0].id }" target="_blank" title="${docList[0].zwbt }">${docList[0].zwbt }</a>
 					   		<span class="pubtime">${docList[0].yfrq }</span>
@@ -57,7 +57,7 @@
 			     	</ul>
                 </div>
                 <div id="box_zbxx" class="main_zhaobgg">
-                    <h3 class="pubh3_3" id="title_zhaobgg"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2085/n2086/index.html" target="_parent" title="综合政务" onmouseover="openTag('box_zbxx','main_zhaobgg')" onfocus="openTag('box_zbxx','main_zhaobgg')">综合政务</a></h3>
+                    <h3 class="pubh3_3" id="title_zhaobgg"><a href="/busi/docindex.do?yjml=2" target="_parent" title="综合政务" onmouseover="openTag('box_zbxx','main_zhaobgg')" onfocus="openTag('box_zbxx','main_zhaobgg')">综合政务</a></h3>
                     <div class="pubcontent3" id="content_zhaobgg">
                     <ul class="publist1">
                     <c:forEach items="${docList2}" var="doc">
@@ -67,7 +67,7 @@
 				    </c:forEach>
                     </ul>
                     </div>
-                    <h3 class="pubh3_3" id="title_zhongbgg"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2085/n2087/index.html" target="_parent" title="民政社区" onmouseover="openTag('box_zbxx','main_zhongbgg')" onfocus="openTag('box_zbxx','main_zhongbgg')">民政社区</a></h3>
+                    <h3 class="pubh3_3" id="title_zhongbgg"><a href="/busi/docindex.do?yjml=17" target="_parent" title="民政社区" onmouseover="openTag('box_zbxx','main_zhongbgg')" onfocus="openTag('box_zbxx','main_zhongbgg')">民政社区</a></h3>
                     <div class="pubcontent3" id="content_zhongbgg">
                         <ul class="publist1">
                     <c:forEach items="${docList3}" var="doc">
@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div id="box_zcxx" class="main_zcfg">
-                    <h3 class="pubh3_3" id="title_zcfg"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2064/index.html" target="_parent" title="财政金融审计" onmouseover="openTag('box_zcxx','main_zcfg')" onfocus="openTag('box_zcxx','main_zcfg')">财政金融审计</a></h3>
+                    <h3 class="pubh3_3" id="title_zcfg"><a href="/busi/docindex.do?yjml=4" target="_parent" title="财政金融审计" onmouseover="openTag('box_zcxx','main_zcfg')" onfocus="openTag('box_zcxx','main_zcfg')">财政金融审计</a></h3>
                     <div class="pubcontent3" id="content_zcfg">
                         <ul class="publist1">
                     <c:forEach items="${docList4}" var="doc">
@@ -89,7 +89,7 @@
 				    </c:forEach>
                         </ul>
                     </div>
-                    <h3 class="pubh3_3" id="title_zcjd"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2075/index.html" target="_parent" title="国土资源能源" onmouseover="openTag('box_zcxx','main_zcjd')" onfocus="openTag('box_zcxx','main_zcjd')">国土资源能源</a></h3>
+                    <h3 class="pubh3_3" id="title_zcjd"><a href="/busi/docindex.do?yjml=5" target="_parent" title="国土资源能源" onmouseover="openTag('box_zcxx','main_zcjd')" onfocus="openTag('box_zcxx','main_zcjd')">国土资源能源</a></h3>
                     <div class="pubcontent3" id="content_zcjd">
                         <ul class="publist1">
                     <c:forEach items="${docList5}" var="doc">
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <div id="box_cwxx" class="main_cwgk">
-                    <h3 class="pubh3_3" id="title_cwgk"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2076/index.html"target="_parent" title="劳动人事监察" onmouseover="openTag('box_cwxx','main_cwgk')" onfocus="openTag('box_cwxx','main_cwgk')">劳动人事监察</a></h3>
+                    <h3 class="pubh3_3" id="title_cwgk"><a href="/busi/docindex.do?yjml=15"target="_parent" title="劳动人事监察" onmouseover="openTag('box_cwxx','main_cwgk')" onfocus="openTag('box_cwxx','main_cwgk')">劳动人事监察</a></h3>
                     <div class="pubcontent3" id="content_cwgk">
                         <ul class="publist1">
                     <c:forEach items="${docList6}" var="doc">
@@ -111,7 +111,7 @@
 				    </c:forEach>
                         </ul>
                     </div>
-                    <h3 class="pubh3_3" id="title_ggzj"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2150/index.html" target="_parent" title="公安安全司法" onmouseover="openTag('box_cwxx','main_ggzj')" onfocus="openTag('box_cwxx','main_ggzj')">公安安全司法</a></h3>
+                    <h3 class="pubh3_3" id="title_ggzj"><a href="/busi/docindex.do?yjml=16" target="_parent" title="公安安全司法" onmouseover="openTag('box_cwxx','main_ggzj')" onfocus="openTag('box_cwxx','main_ggzj')">公安安全司法</a></h3>
                     <div class="pubcontent3" id="content_ggzj">
                         <ul class="publist1">
                     <c:forEach items="${docList7}" var="doc">
