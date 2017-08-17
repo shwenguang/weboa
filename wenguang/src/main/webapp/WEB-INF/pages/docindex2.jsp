@@ -105,7 +105,7 @@
 		</div>
 	  </div>
    </div>
-	<div id="footer" class="row-fluid margin-top10" >
+	<!--<div id="footer" class="row-fluid margin-top10" >
 		<div class="container">
 		    <div class="footlogo"> 
 		    <img src="http://www.shanghai.gov.cn//newshanghai/img/color-logo-hd.png" alt="">
@@ -121,7 +121,8 @@
 		    		<img src="http://www.shanghai.gov.cn//newshanghai/img/copyright/foot.jpg" alt="*" ></a>
 			</div>
 		</div>
-	</div>
+	</div>-->
+	<iframe marginwidth="0" marginheight="0" src="http://wgj.sh.gov.cn/node2/n2029/n2158/n2177/index.html" frameborder="0" width="100%" scrolling="no" height="131"></iframe>
 </div>
 </body>
 </html>
