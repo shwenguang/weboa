@@ -13,55 +13,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="author,email address">
 <link rel="shortcut icon" href="http://www.shanghai.gov.cn//newshanghai/img/ico/favicon.png">
-<!-- <link rel="stylesheet" type="text/css" href="/static/css/hello.css" /> -->
-<style type="text/css">
-*{margin:0px;padding:0px;}
-.body {
-	background: gray;
-}
-div.pageCenter{
-	width:1000px;
-	margin:0px auto;
-}
-a:link{color:#333;text-decoration:none;}
-a:visited{color:#333;text-decoration:none;}
-a:hover{color:#333;text-decoration:underline;}
-
-div#breadcrumbNav{
-	float:left;
-	width:600px;
-	padding-left:10px;
-}
-div#breadcrumbNav ul{
-	float:left;
-	width:100%;
-	padding:7px 0px;
-	overflow:hidden;
-}
-div#breadcrumbNav ul li{
-	float:left;
-	margin-left:-19px;
-	padding:0px 28px 0px 19px;
-	background:url(http://wgj.sh.gov.cn/images/wg2015/images/mf_breadcrumbNavBg.gif) no-repeat left 2px;
-	white-space:nowrap;
-	color:#333;
-}
-
-
-</style>
 </head>
 <body onload="initJSHelperEvent();" class="">
-    <div id="breadcrumbNav">
-        <ul>
-            <li><a href="/entrance/main.do" target="_blank" title="首页">首页</a></li>
-            <li><em class="abtFlag">信息公开</em></li>
-        </ul>
-    </div>
+    
  <div id="accessNull"></div>
 <!-- min CSS -->
-<link rel="stylesheet" type="text/css" href="http://www.shanghai.gov.cn//newshanghai/css/ETUI.min.css">
+ <link rel="stylesheet" type="text/css" href="http://www.shanghai.gov.cn//newshanghai/css/ETUI.min.css">
 <style> 
-
 #skip {overflow: hidden;width: 0px;height: 0px;}
 </style>
 
@@ -77,11 +35,59 @@ div#breadcrumbNav ul li{
 <link rel="shortcut icon" href="http://www.shanghai.gov.cn//newshanghai/img/ico/favicon.png">
 <!-- 工具条 -->
 <link href="http://www.shanghai.gov.cn/jhelper_V2.0/jhelper_tool_style.css" rel="stylesheet" type="text/css"/>
-
 <script type="text/javascript" src="http://www.shanghai.gov.cn//newshanghai/js/jquery-1.7.2.min.js"></script> 
-
-
-
+<style>
+img{border:none;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6{
+	font-size:12px;
+	line-height:16px;
+	font-weight:bold;
+}
+a:link{color:#333;text-decoration:none;}
+a:visited{color:#333;text-decoration:none;}
+a:hover{color:#333;text-decoration:underline;}
+.clear,div#skip{
+	clear:both;
+	height:0px;
+	font-size:0px;
+	line-height:0px;
+	overflow:hidden;
+}
+.clear{clear:both;}
+</style>
+<link rel="stylesheet" type="text/css" href="/static/css/mainFrame.css" />
+<div id="container">
+	<div id="header">
+        <div id="header_top">
+            <div class="pageCenter">
+            <h1 id="logo"><img src="http://wgj.sh.gov.cn/images/wg2015/images/mf_headerLogo.gif" alt="上海市文化广播影视管理局 上海市文物局" title="上海市文化广播影视管理局 上海市文物局" /></h1>
+                <ul id="quickLink">
+                    <li><a href="http://wgj.sh.gov.cn/" title="简体">简体</a></li>
+                    <li><a href="http://big5.eastday.com:82/gate/big5/wgj.eastday.com/" title="繁体">繁体</a></li>
+                    <li><a href="http://hz.eastday.com/wgjc/report.aspx" title="纠错">纠错</a></li>
+                    <li><a href="javascript:ABT.show()" title="无障碍浏览工具">无障碍浏览工具</a></li>
+                </ul>
+                <ul id="mainnav">
+                    <li><a href="http://wgj.sh.gov.cn/node2/n2029/index.html" target="_parent" title="首页">首页</a></li>
+                    <li><a href="http://wgj.sh.gov.cn/node2/n2029/n2030/index.html" target="_parent" title="要闻动态">要闻动态</a></li>
+                    <li class="navSelect"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/index.html" target="_parent" title="政府信息公开">政府信息公开</a></li>
+                    <li><a href="http://wsbs.wgj.sh.gov.cn/shwgj_zwdt/core/web/welcome/index!all.action" target="_parent" title="网上政务大厅">网上政务大厅</a></li>
+                    <li><a href="http://wgj.sh.gov.cn/node2/n2029/n2032/index.html" target="_parent" title="政民互动">政民互动</a></li>
+                    <li><a href="http://wgj.sh.gov.cn/node2/n2029/n2033/index.html" target="_parent" title="公众服务">公众服务</a></li>
+                    <li><a href="http://wgj.sh.gov.cn/node2/n2029/n2034/index.html" target="_parent" title="走进文广">走进文广</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="header_bottom">
+            <div class="pageCenter">
+            	<h2 id="subTitle"><img src="http://wgj.sh.gov.cn/images/wg2015/images/mf_subTitle.gif" alt="网上政务大厅" title="网上政务大厅" /></h2>
+                <iframe id="mainSearchFrame" src="http://wgj.sh.gov.cn/node2/n2029/n2158/n2187/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="搜索"></iframe>
+                <div class="clear"></div>
+            </div>
+        </div>
+   </div>
 
 <div id="container">
   <div id="header" class="navbar MainNav no-margin-bottom"> 
