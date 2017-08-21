@@ -20,6 +20,34 @@
 <div id="skip"><a href="#content" title="跳转到主要内容区域" accesskey="2">跳转到主要内容区域</a></div>
 <div id="container">
     <div id="header">
+        <div id="header_top">
+            <div class="pageCenter">
+            <h1 id="logo"><img src="http://wgj.sh.gov.cn/images/wg2015/images/mf_headerLogo.gif" alt="上海市文化广播影视管理局 上海市文物局" title="上海市文化广播影视管理局 上海市文物局" /></h1>
+                <ul id="quickLink">
+                    <li><a href="http://wgj.sh.gov.cn/" title="简体">简体</a></li>
+                    <li><a href="http://big5.eastday.com:82/gate/big5/wgj.eastday.com/" title="繁体">繁体</a></li>
+                    <li><a href="http://hz.eastday.com/wgjc/report.aspx" title="纠错">纠错</a></li>
+                    <li><a href="javascript:ABT.show()" title="无障碍浏览工具">无障碍浏览工具</a></li>
+                </ul>
+                <ul id="mainnav">
+                    <li><a href="http://wgj.sh.gov.cn/node2/n2029/index.html" target="_parent" title="首页">首页</a></li>
+                    <li><a href="http://wgj.sh.gov.cn/node2/n2029/n2030/index.html" target="_parent" title="要闻动态">要闻动态</a></li>
+                    <li class="navSelect"><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/index.html" target="_parent" title="政府信息公开">政府信息公开</a></li>
+                    <li><a href="http://wsbs.wgj.sh.gov.cn/shwgj_zwdt/core/web/welcome/index!all.action" target="_parent" title="网上政务大厅">网上政务大厅</a></li>
+                    <li><a href="http://wgj.sh.gov.cn/node2/n2029/n2032/index.html" target="_parent" title="政民互动">政民互动</a></li>
+                    <li><a href="http://wgj.sh.gov.cn/node2/n2029/n2033/index.html" target="_parent" title="公众服务">公众服务</a></li>
+                    <li><a href="http://wgj.sh.gov.cn/node2/n2029/n2034/index.html" target="_parent" title="走进文广">走进文广</a></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="header_bottom">
+            <div class="pageCenter">
+            	<h2 id="subTitle"><img src="http://wgj.sh.gov.cn/images/wg2015/images/mf_subTitle.gif" alt="网上政务大厅" title="网上政务大厅" /></h2>
+                <iframe id="mainSearchFrame" src="http://wgj.sh.gov.cn/node2/n2029/n2158/n2187/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="搜索"></iframe>
+                <div class="clear"></div>
+            </div>
+        </div>
     </div>
     <div id="main">
         <div id="mainTop">
@@ -30,6 +58,8 @@
                         <li><em class="abtFlag">依申请公开</em></li>
                     </ul>
                 </div>
+                <iframe id="subSearchFrame" src="http://wgj.sh.gov.cn/node2/n2029/n2158/n2188/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="本栏检索"></iframe>
+                <div class="clear"></div>
             </div>
         </div>
         <div class="pageCenter" id="content">
