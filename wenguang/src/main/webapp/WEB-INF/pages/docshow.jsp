@@ -95,7 +95,7 @@ div#breadcrumbNav ul li{
 	        <div class="row-fluid">
 			     <iframe width="100%" height="100%" align="center" frameborder="0" scrolling="auto" style="border: solid 1px;"
 			      id="cwin" name="cwin" onload="Javascript:SetCwinHeight()"
-			      src="http://localhost/wg/docid/${docid }"></iframe>
+			      src="/wg/docid/${docid }"></iframe>
 	       </div>
 		</div>
 		<div class="span4"></div>
