@@ -119,8 +119,9 @@ a:hover{color:#333;text-decoration:underline;}
 			      <!-- 遍历文件列表 -->
 			     <ul class="uli14 pageList">
 				    <c:forEach items="${docList }" var="doc">
-					   <li><a  class="btn-line" href="/wg/docid/${doc.id }" target="_blank" title="${doc.zwbt }">
-							${doc.zwbt }</a>
+					   <li>
+<%-- 					   	<a  class="btn-line" href="/wg/docid/${doc.id }" target="_blank" title="${doc.zwbt }">${doc.zwbt }</a> --%>
+							<a  class="btn-line" href="/busi/docshow.do?docid=${doc.id }&ejml=${ejml}&yjml=${yjml}" target="_blank" title="${doc.zwbt }">${doc.zwbt }</a>
 					  </li>
 				    </c:forEach>
 			     </ul>

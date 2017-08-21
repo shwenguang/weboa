@@ -73,6 +73,56 @@ public class BusinessController {
                 mv.addObject("ejmlData",ejlist.get(0));
             }
         }
+        mv.addObject("yjml",yjml);
+        mv.addObject("ejml",ejml);
+        return mv;
+    }
+    @RequestMapping("/docshow.do")
+    public ModelAndView docshow(){
+        String yjml = request.getParameter("yjml");
+        String ejml = request.getParameter("ejml");
+        String docid = request.getParameter("docid");
+        ModelAndView mv = new ModelAndView("docshow");
+        //请求中应该有一级目录ID，如果没有，则默认页面展示第一个一级目录内容
+        if(StringUtils.isBlank(yjml)){
+            yjml = "1";
+        }
+        //查出所有的一级目录
+        List<FormtableMain39DO> list1 = formtableMain39Dao.selectAllData();
+        mv.addObject("menu1List", list1);
+        //查询指定的一级目录下的所有二级目录
+        FormtableMain40DO example1 = new FormtableMain40DO();
+        example1.setYjmlmc(yjml);
+        List<FormtableMain40DO> list2 = formtableMain40Dao.selectByExample(example1);
+        mv.addObject("menu2List", list2);
+        //一级目录信息
+        FormtableMain39DO yjmlExamle = new FormtableMain39DO();
+        yjmlExamle.setId(CommonUtils.parseLong(yjml, -1L));
+        List<FormtableMain39DO> yjlist = formtableMain39Dao.selectByExample(yjmlExamle);
+        if (yjlist != null && yjlist.size() == 1) {
+            mv.addObject("yjmlData", yjlist.get(0));
+        }
+        //如果请求中含有一级目录和二级目录，则查询文章列表
+        if(StringUtils.isNotBlank(yjml) && StringUtils.isNotBlank(ejml)){
+            int pageNo = CommonUtils.parseInt(request.getParameter("pageNo"), 1);
+            int pageRows = CommonUtils.parseInt(request.getParameter("pageRows"), 20);
+            FormtableMain2DO example = new FormtableMain2DO();
+            example.setPageNo(pageNo);
+            example.setPageRows(pageRows);
+            example.setXxgkyjml(yjml);
+            example.setXxgkejml(ejml);
+            List<FormtableMain2DO> dataList = formtableMainDao.selectSimpleByExample(example);
+            mv.addObject("docList", dataList);
+            
+            FormtableMain40DO ejmlExample = new FormtableMain40DO();
+            ejmlExample.setId(CommonUtils.parseLong(ejml, -1L));
+            List<FormtableMain40DO> ejlist = formtableMain40Dao.selectByExample(ejmlExample);
+            if(ejlist!=null && ejlist.size()==1){
+                mv.addObject("ejmlData",ejlist.get(0));
+            }
+        }
+        mv.addObject("docid", docid);
+        
         return mv;
     }
 //    @RequestMapping("/top.do")
