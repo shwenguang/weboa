@@ -104,7 +104,7 @@ a:hover{color:#333;text-decoration:underline;}
             <div class="page-header-1"><h4><a title="${yjmlData.yjmlmc }">${yjmlData.yjmlmc }</a></h4></div>
 	        <!-- 文件列表 -->
 	        <div class="row-fluid">
-			     <iframe width="100%" height="100%" align="center" frameborder="0" scrolling="auto" style="border: solid 1px;"
+			     <iframe width="100%" height="100%" align="center" frameborder="0" scrolling="auto" style="border: 1px;"
 			      id="cwin" name="cwin" onload="Javascript:SetCwinHeight()"
 			      src="/wg/docid/${docid }"></iframe>
 	       </div>
@@ -132,9 +132,9 @@ a:hover{color:#333;text-decoration:underline;}
 			if (cwin && !window.opera) {
 				if (cwin.contentDocument
 						&& cwin.contentDocument.body.offsetHeight)
-					cwin.height = cwin.contentDocument.body.offsetHeight;
+					cwin.height = cwin.contentDocument.body.offsetHeight + 200;
 				else if (cwin.Document && cwin.Document.body.scrollHeight)
-					cwin.height = cwin.Document.body.scrollHeight;
+					cwin.height = cwin.Document.body.scrollHeight + 200;
 			}
 		}
 	}
