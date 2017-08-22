@@ -44,6 +44,11 @@ h1,h2,h3,h4,h5,h6{
 	line-height:16px;
 	font-weight:bold;
 }
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
 a:link{color:#333;text-decoration:none;}
 a:visited{color:#333;text-decoration:none;}
 a:hover{color:#333;text-decoration:underline;}
