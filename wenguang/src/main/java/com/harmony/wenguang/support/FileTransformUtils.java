@@ -79,6 +79,12 @@ public class FileTransformUtils {
 	        }
 	        htmlDocument.select("head").append("<title>上海文化广播影视管理局</title>");
 	        htmlDocument.select("head").append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />");
+	        htmlDocument.select("body").prepend(String.format(
+	                "<div style='margin-bottom:2em'>"
+	                + "<h3 style='text-align:center'>%s</h3>"
+	                +"<p style='text-align:center;color:#CECECE;size:20px'>%s</p>"
+	                + "</div>",
+	                detail.getZwbt(),detail.getZs()));
 //	        System.out.println(htmlDocument.html());
 	        WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
 	        wgDocumentsDO.setDocName((requestId!=null?requestId:docid)+"");
