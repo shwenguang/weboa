@@ -132,9 +132,9 @@ a:hover{color:#333;text-decoration:underline;}
 			if (cwin && !window.opera) {
 				if (cwin.contentDocument
 						&& cwin.contentDocument.body.offsetHeight)
-					cwin.height = cwin.contentDocument.body.offsetHeight + 200;
+					cwin.height = cwin.contentDocument.body.offsetHeight + 250;
 				else if (cwin.Document && cwin.Document.body.scrollHeight)
-					cwin.height = cwin.Document.body.scrollHeight + 200;
+					cwin.height = cwin.Document.body.scrollHeight + 250;
 			}
 		}
 	}

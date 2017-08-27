@@ -83,7 +83,8 @@ public class FileTransformUtils {
 	                "<div style='margin-bottom:2em'>"
 	                + "<h3 style='text-align:center'>%s</h3>"
 	                +"<p style='text-align:center;color:#CECECE;size:20px'>%s</p>"
-	                + "</div>",
+	                + "</div>"
+	                + "<hr style=\"height:1px;border:none;border-top:1px solid #CECECE;margin-bottom:2em;\" />",
 	                detail.getZwbt(),detail.getZs()));
 //	        System.out.println(htmlDocument.html());
 	        WgDocumentsDO wgDocumentsDO = new WgDocumentsDO();
