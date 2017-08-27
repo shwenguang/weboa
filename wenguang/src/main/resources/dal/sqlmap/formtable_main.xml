@@ -60,10 +60,11 @@
 	<select id="selectSimpleByExample"
 		resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">
 		SELECT w2.rowId,
-		w1.id,w1.requestId,w1.fwh,w1.fwdw,w1.jj,w1.sfgk,w1.qfr,w1.zw,w1.zs,w1.cs,w1.zbdw,w1.ngr,w1.hbdw,w1.hbr,w1.fj,w1.dz,w1.bz,w1.sfgkwb,w1.zwbt,w1.fjbt
+		w1.id,w1.requestId,w1.fwh,w1.fwdw,w1.jj,w1.sfgk,w1.qfr,w1.zw,w1.zs,w1.cs,w1.zbdw,w1.ngr,w1.hbdw,w1.hbr,w1.fj,w1.dz,w1.bz,w1.sfgkwb,w1.zwbt,w1.fjbt,
+		w1.yjml,w1.ejml,w1.xxgkyjml,w1.xxgkejml
 		FROM formtable_main_2 w1,
 		( SELECT TOP ${endNum } row_number() OVER (ORDER BY ID DESC) rowId,
-		id,requestId,fwh,fwdw,jj,sfgk,qfr,zw,zs,cs,zbdw,ngr,hbdw,hbr,fj,dz,bz,sfgkwb,zwbt,fjbt
+		id,requestId,fwh,fwdw,jj,sfgk,qfr,zw,zs,cs,zbdw,ngr,hbdw,hbr,fj,dz,bz,sfgkwb,zwbt,fjbt,yjml,ejml,xxgkyjml,xxgkejml
 		FROM formtable_main_2
 		<where>
 			<if test="xxgkyjml!=null and xxgkyjml != ''">
