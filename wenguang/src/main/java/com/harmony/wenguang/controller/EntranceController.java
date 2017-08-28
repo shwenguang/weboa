@@ -88,7 +88,7 @@ public class EntranceController {
 		FormtableMain2DO example = new FormtableMain2DO();
 		Integer totalRows = formtableMainDao.countByExample(example);
 		List<FormtableMain2DO> dataList = formtableMainDao.selectSimpleByExample(example);
-		int totalPage = totalRows / 5;
+		int totalPage = totalRows / 21;
 		ModelAndView mv = new ModelAndView("info_disclosure");
 		mv.addObject("docList", dataList);
 		mv.addObject("curPage", pageNo);
@@ -96,7 +96,6 @@ public class EntranceController {
 		mv.addObject("totalPage", totalPage);
 		mv.addObject("beginPage", determineBeginPage(pageNo,totalPage));
 		mv.addObject("endPage", determineEndPage(pageNo,totalPage));
-		
 		return mv;
 	}
 	
