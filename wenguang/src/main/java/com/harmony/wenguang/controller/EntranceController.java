@@ -71,6 +71,26 @@ public class EntranceController {
 		return mv;
 	}
 	
+	@RequestMapping("/head_info_disclosure.do")
+	public ModelAndView addhead_info_disclosureAplly(){
+		
+		ModelAndView mv = new ModelAndView("head_info_disclosure");
+		FormtableMain2DO example = new FormtableMain2DO();
+        List<FormtableMain2DO> dataList = formtableMainDao.selectByExampleOrderedByTime(example);
+        mv.addObject("docList", dataList);
+		return mv;
+	}
+	
+	@RequestMapping("/info_disclosure.do")
+	public ModelAndView addinfo_disclosureAplly(){
+		
+		ModelAndView mv = new ModelAndView("info_disclosure");
+//		FormtableMain2DO example = new FormtableMain2DO();
+//        List<FormtableMain2DO> dataList = formtableMainDao.selectByExampleOrderedByTime(example);
+//        mv.addObject("docList", dataList);
+		return mv;
+	}
+	
 	@RequestMapping("/index2.do")//显示main.JSP的右侧导航栏
 	public ModelAndView addIndex2Aplly(ModelAndView mv){
 		mv.setViewName("index2"); 

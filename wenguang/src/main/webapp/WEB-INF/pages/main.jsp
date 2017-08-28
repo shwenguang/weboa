@@ -61,7 +61,7 @@
         </div>
         <div class="pageCenter" id="content">
             <div id="maincontent">
-                <div id="box_jjxxgk">
+                <!-- <div id="box_jjxxgk">
                     <a href="/busi/docindex.do" target="_parent" title="近期信息公开"><h3 class="pubh3_3">近期信息公开</h3></a>
                     <ul class="publist1">
 				    	<li><a  href="/wg/docid/${docList[0].id }" target="_blank" title="${docList[0].zwbt }">${docList[0].zwbt }</a>
@@ -74,7 +74,9 @@
 					   		<span class="pubtime">${docList[2].yfrq }</span>
 					   	</li>
 			     	</ul>
-                </div>
+                </div>-->
+                <iframe id="box_jjxxgk" marginwidth="0" marginheight="0" src="http://localhost:8080/entrance/head_info_disclosure.do" frameborder="0" width="100%" scrolling="no" height="205px"></iframe>
+                
                 <div id="box_zbxx" class="main_zhaobgg">
                     <h3 class="pubh3_3" id="title_zhaobgg"><a href="/busi/docindex.do?yjml=2" target="_parent" title="综合政务" onmouseover="openTag('box_zbxx','main_zhaobgg')" onfocus="openTag('box_zbxx','main_zhaobgg')">综合政务</a></h3>
                     <div class="pubcontent3" id="content_zhaobgg">

@@ -53,7 +53,6 @@ ol {
   padding: 0;
   margin: 0;
 }
-
 a:link{color:#333;text-decoration:none;}
 a:visited{color:#333;text-decoration:none;}
 a:hover{color:#333;text-decoration:underline;}
@@ -62,6 +61,9 @@ a:hover{color:#333;text-decoration:underline;}
 	height:0px;
 	font-size:0px;
 	line-height:0px;
+	margin:0px;
+	padding:0px;
+	text-align:center;
 	overflow:hidden;
 }
 .clear{clear:both;}
@@ -157,6 +159,7 @@ a:hover{color:#333;text-decoration:underline;}
 <!-- 						<li>电子邮箱：xxgkyjx@shanghai.gov.cn</li> -->
 <!-- 					</ul> -->
 		</div>
+		<div class="clear"></div>
 	  </div>
    </div>
 	<!--<div id="footer" class="row-fluid margin-top10" >
