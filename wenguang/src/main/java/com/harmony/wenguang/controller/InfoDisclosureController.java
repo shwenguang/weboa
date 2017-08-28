@@ -23,7 +23,7 @@ public class InfoDisclosureController {
 	protected WgDisclosureInfoDaoImpl wgDisclosureInfoDao;
 	@RequestMapping("/addNewApply.do")
 	public ModelAndView addNewAplly(ModelAndView mv){
-		mv.setViewName("addNewApply"); 
+		mv.setViewName("addNewApply2"); 
 		return mv;
 	}
 	@RequestMapping(value="/insert.do",produces="application/json;charset=utf-8")
