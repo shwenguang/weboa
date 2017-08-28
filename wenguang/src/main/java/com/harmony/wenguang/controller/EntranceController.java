@@ -83,11 +83,20 @@ public class EntranceController {
 	
 	@RequestMapping("/info_disclosure.do")
 	public ModelAndView addinfo_disclosureAplly(){
-		
+		int pageNo = CommonUtils.parseInt(request.getParameter("pageNo"),1);
+		StringBuilder query = new StringBuilder();
+		FormtableMain2DO example = new FormtableMain2DO();
+		Integer totalRows = formtableMainDao.countByExample(example);
+		List<FormtableMain2DO> dataList = formtableMainDao.selectSimpleByExample(example);
+		int totalPage = totalRows / 5;
 		ModelAndView mv = new ModelAndView("info_disclosure");
-//		FormtableMain2DO example = new FormtableMain2DO();
-//        List<FormtableMain2DO> dataList = formtableMainDao.selectByExampleOrderedByTime(example);
-//        mv.addObject("docList", dataList);
+		mv.addObject("docList", dataList);
+		mv.addObject("curPage", pageNo);
+		mv.addObject("totalRows", totalRows);
+		mv.addObject("totalPage", totalPage);
+		mv.addObject("beginPage", determineBeginPage(pageNo,totalPage));
+		mv.addObject("endPage", determineEndPage(pageNo,totalPage));
+		
 		return mv;
 	}
 	

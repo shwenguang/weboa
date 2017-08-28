@@ -148,8 +148,7 @@
 				and xxgkyjml = #{xxgkyjml}
 			</if>
 		</where>
-
+		ORDER BY yfrq DESC
 	</select>
-
-
+	
 </mapper>
