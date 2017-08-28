@@ -26,6 +26,11 @@ public class InfoDisclosureController {
 		mv.setViewName("addNewApply2"); 
 		return mv;
 	}
+	@RequestMapping("/addNewApplyTable.do")
+    public ModelAndView addNewApplyTable(ModelAndView mv){
+        mv.setViewName("addNewApplyTable"); 
+        return mv;
+    }
 	@RequestMapping(value="/insert.do",produces="application/json;charset=utf-8")
 	@ResponseBody
 	public String insertSQL() throws JSONException
