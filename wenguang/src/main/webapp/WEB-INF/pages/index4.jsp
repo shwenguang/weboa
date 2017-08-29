@@ -80,6 +80,7 @@
 								src="http://searchgov1.eastday.com/searchwgj_new/images/blank.gif" width="5" /></td>
 							<td width="147" class="12pixblack" bgcolor="#FFFEEA" valign="top"><img
 								src="http://searchgov1.eastday.com/searchwgj_new/images/blank.gif" width="3" /><a
+								target="__blank"
 								href="/busi/docshow.do?docid=${doc.id }&ejml=${doc.xxgkejml}&yjml=${doc.xxgkyjml}">${doc.zwbt }</a><img
 								src="http://searchgov1.eastday.com/searchwgj_new/images/blank.gif" width="3" /></td>
 							<td width="1" bgcolor="#EFEFEF"><img
