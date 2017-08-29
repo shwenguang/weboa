@@ -116,7 +116,7 @@ a:hover{color:#333;text-decoration:underline;}
             <div id="maincontent">
                <h2 class="rsPublicTitle">近期信息公开</h2>
                 <div class="row-fluid">
-			     <iframe width="100%" height="90%" align="center" frameborder="0" scrolling="auto" style="border: 1px;"
+			     <iframe width="100%" height="90%" align="center" frameborder="0" scrolling="auto" style="border: solid 1px;"
 			      id="cwin" name="cwin" onload="Javascript:SetCwinHeight()"
 			      src="/wg/docid/${docid }"></iframe>
 			      </div>

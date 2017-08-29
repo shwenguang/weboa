@@ -72,22 +72,18 @@
                 </ul>
                 <ul id="changepage">
                 	<c:if test="${not empty docList }">
-                		<c:if test="${curPage > beginPage }">
-							<a id="prev" href="/entrance/info_disclosure.do&pageNo=${curPage==1?1:(curPage-1)}">&lt;&lt;</a>
-						</c:if>
+                	<a id="prev" href="/entrance/info_disclosure.do?pageNo=${curPage==1?1:(curPage-1)}">&lt;&lt;</a>
 					<span id="nums">
 					<c:forEach begin="${beginPage }" end="${endPage }" var="v">
 						<c:if test="${v == curPage }">
-							<a class="Current"> ${v}</a>
+							<a style="border: 0px;"> ${v}</a>
 						</c:if>
 						<c:if test="${not (v == curPage) }">
-							<a href="/entrance/info_disclosure.do&pageNo=${v}"> ${v } </a>
+							<a href="/entrance/info_disclosure.do?pageNo=${v}"> ${v } </a>
 						</c:if>
 					</c:forEach>
 	                </span>
-	                <c:if test="${curPage < beginPage }">
-	                	<a id="next" href="/entrance/info_disclosure.do&pageNo=${curPage==totalPage?totalPage:(curPage+1)}">&gt;&gt;</a>
-                	</c:if>
+	                <a id="next" href="/entrance/info_disclosure.do?pageNo=${curPage==totalPage?totalPage:(curPage+1)}">&gt;&gt;</a>
                 </c:if>
                 <c:if test="${empty docList}">
 					<div id="empty">未找到相关记录，请检查输入的文字是否有误或更换关键字</div>
