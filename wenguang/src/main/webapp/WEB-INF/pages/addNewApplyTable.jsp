@@ -623,6 +623,15 @@ td
 	{mso-style-parent:style0;
 	mso-font-charset:134;
 	border:1.5pt solid windowtext;}
+.td_input {
+	width: 100%;
+	height: 90%;
+	border-left-width:0px;
+	border-top-width:0px;
+	border-right-width:0px;
+	border-bottom:1px solid #0F2543;
+	margin-bottom: 3px;
+}
  </style>
  </head>
  <body link="blue" vlink="purple">
@@ -637,77 +646,95 @@ td
     <td class="xl65" height="391.50" width="35" rowspan="11" style='height:234.90pt;width:21.00pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>申请人信息</td>
     <td class="xl66" width="86" rowspan="5" style='width:51.60pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>公民</td>
     <td class="xl67" width="102.00" style='width:61.20pt;' x:str>*<font class="font1">姓名</font></td>
-    <td class="xl68" width="144.00" style='width:86.40pt;'></td>
+    <td class="xl68" width="144.00" style='width:86.40pt;'><input class="td_input" placeholder="请输入" /></td>
     <td class="xl67" width="110" style='width:66.00pt;' x:str>*<font class="font1">工作单位</font></td>
-    <td class="xl68" width="125.00" style='width:75.00pt;'></td>
+    <td class="xl68" width="125.00" style='width:75.00pt;'><input class="td_input" placeholder="请输入" /></td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl67" x:str>*<font class="font1">证件名称</font></td>
-    <td class="xl68"></td>
+    <td class="xl68"><input class="td_input" placeholder="请输入" /></td>
     <td class="xl67" x:str>*<font class="font1">证件号码</font></td>
-    <td class="xl68"></td>
+    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl67" x:str>*<font class="font1">联系电话</font></td>
-    <td class="xl68"></td>
+    <td class="xl68"><input class="td_input" placeholder="请输入" /></td>
     <td class="xl67" x:str>*<font class="font1">邮政编码</font></td>
-    <td class="xl68"></td>
+    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl67" x:str>*<font class="font1">联系地址</font></td>
-    <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
+    <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
+    <input class="td_input" placeholder="请输入"/>
+    </td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl65" x:str>电子邮箱</td>
-    <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
+    <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
+    <input class="td_input" placeholder="请输入" />
+    </td>
    </tr>
    <tr height="54.50" style='height:32.70pt;'>
     <td class="xl66" rowspan="5" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>法人/法人其他组织</td>
     <td class="xl67" x:str>*<font class="font1">名称</font></td>
-    <td class="xl68"></td>
+    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
     <td class="xl67" x:str>*<font class="font1">组织机构代码</font></td>
-    <td class="xl68"></td>
+    <td class="xl68"><input class="td_input" placeholder="请输入" /></td>
    </tr>
    <tr height="54.50" style='height:32.70pt;'>
     <td class="xl67" x:str>*<font class="font1">法人代表</font></td>
-    <td class="xl68"></td>
+    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
     <td class="xl67" x:str>*<font class="font1">联系人姓名</font></td>
-    <td class="xl68"></td>
+    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
    </tr>
    <tr height="54.50" style='height:32.70pt;'>
     <td class="xl67" x:str>*<font class="font1">联系人电话</font></td>
-    <td class="xl68"></td>
+    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
     <td class="xl67" x:str>*<font class="font1">邮政编码</font></td>
-    <td class="xl68"></td>
+    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl67" x:str>*<font class="font1">联系地址</font></td>
-    <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
+    <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
+    <input class="td_input" placeholder="请输入"/>
+    </td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl65" x:str>电子邮箱</td>
-    <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
+    <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
+    <input class="td_input" />
+    </td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl66" colspan="2" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>申请时间</td>
-    <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
+    <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
+    <input class="td_input" />
+    </td>
    </tr>
    <tr height="158.50" style='height:95.10pt;'>
     <td class="xl65" height="641.50" rowspan="7" style='height:384.90pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>所需信息情况</td>
     <td class="xl66" x:str>政府信息公开义务机关（机构）名称</td>
-    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
+    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
+    <input class="td_input" />
+    </td>
    </tr>
    <tr height="210.50" style='height:126.30pt;'>
     <td class="xl66" x:str>*所需信息的内容描述（名称、文号或其他特征描述）</td>
-    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
+    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
+    <input class="td_input" />
+    </td>
    </tr>
    <tr height="80.50" style='height:48.30pt;'>
     <td class="xl66" x:str>获取政府信息的方式</td>
-    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
+    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
+    <input class="td_input" />
+    </td>
    </tr>
    <tr height="80.50" style='height:48.30pt;'>
     <td class="xl66" x:str>政府信息的载体形式</td>
-    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
+    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
+    <input class="td_input" />
+    </td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl66" rowspan="2" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>所需政府信息的用途</td>
@@ -721,13 +748,17 @@ td
     <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
-    <td class="xl71" height="28.50" colspan="3" style='height:17.10pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>关键字:</td>
-    <td class="xl72" x:str>受理号:</td>
-    <td class="xl71" colspan="2" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>申请类型:</td>
+    <td class="xl71" height="28.50" colspan="3" style='height:17.10pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
+    关键字:<input width="200px;"  /></td>
+    <td class="xl72" x:str>受理号:<input width="10pt;"></td>
+    <td class="xl71" colspan="2" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
+    申请类型:<input width="100px;" /></td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
-    <td class="xl71" height="28.50" colspan="3" style='height:17.10pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>流水号:（系统自动生成<span style='display:none;'>）</span></td>
-    <td class="xl71" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>转办单号:</td>
+    <td class="xl71" height="28.50" colspan="3" style='height:17.10pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
+    流水号:（系统自动生成）</span></td>
+    <td class="xl71" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
+    转办单号:<input width="100px;" /></td>
    </tr>
    <tr height="27.25" style='height:16.35pt;'>
     <td height="27.25" colspan="6" style='height:16.35pt;mso-ignore:colspan;'></td>
