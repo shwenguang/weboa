@@ -91,7 +91,7 @@ public class EntranceController {
 		example.setPageRows(pageRows);
 		Integer totalRows = formtableMainDao.countByExample(example);
 		List<FormtableMain2DO> dataList = formtableMainDao.selectSimpleByExample(example);
-		int totalPage = (totalRows / pageRows)+1;
+		int totalPage = CommonUtils.ceilDivide(totalRows , pageRows);
 		ModelAndView mv = new ModelAndView("info_disclosure");
 		mv.addObject("docList", dataList);
 		mv.addObject("curPage", pageNo);
@@ -146,7 +146,7 @@ public class EntranceController {
 		example.setKeyWord(CommonUtils.trimToNull(keyWord));
 		Integer totalRows = formtableMainDao.countByExample(example);
 		List<FormtableMain2DO> dataList = formtableMainDao.selectSimpleByExample(example);
-		int totalPage = totalRows / 5;
+		int totalPage = CommonUtils.ceilDivide(totalRows, 5);
 		ModelAndView mv = new ModelAndView("index4");
 		mv.addObject("docList", dataList);
 		mv.addObject("curPage", pageNo);

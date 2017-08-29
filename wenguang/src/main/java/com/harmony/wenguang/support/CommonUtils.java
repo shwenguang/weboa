@@ -54,6 +54,13 @@ public class CommonUtils {
         return Integer.parseInt(str);
     }
     
+    public static int ceilDivide(int n1, int n2){
+        if(n1 % n2 == 0){
+            return n1 / n2;
+        }
+        return (n1/n2)+1;
+    }
+    
     public static String getFileSuffix(String fileName){
         if(blank(fileName)){
             return null;
