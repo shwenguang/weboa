@@ -61,7 +61,11 @@ a:hover{color:#333;text-decoration:underline;}
 }
 .clear{clear:both;}
 </style>
+<script type="text/javascript" src="/images/wg2015/script/closeWindow.js"></script>
+<link rel="stylesheet" type="text/css" href="http://wgj.sh.gov.cn/images/wg2015/styles/public.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/mainFrame.css" />
+<link rel="stylesheet" type="text/css" href="http://wgj.sh.gov.cn/images/wg2015/styles/modules.css" />
+<link rel="stylesheet" type="text/css" href="http://wgj.sh.gov.cn/images/wg2015/styles/style_zfxxgk5.css" />
 <div id="container">
 	<div id="header">
         <div id="header_top">
@@ -94,15 +98,56 @@ a:hover{color:#333;text-decoration:underline;}
         </div>
    </div>
 
-<div id="container">
+    <div id="main">
+        <div id="mainTop">
+            <div class="pageCenter">
+                <div id="breadcrumbNav">
+                    <ul>
+                        <li><a href="http://wgj.sh.gov.cn/node2/n2029/index.html" target="_blank" title="首页">首页</a></li>
+                        <li><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/index.html" target="_parent" title="政府信息公开">政府信息公开</a></li>
+                        <li>近期信息公开</li>
+                    </ul>
+                </div>
+                <iframe id="subSearchFrame" src="http://wgj.sh.gov.cn/node2/n2029/n2158/n2188/index.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="本栏检索"></iframe>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="pageCenter" id="content">
+            <div id="maincontent">
+               <h2 class="rsPublicTitle">近期信息公开</h2>
+                <div class="row-fluid">
+			     <iframe width="100%" height="90%" align="center" frameborder="0" scrolling="auto" style="border: 1px;"
+			      id="cwin" name="cwin" onload="Javascript:SetCwinHeight()"
+			      src="/wg/docid/${docid }"></iframe>
+			      </div>
+                	<ul id="artical_menu">
+                    	<li><a href="javascript:" onclick="CloseWebPage()" onkeypress="CloseWebPage()" title="关闭窗口">关闭窗口</a></li>
+                    	<li><a href="http://hz.eastday.com/wgjc/report.aspx" target="_blank" title="网页纠错">网页纠错</a></li>
+                    	<li><a href="http://wgj.sh.gov.cn/node2/n2029/index.html" target="_blank" title="返回首页">返回首页</a></li>
+                	</ul>
+            	  </div>
+            	  	<div id="rightsidebar">
+                		<iframe id="xxgk_gkml" src="/entrance/index2.do" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="信息公开目录"></iframe>
+                		<iframe id="xxgk_gkjs" src="/entrance/index3.do" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="信息公开检索"></iframe>
+                		<iframe id="xxgk_zcjd" src="http://wgj.sh.gov.cn/node2/n2029/n2031/n2075/index_K566.html" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" title="政策解读"></iframe>
+           		    </div>
+            		<div class="clear"></div>
+	       		</div>  
+            </div>
+            
+        </div>
+        <iframe marginwidth="0" marginheight="0" src="http://wgj.sh.gov.cn/node2/n2029/n2158/n2177/index.html" frameborder="0" width="100%" scrolling="no" height="131"></iframe>
+    </div>
+
+<!--  <div id="container">
   <div id="header" class="navbar MainNav no-margin-bottom"> 
   </div>
   <div class="container">
      <div class="row-fluid">
         <div class="span8 no-margin-left">
-        	<!-- 一级目录名称 -->
+        	
             <div class="page-header-1"><h4><a title="${yjmlData.yjmlmc }">${yjmlData.yjmlmc }</a></h4></div>
-	        <!-- 文件列表 -->
+	        
 	        <div class="row-fluid">
 			     <iframe width="100%" height="100%" align="center" frameborder="0" scrolling="auto" style="border: 1px;"
 			      id="cwin" name="cwin" onload="Javascript:SetCwinHeight()"
@@ -111,7 +156,7 @@ a:hover{color:#333;text-decoration:underline;}
 		</div>
 		<div class="span4"></div>
 		<div class="span4">
-			<!-- 一级目录 -->
+			
 			<ul class="nav nav-list arrowNav margin-bottom20">
 				<c:forEach items="${menu1List }" var="menu">
 					<li onclick=""><a href="/busi/docindex.do?yjml=${menu.id }" title="${menu.yjmlmc }" ><span>${menu.yjmlmc }</span></a></li>
@@ -121,7 +166,7 @@ a:hover{color:#333;text-decoration:underline;}
 	  </div>
    </div>
 	<iframe marginwidth="0" marginheight="0" src="http://wgj.sh.gov.cn/node2/n2029/n2158/n2177/index.html" frameborder="0" width="100%" scrolling="no" height="131"></iframe>
-</div>
+</div>-->
 </body>
 </html>
 <
@@ -137,5 +182,10 @@ a:hover{color:#333;text-decoration:underline;}
 					cwin.height = cwin.Document.body.scrollHeight + 250;
 			}
 		}
+	}
+	
+	function CloseWebPage()
+	{
+		window.close();
 	}
 </script>

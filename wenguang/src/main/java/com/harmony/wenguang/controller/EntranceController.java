@@ -88,7 +88,7 @@ public class EntranceController {
 		FormtableMain2DO example = new FormtableMain2DO();
 		Integer totalRows = formtableMainDao.countByExample(example);
 		List<FormtableMain2DO> dataList = formtableMainDao.selectSimpleByExample(example);
-		int totalPage = totalRows / 21;
+		int totalPage = (totalRows / 21)+1;
 		ModelAndView mv = new ModelAndView("info_disclosure");
 		mv.addObject("docList", dataList);
 		mv.addObject("curPage", pageNo);
@@ -135,7 +135,6 @@ public class EntranceController {
 		example.setYfrq(CommonUtils.trimToNull(startTime));
 		example.setFwh(CommonUtils.trimToNull(endTime));
 		example.setCallNumber(CommonUtils.trimToNull(callNumber));
-		// TODO 此处发文机构与公开类别(一级目录)都是Integer变量，需要映射
 		// example.setFwdw(publishOrganization);
 		example.setZwbt(CommonUtils.trimToNull(infoName));
 		example.setFileNumber(CommonUtils.trimToNull(indexOfFile));
