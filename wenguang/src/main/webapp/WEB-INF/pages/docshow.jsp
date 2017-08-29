@@ -116,7 +116,8 @@ a:hover{color:#333;text-decoration:underline;}
             <div id="maincontent">
                <h2 class="rsPublicTitle">近期信息公开</h2>
                 <div class="row-fluid">
-			     <iframe width="100%" height="90%" align="center" frameborder="0" scrolling="auto" style="border: solid 1px;"
+			     <iframe width="100%" height="90%" align="center" frameborder="0" scrolling="auto" 
+			     style="border: 1px; "
 			      id="cwin" name="cwin" onload="Javascript:SetCwinHeight()"
 			      src="/wg/docid/${docid }"></iframe>
 			      </div>
@@ -175,11 +176,13 @@ a:hover{color:#333;text-decoration:underline;}
 		var cwin = document.getElementById("cwin");
 		if (document.getElementById) {
 			if (cwin && !window.opera) {
-				if (cwin.contentDocument
-						&& cwin.contentDocument.body.offsetHeight)
+				if (cwin.contentDocument && cwin.contentDocument.body.offsetHeight){
 					cwin.height = cwin.contentDocument.body.offsetHeight + 250;
-				else if (cwin.Document && cwin.Document.body.scrollHeight)
+					cwin.contentDocument.body.style="position: relative;left: -50px;";
+				}else if (cwin.Document && cwin.Document.body.scrollHeight){
 					cwin.height = cwin.Document.body.scrollHeight + 250;
+					cwin.Document.body.style="position: relative;left: -50px;";
+				}
 			}
 		}
 	}
