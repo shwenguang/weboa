@@ -8,6 +8,7 @@
   <link id="Main-File" rel="Main-File" href="../新建 Microsoft Excel 97-2003 工作表.htm"/>
   <link rel="File-List" href="filelist.xml"/>
   <link rel="Stylesheet" href="stylesheet.css"/>
+  <script type="text/javascript"  src="/static/js/jquery-1.8.2.js"></script>
   <style>
   tr
 	{mso-height-source:auto;
@@ -635,7 +636,7 @@ td
  </style>
  </head>
  <body link="blue" vlink="purple">
-  <table width="602" border="0" cellpadding="0" cellspacing="0" style='width:361.20pt;border-collapse:collapse;table-layout:fixed;'>
+  <table id="input_table" width="602" border="0" cellpadding="0" cellspacing="0" style='width:361.20pt;border-collapse:collapse;table-layout:fixed;'>
    <col width="35" style='mso-width-source:userset;mso-width-alt:896;'/>
    <col width="86" style='mso-width-source:userset;mso-width-alt:2201;'/>
    <col width="102.00" style='mso-width-source:userset;mso-width-alt:2611;'/>
@@ -652,15 +653,15 @@ td
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl67" x:str>*<font class="font1">证件名称</font></td>
-    <td class="xl68"><input class="td_input" placeholder="请输入" /></td>
+    <td class="xl68"><input class="td_input" name="id_name" placeholder="请输入" /></td>
     <td class="xl67" x:str>*<font class="font1">证件号码</font></td>
-    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
+    <td class="xl68"><input name="id_number" class="td_input" placeholder="请输入"/></td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl67" x:str>*<font class="font1">联系电话</font></td>
-    <td class="xl68"><input class="td_input" placeholder="请输入" /></td>
+    <td class="xl68"><input class="td_input" name="phone_number" placeholder="请输入" /></td>
     <td class="xl67" x:str>*<font class="font1">邮政编码</font></td>
-    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
+    <td class="xl68"><input class="td_input" name="postal_code" placeholder="请输入"/></td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl67" x:str>*<font class="font1">联系地址</font></td>
@@ -727,13 +728,19 @@ td
    <tr height="80.50" style='height:48.30pt;'>
     <td class="xl66" x:str>获取政府信息的方式</td>
     <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
-    <input class="td_input" />
+    <input type="radio" name="mode" value="方式A">方式A
+    <input type="radio" name="mode" value="方式B">方式B
+    <input type="radio" name="mode" value="方式C">方式C
+    <input type="radio" name="mode" value="方式D">方式D
     </td>
    </tr>
    <tr height="80.50" style='height:48.30pt;'>
     <td class="xl66" x:str>政府信息的载体形式</td>
     <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
-    <input class="td_input" />
+    <input type="checkbox" name="carrier" value="形式A">形式A
+    <input type="checkbox" name="carrier" value="形式B">形式B
+    <input type="checkbox" name="carrier" value="形式C">形式C
+    <input type="checkbox" name="carrier" value="形式D">形式D
     </td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
@@ -775,4 +782,44 @@ td
    <![endif]>
   </table>
  </body>
+ <div>
+ <span style="margin-left: 200px;"><button onclick="add()">点击</button></span>
+ <span style="margin-left: 20px;"><button onclick="reset()">重置</button></span>
+ </div>
 </html>
+<script type="text/javascript">
+function add(){
+	var data = {};
+	$("#input_table").find("input,select").each(function(){
+		if(!$(this).attr("name")){
+			return;
+		}
+		if($(this).is("input[type=checkbox]")){
+			if($(this).is(":checked")){
+				if(data[$(this).attr("name")]){
+					data[$(this).attr("name")] = data[$(this).attr("name")]+","+$(this).val()
+				}else{
+					data[$(this).attr("name")] = $(this).val()
+				}
+			}
+		}else if($(this).is("input[type=radio]")){
+			if($(this).is(":checked")){
+				data[$(this).attr("name")] = $(this).val()
+			}
+		}else if($(this).is("input")){
+			data[$(this).attr("name")] = $(this).val()
+		}
+	});
+	console.log(data)
+	$.ajax({
+		url:"/info/disclosure/insert.do",
+		data:data,
+		success:function(r){
+			//alert(r);
+		},
+		fails:function(r){
+			//alert(r);
+		}
+	})
+}
+</script>

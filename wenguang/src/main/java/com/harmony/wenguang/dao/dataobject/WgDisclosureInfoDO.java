@@ -46,8 +46,8 @@ public class WgDisclosureInfoDO {
     public String getApplicant_sign() {
         return applicant_sign;
     }
-    public void setApplicant_Sign(String applicant_Sign) {
-        this.applicant_sign = applicant_Sign;
+    public void setApplicant_sign(String applicant_sign) {
+        this.applicant_sign = applicant_sign;
     }
     public String getId_name() {
         return id_name;
@@ -169,5 +169,5 @@ public class WgDisclosureInfoDO {
     public void setSignature_applicant(String signature_applicant) {
         this.signature_applicant = signature_applicant;
     }
-	
+   
 }

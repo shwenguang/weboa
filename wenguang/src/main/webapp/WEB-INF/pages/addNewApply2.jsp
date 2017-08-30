@@ -86,7 +86,7 @@
 					<h4 style="font-size: 2em">信息公开申请表</h4>
 				</div>
 				<div style="margin-top: 2em; margin-left: 2em;">
-					<p>注:XXXXXXXXX</p>
+					<p>注:公民和法人信息选填一个即可</p>
 				</div>
 				<div >
 				<iframe width="110%" height="100%" align="center" frameborder="0" scrolling="auto" style="border: 1px;"
