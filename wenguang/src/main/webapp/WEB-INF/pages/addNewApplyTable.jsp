@@ -626,12 +626,11 @@ td
 	border:1.5pt solid windowtext;}
 .td_input {
 	width: 100%;
-	height: 90%;
+	height: 95%;
 	border-left-width:0px;
 	border-top-width:0px;
 	border-right-width:0px;
 	border-bottom:1px solid #0F2543;
-	margin-bottom: 3px;
 }
  </style>
  </head>
@@ -643,129 +642,145 @@ td
    <col width="144.00" style='mso-width-source:userset;mso-width-alt:3686;'/>
    <col width="110" style='mso-width-source:userset;mso-width-alt:2816;'/>
    <col width="125.00" style='mso-width-source:userset;mso-width-alt:3200;'/>
-   <tr height="28.50" style='height:17.10pt;'>
+   <tr height="48.50" style='height:25pt;'>
     <td class="xl65" height="391.50" width="35" rowspan="11" style='height:234.90pt;width:21.00pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>申请人信息</td>
     <td class="xl66" width="86" rowspan="5" style='width:51.60pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>公民</td>
     <td class="xl67" width="102.00" style='width:61.20pt;' x:str>*<font class="font1">姓名</font></td>
-    <td class="xl68" width="144.00" style='width:86.40pt;'><input class="td_input" placeholder="请输入" /></td>
+    <td class="xl68" width="144.00" style='width:86.40pt;'><input class="td_input" name="indv_name" placeholder="请输入" /></td>
     <td class="xl67" width="110" style='width:66.00pt;' x:str>*<font class="font1">工作单位</font></td>
-    <td class="xl68" width="125.00" style='width:75.00pt;'><input class="td_input" placeholder="请输入" /></td>
+    <td class="xl68" width="125.00" style='width:75.00pt;'><input class="td_input" name="indv_company" placeholder="请输入" /></td>
    </tr>
-   <tr height="28.50" style='height:17.10pt;'>
+   <tr height="48.50" style='height:25pt;'>
     <td class="xl67" x:str>*<font class="font1">证件名称</font></td>
-    <td class="xl68"><input class="td_input" name="id_name" placeholder="请输入" /></td>
+    <td class="xl68"><input class="td_input" name="indv_cert_type" placeholder="请输入" /></td>
     <td class="xl67" x:str>*<font class="font1">证件号码</font></td>
-    <td class="xl68"><input name="id_number" class="td_input" placeholder="请输入"/></td>
+    <td class="xl68"><input class="td_input" name="indv_cert_num" placeholder="请输入"/></td>
    </tr>
-   <tr height="28.50" style='height:17.10pt;'>
+   <tr height="48.50" style='height:25pt;'>
     <td class="xl67" x:str>*<font class="font1">联系电话</font></td>
-    <td class="xl68"><input class="td_input" name="phone_number" placeholder="请输入" /></td>
+    <td class="xl68"><input class="td_input" name="indv_link_number" placeholder="请输入" /></td>
     <td class="xl67" x:str>*<font class="font1">邮政编码</font></td>
-    <td class="xl68"><input class="td_input" name="postal_code" placeholder="请输入"/></td>
+    <td class="xl68"><input class="td_input" name="indv_post_code" placeholder="请输入"/></td>
    </tr>
-   <tr height="28.50" style='height:17.10pt;'>
+   <tr height="48.50" style='height:25pt;'>
     <td class="xl67" x:str>*<font class="font1">联系地址</font></td>
     <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
-    <input class="td_input" placeholder="请输入"/>
+    <textarea rows="2" name="indv_address" style="width: 100%"></textarea>
     </td>
    </tr>
-   <tr height="28.50" style='height:17.10pt;'>
+   <tr height="48.50" style='height:25pt;'>
     <td class="xl65" x:str>电子邮箱</td>
     <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
-    <input class="td_input" placeholder="请输入" />
+    <input class="td_input"name="indv_email" placeholder="请输入" />
     </td>
    </tr>
-   <tr height="54.50" style='height:32.70pt;'>
+   <tr height="54.50" style='height:25pt;'>
     <td class="xl66" rowspan="5" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>法人/法人其他组织</td>
     <td class="xl67" x:str>*<font class="font1">名称</font></td>
-    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
+    <td class="xl68"><input class="td_input" name="org_name" placeholder="请输入"/></td>
     <td class="xl67" x:str>*<font class="font1">组织机构代码</font></td>
-    <td class="xl68"><input class="td_input" placeholder="请输入" /></td>
+    <td class="xl68"><input class="td_input" name="org_code" placeholder="请输入" /></td>
    </tr>
-   <tr height="54.50" style='height:32.70pt;'>
+   <tr height="54.50" style='height:25pt;'>
     <td class="xl67" x:str>*<font class="font1">法人代表</font></td>
-    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
+    <td class="xl68"><input class="td_input" name="org_legal_person" placeholder="请输入"/></td>
     <td class="xl67" x:str>*<font class="font1">联系人姓名</font></td>
-    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
+    <td class="xl68"><input class="td_input" name="org_link_man" placeholder="请输入"/></td>
    </tr>
-   <tr height="54.50" style='height:32.70pt;'>
+   <tr height="54.50" style='height:25pt;'>
     <td class="xl67" x:str>*<font class="font1">联系人电话</font></td>
-    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
+    <td class="xl68"><input class="td_input" name="org_link_number" placeholder="请输入"/></td>
     <td class="xl67" x:str>*<font class="font1">邮政编码</font></td>
-    <td class="xl68"><input class="td_input" placeholder="请输入"/></td>
+    <td class="xl68"><input class="td_input" name="org_post_code" placeholder="请输入"/></td>
    </tr>
-   <tr height="28.50" style='height:17.10pt;'>
+   <tr height="28.50" style='height:25pt;'>
     <td class="xl67" x:str>*<font class="font1">联系地址</font></td>
     <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
-    <input class="td_input" placeholder="请输入"/>
+    <textarea rows="2" name="org_address" style="width: 100%"></textarea>
     </td>
    </tr>
-   <tr height="28.50" style='height:17.10pt;'>
+   <tr height="28.50" style='height:25pt;'>
     <td class="xl65" x:str>电子邮箱</td>
     <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
-    <input class="td_input" />
+    <input class="td_input" name="org_email"/>
     </td>
    </tr>
-   <tr height="28.50" style='height:17.10pt;'>
+   <tr height="28.50" style='height:25pt;'>
     <td class="xl66" colspan="2" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>申请时间</td>
     <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
-    <input class="td_input" />
+    <input class="td_input" name="apply_date"/>
     </td>
    </tr>
-   <tr height="158.50" style='height:95.10pt;'>
-    <td class="xl65" height="641.50" rowspan="7" style='height:384.90pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>所需信息情况</td>
+   <tr height="158.50" style='height:70pt;'>
+    <td class="xl65" height="641.50" rowspan="7" style='height:384.90pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
+    	所需信息情况</td>
     <td class="xl66" x:str>政府信息公开义务机关（机构）名称</td>
     <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
-    <input class="td_input" />
+    <input class="td_input" style="height: 2em;" name="info_of_gov"/>
     </td>
    </tr>
-   <tr height="210.50" style='height:126.30pt;'>
+   <tr height="120.50" style='height:90pt;'>
     <td class="xl66" x:str>*所需信息的内容描述（名称、文号或其他特征描述）</td>
     <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
-    <input class="td_input" />
+    <textarea rows="6" style="width:100%;" name="info_descriptor"></textarea>
     </td>
    </tr>
    <tr height="80.50" style='height:48.30pt;'>
     <td class="xl66" x:str>获取政府信息的方式</td>
     <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
-    <input type="radio" name="mode" value="方式A">方式A
-    <input type="radio" name="mode" value="方式B">方式B
-    <input type="radio" name="mode" value="方式C">方式C
-    <input type="radio" name="mode" value="方式D">方式D
+    <input type="radio" name="get_info_way" value="邮寄">邮寄
+    <input type="radio" name="get_info_way" value="传真">传真
+    <input type="radio" name="get_info_way" value="递送">递送 <br>
+    <input type="radio" name="get_info_way" value="当面领取">当面领取
+    <input type="radio" name="get_info_way" value="现场查阅">现场查阅
+    <input type="radio" name="get_info_way" value="电子邮件">电子邮件
     </td>
    </tr>
    <tr height="80.50" style='height:48.30pt;'>
     <td class="xl66" x:str>政府信息的载体形式</td>
     <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
-    <input type="checkbox" name="carrier" value="形式A">形式A
-    <input type="checkbox" name="carrier" value="形式B">形式B
-    <input type="checkbox" name="carrier" value="形式C">形式C
-    <input type="checkbox" name="carrier" value="形式D">形式D
+    <input type="checkbox" name="get_info_media" value="纸质文本">纸质文本
+    <input type="checkbox" name="get_info_media" value="光盘">光盘
+    <input type="checkbox" name="get_info_media" value="磁盘">磁盘
     </td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl66" rowspan="2" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>所需政府信息的用途</td>
-    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
+    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
+    	类型:<br>
+    	<input type="checkbox" name="info_usage" value="自身生产的需要">自身生产的需要  
+    	<input type="checkbox" name="info_usage" value="自身生活的需要 ">自身生活的需要 <br> 
+    	<input type="checkbox" name="info_usage" value="自身科研的需要">自身科研的需要  
+    	<input type="checkbox" name="info_usage" value="察验自身信息">察验自身信息  
+    </td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
-    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
+    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
+    <textarea rows="3" name="info_usage_remark" style="width: 100%">使用方式补充</textarea>
+    </td>
    </tr>
    <tr height="54.50" style='height:32.70pt;'>
     <td class="xl66" x:str>需减免费用</td>
-    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'></td>
+    <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
+    需申请免除费用，主要理由:<br>
+    <input type="checkbox" name="info_usage" value="属于农村五保供养对象">属于农村五保供养对象 <br>
+    <input type="checkbox" name="info_usage" value="属于城乡居民最低生活保障对象">属于城乡居民最低生活保障对象<br>
+    <input type="checkbox" name="info_usage" value="属于领取国家抚恤补助对象">属于领取国家抚恤补助对象<br>
+    <input type="checkbox" name="info_usage" value="确有其他经济困难的">确有其他经济困难的<br>
+    </td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl71" height="28.50" colspan="3" style='height:17.10pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
-    关键字:<input width="200px;"  /></td>
-    <td class="xl72" x:str>受理号:<input width="10pt;"></td>
+    关键字:<input width="200px;"  name="key_word" /></td>
+    <td class="xl72" x:str>受理号:<input width="10pt;" name="accept_no"></td>
     <td class="xl71" colspan="2" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
-    申请类型:<input width="100px;" /></td>
+    申请类型:<input width="100px;" name="apply_type"/></td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl71" height="28.50" colspan="3" style='height:17.10pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
     流水号:（系统自动生成）</span></td>
     <td class="xl71" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
-    转办单号:<input width="100px;" /></td>
+    转办单号:<input width="100px;" name="transfer_no" /></td>
    </tr>
    <tr height="27.25" style='height:16.35pt;'>
     <td height="27.25" colspan="6" style='height:16.35pt;mso-ignore:colspan;'></td>
@@ -789,6 +804,29 @@ td
 </html>
 <script type="text/javascript">
 function add(){
+	//空字段校验
+	var check = {};
+	$(["indv_name","indv_company","indv_cert_type","indv_cert_num","indv_link_number","indv_post_code","indv_address"])
+	.each(function(){
+		var isempty = $("#input_table").find("[name="+this+"]").val()=='';
+		if(isempty){
+			check.indv_has_empty = true;
+			return false;//中断each
+		}
+	})
+	$("#input_table")
+	.find("[name=org_name],[name=org_code],[name=org_legal_person],[name=org_link_man],[name=org_post_code],[name=org_address]")
+	.each(function(){
+		if($(this).val()==''){
+			check.org_has_empty=true;
+			return false;
+		}
+	})
+	;
+	if(check.indv_has_empty && check.org_has_empty){
+		alert("请完善信息")
+		return;
+	}
 	var data = {};
 	$("#input_table").find("input,select").each(function(){
 		if(!$(this).attr("name")){
@@ -821,5 +859,13 @@ function add(){
 			//alert(r);
 		}
 	})
+}
+
+function reset(){
+	$("#input_table").find("input,select,textarea")
+	.not(':button, :submit, :reset, :hidden')
+	.val('')
+	.removeAttr('checked') 
+	.removeAttr('selected');
 }
 </script>
