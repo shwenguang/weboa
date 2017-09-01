@@ -35,7 +35,6 @@ public class InfoDisclosureController {
 	@ResponseBody
 	public String insertSQL(WgDisclosureInfoDO info) throws JSONException
 	{
-		
 		System.out.println(JSON.toJSONString(info,true));
 		wgDisclosureInfoDao.insert(info);
 		JSONObject result = new JSONObject();

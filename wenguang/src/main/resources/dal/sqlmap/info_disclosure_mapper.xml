@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="info_disclosure">
+	<insert id="insert">
+		insert into wg_disclosure_info(
+			indv_name,
+			indv_company,
+			indv_cert_type,
+			indv_cert_num,
+			indv_link_number,
+			indv_post_code,
+			indv_address,
+			indv_email,
+			org_name,
+			org_code,
+			org_legal_person,
+			org_link_man,
+			org_link_number,
+			org_post_code,
+			org_address,
+			org_email,
+			apply_date,
+			info_of_gov,
+			info_descriptor,
+			get_info_way,
+			get_info_media,
+			info_usage,
+			info_usage_remark,
+			derate_expenses_reason,
+			key_word,
+			accept_no,
+			apply_type,
+			transfer_no
+		)
+		values(
+			#{indv_name},
+			#{indv_company},
+			#{indv_cert_type},
+			#{indv_cert_num},
+			#{indv_link_number},
+			#{indv_post_code},
+			#{indv_address},
+			#{indv_email},
+			#{org_name},
+			#{org_code},
+			#{org_legal_person},
+			#{org_link_man},
+			#{org_link_number},
+			#{org_post_code},
+			#{org_address},
+			#{org_email},
+			#{apply_date},
+			#{info_of_gov},
+			#{info_descriptor},
+			#{get_info_way},
+			#{get_info_media},
+			#{info_usage},
+			#{info_usage_remark},
+			#{derate_expenses_reason},
+			#{key_word},
+			#{accept_no},
+			#{apply_type},
+			#{transfer_no}
+		)
+	</insert>
+</mapper>

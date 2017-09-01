@@ -10,6 +10,6 @@ public class WgDisclosureInfoDaoImpl extends SqlSessionDaoSupport implements WgD
 
 	@Override
 	public int insert(WgDisclosureInfoDO wgInputDO) {
-		return this.getSqlSession().insert("wg_input.insert",wgInputDO);
+		return this.getSqlSession().insert("info_disclosure.insert",wgInputDO);
 	}
 }

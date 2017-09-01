@@ -763,10 +763,10 @@ td
     <td class="xl66" x:str>需减免费用</td>
     <td class="xl71" colspan="4" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
     需申请免除费用，主要理由:<br>
-    <input type="checkbox" name="info_usage" value="属于农村五保供养对象">属于农村五保供养对象 <br>
-    <input type="checkbox" name="info_usage" value="属于城乡居民最低生活保障对象">属于城乡居民最低生活保障对象<br>
-    <input type="checkbox" name="info_usage" value="属于领取国家抚恤补助对象">属于领取国家抚恤补助对象<br>
-    <input type="checkbox" name="info_usage" value="确有其他经济困难的">确有其他经济困难的<br>
+    <input type="checkbox" name="derate_expenses_reason" value="属于农村五保供养对象">属于农村五保供养对象 <br>
+    <input type="checkbox" name="derate_expenses_reason" value="属于城乡居民最低生活保障对象">属于城乡居民最低生活保障对象<br>
+    <input type="checkbox" name="derate_expenses_reason" value="属于领取国家抚恤补助对象">属于领取国家抚恤补助对象<br>
+    <input type="checkbox" name="derate_expenses_reason" value="确有其他经济困难的">确有其他经济困难的<br>
     </td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>

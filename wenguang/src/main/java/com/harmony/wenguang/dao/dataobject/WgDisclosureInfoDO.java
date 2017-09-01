@@ -1,173 +1,209 @@
 package com.harmony.wenguang.dao.dataobject;
 
+import java.util.Date;
+
 public class WgDisclosureInfoDO {
-	//申请人(个人)签名
-	private String applicant_sign;
-	//证件名称
-	private String id_name;
-	//申请人(法人或其它组织)签名
-	private String corporate_sign;
-	//单位/职业
-	private String occupation;
-	//证件号码
-	private String id_number;
-	//法定代表人
-	private String legal_representative;
-	//通信地址
-	private String address;
-	//联系电话
-	private String phone_number;
-	//电子邮箱
-	private String email;
-	//邮政编码
-	private String postal_code;
-	//联系人
-	private String legal_representative_s;
-	//政府信息公开义务机关(机构)名称
-	private String organization_name;
-	//名称
-	private String organization_name_s;
-	//文号
-	private String organization_number;
-	//所需政府信息(其它特征描述)
-	private String government_information;
-	//获取政府信息的方式  邮递、传真、递送、当面领取、现场查阅、电子邮件
-	private String mode;
-	//获取政府信息的载体形式 纸质文本、光盘、磁盘
-	private String carrier;
-	//所需政府信息用途类型 自身生产需要、自身科研的需要、自身生活的需要、查验自身信息
-	private String use_type;
-	//所需政府信息用途
-	private String information_use;
-	//减免费用理由 农村五保户供养对象、属于城乡居民最低生活保障对象、属于领取国家抚恤补助的优抚对象、确有其他经济困难
-	private String remission_type;
-	//申请人签名(盖章)
-	private String signature_applicant;
-    public String getApplicant_sign() {
-        return applicant_sign;
+	private Long id;
+	private String indv_name;
+	private String indv_company;
+	private String indv_cert_type;
+	private String indv_cert_num;
+	private String indv_link_number;
+	private String indv_post_code;
+	private String indv_address;
+	private String indv_email;
+	private String org_name;
+	private String org_code;
+	private String org_legal_person;
+	private String org_link_man;
+	private String org_link_number;
+	private String org_post_code;
+	private String org_address;
+	private String org_email;
+	private Date apply_date;
+	private String info_of_gov;
+	private String info_descriptor;
+	private String get_info_way;
+	private String get_info_media;
+	private String info_usage;
+	private String info_usage_remark;
+	private String derate_expenses_reason;
+	private String key_word;
+	private String accept_no;
+	private String apply_type;
+	private String transfer_no;
+    public Long getId() {
+        return id;
     }
-    public void setApplicant_sign(String applicant_sign) {
-        this.applicant_sign = applicant_sign;
+    public void setId(Long id) {
+        this.id = id;
     }
-    public String getId_name() {
-        return id_name;
+    public String getIndv_name() {
+        return indv_name;
     }
-    public void setId_name(String id_name) {
-        this.id_name = id_name;
+    public void setIndv_name(String indv_name) {
+        this.indv_name = indv_name;
     }
-    public String getCorporate_sign() {
-        return corporate_sign;
+    public String getIndv_company() {
+        return indv_company;
     }
-    public void setCorporate_sign(String corporate_sign) {
-        this.corporate_sign = corporate_sign;
+    public void setIndv_company(String indv_company) {
+        this.indv_company = indv_company;
     }
-    public String getOccupation() {
-        return occupation;
+    public String getIndv_cert_type() {
+        return indv_cert_type;
     }
-    public void setOccupation(String occupation) {
-        this.occupation = occupation;
+    public void setIndv_cert_type(String indv_cert_type) {
+        this.indv_cert_type = indv_cert_type;
     }
-    public String getId_number() {
-        return id_number;
+    public String getIndv_cert_num() {
+        return indv_cert_num;
     }
-    public void setId_number(String id_number) {
-        this.id_number = id_number;
+    public void setIndv_cert_num(String indv_cert_num) {
+        this.indv_cert_num = indv_cert_num;
     }
-    public String getLegal_representative() {
-        return legal_representative;
+    public String getIndv_link_number() {
+        return indv_link_number;
     }
-    public void setLegal_representative(String legal_representative) {
-        this.legal_representative = legal_representative;
+    public void setIndv_link_number(String indv_link_number) {
+        this.indv_link_number = indv_link_number;
     }
-    public String getAddress() {
-        return address;
+    public String getIndv_post_code() {
+        return indv_post_code;
     }
-    public void setAddress(String address) {
-        this.address = address;
+    public void setIndv_post_code(String indv_post_code) {
+        this.indv_post_code = indv_post_code;
     }
-    public String getPhone_number() {
-        return phone_number;
+    public String getIndv_address() {
+        return indv_address;
     }
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setIndv_address(String indv_address) {
+        this.indv_address = indv_address;
     }
-    public String getEmail() {
-        return email;
+    public String getIndv_email() {
+        return indv_email;
     }
-    public void setEmail(String email) {
-        this.email = email;
+    public void setIndv_email(String indv_email) {
+        this.indv_email = indv_email;
     }
-    public String getPostal_code() {
-        return postal_code;
+    public String getOrg_name() {
+        return org_name;
     }
-    public void setPostal_code(String postal_code) {
-        this.postal_code = postal_code;
+    public void setOrg_name(String org_name) {
+        this.org_name = org_name;
     }
-    public String getLegal_representative_s() {
-        return legal_representative_s;
+    public String getOrg_code() {
+        return org_code;
     }
-    public void setLegal_representative_s(String legal_representative_s) {
-        this.legal_representative_s = legal_representative_s;
+    public void setOrg_code(String org_code) {
+        this.org_code = org_code;
     }
-    public String getOrganization_name() {
-        return organization_name;
+    public String getOrg_legal_person() {
+        return org_legal_person;
     }
-    public void setOrganization_name(String organization_name) {
-        this.organization_name = organization_name;
+    public void setOrg_legal_person(String org_legal_person) {
+        this.org_legal_person = org_legal_person;
     }
-    public String getOrganization_name_s() {
-        return organization_name_s;
+    public String getOrg_link_man() {
+        return org_link_man;
     }
-    public void setOrganization_name_s(String organization_name_s) {
-        this.organization_name_s = organization_name_s;
+    public void setOrg_link_man(String org_link_man) {
+        this.org_link_man = org_link_man;
     }
-    public String getOrganization_number() {
-        return organization_number;
+    public String getOrg_link_number() {
+        return org_link_number;
     }
-    public void setOrganization_number(String organization_number) {
-        this.organization_number = organization_number;
+    public void setOrg_link_number(String org_link_number) {
+        this.org_link_number = org_link_number;
     }
-    public String getGovernment_information() {
-        return government_information;
+    public String getOrg_post_code() {
+        return org_post_code;
     }
-    public void setGovernment_information(String government_information) {
-        this.government_information = government_information;
+    public void setOrg_post_code(String org_post_code) {
+        this.org_post_code = org_post_code;
     }
-    public String getMode() {
-        return mode;
+    public String getOrg_address() {
+        return org_address;
     }
-    public void setMode(String mode) {
-        this.mode = mode;
+    public void setOrg_address(String org_address) {
+        this.org_address = org_address;
     }
-    public String getCarrier() {
-        return carrier;
+    public String getOrg_email() {
+        return org_email;
     }
-    public void setCarrier(String carrier) {
-        this.carrier = carrier;
+    public void setOrg_email(String org_email) {
+        this.org_email = org_email;
     }
-    public String getUse_type() {
-        return use_type;
+    public Date getApply_date() {
+        return apply_date;
     }
-    public void setUse_type(String use_type) {
-        this.use_type = use_type;
+    public void setApply_date(Date apply_date) {
+        this.apply_date = apply_date;
     }
-    public String getInformation_use() {
-        return information_use;
+    public String getInfo_of_gov() {
+        return info_of_gov;
     }
-    public void setInformation_use(String information_use) {
-        this.information_use = information_use;
+    public void setInfo_of_gov(String info_of_gov) {
+        this.info_of_gov = info_of_gov;
     }
-    public String getRemission_type() {
-        return remission_type;
+    public String getInfo_descriptor() {
+        return info_descriptor;
     }
-    public void setRemission_type(String remission_type) {
-        this.remission_type = remission_type;
+    public void setInfo_descriptor(String info_descriptor) {
+        this.info_descriptor = info_descriptor;
     }
-    public String getSignature_applicant() {
-        return signature_applicant;
+    public String getGet_info_way() {
+        return get_info_way;
     }
-    public void setSignature_applicant(String signature_applicant) {
-        this.signature_applicant = signature_applicant;
+    public void setGet_info_way(String get_info_way) {
+        this.get_info_way = get_info_way;
     }
-   
+    public String getGet_info_media() {
+        return get_info_media;
+    }
+    public void setGet_info_media(String get_info_media) {
+        this.get_info_media = get_info_media;
+    }
+    public String getInfo_usage() {
+        return info_usage;
+    }
+    public void setInfo_usage(String info_usage) {
+        this.info_usage = info_usage;
+    }
+    public String getInfo_usage_remark() {
+        return info_usage_remark;
+    }
+    public void setInfo_usage_remark(String info_usage_remark) {
+        this.info_usage_remark = info_usage_remark;
+    }
+    public String getDerate_expenses_reason() {
+        return derate_expenses_reason;
+    }
+    public void setDerate_expenses_reason(String derate_expenses_reason) {
+        this.derate_expenses_reason = derate_expenses_reason;
+    }
+    public String getKey_word() {
+        return key_word;
+    }
+    public void setKey_word(String key_word) {
+        this.key_word = key_word;
+    }
+    public String getAccept_no() {
+        return accept_no;
+    }
+    public void setAccept_no(String accept_no) {
+        this.accept_no = accept_no;
+    }
+    public String getApply_type() {
+        return apply_type;
+    }
+    public void setApply_type(String apply_type) {
+        this.apply_type = apply_type;
+    }
+    public String getTransfer_no() {
+        return transfer_no;
+    }
+    public void setTransfer_no(String transfer_no) {
+        this.transfer_no = transfer_no;
+    }
 }
