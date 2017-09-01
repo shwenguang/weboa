@@ -2,6 +2,8 @@ package com.harmony.wenguang.dao.dataobject;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class WgDisclosureInfoDO {
 	private Long id;
 	private String indv_name;
@@ -20,6 +22,7 @@ public class WgDisclosureInfoDO {
 	private String org_post_code;
 	private String org_address;
 	private String org_email;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")  
 	private Date apply_date;
 	private String info_of_gov;
 	private String info_descriptor;

@@ -708,7 +708,7 @@ td
    <tr height="28.50" style='height:25pt;'>
     <td class="xl66" colspan="2" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>申请时间</td>
     <td class="xl68" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;'>
-    <input class="td_input" name="apply_date"/>
+    <input class="td_input" name="apply_date" value="${today }"/>
     </td>
    </tr>
    <tr height="158.50" style='height:70pt;'>
