@@ -798,12 +798,16 @@ td
   </table>
  </body>
  <div>
- <span style="margin-left: 200px;"><button onclick="add()">点击</button></span>
+ <span style="margin-left: 200px;"><button onclick="add(this)">点击</button></span>
  <span style="margin-left: 20px;"><button onclick="reset()">重置</button></span>
  </div>
 </html>
 <script type="text/javascript">
-function add(){
+function add(b){
+	if($(b).attr("had_submit")){
+		alert("请勿重复提交")
+		return;
+	}
 	//空字段校验
 	var check = {};
 	$(["indv_name","indv_company","indv_cert_type","indv_cert_num","indv_link_number","indv_post_code","indv_address"])
@@ -853,10 +857,13 @@ function add(){
 		url:"/info/disclosure/insert.do",
 		data:data,
 		success:function(r){
-			//alert(r);
+			if(r.result == "success"){
+				$(b).attr("had_submit","true")
+			}
+			alert(r.message)
 		},
-		fails:function(r){
-			//alert(r);
+		error:function(r){
+			alert("系统异常，请稍后")
 		}
 	})
 }
