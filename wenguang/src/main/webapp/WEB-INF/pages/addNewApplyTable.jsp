@@ -772,15 +772,16 @@ td
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl71" height="28.50" colspan="3" style='height:17.10pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
     关键字:<input width="200px;"  name="key_word" /></td>
-    <td class="xl72" x:str>受理号:<input width="10pt;" name="accept_no"></td>
-    <td class="xl71" colspan="2" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
-    申请类型:<input width="100px;" name="apply_type"/></td>
+    <td class="xl72" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
+    	受理号:<input style="width:110px" name="accept_no">
+    	申请类型:<input style="width:130px" name="apply_type"/>
+    </td>
    </tr>
    <tr height="28.50" style='height:17.10pt;'>
     <td class="xl71" height="28.50" colspan="3" style='height:17.10pt;border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
     流水号:（系统自动生成）</span></td>
     <td class="xl71" colspan="3" style='border-right:1.5pt solid windowtext;border-bottom:1.5pt solid windowtext;' x:str>
-    转办单号:<input width="100px;" name="transfer_no" /></td>
+    转办单号:<input style="width:80%;" name="transfer_no" /></td>
    </tr>
    <tr height="27.25" style='height:16.35pt;'>
     <td height="27.25" colspan="6" style='height:16.35pt;mso-ignore:colspan;'></td>
