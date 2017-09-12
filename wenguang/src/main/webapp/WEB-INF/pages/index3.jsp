@@ -76,7 +76,7 @@
     <div class="formRow">
         <label class="labelClass3">公开类别</label>
         <select name="select1" class="form_e" id="select1" onchange="swapOptions(this.value);" select="">
-                                          <option value="组织机构简介" selected="">组织机构简介</option>
+                                          <!-- <option value="组织机构简介" selected="">组织机构简介</option>
                                           <option value="综合政务">综合政务</option>
                                           <option value="国民经济管理、国有资产管理">国民经济管理、国有资产管理</option>
                                           <option value="财政、金融、审计">财政、金融、审计</option>
@@ -97,7 +97,12 @@
                                           <option value="对外事务">对外事务</option>
                                           <option value="港澳台侨工作">港澳台侨工作</option>
                                           <option value="国防、民防">国防、民防</option>
-                                          <option value="其他">其他</option>                     
+                                          <option value="其他">其他</option>  -->
+                                          <option value="公开类别">公开类别</option>
+                                          <option value="政策法规">政策法规</option>
+                                          <option value="文广业务">文广业务</option>
+                                          <option value="计划规划与研究">计划规划与研究</option>
+                                          <option value="机构职能">机构职能</option>                    
                                         </select>
         
     </div>

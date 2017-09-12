@@ -40,6 +40,13 @@ public class InfoDisclosureController {
         mv.addObject("today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
         return mv;
     }
+    
+    @RequestMapping("/input_table.do")
+    public ModelAndView input_table(ModelAndView mv) {
+        mv.setViewName("input_table");
+        mv.addObject("today", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+        return mv;
+    }
 
     @RequestMapping(value = "/insert.do", produces = "application/json;charset=utf-8")
     @ResponseBody

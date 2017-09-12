@@ -72,7 +72,7 @@
                 </ul>
                 <ul id="changepage">
                 	<c:if test="${not empty docList }">
-                	<a id="prev" href="/entrance/info_disclosure.do?pageNo=${curPage==1?1:(curPage-1)}">&lt;&lt;</a>
+                		<a id="prev" href="/entrance/info_disclosure.do?pageNo=${curPage==1?1:(curPage-1)}">&lt;&lt;</a>
 					<span id="nums">
 					<c:forEach begin="${beginPage }" end="${endPage }" var="v">
 						<c:if test="${v == curPage }">

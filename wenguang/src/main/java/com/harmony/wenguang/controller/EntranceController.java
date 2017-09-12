@@ -84,7 +84,7 @@ public class EntranceController {
 	@RequestMapping("/info_disclosure.do")
 	public ModelAndView addinfo_disclosureAplly(){
 		int pageNo = CommonUtils.parseInt(request.getParameter("pageNo"),1);
-		int pageRows = 5;
+		int pageRows = 21;
 //		StringBuilder query = new StringBuilder();
 		FormtableMain2DO example = new FormtableMain2DO();
 		example.setPageNo(pageNo);
@@ -131,7 +131,8 @@ public class EntranceController {
 		query.append("&call_Number=").append(CommonUtils.encodeurl(callNumber));
 		query.append("&infoName=").append(CommonUtils.encodeurl(infoName));
 		query.append("&indexOf_File=").append(CommonUtils.encodeurl(indexOfFile));
-		query.append("&select1=").append(CommonUtils.encodeurl(openCategories));
+		//公开类别 项不再起作用 edited by wusk 2017.9.11
+		//query.append("&select1=").append(CommonUtils.encodeurl(openCategories));
 		query.append("&keyword=").append(CommonUtils.encodeurl(keyWord));
 		query.append("&publish_Organization=").append(CommonUtils.encodeurl(publishOrganization));
 		FormtableMain2DO example = new FormtableMain2DO();
