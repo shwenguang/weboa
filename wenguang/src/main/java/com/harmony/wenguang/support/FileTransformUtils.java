@@ -72,7 +72,7 @@ public class FileTransformUtils {
 	            String fjhtml = String.format(
 	                    "<p style=''>"
 	                    +"<span>附件下载</span></br>"
-	                    + "附件1: <a href='%s'>%s</a><p>", 
+	                    + "<a style='text-decoration: none;color: black;' href='%s'>%s</a><p>", 
 	                    "/documents/fujian.do?docid="+docid,fjName
 	                    );
 	            htmlDocument.select("body").append(fjhtml);
