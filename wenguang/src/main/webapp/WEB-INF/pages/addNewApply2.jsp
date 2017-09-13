@@ -93,7 +93,7 @@
 				<iframe width="110%" height="100%" align="center" frameborder="0" scrolling="auto" style="border: 1px;"
 			      id="cwin" name="cwin" onload="Javascript:SetCwinHeight()" src="/info/disclosure/addNewApplyTable.do"></iframe>
 			    </div>-->
-			    <div style="position: relative;left: -15px;">
+			    <div style="position: relative;left: -15px; margin-top: 5px;">
 				<iframe width="105%" height="100%" align="center" frameborder="0" scrolling="auto" style="border: 0px;"
 			      id="cwin" name="cwin" onload="Javascript:SetCwinHeight()" src="/info/disclosure/input_table.do"></iframe>
 			    </div>
