@@ -283,7 +283,7 @@ function add(b){
 	})
 	;
 	if(check.indv_has_empty && check.org_has_empty){
-		alert("请完善信息")
+		alert("公民信息和法人信息必须输入一个")
 		return;
 	}
 	var data = {};
