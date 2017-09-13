@@ -287,24 +287,17 @@ function add(b){
 		return;
 	}
 	var data = {};
-	$("#input_table").find("input,select").each(function(){
-		if(!$(this).attr("name")){
-			return;
-		}
-		if($(this).is("input[type=checkbox]")){
-			if($(this).is(":checked")){
-				if(data[$(this).attr("name")]){
-					data[$(this).attr("name")] = data[$(this).attr("name")]+","+$(this).val()
-				}else{
-					data[$(this).attr("name")] = $(this).val()
-				}
+	$("#input_table").find("input,select,textarea").each(function(){
+		var name = $(this).attr("name");
+		var val = $(this).val();
+		var selected = ($(this).is(":checkbox") || $(this).is(":radio"))?$(this).is(":checked"):true;
+		
+		if(selected && name && val){
+			if(data[name]){
+				data[name] = data[name] + "," + val;
+			}else{
+				data[name] = val;
 			}
-		}else if($(this).is("input[type=radio]")){
-			if($(this).is(":checked")){
-				data[$(this).attr("name")] = $(this).val()
-			}
-		}else if($(this).is("input")){
-			data[$(this).attr("name")] = $(this).val()
 		}
 	});
 	console.log(data)
