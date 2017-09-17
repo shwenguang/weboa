@@ -64,8 +64,11 @@
         </div>
         <div class="pageCenter" id="content">
             <div id="maincontent">
-                <h3 class="pubtitle1">依申请公开</h3>
-				<ul class="publist1">
+            <ul class="nav nav-pills AccTab FilterTab">
+	    		<li class="active"><a name="#Tab2-3" title="填写申请" href="#" data-toggle="tab">填写申请</a></li>
+      		</ul>
+                <!--<h3 class="pubtitle1">依申请公开</h3>
+				  <ul class="publist1">
                 	<li><a href="/info/disclosure/addNewApply.do" target="_parent" title="网上申请"><em class="abtFlag">网上申请</em></a></li>
 
                     <li><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2178/n2179/index.html" target="_parent" title="受理申请机构"><em class="abtFlag">受理申请机构</em></a></li>
@@ -81,10 +84,11 @@
                     <li><a href="http://wgj.sh.gov.cn/node2/n2029/n2031/n2178/n2183/index.html" target="_parent" title="申请表下载"><em class="abtFlag">申请表下载</em></a></li>
 
 					
-                </ul>
+                </ul>-->
 				<div style="text-align: center;">
 					<!--  <h4 style="font-size: 2em">信息公开申请表</h4> -->
-					<h4 style="font-size: 2em">上海市文化广播影视管理局(上海市文广局) </h4>
+					<h4 class="h41" style="FONT-WEIGHT: bolder">上海市文化广播影视管理局(上海市文物局) </h4>
+					<!--<h4 style="font-size: 2em">上海市文化广播影视管理局(上海市文物局) </h4>-->
 				</div>
 				<!--<div style="margin-top: 2em; margin-left: 2em;">
 					<p>注:公民和法人信息选填一个即可</p>

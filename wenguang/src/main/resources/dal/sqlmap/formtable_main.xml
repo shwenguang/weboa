@@ -101,6 +101,7 @@
 		</where>
 		) w2
 		WHERE w1.ID = w2.ID AND w2.rowId >= #{startNum}
+		ORDER BY yfrq DESC
 	</select>
 	<select id="selectByExample"
 		resultType="com.harmony.wenguang.dao.dataobject.FormtableMain2DO">

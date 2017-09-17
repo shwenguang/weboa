@@ -154,7 +154,7 @@ function undoing(){
   <tr> 
     <td width="4%" height="150" align="center" class="table_red" rowspan="7">所<br>需<br>信<br>息<br>情<br>况</td>
     <td width="18%" height="45" align="center" class="table_hui" rowspan="1">政府信息公开<br>义务机关(机构)<br>名称</td>
-    <td class="table_fff" colspan="8"><input name="info_of_gov" align="left" class="text1" type="text" size="30" readonly="" value="上海市文化广播影视管理局(上海市文广局)"></td>
+    <td class="table_fff" colspan="8"><input name="info_of_gov" align="left" class="text1" type="text" size="30" readonly="" value="上海市文化广播影视管理局(上海市文物局)"></td>
   </tr>
   <tr>
     <td width="18%" height="*" align="center" class="table_hui" rowspan="1"><font color="#e70000">*</font>所需信息的<br>内容描述<br>（名称、文号或<br>其他特征描述）</td>

@@ -71,7 +71,7 @@ public class FileTransformUtils {
 	        if(dd.getFjInputStream()!=null || dd.getFjInputStream().trim().length()>0){
 	            String fjhtml = String.format(
 	                    "<p style=''>"
-	                    +"<span>附件下载</span></br>"
+	                    +"<span>相关稿件</span></br>"
 	                    + "<a style='text-decoration: none;color: black;' href='%s'>%s</a><p>", 
 	                    "/documents/fujian.do?docid="+docid,fjName
 	                    );

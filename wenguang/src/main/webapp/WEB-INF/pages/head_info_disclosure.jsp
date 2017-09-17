@@ -18,16 +18,16 @@
          <a href="/entrance/info_disclosure.do" target="_parent" title="近期信息公开"><h3 class="pubh3_3">近期信息公开</h3></a>
          <ul class="publist1">
 			<li>
-				<a  href="/wg/docid/${docList[0].id }" target="_blank" title="${docList[0].zwbt }">${docList[0].zwbt }</a>
-				<span class="pubtime">${docList[0].yfrq }</span>
+				<a target="__blank" href="/busi/docshow.do?docid=${docList[0].id }&ejml=${docList[0].xxgkejml}&yjml=${docList[0].xxgkyjml}">${docList[0].zwbt }</a>
+				<span class="pubtime">${docList[0].yfrq}</span>
 			</li>
 			<li>
-				<a  href="/wg/docid/${docList[1].id }" target="_blank" title="${docList[1].zwbt }">${docList[1].zwbt }</a>
-				<span class="pubtime">${docList[1].yfrq }</span>
+				<a target="__blank" href="/busi/docshow.do?docid=${docList[1].id }&ejml=${docList[1].xxgkejml}&yjml=${docList[1].xxgkyjml}">${docList[1].zwbt }</a>
+				<span class="pubtime">${docList[1].yfrq}</span>
 			</li>
 			<li>
-				<a  href="/wg/docid/${docList[2].id }" target="_blank" title="${docList[2].zwbt }">${docList[2].zwbt }</a>
-				<span class="pubtime">${docList[2].yfrq }</span>
+				<a target="__blank" href="/busi/docshow.do?docid=${docList[2].id }&ejml=${docList[2].xxgkejml}&yjml=${docList[2].xxgkyjml}">${docList[2].zwbt }</a>
+				<span class="pubtime">${docList[2].yfrq}</span>
 			</li>
 		</ul>
          </div>
