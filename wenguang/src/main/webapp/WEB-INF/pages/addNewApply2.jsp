@@ -65,7 +65,7 @@
         <div class="pageCenter" id="content">
             <div id="maincontent">
             <ul class="nav nav-pills AccTab FilterTab">
-	    		<li class="active"><a name="#Tab2-3" title="填写申请" href="#" data-toggle="tab">填写申请</a></li>
+	    		<h2 class="rsPublicTitle">填写申请</h2>
       		</ul>
                 <!--<h3 class="pubtitle1">依申请公开</h3>
 				  <ul class="publist1">
@@ -85,9 +85,9 @@
 
 					
                 </ul>-->
-				<div style="text-align: center;">
+				<div style="text-align: ;">
 					<!--  <h4 style="font-size: 2em">信息公开申请表</h4> -->
-					<h4 class="h41" style="FONT-WEIGHT: bolder">上海市文化广播影视管理局(上海市文物局) </h4>
+					<h2  style="FONT-WEIGHT: bolder; font-size: 15px;">上海市文化广播影视管理局(上海市文物局) </h2>
 					<!--<h4 style="font-size: 2em">上海市文化广播影视管理局(上海市文物局) </h4>-->
 				</div>
 				<!--<div style="margin-top: 2em; margin-left: 2em;">
