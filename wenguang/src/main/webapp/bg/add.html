@@ -72,12 +72,13 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
         <td align="left" valign="middle" class="borderright borderbottom main-for" style="line-height:24px;">
         <el-upload
 		  class="upload-demo"
+		  multiple=false
 		  action="/bg/uploadFile.do?type=zw"
 		  :on-preview="handlePreview"
 		  :on-remove="handleRemove"
 		  :file-list="fileList">
-		  <el-button size="small" type="primary">点击上传</el-button>
-		  <div slot="tip" class="el-upload__tip">只能上传doc/docx文件，且不超过5M</div>
+		  <el-button size="mini" type="primary">点击上传</el-button>
+		  <span slot="tip" class="el-upload__tip">只能上传doc/docx文件，且不超过5M</span>
 		</el-upload>
         </td>
       </tr>
@@ -90,8 +91,8 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
 		  :on-preview="handlePreview"
 		  :on-remove="handleRemove"
 		  :file-list="fileList">
-		  <el-button size="small" type="primary">点击上传</el-button>
-		  <div slot="tip" class="el-upload__tip">只能上传doc/docx文件，且不超过5M</div>
+		  <el-button size="mini" type="primary">点击上传</el-button>
+		  <span slot="tip" class="el-upload__tip">只能上传doc/docx文件，且不超过5M</span>
 		</el-upload>
         </td>
       </tr>
