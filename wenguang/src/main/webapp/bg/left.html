@@ -5,78 +5,127 @@
 <title>左侧导航menu</title>
 <link href="css/css.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="/static/js/vue.js"></script>
+<script type="text/javascript" src="/static/js/jquery-1.8.2.js"></script>
 <style type=text/css>
-html{ SCROLLBAR-FACE-COLOR: #538ec6; SCROLLBAR-HIGHLIGHT-COLOR: #dce5f0; SCROLLBAR-SHADOW-COLOR: #2c6daa; SCROLLBAR-3DLIGHT-COLOR: #dce5f0; SCROLLBAR-ARROW-COLOR: #2c6daa;  SCROLLBAR-TRACK-COLOR: #dce5f0;  SCROLLBAR-DARKSHADOW-COLOR: #dce5f0; overflow-x:hidden;}
-body{overflow-x:hidden; background:url(images/main/leftbg.jpg) left top repeat-y #f2f0f5; width:194px;}
+html {
+	SCROLLBAR-FACE-COLOR: #538ec6;
+	SCROLLBAR-HIGHLIGHT-COLOR: #dce5f0;
+	SCROLLBAR-SHADOW-COLOR: #2c6daa;
+	SCROLLBAR-3DLIGHT-COLOR: #dce5f0;
+	SCROLLBAR-ARROW-COLOR: #2c6daa;
+	SCROLLBAR-TRACK-COLOR: #dce5f0;
+	SCROLLBAR-DARKSHADOW-COLOR: #dce5f0;
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
+	background: url(images/main/leftbg.jpg) left top repeat-y #f2f0f5;
+	width: 194px;
+}
 </style>
 </head>
 <!-- <body onselectstart="return false;" ondragstart="return false;" oncontextmenu="return false;"> -->
 <body>
-<div id="left-top">
-	<div><img src="images/main/member.gif" width="44" height="44" /></div>
-    <span>用户：admin<br>角色：超级管理员</span>
-</div>
-    <div style="float: left" id="my_menu" class="sdmenu">
-<!--       <div class="collapsed"> -->
-<!--         <span>系统设置</span> -->
-<!--         <a href="main.html" target="mainFrame" onFocus="this.blur()">后台首页</a> -->
-<!--         <a href="main_list.html" target="mainFrame" onFocus="this.blur()">列表页</a> -->
-<!--         <a href="main_info.html" target="mainFrame" onFocus="this.blur()">列表详细页</a> -->
-<!--         <a href="main_message.html" target="mainFrame" onFocus="this.blur()">留言页</a> -->
-<!--         <a href="main_menu.html" target="mainFrame" onFocus="this.blur()">栏目管理</a> -->
-<!--       </div> -->
-<!--       <div> -->
-<!--         <span>系统设置</span> -->
-<!--         <a href="main.html" target="mainFrame" onFocus="this.blur()">分组权限</a> -->
-<!--         <a href="main_list.html" target="mainFrame" onFocus="this.blur()">级别权限</a> -->
-<!--         <a href="main_info.html" target="mainFrame" onFocus="this.blur()">角色管理</a> -->
-<!--         <a href="main.html" target="mainFrame" onFocus="this.blur()">自定义权限</a> -->
-<!--       </div> -->
-<!--       <div> -->
-<!--         <span>系统设置</span> -->
-<!--         <a href="main.html" target="mainFrame" onFocus="this.blur()">分组权限</a> -->
-<!--         <a href="main_list.html" target="mainFrame" onFocus="this.blur()">级别权限</a> -->
-<!--         <a href="main_info.html" target="mainFrame" onFocus="this.blur()">角色管理</a> -->
-<!--         <a href="main.html" target="mainFrame" onFocus="this.blur()">自定义权限</a> -->
-<!--       </div> -->
-<!--       <div> -->
-<!--         <span>系统设置</span> -->
-<!--         <a href="main.html" target="mainFrame" onFocus="this.blur()">分组权限</a> -->
-<!--         <a href="main_list.html" target="mainFrame" onFocus="this.blur()">级别权限</a> -->
-<!--         <a href="main_info.html" target="mainFrame" onFocus="this.blur()">角色管理</a> -->
-<!--         <a href="main.html" target="mainFrame" onFocus="this.blur()">自定义权限</a> -->
-<!--       </div> -->
+	<div id="left-top">
+		<div>
+			<img src="images/main/member.gif" width="44" height="44" />
+		</div>
+		<span>用户：admin<br>角色：超级管理员</span>
+	</div>
+	<div style="float: left" id="my_menu" class="sdmenu">
 		<div v-for="menu in menus">
-			<span>{{menu.name}}</span>
-			<div v-for="sub in menu.subMenus">
-				<a href="##">{{sub.name}}</a>
+			<span onclick="showThis(this)" class="menu1">{{menu.name}}</span>
+			<div style="display: none">
+				<a v-for="sub in menu.subMenus" 
+					:href="sub.href" target="mainFrame" onclick="showPage(this)">{{sub.name}}</a>
 			</div>
 		</div>
-    </div>
+	</div>
 </body>
 <script>
-var app = new Vue({
-	el:"#my_menu",
-	data:{
-		menus:[
-		  {
-			  name:'系统设置',
-			  code:'sysconfig',
-			  subMenus:[
-			      {name:'后台首页',code:''},
-			      {name:'列表页',code:''}
-			  ]
-		  },
-		  {
-			  name:'系统设置',
-			  code:'sysconfig',
-			  subMenus:[
-			      {name:'后台首页',code:''},
-			      {name:'列表页',code:''}
-			  ]
-		  }
-		]
+	var app = new Vue({
+		el : "#my_menu",
+		data : {
+			menus : [ {
+				name : '系统设置',
+				code : 'sysconfig',
+				subMenus : [ {
+					name : '后台首页',
+					code : 'aaaa',
+					href: 'list.html?code=aaaa'
+				}, {
+					name : '列表页',
+					code : 'bbbb',
+					href: 'list.html?code=bbbb'
+				} ]
+			}, {
+				name : '系统设置2222',
+				code : 'sysconfig22',
+				subMenus : [ {
+					name : '后台首页2222',
+					code : 'dccc',
+					href: 'main.html?code=dccc'
+				}, {
+					name : '列表页2222',
+					code : 'eeee',
+					href: 'main.html?code=dccc'
+				} ]
+			}, {
+				name : '系统设置2222',
+				code : 'sysconfig22',
+				subMenus : [ {
+					name : '后台首页2222',
+					code : 'ffff',
+					href: 'main.html?code=dccc'
+				}, {
+					name : '列表页2222',
+					code : 'gggg',
+					href: 'main.html?code=dccc'
+				} ]
+			}, {
+				name : '系统设置2222',
+				code : 'sysconfig22',
+				subMenus : [ {
+					name : '后台首页2222',
+					code : '11111',
+					href: 'main.html?code=dccc'
+				}, {
+					name : '列表页2222',
+					code : '222',
+					href: 'main.html?code=dccc'
+				} ]
+			}, {
+				name : '系统设置2222',
+				code : 'sysconfig22',
+				subMenus : [ {
+					name : '后台首页2222',
+					code : 'zadf',
+					href: 'main.html?code=dccc'
+				}, {
+					name : '列表页2222',
+					code : '1232',
+					href: 'main.html?code=dccc'
+				} ]
+			} ]
+		}
+	});
+
+	function showThis(e) {
+		if($(e).is(":visible")){
+			$(".menu1").each(function() {
+				if (this == e) {
+					$(this).next().show();
+				} else {
+					$(this).next().hide();
+				}
+			})
+		}else{
+			$(e).next().hide();
+		}
 	}
-});
+	function showPage(e) {
+		//alert($(e).attr("code"))
+	}
 </script>
 </html>
