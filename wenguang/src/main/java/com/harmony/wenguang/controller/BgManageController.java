@@ -56,7 +56,7 @@ public class BgManageController {
 	            JSONObject subMenu = new JSONObject();
 	            menu2.add(subMenu);
 	            subMenu.put("name", sub.getEjmlmc());
-	            subMenu.put("mlbh", sub.getMlbh());
+	            subMenu.put("mlbh", sub.getId());
 	        }
 	        menu1.put("subs", menu2);
 	    }
@@ -83,15 +83,15 @@ public class BgManageController {
 	@ResponseBody
     public Object queryList(){
 		JSONObject json = new JSONObject();
-		Integer ejml = CommonUtils.parseInt(request.getParameter("ejml"), null);
-		Integer yjml = CommonUtils.parseInt(request.getParameter("yjml"), null);
+		String xxgkejml = request.getParameter("ejml");
+		String xxgkyjml = request.getParameter("yjml");
 		int pageNo = CommonUtils.parseInt(request.getParameter("pageNo"), 1);
 		int pageSize = CommonUtils.parseInt(request.getParameter("pageSize"), 20);
 		FormtableMain2DO example = new FormtableMain2DO();
 		example.setPageNo(pageNo);
 		example.setPageRows(pageSize);
-		example.setEjml(ejml);
-		example.setYjml(yjml);
+		example.setXxgkejml(xxgkejml);
+		example.setXxgkyjml(xxgkyjml);
 		int total = formtableMainDao.countByExample(example);
 		List<FormtableMain2DO> list = formtableMainDao.selectSimpleByExample(example);
 		json.put("total", total);

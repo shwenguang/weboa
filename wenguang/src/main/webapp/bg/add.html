@@ -99,7 +99,7 @@ var vm = new Vue({
 	created:function(){
 		axios.get("/bg/getDetail.do",{
 			params:{
-				id:1
+				id:input.id
 			}
 		}).then(function(res){
 			vm.$data.detail = res.data;

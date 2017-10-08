@@ -90,10 +90,11 @@ var vm = new Vue({
 	methods:{
 		
 	},
-	created:function(){
+	mounted:function(){
+		console.log(this.ejml)
 		axios.get("/bg/queryList.do",{
-			params:{
-				ejml:123
+			params : {
+				ejml:this.ejml
 			}
 		}).then(function(res){
 			console.log(res)
