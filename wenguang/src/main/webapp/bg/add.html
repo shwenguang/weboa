@@ -34,6 +34,7 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
 #addinfo a:hover{ background:url(images/main/replayblue.jpg) no-repeat 0 0px;}
 </style>
 <script type="text/javascript" src="/static/js/vue.js"></script>
+<script type="text/javascript" src="/static/js/axios.min.js"></script>
 <script type="text/javascript" src="/static/js/jquery-1.8.2.js"></script>
 </head>
 <body>
@@ -44,29 +45,33 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">标题：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">{{title}}</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">{{detail.zwbt}}</td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">抄送：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">{{cs}}</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">{{detail.cs}}</td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">主送：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">{{zs}}</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">{{detail.zs}}</td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">一级目录：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">{{yjml}}</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">{{detail.xxgkyjml}}</td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">二级目录：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for" style="line-height:24px;">
-        {{ejml}}
+        {{detail.xxgkejml}}
         </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">操作：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">回复</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">不允许显示</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a><span class="gray">&nbsp;|&nbsp;</span><a href="message_info.html" target="mainFrame" onFocus="this.blur()" class="add">查看</a></td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+        <a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">回复</a><span class="gray">&nbsp;|&nbsp;</span>
+        <a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">不允许显示</a><span class="gray">&nbsp;|&nbsp;</span>
+        <a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a><span class="gray">&nbsp;|&nbsp;</span>
+        <a href="message_info.html" target="mainFrame" onFocus="this.blur()" class="add">查看</a></td>
       </tr>
     </table>
     </td>
@@ -75,14 +80,30 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
 </div>
 </body>
 <script>
+var input = {};
+var url = window.location.href;
+
+var params=url.split("?")[1];
+if(params){
+	var arr = params.split("&");
+	for(var i =0 ; i < arr.length; i++){
+		var p = arr[i].split("=");
+		input[p[0]] = p[1];
+	}
+}
 var vm = new Vue({
 	el:"#edit",
 	data:{
-		title:'测试',
-		cs:'办公室主任',
-		zs:'相关单位',
-		yjml:'最新发布',
-		ejml:'XXXXX'
+		detail:{}
+	},
+	created:function(){
+		axios.get("/bg/getDetail.do",{
+			params:{
+				id:1
+			}
+		}).then(function(res){
+			vm.$data.detail = res.data;
+		})
 	}
 })
 </script>
