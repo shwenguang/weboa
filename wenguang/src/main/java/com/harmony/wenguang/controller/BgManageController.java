@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -19,6 +20,7 @@ import com.harmony.wenguang.dao.dataobject.FormtableMain2DO;
 import com.harmony.wenguang.dao.dataobject.FormtableMain39DO;
 import com.harmony.wenguang.dao.dataobject.FormtableMain40DO;
 import com.harmony.wenguang.support.CommonUtils;
+import com.harmony.wenguang.vo.FormtableMain2Vo;
 
 @Controller
 @RequestMapping("/bg")
@@ -72,7 +74,9 @@ public class BgManageController {
 	    List<FormtableMain2DO> list = formtableMainDao.selectSimpleByExample(example);
 	    
 	    if(list.size() > 0){
-	        return list.get(0);
+	        FormtableMain2Vo vo = new FormtableMain2Vo();
+	        BeanUtils.copyProperties(list.get(0), vo);
+	        return vo;
 	    }
 	    else{
 	        return null;
