@@ -1,5 +1,6 @@
 package com.harmony.wenguang.controller;
 
+import java.util.Enumeration;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -81,6 +82,17 @@ public class BgManageController {
 	    else{
 	        return null;
 	    }
+	}
+	
+	@RequestMapping("/uploadFile.do")
+    @ResponseBody
+    public Object uploadFile(){
+	    Enumeration<String> e = request.getParameterNames();
+	    while(e.hasMoreElements()){
+	        System.out.println(e.nextElement());
+	    }
+	    System.out.println("........................."+request.getContentLength());
+	    return null;
 	}
 	
 	@RequestMapping("/queryList.do")
