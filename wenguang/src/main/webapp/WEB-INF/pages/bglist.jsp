@@ -405,57 +405,36 @@
 														</table>
 													</div>
 												</div>
-												<div
-													class="x-panel-body x-panel-body-noheader x-panel-body-noborder"
-													id="ext-gen48" style="width: 1208px; height: 777px;">
-													<div class="x-grid3" hidefocus="true" id="ext-gen53"
-														style="width: 1208px; height: 777px;">
+												<div class="x-panel-body x-panel-body-noheader x-panel-body-noborder" style="width: 1208px; height: 777px; overflow: scroll;">
+													<div class="x-grid3" style="width: 1208px; height: 777px; overflow: scroll;">
 														<div class="x-grid3-viewport" id="ext-gen54">
 															<div class="x-grid3-header" id="ext-gen55">
-																<div class="x-grid3-header-inner" id="ext-gen61"
-																	style="width: 1208px;">
-																	<div class="x-grid3-header-offset"
-																		style="width: 1201px;">
-																		<table border="0" cellspacing="0" cellpadding="0"
-																			style="width: 1180px;">
+																<div class="x-grid3-header-inner" style="width: 1208px;">
+																	<div class="x-grid3-header-offset" style="width: 1201px;">
+																		<table border="0" cellspacing="0" cellpadding="0" style="width: 1180px;">
 																			<thead>
 																				<tr class="x-grid3-hd-row">
-																					<td
-																						class="x-grid3-hd x-grid3-cell x-grid3-td-checker x-grid3-cell-first "
-																						style="width: 20px; display: none;"><div
-																							class="x-grid3-hd-inner x-grid3-hd-checker"
-																							unselectable="on" style="">
-																							<a class="x-grid3-hd-btn"
-																								href="https://ecms.eastday.com/wdcmbs/Main.aspx#"></a>
+																					<td class="x-grid3-hd x-grid3-cell x-grid3-td-checker x-grid3-cell-first " style="width: 20px; display: none;">
+																						<div class="x-grid3-hd-inner x-grid3-hd-checker">
+																							<a class="x-grid3-hd-btn" href="https://ecms.eastday.com/wdcmbs/Main.aspx#"></a>
 																							<div class="x-grid3-hd-checker">&nbsp;</div>
-																							<img class="x-grid3-sort-icon"
-																								src="/static/images/s.gif">
+																							<img class="x-grid3-sort-icon" src="/static/images/s.gif">
 																						</div></td>
-																					<td
-																						class="x-grid3-hd x-grid3-cell x-grid3-td-numberer "
-																						style="width: 28px;"><div
-																							class="x-grid3-hd-inner x-grid3-hd-numberer"
-																							unselectable="on" style="">
-																							<a class="x-grid3-hd-btn"
-																								href="https://ecms.eastday.com/wdcmbs/Main.aspx#"></a><img
-																								class="x-grid3-sort-icon" src="/static/images/s.gif">
+																					<td class="x-grid3-hd x-grid3-cell x-grid3-td-numberer " style="width: 28px;">
+																						<div class="x-grid3-hd-inner x-grid3-hd-numberer">
+																							<a class="x-grid3-hd-btn" href="https://ecms.eastday.com/wdcmbs/Main.aspx#"></a>
+																							<img class="x-grid3-sort-icon" src="/static/images/s.gif">
 																						</div></td>
-																					<td class="x-grid3-hd x-grid3-cell x-grid3-td-2 "
-																						style="width: 297px;"><div
-																							class="x-grid3-hd-inner x-grid3-hd-2"
-																							unselectable="on" style="">
-																							<a class="x-grid3-hd-btn"
-																								href="https://ecms.eastday.com/wdcmbs/Main.aspx#"></a>标题<img
-																								class="x-grid3-sort-icon" src="/static/images/s.gif">
+																					<td class="x-grid3-hd x-grid3-cell x-grid3-td-2 " style="width: 297px;">
+																						<div class="x-grid3-hd-inner x-grid3-hd-2">
+																							<a class="x-grid3-hd-btn" href="https://ecms.eastday.com/wdcmbs/Main.aspx#"></a>标题
+																							<img class="x-grid3-sort-icon" src="/static/images/s.gif"/>
 																						</div></td>
-																					<td class="x-grid3-hd x-grid3-cell x-grid3-td-3 "
-																						style="width: 118px;"><div
-																							class="x-grid3-hd-inner x-grid3-hd-3"
-																							unselectable="on" style="">
-																							<a class="x-grid3-hd-btn"
-																								href="https://ecms.eastday.com/wdcmbs/Main.aspx#"
-																								id="ext-gen321" style="height: 22px;"></a>签发状态<img
-																								class="x-grid3-sort-icon" src="/static/images/s.gif">
+																					<td class="x-grid3-hd x-grid3-cell x-grid3-td-3 " style="width: 118px;">
+																						<div class="x-grid3-hd-inner x-grid3-hd-3">
+																							<a class="x-grid3-hd-btn" href="https://ecms.eastday.com/wdcmbs/Main.aspx#"
+																								id="ext-gen321" style="height: 22px;"></a>签发状态
+																								<img class="x-grid3-sort-icon" src="/static/images/s.gif">
 																						</div></td>
 																					<td class="x-grid3-hd x-grid3-cell x-grid3-td-4 "
 																						style="width: 118px;"><div
@@ -538,33 +517,23 @@
 																</div>
 																<div class="x-clear"></div>
 															</div>
-															<div class="x-grid3-scroller" id="ext-gen56"
-																style="overflow-x: ; width: 1208px; height: 753px;">
-																<div class="x-grid3-body" style="width: 1180px;"
-																	id="ext-gen57">
+															<div style="width: 1208px; height: 753px;">
+																<div v-for="row in rowList" class="x-grid3-body" style="width: 1180px;">
 																	<div class="x-grid3-row " style="width: 1180px;">
-																		<table class="x-grid3-row-table" border="0"
-																			cellspacing="0" cellpadding="0"
-																			style="width: 1180px;">
+																		<table class="x-grid3-row-table" border="0" cellspacing="0" cellpadding="0" style="width: 1180px;">
 																			<tbody>
 																				<tr>
-																					<td
-																						class="x-grid3-col x-grid3-cell x-grid3-td-checker x-grid3-cell-first "
-																						style="width: 20px; display: none;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-checker"
-																							unselectable="on">
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-checker x-grid3-cell-first "
+																						style="width: 20px; display: none;" tabindex="0">
+																						<div class="x-grid3-cell-inner x-grid3-col-checker">
 																							<div class="x-grid3-row-checker">&nbsp;</div>
-																						</div></td>
-																					<td
-																						class="x-grid3-col x-grid3-cell x-grid3-td-numberer "
-																						style="width: 28px;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-numberer"
-																							unselectable="on">3</div></td>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-2 "
-																						style="width: 297px;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-2"
-																							unselectable="on" ext:qtitle="文件标题"
-																							ext:qtip="张翔版画作品展”在文化馆民间文化展示馆开幕">张翔版画作品展”在文化馆民间文化展示馆开幕</div></td>
+																						</div>
+																					</td>
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-numberer " style="width: 28px;" tabindex="0">
+																						<div class="x-grid3-cell-inner x-grid3-col-numberer"
+																							unselectable="on">{{row.id}}</div></td>
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-2 " style="width: 297px;" tabindex="0"><div
+																							class="x-grid3-cell-inner x-grid3-col-2">{{row.zwbt}}</div></td>
 																					<td class="x-grid3-col x-grid3-cell x-grid3-td-3 "
 																						style="width: 118px;" tabindex="0"><div
 																							class="x-grid3-cell-inner x-grid3-col-3"
@@ -606,12 +575,12 @@
 																					<td class="x-grid3-col x-grid3-cell x-grid3-td-11 "
 																						style="width: 118px;" tabindex="0"><div
 																							class="x-grid3-cell-inner x-grid3-col-11"
-																							unselectable="on">wgj2</div></td>
+																							unselectable="on">aawgj2sdffdsfdsfdsafdsfsfafsd</div></td>
 																					<td
 																						class="x-grid3-col x-grid3-cell x-grid3-td-12 x-grid3-cell-last "
 																						style="width: 29px;" tabindex="0"><div
 																							class="x-grid3-cell-inner x-grid3-col-12"
-																							unselectable="on">&nbsp;</div></td>
+																							unselectable="on">&nbsp;ssss</div></td>
 																				</tr>
 																				<tr class="x-grid3-row-body-tr" style="">
 																					<td colspan="13" class="x-grid3-body-cell"
@@ -622,13 +591,8 @@
 																		</table>
 																	</div>
 																</div>
-																<a href="https://ecms.eastday.com/wdcmbs/Main.aspx#"
-																	class="x-grid3-focus" tabindex="-1" id="ext-gen58"
-																	style="left: 1px; top: 1px;"></a>
 															</div>
 														</div>
-														<div class="x-grid3-resize-marker" id="ext-gen59">&nbsp;</div>
-														<div class="x-grid3-resize-proxy" id="ext-gen60">&nbsp;</div>
 													</div>
 												</div>
 												<div class="x-panel-bbar x-panel-bbar-noborder"
@@ -866,30 +830,6 @@
 									</div>
 								</div>
 							</div>
-							<div id="bottom-preview"
-								class=" x-panel x-panel-noborder x-hide-display x-border-panel">
-								<div
-									class="x-panel-header x-panel-header-noborder x-unselectable"
-									id="ext-gen34">
-									<div class="x-tool x-tool-toggle x-tool-collapse-south"
-										id="ext-gen37">&nbsp;</div>
-									<span class="x-panel-header-text"></span>
-								</div>
-								<div class="x-panel-bwrap" id="ext-gen35">
-									<div class="x-panel-body x-panel-body-noborder" id="ext-gen36"
-										style="height: 224px;"></div>
-								</div>
-							</div>
-							<div class="x-layout-split x-layout-split-south x-splitbar-v"
-								id="bottom-preview-xsplit" style="visibility: hidden;">
-								&nbsp;
-								<div class="x-layout-mini x-layout-mini-south" id="ext-gen39">&nbsp;</div>
-							</div>
-							<div class="x-layout-split x-layout-split-east x-splitbar-h"
-								id="right-preview-xsplit" style="visibility: hidden;">
-								&nbsp;
-								<div class="x-layout-mini x-layout-mini-east" id="ext-gen44">&nbsp;</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -897,7 +837,7 @@
 		</div>
 	</div>
 	<div id="menutree" style="width: 190px; height: 100%; float: left; left: 0px; top: 66px; overflow: scroll;" class="x-panel x-border-panel">
-			<div class="x-panel-body" style="width: 188px; height: 836px;">
+			<div class="x-panel-body" style="width: 188px; height: 105%;">
 				<div v-for="menu in menutree" class=" x-panel x-panel-noborder " style="width: auto;">
 					<div class="x-panel-header main_menu" onclick="showThis(this)" style="cursor: pointer;">
 						<span class="x-panel-header-text">{{menu.name}}</span>
@@ -921,11 +861,21 @@
 var app = new Vue({
 	el:"#app",
 	data:{
-		menutree:[]
+		menutree:[],
+		rowList:[],
+		totalRows:10
 	},
 	methods:{
 		show:function(ejml){
-			alert(ejml)
+			axios.get("/bg/queryList.do",{
+				params : {
+					ejml:ejml
+				}
+			}).then(function(res){
+				console.log(res.data.list)
+				app.$data.rowList = res.data.list;
+				app.$data.totalRows = res.data.total;
+			})
 		}
 	},
 	created:function(){
