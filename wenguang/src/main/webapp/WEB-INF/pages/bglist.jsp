@@ -931,7 +931,7 @@ var app = new Vue({
 	created:function(){
 		axios.get("/bg/menuTree.do")
 		.then(function(res){
-			console.log(res.data)
+// 			console.log(res.data)
 			app.$data.menutree = res.data;
 		})
 	}
