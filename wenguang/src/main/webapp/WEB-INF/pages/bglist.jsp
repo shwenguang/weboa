@@ -92,43 +92,30 @@
 	</div>
 	<div id="ext-comp-1104" class=" x-tab-panel x-border-panel"
 		style="padding: 0px 5px; left: 196px; top: 66px; width: 1210px;">
-		<div class="x-tab-panel-header x-unselectable" id="ext-gen18"
-			style="width: 1208px;">
+		<div class="x-tab-panel-header x-unselectable"  style="width: 1208px;">
 			<div class="x-tab-strip-wrap" id="ext-gen21" style="width: 1208px;">
 				<ul class="x-tab-strip x-tab-strip-top" id="ext-gen23">
-					<li class=" x-tab-with-icon x-tab-strip-active"
-						id="ext-comp-1104__center-main-panel"><a
-						class="x-tab-strip-close" id="ext-gen26"></a><a
-						class="x-tab-right"
-						href="https://ecms.eastday.com/wdcmbs/Main.aspx#" id="ext-gen27"><em
-							class="x-tab-left"><span class="x-tab-strip-inner"><span
-									class="x-tab-strip-text house">内容列表</span></span></em></a></li>
-					<li class="x-tab-edge" id="ext-gen24"><span
-						class="x-tab-strip-text">&nbsp;</span></li>
+					<li class=" x-tab-with-icon x-tab-strip-active" id="ext-comp-1104__center-main-panel">
+						<a class="x-tab-strip-close" id="ext-gen26"></a>
+						<a class="x-tab-right" href="https://ecms.eastday.com/wdcmbs/Main.aspx#">
+							<em class="x-tab-left"><span class="x-tab-strip-inner"><span class="x-tab-strip-text house">内容列表</span></span></em>
+						</a>
+					</li>
+					<li class="x-tab-edge" id="ext-gen24"><span class="x-tab-strip-text">&nbsp;</span></li>
 					<div class="x-clear" id="ext-gen25"></div>
 				</ul>
 			</div>
 			<div class="x-tab-strip-spacer" id="ext-gen22"></div>
 		</div>
-		<div class="x-tab-panel-bwrap" id="ext-gen19">
-			<div class="x-tab-panel-body x-tab-panel-body-top" id="ext-gen20"
-				style="width: 1208px; height: 832px;">
-				<div id="center-main-panel" class=" x-panel x-panel-noborder"
-					style="width: 1208px;">
-					<div class="x-panel-bwrap" id="ext-gen28">
-						<div
-							class="x-panel-body x-panel-body-noheader x-panel-body-noborder x-border-layout-ct"
-							id="ext-gen29" style="width: 1208px; height: 832px;">
-							<div id="center-preview"
-								class=" x-panel x-panel-noborder x-border-panel"
-								style="left: 0px; top: 0px; width: 1208px;">
+		<div class="x-tab-panel-bwrap">
+			<div class="x-tab-panel-body x-tab-panel-body-top" style="width: 1208px; height: 832px;">
+				<div id="center-main-panel" class=" x-panel x-panel-noborder" style="width: 1208px;">
+					<div class="x-panel-bwrap">
+						<div class="x-panel-body x-panel-body-noheader x-panel-body-noborder x-border-layout-ct" style="width: 1208px; height: 832px;">
+							<div id="center-preview" class=" x-panel x-panel-noborder x-border-panel" style="left: 0px; top: 0px; width: 1208px;">
 								<div class="x-panel-bwrap" id="ext-gen31">
-									<div
-										class="x-panel-body x-panel-body-noheader x-panel-body-noborder"
-										id="ext-gen32" style="width: 1208px; height: 832px;">
-										<div id="mccenter_grid_list"
-											class=" x-panel x-panel-noborder x-grid-panel"
-											style="width: 1208px;">
+									<div class="x-panel-body x-panel-body-noheader x-panel-body-noborder" style="width: 1208px; height: 832px;">
+										<div id="mccenter_grid_list" class=" x-panel x-panel-noborder x-grid-panel" style="width: 1208px;">
 											<div class="x-panel-bwrap " id="ext-gen46">
 												<div
 													class="x-panel-tbar x-panel-tbar-noheader x-panel-tbar-noborder"
@@ -518,74 +505,41 @@
 																<div class="x-clear"></div>
 															</div>
 															<div style="width: 1208px; height: 753px;">
-																<div v-for="row in rowList" class="x-grid3-body" style="width: 1180px;">
+																<!-- 展示查询列表 -->
+																<div v-for="row in rowList" class="x-grid3-body" >
 																	<div class="x-grid3-row " style="width: 1180px;">
 																		<table class="x-grid3-row-table" border="0" cellspacing="0" cellpadding="0" style="width: 1180px;">
 																			<tbody>
 																				<tr>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-checker x-grid3-cell-first "
-																						style="width: 20px; display: none;" tabindex="0">
-																						<div class="x-grid3-cell-inner x-grid3-col-checker">
-																							<div class="x-grid3-row-checker">&nbsp;</div>
-																						</div>
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-numberer" style="width: 28px;" tabindex="0">
+																						<div>{{row.id}}</div></td>
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-2" style="width: 297px;" tabindex="0">
+																						<div class="x-grid3-cell-inner x-grid3-col-2">{{row.zwbt}}</div></td>
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-3" style="width: 118px;" tabindex="0">
+																						<div class="x-grid3-cell-inner x-grid3-col-3">
+																							<font font-size="12">&nbsp;新编</font>
+																						</div></td>
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-4" style="width: 118px;" tabindex="0">
+																						<div class="x-grid3-cell-inner x-grid3-col-4">
+																							<font font-size="12">&nbsp;未审</font>
+																						</div></td>
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-5 " style="width: 118px;" tabindex="0">
+																						<div class="x-grid3-cell-inner x-grid3-col-5">稿件</div></td>
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-6 " style="width: 118px;" tabindex="0">
+																						<div class="x-grid3-cell-inner x-grid3-col-6">wgj2</div></td>
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-7 " style="width: 118px;" tabindex="0">
+																						<div class="x-grid3-cell-inner x-grid3-col-7">2014/05/22 15:15:00</div></td>
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-8 " style="width: 118px;" tabindex="0">
+																						<div class="x-grid3-cell-inner x-grid3-col-8">2014/05/22 15:15:00</div>
 																					</td>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-numberer " style="width: 28px;" tabindex="0">
-																						<div class="x-grid3-cell-inner x-grid3-col-numberer"
-																							unselectable="on">{{row.id}}</div></td>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-2 " style="width: 297px;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-2">{{row.zwbt}}</div></td>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-3 "
-																						style="width: 118px;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-3"
-																							unselectable="on">
-																							<font font-size="12"><font><img
-																									src="lb_files/qian1.png" border="0"></font>&nbsp;新编</font>
-																						</div></td>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-4 "
-																						style="width: 118px;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-4"
-																							unselectable="on">
-																							<font font-size="12"><font><img
-																									src="lb_files/audit1.png" border="0"></font>&nbsp;未审</font>
-																						</div></td>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-5 "
-																						style="width: 118px;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-5"
-																							unselectable="on">稿件</div></td>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-6 "
-																						style="width: 118px;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-6"
-																							unselectable="on">wgj2</div></td>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-7 "
-																						style="width: 118px;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-7"
-																							unselectable="on">2014/05/22 15:15:00</div></td>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-8 "
-																						style="width: 118px;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-8"
-																							unselectable="on">2014/05/22 15:15:00</div></td>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-9 "
-																						style="width: 40px; display: none;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-9"
-																							unselectable="on" ext:qtitle="文件标题" ext:qtip="">&nbsp;</div></td>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-10 "
-																						style="width: 40px; display: none;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-10"
-																							unselectable="on" ext:qtitle="文件标题" ext:qtip="">&nbsp;</div></td>
-																					<td class="x-grid3-col x-grid3-cell x-grid3-td-11 "
-																						style="width: 118px;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-11"
-																							unselectable="on">aawgj2sdffdsfdsfdsafdsfsfafsd</div></td>
-																					<td
-																						class="x-grid3-col x-grid3-cell x-grid3-td-12 x-grid3-cell-last "
-																						style="width: 29px;" tabindex="0"><div
-																							class="x-grid3-cell-inner x-grid3-col-12"
-																							unselectable="on">&nbsp;ssss</div></td>
-																				</tr>
-																				<tr class="x-grid3-row-body-tr" style="">
-																					<td colspan="13" class="x-grid3-body-cell"
-																						tabindex="0" hidefocus="on"><div
-																							class="x-grid3-row-body"></div></td>
+																					<td style="width: 40px; display: none;" tabindex="0"></td>
+																					<td style="width: 40px; display: none;" tabindex="0"></td>
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-11 " style="width: 118px;" tabindex="0">
+																						<div class="x-grid3-cell-inner x-grid3-col-11">aawgj2 sdffdsfd sfdsafd sfsfafsd</div>
+																					</td>
+																					<td class="x-grid3-col x-grid3-cell x-grid3-td-12 x-grid3-cell-last " style="width: 29px;" tabindex="0">
+																						<div class="x-grid3-cell-inner x-grid3-col-12">&nbsp;</div>
+																					</td>
 																				</tr>
 																			</tbody>
 																		</table>
@@ -593,236 +547,6 @@
 																</div>
 															</div>
 														</div>
-													</div>
-												</div>
-												<div class="x-panel-bbar x-panel-bbar-noborder"
-													id="ext-gen49" style="width: 1208px;">
-													<div id="ext-comp-1044"
-														class="x-toolbar x-small-editor x-toolbar-layout-ct"
-														style="width: 1204px;">
-														<table cellspacing="0" class="x-toolbar-ct">
-															<tbody>
-																<tr>
-																	<td class="x-toolbar-left" align="left"><table
-																			cellspacing="0">
-																			<tbody>
-																				<tr class="x-toolbar-left-row">
-																					<td class="x-toolbar-cell" id="ext-gen109"><table
-																							id="ext-comp-1045" cellspacing="0"
-																							class="x-btn   x-btn-icon x-item-disabled">
-																							<tbody class="x-btn-small x-btn-icon-small-left">
-																								<tr>
-																									<td class="x-btn-tl"><i>&nbsp;</i></td>
-																									<td class="x-btn-tc"></td>
-																									<td class="x-btn-tr"><i>&nbsp;</i></td>
-																								</tr>
-																								<tr>
-																									<td class="x-btn-ml"><i>&nbsp;</i></td>
-																									<td class="x-btn-mc"><em class=""
-																										unselectable="on"><button type="button"
-																												id="ext-gen110"
-																												class=" x-btn-text x-tbar-page-first">&nbsp;</button></em></td>
-																									<td class="x-btn-mr"><i>&nbsp;</i></td>
-																								</tr>
-																								<tr>
-																									<td class="x-btn-bl"><i>&nbsp;</i></td>
-																									<td class="x-btn-bc"></td>
-																									<td class="x-btn-br"><i>&nbsp;</i></td>
-																								</tr>
-																							</tbody>
-																						</table></td>
-																					<td class="x-toolbar-cell" id="ext-gen111"><table
-																							id="ext-comp-1046" cellspacing="0"
-																							class="x-btn   x-btn-icon x-item-disabled">
-																							<tbody class="x-btn-small x-btn-icon-small-left">
-																								<tr>
-																									<td class="x-btn-tl"><i>&nbsp;</i></td>
-																									<td class="x-btn-tc"></td>
-																									<td class="x-btn-tr"><i>&nbsp;</i></td>
-																								</tr>
-																								<tr>
-																									<td class="x-btn-ml"><i>&nbsp;</i></td>
-																									<td class="x-btn-mc"><em class=""
-																										unselectable="on"><button type="button"
-																												id="ext-gen112"
-																												class=" x-btn-text x-tbar-page-prev">&nbsp;</button></em></td>
-																									<td class="x-btn-mr"><i>&nbsp;</i></td>
-																								</tr>
-																								<tr>
-																									<td class="x-btn-bl"><i>&nbsp;</i></td>
-																									<td class="x-btn-bc"></td>
-																									<td class="x-btn-br"><i>&nbsp;</i></td>
-																								</tr>
-																							</tbody>
-																						</table></td>
-																					<td class="x-toolbar-cell" id="ext-gen113"><span
-																						class="xtb-sep" id="ext-gen114"></span></td>
-																					<td class="x-toolbar-cell" id="ext-gen115"><div
-																							class="xtb-text" id="ext-comp-1054">第</div></td>
-																					<td class="x-toolbar-cell" id="ext-gen116"><input
-																						type="text" size="20" autocomplete="off"
-																						id="ext-comp-1047"
-																						class=" x-form-text x-form-field x-form-num-field x-tbar-page-number"
-																						title=""></td>
-																					<td class="x-toolbar-cell" id="ext-gen117"><div
-																							class="xtb-text" id="ext-comp-1048">页 共1页</div></td>
-																					<td class="x-toolbar-cell" id="ext-gen118"><span
-																						class="xtb-sep" id="ext-gen119"></span></td>
-																					<td class="x-toolbar-cell" id="ext-gen120"><table
-																							id="ext-comp-1049" cellspacing="0"
-																							class="x-btn   x-btn-icon x-item-disabled">
-																							<tbody class="x-btn-small x-btn-icon-small-left">
-																								<tr>
-																									<td class="x-btn-tl"><i>&nbsp;</i></td>
-																									<td class="x-btn-tc"></td>
-																									<td class="x-btn-tr"><i>&nbsp;</i></td>
-																								</tr>
-																								<tr>
-																									<td class="x-btn-ml"><i>&nbsp;</i></td>
-																									<td class="x-btn-mc"><em class=""
-																										unselectable="on"><button type="button"
-																												id="ext-gen121"
-																												class=" x-btn-text x-tbar-page-next">&nbsp;</button></em></td>
-																									<td class="x-btn-mr"><i>&nbsp;</i></td>
-																								</tr>
-																								<tr>
-																									<td class="x-btn-bl"><i>&nbsp;</i></td>
-																									<td class="x-btn-bc"></td>
-																									<td class="x-btn-br"><i>&nbsp;</i></td>
-																								</tr>
-																							</tbody>
-																						</table></td>
-																					<td class="x-toolbar-cell" id="ext-gen122"><table
-																							id="ext-comp-1050" cellspacing="0"
-																							class="x-btn   x-btn-icon x-item-disabled">
-																							<tbody class="x-btn-small x-btn-icon-small-left">
-																								<tr>
-																									<td class="x-btn-tl"><i>&nbsp;</i></td>
-																									<td class="x-btn-tc"></td>
-																									<td class="x-btn-tr"><i>&nbsp;</i></td>
-																								</tr>
-																								<tr>
-																									<td class="x-btn-ml"><i>&nbsp;</i></td>
-																									<td class="x-btn-mc"><em class=""
-																										unselectable="on"><button type="button"
-																												id="ext-gen123"
-																												class=" x-btn-text x-tbar-page-last">&nbsp;</button></em></td>
-																									<td class="x-btn-mr"><i>&nbsp;</i></td>
-																								</tr>
-																								<tr>
-																									<td class="x-btn-bl"><i>&nbsp;</i></td>
-																									<td class="x-btn-bc"></td>
-																									<td class="x-btn-br"><i>&nbsp;</i></td>
-																								</tr>
-																							</tbody>
-																						</table></td>
-																					<td class="x-toolbar-cell" id="ext-gen124"><span
-																						class="xtb-sep" id="ext-gen125"></span></td>
-																					<td class="x-toolbar-cell" id="ext-gen126"><table
-																							id="ext-comp-1051" cellspacing="0"
-																							class="x-btn   x-btn-icon ">
-																							<tbody class="x-btn-small x-btn-icon-small-left">
-																								<tr>
-																									<td class="x-btn-tl"><i>&nbsp;</i></td>
-																									<td class="x-btn-tc"></td>
-																									<td class="x-btn-tr"><i>&nbsp;</i></td>
-																								</tr>
-																								<tr>
-																									<td class="x-btn-ml"><i>&nbsp;</i></td>
-																									<td class="x-btn-mc"><em class=""
-																										unselectable="on"><button type="button"
-																												id="ext-gen127"
-																												class=" x-btn-text x-tbar-loading">&nbsp;</button></em></td>
-																									<td class="x-btn-mr"><i>&nbsp;</i></td>
-																								</tr>
-																								<tr>
-																									<td class="x-btn-bl"><i>&nbsp;</i></td>
-																									<td class="x-btn-bc"></td>
-																									<td class="x-btn-br"><i>&nbsp;</i></td>
-																								</tr>
-																							</tbody>
-																						</table></td>
-																					<td class="x-toolbar-cell" id="ext-gen128"><span
-																						class="xtb-sep" id="ext-gen129"></span></td>
-																					<td class="x-toolbar-cell" id="ext-gen130"><div
-																							class="xtb-text" id="ext-comp-1058">查询</div></td>
-																					<td class="x-toolbar-cell" id="ext-gen131"><div
-																							class="x-form-field-wrap x-form-field-trigger-wrap"
-																							id="ext-gen132" style="width: 85px;">
-																							<input type="text" size="24" autocomplete="off"
-																								id="CenterGrid_CountBox"
-																								name="CenterGrid_CountBox"
-																								class=" x-form-text x-form-field" title=""
-																								style="width: 59px;"><img
-																								src="/static/images/s.gif"
-																								class="x-form-trigger x-form-arrow-trigger"
-																								id="ext-gen133">
-																						</div></td>
-																					<td class="x-toolbar-cell" id="ext-gen134"><div
-																							class="xtb-text" id="ext-comp-1059">记录</div></td>
-																					<td class="x-toolbar-cell" id="ext-gen135"><span
-																						class="xtb-sep" id="ext-gen136"></span></td>
-																					<td class="x-toolbar-cell" id="ext-gen137"><div
-																							class="xtb-text" id="ext-comp-1061">查看</div></td>
-																					<td class="x-toolbar-cell" id="ext-gen138"><div
-																							class="x-form-field-wrap x-form-field-trigger-wrap"
-																							id="ext-gen139" style="width: 85px;">
-																							<input type="text" size="24" autocomplete="off"
-																								id="CenterGrid_UserBox"
-																								name="CenterGrid_UserBox"
-																								class=" x-form-text x-form-field" title=""
-																								style="width: 59px;"><img
-																								src="/static/images/s.gif"
-																								class="x-form-trigger x-form-arrow-trigger"
-																								id="ext-gen140">
-																						</div></td>
-																					<td class="x-toolbar-cell" id="ext-gen141"><div
-																							class="xtb-text" id="ext-comp-1062">的稿件</div></td>
-																					<td class="x-toolbar-cell" id="ext-gen142"><span
-																						class="xtb-sep" id="ext-gen143"></span></td>
-																					<td class="x-toolbar-cell" id="ext-gen144"><div
-																							class="xtb-text" id="ext-comp-1064">每页显示</div></td>
-																					<td class="x-toolbar-cell" id="ext-gen145"><div
-																							class="x-form-field-wrap x-form-field-trigger-wrap"
-																							id="ext-gen146" style="width: 45px;">
-																							<input type="text" size="24" autocomplete="off"
-																								id="CenterGrid_PageCountBox"
-																								name="CenterGrid_PageCountBox"
-																								class=" x-form-text x-form-field" title=""
-																								style="width: 19px;"><img
-																								src="/static/images/s.gif"
-																								class="x-form-trigger x-form-arrow-trigger"
-																								id="ext-gen147">
-																						</div></td>
-																					<td class="x-toolbar-cell" id="ext-gen148"><div
-																							class="xtb-text" id="ext-comp-1065">条稿件</div></td>
-																				</tr>
-																			</tbody>
-																		</table></td>
-																	<td class="x-toolbar-right" align="right"><table
-																			cellspacing="0" class="x-toolbar-right-ct">
-																			<tbody>
-																				<tr>
-																					<td><table cellspacing="0">
-																							<tbody>
-																								<tr class="x-toolbar-right-row">
-																									<td class="x-toolbar-cell" id="ext-gen149"><div
-																											class="xtb-text" id="ext-comp-1052">第1-30条
-																											共30条</div></td>
-																								</tr>
-																							</tbody>
-																						</table></td>
-																					<td><table cellspacing="0">
-																							<tbody>
-																								<tr class="x-toolbar-extras-row"></tr>
-																							</tbody>
-																						</table></td>
-																				</tr>
-																			</tbody>
-																		</table></td>
-																</tr>
-															</tbody>
-														</table>
 													</div>
 												</div>
 											</div>
