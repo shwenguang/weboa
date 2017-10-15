@@ -872,7 +872,7 @@ var app = new Vue({
 					ejml:ejml
 				}
 			}).then(function(res){
-				console.log(res.data.list)
+// 				console.log(res.data.list)
 				app.$data.rowList = res.data.list;
 				app.$data.totalRows = res.data.total;
 			})
