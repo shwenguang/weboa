@@ -507,7 +507,7 @@
 															<div style="width: 1208px; height: 753px;">
 																<!-- 展示查询列表 -->
 																<div v-for="row in rowList" class="x-grid3-body" >
-																	<div class="x-grid3-row " style="width: 1180px;">
+																	<div class="x-grid3-row" style="width: 1180px;">
 																		<table class="x-grid3-row-table" border="0" cellspacing="0" cellpadding="0" style="width: 1180px;">
 																			<tbody>
 																				<tr>
