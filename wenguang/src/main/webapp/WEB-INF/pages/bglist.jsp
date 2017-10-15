@@ -903,12 +903,12 @@
 						<span class="x-panel-header-text">{{menu.name}}</span>
 					</div>
 					<div class="sub_menu" :id="'menu_'+menu.mlbh" style="display:none;">
-						<ul class="x-tree-root-ct x-tree-lines" id="ext-gen255">
+						<ul class="x-tree-root-ct x-tree-lines">
+							<!-- 二级菜单 -->
 							<li v-for="sub in menu.subs" class="x-tree-node">
-								<div  class="x-tree-node-el x-unselectable  x-tree-node-expanded">
+								<div @click="show(sub.mlbh)" class="x-tree-node-el x-unselectable  x-tree-node-expanded">
 									<img src="/static/images/s.gif" class="x-tree-node-icon system_main">
-									<a class="x-tree-node-anchor" href="/bg/bglist.do">
-									{{sub.name}}</a>
+									<span>{{sub.name}}</span>
 								</div>
 							</li>
 						</ul>
@@ -923,6 +923,11 @@ var app = new Vue({
 	data:{
 		menutree:[]
 	},
+	methods:{
+		show:function(ejml){
+			alert(ejml)
+		}
+	},
 	created:function(){
 		axios.get("/bg/menuTree.do")
 		.then(function(res){
@@ -935,9 +940,9 @@ var app = new Vue({
 function showThis(e) {
 	var next = $(e).next();
 	if($(next).is(":visible")){
-		$(next).hide();
+		$(next).hide('fast');
 	} else {
-		$(next).show();
+		$(next).show('fast');
 	}
 }
 </script>
