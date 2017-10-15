@@ -933,16 +933,11 @@ var app = new Vue({
 })
 
 function showThis(e) {
-	if($(e).is(":visible")){
-		$(".main_menu").each(function() {
-			if (this == e) {
-				$(this).next().show();
-			} else {
-				$(this).next().hide();
-			}
-		})
-	}else{
-		$(e).next().hide();
+	var next = $(e).next();
+	if($(next).is(":visible")){
+		$(next).hide();
+	} else {
+		$(next).show();
 	}
 }
 </script>
