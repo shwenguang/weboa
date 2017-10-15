@@ -1,0 +1,1063 @@
+body 
+{
+    scrollbar-highlight-color:#ffffff;
+    scrollbar-shadow-color:#ffffff;
+    scrollbar-arrow-color:#ffffff;
+    scrollbar-darkshadow-color:#4A65A7;
+    scrollbar-base-color:#8198C8;
+}
+.table_main{background:#96B1CF; border:solid 1px #99BBE8; color:#15428B;}
+.table_main_tr1{background:#CEDDEF;}
+.table_main_tr2{background:#C2D8F0;}
+.wz{ font-size:14px; font-weight:bold;}
+.wz1{color:#FF0000;}
+.wz2{color:#006633;}
+.example-info{
+	width:150px;
+	border:1px solid #c3daf9;
+	border-top:1px solid #DCEAFB;
+	border-left:1px solid #DCEAFB;
+	background:#ecf5fe url( info-bg.gif ) repeat-x;
+	font-size:10px;
+	padding:8px;
+}
+pre.code{
+	background: #F8F8F8;
+	border: 1px solid #e8e8e8;
+	padding:10px;
+	margin:10px;
+	margin-left:0px;
+	border-left:5px solid #e8e8e8;
+	font-size: 12px !important;
+	line-height:14px !important;
+}
+.msg .x-box-mc {
+    font-size:14px;
+}
+#msg-div {
+    position:absolute;
+    left:35%;
+    top:10px;
+    width:250px;
+    z-index:20000;
+}
+.x-grid3-row-body p {
+    margin:5px 5px 10px 5px !important;
+}
+.css_source_box{border:1px solid #666666; position:relative;}
+.css_drag_box{border:1px dashed #fff; top:0px; left:0px; cursor:move;}
+.css_rightdown{position:absolute;cursor:nw-resize;right:0px;bottom:0px;background-color:#00F;background:#FFF;border: 1px solid #333;width: 6px;height: 6px;z-index:500;font-size:0;opacity: 0.5;filter:alpha(opacity=50);}
+.css_leftdown{position:absolute;cursor:ne-resize;left:0px;bottom:0px;background:#FFF;border: 1px solid #333;width: 6px;height: 6px;z-index:500;font-size:0;opacity: 0.5;filter:alpha(opacity=50);}
+.css_rightup{position:absolute;cursor:ne-resize;right:0px;top:0px;background:#FFF;border: 1px solid #333;width: 6px;height: 6px;z-index:500;font-size:0;opacity: 0.5;filter:alpha(opacity=50);}
+.css_leftup{position:absolute;cursor:nw-resize;left:0px;top:0px;background:#FFF;border: 1px solid #333;width: 6px;height: 6px;z-index:500;font-size:0;opacity: 0.5;filter:alpha(opacity=50);}
+.css_right{position:absolute;cursor:e-resize;right:0px;top:50%;margin-top:-4px;background:#FFF;border: 1px solid #333;width: 6px;height: 6px;z-index:500;font-size:0;opacity: 0.5;filter:alpha(opacity=50);}
+.css_left{position:absolute;cursor:e-resize;left:0px;top:50%;margin-top:-4px;background:#FFF;border: 1px solid #333;width: 6px;height: 6px;z-index:500;font-size:0;opacity: 0.5;filter:alpha(opacity=50);}
+.css_up{position:absolute;cursor:n-resize;top:0px;left:50%;margin-left:-4px;background:#FFF;border: 1px solid #333;width: 6px;height: 6px;z-index:500;font-size:0;opacity: 0.5;filter:alpha(opacity=50);}
+.css_down{position:absolute;cursor:n-resize;bottom:0px;left:50%;margin-left:-4px;background:#FFF;border: 1px solid #333;width: 6px;height: 6px;z-index:500;font-size:0;opacity: 0.5;filter:alpha(opacity=50);}
+.imgbox
+{
+	font-size:12px;
+	width:450px; 
+	height:348px;
+	margin:0 auto; 
+	overflow:scroll;
+}
+.imgbox1
+{
+	font-size:12px;
+	height:325px;
+	width:120px; 
+	margin:0 auto; 
+	overflow:scroll;
+}
+.imgboxWeb
+{
+	font-size:12px;
+	height:325px;
+	width:480px; 
+	margin:0 auto; 
+	overflow:scroll;
+}
+.imgmark
+{
+	font-size:12px;
+	height:580px;
+	width:158px; 
+	margin:0 auto; 
+	overflow:scroll;
+}
+.imgeditor
+{
+	font-size:12px;
+	padding-top: 5px;
+	height:500px;
+	width:750px; 
+	margin:0 auto; 
+	text-align:center;
+	overflow:scroll;
+}
+.item {
+    border: 1px #000 solid; 
+    width: 80px;
+    text-align:center;
+    padding-top:2px;
+    color:White;
+    float:left;
+    cursor:pointer;
+}
+.imgul{
+    width:440px; 
+    height:130px; 
+    margin:0 auto; 
+    padding:4px 0 0 2px; 
+    border:0; 
+    border-top-style:dotted;
+    list-style:none;
+}
+.imgli{ 
+    float:left; 
+    margin:0 4px 4px 0;
+    display:inline;
+}
+.imga{ 
+    display:block; 
+    width:100px; 
+    height:124px; 
+    cursor:pointer; 
+    text-decoration:none; 
+    text-align:center; 
+    overflow:hidden;
+}
+.img { 
+    width:100px; 
+    height:100px; 
+    border:1px solid #ccc;
+}
+.img1 { 
+    width:12px; 
+    height:12px; 
+    border:0;
+}
+.imgspan { 
+    display:block; 
+    width:100px; 
+    height:12px; 
+    text-align:left;
+    background-color:#FFFFFF;
+}
+.chdiv
+{
+	font-size:12px;
+    width:80px;
+    height: 82px;
+    margin:0 auto; 
+    padding:0 0 0 0;
+}
+.chimga{ 
+    display:block; 
+    cursor: pointer;
+    text-decoration:none; 
+    text-align:center; 
+    overflow:hidden;
+}
+.chspan{ 
+    display:block; 
+    height:12px; 
+    text-align:left;
+    background-color:#FFFFFF;
+}
+.chimg { 
+    width:80px; 
+    height:70px;
+    border:0;
+}
+.linktab
+{
+	cursor:pointer;
+	color:Blue;
+}
+.inpstyle{
+     background:#FFFFFF;
+     border: #CCCCCC 2px solid;
+     COLOR: #000000;
+}
+/* Tree GRID 样式表 */
+.x-treegrid-root-table {
+    border-right: 1px solid;
+}
+.x-treegrid-root-node {
+    overflow: auto;
+}
+.x-treegrid-hd-hidden {
+    visibility: hidden;
+    border: 0;
+    width: 0;
+}
+.x-treegrid-col {
+    border-bottom: 1px solid;
+    height: 20px;
+    overflow: hidden;
+    vertical-align: top;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.x-treegrid-text {
+    padding-left: 4px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+}
+.x-treegrid-resizer {
+    border-left:1px solid;
+    border-right:1px solid;
+    position:absolute;
+    left:0;
+    top:0;
+}
+.x-treegrid-header-inner {
+    overflow: hidden;
+}
+.x-treegrid-root-table,
+.x-treegrid-col {
+    border-color: #ededed;
+}
+.x-treegrid-resizer {
+    border-left-color:#555;
+    border-right-color:#555;
+}
+/* EXT图标样式表 */
+.add
+{
+	background-image: url(../image/add.png) !important;
+}
+.edit
+{
+	background-image: url(../image/edit.png) !important;
+}
+.del
+{
+	background-image: url(../image/delete.png) !important;
+}
+.userimage
+{
+	background-image: url(../image/user.png) !important;
+}
+.user-login
+{
+	background-image: url(../image/user_go.png) !important;
+}
+.user_edit
+{
+	background-image: url(../image/user_edit.png) !important;
+}
+.house
+{
+	background-image: url(../image/house.png) !important;
+}
+.group
+{
+	background-image: url(../image/group.png) !important;
+}
+.help
+{
+	background-image: url(../image/help.png) !important;
+}
+.hourglass
+{
+	background-image: url(../image/hourglass.png) !important;
+}
+.hourglass_add
+{
+	background-image: url(../image/hourglass_add.png) !important;
+}
+.save
+{
+	background-image: url(../image/save.png) !important;
+}
+.text_list_numbers
+{
+	background-image: url(../image/text_list_numbers.png) !important;
+}
+.page_refresh
+{
+	background-image: url(../image/page_refresh.png) !important;
+}
+.folder_delete
+{
+	background-image: url(../image/folder_delete.png) !important;
+}
+.folder_go
+{
+	background-image: url(../image/folder_go.png) !important;
+}
+.preview-bottom
+{
+	background-image: url(../image/preview-bottom.png) !important;
+}
+.page_white_put
+{
+	background-image: url(../image/page_white_put.png) !important;
+}
+.preview-right
+{
+	background-image: url(../image/preview-right.png) !important;
+}
+.preview-hide
+{
+	background-image: url(../image/preview-hide.png) !important;
+}
+.search
+{
+	background-image: url(../image/zoom.png) !important;
+}
+.rec
+{
+	background-image: url(../image/rec.png) !important;
+}
+.prei
+{
+	background-image: url(../image/prei.png) !important;
+}
+.three
+{
+	background-image: url(../image/three.png) !important;
+}
+.down
+{
+	background-image: url(../image/down.png) !important;
+}
+.bottom
+{
+	background-image: url(../image/bottom.png) !important;
+}
+.top
+{
+	background-image: url(../image/top.png) !important;
+}
+.up
+{
+	background-image: url(../image/up.png) !important;
+}
+.new
+{
+	background-image: url(../image/new.png) !important;
+}
+.left
+{
+	background-image: url(../image/left.png) !important;
+}
+.leftall
+{
+	background-image: url(../image/leftall.png) !important;
+}
+.right
+{
+	background-image: url(../image/right.png) !important;
+}
+.rightall
+{
+	background-image: url(../image/rightall.png) !important;
+}
+.images
+{
+	background-image: url(../image/images.png) !important;
+}
+.attach
+{
+	background-image: url(../image/attach.png) !important;
+}
+.build
+{
+	background-image: url(../image/qian4.png) !important;
+}
+.build_add
+{
+	background-image: url(../image/build_add.png) !important;
+}
+.publish
+{
+	background-image: url(../image/qian8.png) !important;
+}
+.publish_add
+{
+	background-image: url(../image/publish_add.png) !important;
+}
+.recall
+{
+	background-image: url(../image/qian16.png) !important;
+}
+.find
+{
+	background-image: url(../image/find.png) !important;
+}
+.yw
+{
+	background-image: url(../image/yw.jpg) !important;
+}
+.before
+{
+background-image: url(../image/before.png) !important;
+}
+.next
+{
+background-image: url(../image/next.png) !important;
+}
+.application_link {
+background-image: url(../image/link.png) !important;
+}
+.page_white_get {
+background-image: url(../image/recommend.png) !important;
+}
+.x-grid-record-gray table{
+    color: #000000;   
+}
+.x-grid-record-red table{
+    color: #FF0000;   
+}
+.x-grid-record-blue table{
+    color: #0000FF;   
+}
+.x-grid-record-olive table{
+    color: #008000;   
+}
+.x-grid-record-purple table{
+    color: #800080;   
+}
+.input6
+{
+	background-color: #7380ed;
+	color: #7380ed;
+	font-size: 9pt;
+	line-height: 13pt;
+	border: 1px solid;
+}
+.AlignLeftCss
+{
+	background-image: url(../image/text_align_left.png) !important;
+}
+.AlignCenterCss
+{
+	background-image: url(../image/text_align_center.png) !important;
+}
+.AlignRightCss
+{
+	background-image: url(../image/text_align_right.png) !important;
+}
+.AlignFullCss
+{
+	background-image: url(../image/text_align_justify.png) !important;
+}
+.audit1
+{
+	background-image: url(../image/audit1.png) !important;
+}
+.audit2
+{
+	background-image: url(../image/audit2.png) !important;
+}
+.audit4
+{
+	background-image: url(../image/audit4.png) !important;
+}
+.audit8
+{
+	background-image: url(../image/audit8.png) !important;
+}
+.audit16
+{
+	background-image: url(../image/audit16.png) !important;
+}
+.findreplace
+{
+	background-image: url(../image/find.png) !important;
+}
+.aform
+{
+	background-image: url(../image/application_form.png) !important;
+}
+.spir
+{
+	background-image: url(../image/spir.png) !important;
+}
+.wap
+{
+	background-image: url(../image/wap.png) !important;
+}
+.wapp
+{
+	background-image: url(../image/wapp.png) !important;
+}
+.waps
+{
+	background-image: url(../image/waps.png) !important;
+}
+.image
+{
+	background-image: url(../image/picture.png) !important;
+}
+.image1
+{
+	background-image: url(../image/picture1.png) !important;
+}
+.redo
+{
+	background-image: url(../image/redo.png) !important;
+}
+.undo
+{
+	background-image: url(../image/undo.png) !important;
+}
+.goto
+{
+	background-image: url(../image/goto.png) !important;
+}
+.old
+{
+	background-image: url(../image/old.png) !important;
+}
+.rightroll
+{
+	background-image: url(../image/rightroll.png) !important;
+}
+.leftroll
+{
+	background-image: url(../image/leftroll.png) !important;
+}
+.roll
+{
+	background-image: url(../image/roll.png) !important;
+}
+.big
+{
+	background-image: url(../image/big.png) !important;
+}
+.small
+{
+	background-image: url(../image/small.png) !important;
+}
+.sharp
+{
+	background-image: url(../image/sharp.png) !important;
+}
+.vague
+{
+	background-image: url(../image/vague.png) !important;
+}
+.icut
+{
+	background-image: url(../image/icut.png) !important;
+}
+.contrast
+{
+	background-image: url(../image/contrast.png) !important;
+}
+.sun
+{
+	background-image: url(../image/sun.png) !important;
+}
+.imore
+{
+	background-image: url(../image/imore.png) !important;
+}
+.toning
+{
+	background-image: url(../image/toning.png) !important;
+}
+.stylecolor
+{
+	background-image: url(../image/stylecolor.png) !important;
+}
+.whiteblack
+{
+	background-image: url(../image/whiteblack.png) !important;
+}
+.warterm
+{
+	background-image: url(../image/warterm.png) !important;
+}
+.addde
+{
+	background-image: url(../image/addde.png) !important;
+}
+.database_add
+{
+	background-image: url(../image/database_add.png) !important;
+}
+.config_image
+{
+	background-image: url(../image/config_image.png) !important;
+}
+.logimage
+{
+	background-image: url(../image/logimage.png) !important;
+}
+.workgroup
+{
+	background-image: url(../image/workgroup.png) !important;
+}
+.foldercount
+{
+	background-image: url(../image/foldercount.png) !important;
+}
+.commonword
+{
+	background-image: url(../image/commonword.png) !important;
+}
+.special
+{
+	background-image: url(../image/special.png) !important;
+}
+.imagescheme
+{
+	background-image: url(../image/imagescheme.png) !important;
+}
+.adoptimage
+{
+	background-image: url(../image/adoptimage.png) !important;
+}
+.runlog
+{
+	background-image: url(../image/runlog.png) !important;
+}
+.commonfolder
+{
+	background-image: url(../image/commonfolder.png) !important;
+}
+.editorimage
+{
+	background-image: url(../image/editorimage.png) !important;
+}
+.sysconfig
+{
+	background-image: url(../image/sysconfig.png) !important;
+}
+.user_add
+{
+	background-image: url(../image/user_add.png) !important;
+}
+.user_delete
+{
+	background-image: url(../image/user_delete.png) !important;
+}
+.returnback
+{
+	background-image: url(../image/returnback.png) !important;
+}
+.saveuser
+{
+	background-image: url(../image/saveuser.png) !important;
+}
+.group_delete
+{
+	background-image: url(../image/group_delete.png) !important;
+}
+.group_add
+{
+	background-image: url(../image/group_add.png) !important;
+}
+.group_edit
+{
+	background-image: url(../image/group_edit.png) !important;
+}
+.table
+{
+	background-image: url(../image/table.png) !important;
+}
+.table_add
+{
+	background-image: url(../image/table_add.png) !important;
+}
+.table_delete
+{
+	background-image: url(../image/table_delete.png) !important;
+}
+.table_edit
+{
+	background-image: url(../image/table_edit.png) !important;
+}
+.designform
+{
+	background-image: url(../image/designform.png) !important;
+}
+.workgroup_add
+{
+	background-image: url(../image/workgroup_add.png) !important;
+}
+.workgroup_delete
+{
+	background-image: url(../image/workgroup_delete.png) !important;
+}
+.workgroup_editor
+{
+	background-image: url(../image/workgroup_editor.png) !important;
+}
+.ftp_add
+{
+	background-image: url(../image/ftp_add.png) !important;
+}
+.ftp_editor
+{
+	background-image: url(../image/ftp_editor.png) !important;
+}
+.ftp_delete
+{
+	background-image: url(../image/ftp_delete.png) !important;
+}
+.adopt_limit
+{
+	background-image: url(../image/adopt_limit.png) !important;
+}
+.adoptreturn
+{
+	background-image: url(../image/adoptreturn.png) !important;
+}
+.save_new
+{
+	background-image: url(../image/save_new.png) !important;
+}
+.submit
+{
+	background-image: url(../image/submit.png) !important;
+}
+.recommend
+{
+	background-image: url(../image/recommend.png) !important;
+}
+.property
+{
+	background-image: url(../image/property.png) !important;
+}
+.relation_file
+{
+	background-image: url(../image/relation_file.png) !important;
+}
+.relation_commant
+{
+	background-image: url(../image/relation_commant.png) !important;
+}
+.search_more
+{
+	background-image: url(../image/search_more.png) !important;
+}
+.order_file
+{
+	background-image: url(../image/order_file.png) !important;
+}
+.order_pic
+{
+	background-image: url(../image/order_pic.png) !important;
+}
+.relation_search
+{
+	background-image: url(../image/relation_search.png) !important;
+}
+.clean_box
+{
+	background-image: url(../image/clean_box.png) !important;
+}
+.selected_publish
+{
+	background-image: url(../image/selected_publish.png) !important;
+}
+.selected_add
+{
+	background-image: url(../image/selected_add.png) !important;
+}
+.pub_list
+{
+	background-image: url(../image/pub_list.png) !important;
+}
+.recall_list
+{
+	background-image: url(../image/recall_list.png) !important;
+}
+.recall_insert
+{
+	background-image: url(../image/recall_insert.png) !important;
+}
+.pub_insert
+{
+	background-image: url(../image/pub_insert.png) !important;
+}
+.folder_pro
+{
+	background-image: url(../image/folder_pro.png) !important;
+}
+.open_win
+{
+	background-image: url(../image/open_win.png) !important;
+}
+.close_win
+{
+	background-image: url(../image/close_win.png) !important;
+}
+.return_all
+{
+	background-image: url(../image/return_all.png) !important;
+}
+.delete_all
+{
+	background-image: url(../image/delete_all.png) !important;
+}
+.export_folder
+{
+	background-image: url(../image/export_folder.png) !important;
+}
+.preview_folder
+{
+	background-image: url(../image/preview_folder.png) !important;
+}
+.file_list
+{
+	background-image: url(../image/file_list.png) !important;
+}
+.file_adopt
+{
+	background-image: url(../image/qian128.png) !important;
+}
+.file_accept
+{
+	background-image: url(../image/file_accept.png) !important;
+}
+.file_preview
+{
+	background-image: url(../image/file_preview.png) !important;
+}
+.adopt_obj
+{
+	background-image: url(../image/adopt_obj.png) !important;
+}
+.new_peri
+{
+	background-image: url(../image/new_peri.png) !important;
+}
+.display_all
+{
+	background-image: url(../image/display_all.png) !important;
+}
+.active_mc
+{
+	background-image: url(../image/active_mc.png) !important;
+}
+.forbid_mc
+{
+	background-image: url(../image/forbid_mc.png) !important;
+}
+.active_wap
+{
+	background-image: url(../image/active_wap.png) !important;
+}
+.active_peri
+{
+	background-image: url(../image/active_peri.png) !important;
+}
+.active_spec
+{
+	background-image: url(../image/active_spec.png) !important;
+}
+.forbid_wap
+{
+	background-image: url(../image/forbid_wap.png) !important;
+}
+.forbid_peri
+{
+	background-image: url(../image/forbid_peri.png) !important;
+}
+.forbid_spec
+{
+	background-image: url(../image/forbid_spec.png) !important;
+}
+.propety_peri
+{
+	background-image: url(../image/propety_peri.png) !important;
+}
+.propety_spec
+{
+	background-image: url(../image/propety_spec.png) !important;
+}
+.file_position
+{
+	background-image: url(../image/file_position.png) !important;
+}
+.template_new
+{
+	background-image: url(../image/template_new.png) !important;
+}
+.template_edit
+{
+	background-image: url(../image/template_edit.png) !important;
+}
+.template_del
+{
+	background-image: url(../image/template_del.png) !important;
+}
+.template_selected
+{
+	background-image: url(../image/template_selected.png) !important;
+}
+.template_pro_edit
+{
+	background-image: url(../image/template_pro_edit.png) !important;
+}
+.template_comp
+{
+	background-image: url(../image/template_comp.png) !important;
+}
+.template_comp_save
+{
+	background-image: url(../image/template_comp_save.png) !important;
+}
+.system_link
+{
+	background-image: url(../image/system_link.png) !important;
+}
+.system_main
+{
+	background-image: url(../image/system_main.png) !important;
+}
+.run_err
+{
+	background-image: url(../image/run_err.png) !important;
+}
+.run_pub
+{
+	background-image: url(../image/run_pub.png) !important;
+}
+.exp_excel
+{
+	background-image: url(../image/exp_excel.png) !important;
+}
+.image_style
+{
+	background-image: url(../image/image_style.png) !important;
+}
+.insert_image
+{
+	background-image: url(../image/insert_image.png) !important;
+}
+.img_upload
+{
+	background-image: url(../image/img_upload.png) !important;
+}
+.film
+{
+	background-image: url(../image/film.png) !important;
+}
+.sound_low
+{
+	background-image: url(../image/sound_low.png) !important;
+}
+.sound_add
+{
+	background-image: url(../image/sound_add.png) !important;
+}
+.fm_stop
+{
+	background-image: url(../image/fm_stop.png) !important;
+}
+.fm_back
+{
+	background-image: url(../image/fm_back.png) !important;
+}
+.fm_play
+{
+	background-image: url(../image/fm_play.png) !important;
+}
+.fm_pause
+{
+	background-image: url(../image/fm_pause.png) !important;
+}
+.fm_next
+{
+	background-image: url(../image/fm_next.png) !important;
+}
+.udconfig
+{
+	background-image: url(../image/udconfig.png) !important;
+}
+.user_key
+{
+	background-image: url(../image/user_key.png) !important;
+}
+.group_key
+{
+	background-image: url(../image/group_key.png) !important;
+}
+.code_source
+{
+	background-image: url(../image/tag.png) !important;
+}
+.accessibility
+{
+	background-image: url(../image/accessibility.png) !important;
+}
+.phone
+{
+	background-image: url(../image/phone.png) !important;
+}
+.clock
+{
+	background-image: url(../image/clock.png) !important;
+}
+.reload
+{
+	background-image: url(../image/return_all.png) !important;
+}
+.nodebackground
+{
+    background-image:url(../image/nodebackgroundcolor.png);
+}
+.x-tree-node .nodebackgroundtextcolor
+{
+    background-image:url(../image/nodebackgroundcolor.png);
+}
+.x-tree-node .nodebackgroundtextcolor span
+{
+    color:Red;
+}
+.x-tree-node .nodetextcolorred span{color:red}
+.authority-one-icon
+{
+    background-image:url(../image/authorityoneicon.png) !important;
+}
+.rename
+{
+	background-image: url(../image/rename.png) !important;
+}
+.newmodule
+{
+	background-image: url(../image/newmodule.png) !important;
+}
+.repair
+{
+	background-image: url(../image/repair.png) !important;
+}
+.attribute
+{
+	background-image: url(../image/attribute.png) !important;
+}
+.ux-lovcombo-icon {
+ width:16px;
+ height:16px;
+ float:left;
+ background-position: -1px -1px ! important;
+ background-repeat:no-repeat ! important;
+}
+.ux-lovcombo-icon-checked {
+ background: transparent url(../ext/resources/images/default/menu/checked.gif);
+}
+.ux-lovcombo-icon-unchecked {
+ background: transparent url(../ext/resources/images/default/menu/unchecked.gif);
+}
+.addfile
+{
+    background-image: url(../image/add1.png) !important;
+}
+.uploadfile
+{
+	background-image: url(../image/upload1.png) !important;
+}
+.stop
+{
+	background-image: url(../image/stop.png) !important;	
+}

@@ -35,6 +35,11 @@ public class BgManageController {
     @Resource
     FormtableMain40Dao formtableMain40Dao;
     
+    @RequestMapping("/bglist.do")
+    public ModelAndView bglist(){
+        ModelAndView mv = new ModelAndView("bglist");
+        return mv;
+    }
     
 	@RequestMapping("/index.do")
     public ModelAndView index(){
